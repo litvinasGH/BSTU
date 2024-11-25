@@ -1,0 +1,11 @@
+#pragma once
+#include <iostream>
+#include <ctime>;
+#include "leap_year_definition.h"
+#include "sequential_number_counting.h"
+#include "name_of_the_month.h"
+#include "events.h"
+#include "main.h"
+#include "struc.h"
+#include "difference.h"
+#include "inputDate.h"
