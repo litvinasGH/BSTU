@@ -1,0 +1,14 @@
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\bin\Debug\net8.0\Lab08OOP.exe
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\bin\Debug\net8.0\Lab08OOP.deps.json
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\bin\Debug\net8.0\Lab08OOP.runtimeconfig.json
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\bin\Debug\net8.0\Lab08OOP.dll
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\bin\Debug\net8.0\Lab08OOP.pdb
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\obj\Debug\net8.0\Lab08OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\obj\Debug\net8.0\Lab08OOP.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\obj\Debug\net8.0\Lab08OOP.AssemblyInfo.cs
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\obj\Debug\net8.0\Lab08OOP.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\obj\Debug\net8.0\Lab08OOP.dll
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\obj\Debug\net8.0\refint\Lab08OOP.dll
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\obj\Debug\net8.0\Lab08OOP.pdb
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\obj\Debug\net8.0\Lab08OOP.genruntimeconfig.cache
+C:\Users\user\source\repos\Lab08OOP\Lab08OOP\obj\Debug\net8.0\ref\Lab08OOP.dll

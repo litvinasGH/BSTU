@@ -1,0 +1,52 @@
+﻿Сборка начата 20.11.2024 18:32:05.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\user\source\repos\SE_LAb18\SE_LAb18\SE_LAb18.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+         Создание каталога "C:\Users\user\source\repos\SE_LAb18\x64\Debug\".
+         Создание каталога "x64\Debug\SE_LAb18.tlog\".
+       InitializeBuildStatus:
+         Создание "x64\Debug\SE_LAb18.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "x64\Debug\SE_LAb18.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt Error.cpp FST.cpp In.cpp IT.cpp Log.cpp LT.cpp main.cpp Out.cpp Parm.cpp
+         Error.cpp
+         FST.cpp
+         In.cpp
+     1>C:\Users\user\source\repos\SE_LAb18\SE_LAb18\FST.cpp(58,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+         IT.cpp
+         Log.cpp
+         LT.cpp
+         main.cpp
+         Out.cpp
+         Parm.cpp
+         Создание кода...
+     1>C:\Users\user\source\repos\SE_LAb18\SE_LAb18\FST.cpp(402,1): warning C4715: FST::GetLex: значение возвращается не при всех путях выполнения
+     1>C:\Users\user\source\repos\SE_LAb18\SE_LAb18\FST.cpp(323,1): warning C4715: FST::GetID: значение возвращается не при всех путях выполнения
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\source\repos\SE_LAb18\x64\Debug\SE_LAb18.exe" /INCREMENTAL /ILK:"x64\Debug\SE_LAb18.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\source\repos\SE_LAb18\x64\Debug\SE_LAb18.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\source\repos\SE_LAb18\x64\Debug\SE_LAb18.lib" /MACHINE:X64 x64\Debug\Error.obj
+         x64\Debug\FST.obj
+         x64\Debug\In.obj
+         x64\Debug\IT.obj
+         x64\Debug\Log.obj
+         x64\Debug\LT.obj
+         x64\Debug\main.obj
+         x64\Debug\Out.obj
+         x64\Debug\Parm.obj
+         SE_LAb18.vcxproj -> C:\Users\user\source\repos\SE_LAb18\x64\Debug\SE_LAb18.exe
+       FinalizeBuildStatus:
+         Файл "x64\Debug\SE_LAb18.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Debug\SE_LAb18.tlog\SE_LAb18.lastbuildstate".
+     1>Сборка проекта "C:\Users\user\source\repos\SE_LAb18\SE_LAb18\SE_LAb18.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+       "C:\Users\user\source\repos\SE_LAb18\SE_LAb18\SE_LAb18.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\user\source\repos\SE_LAb18\SE_LAb18\FST.cpp(58,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+         C:\Users\user\source\repos\SE_LAb18\SE_LAb18\FST.cpp(402,1): warning C4715: FST::GetLex: значение возвращается не при всех путях выполнения
+         C:\Users\user\source\repos\SE_LAb18\SE_LAb18\FST.cpp(323,1): warning C4715: FST::GetID: значение возвращается не при всех путях выполнения
+
+    Предупреждений: 3
+    Ошибок: 0
+
+Прошло времени 00:00:06.14
