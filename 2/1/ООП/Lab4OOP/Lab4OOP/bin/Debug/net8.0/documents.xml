@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDocumentBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DocumentBase xsi:type="Receipt">
+    <Date>
+      <Day>21</Day>
+      <Month>11</Month>
+      <Year>2024</Year>
+    </Date>
+    <Organization>
+      <Name>Company A</Name>
+      <Address>
+        <Num>123</Num>
+        <Street>Street</Street>
+        <Index>fifth</Index>
+      </Address>
+    </Organization>
+    <Amount>150.5</Amount>
+  </DocumentBase>
+  <DocumentBase xsi:type="Invoice">
+    <Date>
+      <Day>21</Day>
+      <Month>11</Month>
+      <Year>2024</Year>
+    </Date>
+    <Sender>
+      <Name>Company A</Name>
+      <Address>
+        <Num>123</Num>
+        <Street>Street</Street>
+        <Index>fifth</Index>
+      </Address>
+    </Sender>
+    <Receiver>
+      <Name>Company B</Name>
+      <Address>
+        <Num>456</Num>
+        <Street>Avenue</Street>
+        <Index>third</Index>
+      </Address>
+    </Receiver>
+    <ItemDescription>Чай</ItemDescription>
+    <Amount>20</Amount>
+  </DocumentBase>
+  <DocumentBase xsi:type="Check">
+    <Date>
+      <Day>21</Day>
+      <Month>11</Month>
+      <Year>2024</Year>
+    </Date>
+    <Issuer>
+      <Name>Company B</Name>
+      <Address>
+        <Num>456</Num>
+        <Street>Avenue</Street>
+        <Index>third</Index>
+      </Address>
+    </Issuer>
+    <Amount>1000</Amount>
+  </DocumentBase>
+  <DocumentBase xsi:type="Invoice">
+    <Date>
+      <Day>5</Day>
+      <Month>2</Month>
+      <Year>2000</Year>
+    </Date>
+    <Sender>
+      <Name>Company A</Name>
+      <Address>
+        <Num>123</Num>
+        <Street>Street</Street>
+        <Index>fifth</Index>
+      </Address>
+    </Sender>
+    <Receiver>
+      <Name>Company B</Name>
+      <Address>
+        <Num>456</Num>
+        <Street>Avenue</Street>
+        <Index>third</Index>
+      </Address>
+    </Receiver>
+    <ItemDescription>Чай</ItemDescription>
+    <Amount>10</Amount>
+  </DocumentBase>
+  <DocumentBase xsi:type="Invoice">
+    <Date>
+      <Day>21</Day>
+      <Month>11</Month>
+      <Year>2024</Year>
+    </Date>
+    <Sender>
+      <Name>Company A</Name>
+      <Address>
+        <Num>123</Num>
+        <Street>Street</Street>
+        <Index>fifth</Index>
+      </Address>
+    </Sender>
+    <Receiver>
+      <Name>Company B</Name>
+      <Address>
+        <Num>456</Num>
+        <Street>Avenue</Street>
+        <Index>third</Index>
+      </Address>
+    </Receiver>
+    <ItemDescription>Чай</ItemDescription>
+    <Amount>30</Amount>
+  </DocumentBase>
+  <DocumentBase xsi:type="Invoice">
+    <Date>
+      <Day>21</Day>
+      <Month>11</Month>
+      <Year>2024</Year>
+    </Date>
+    <Sender>
+      <Name>Company A</Name>
+      <Address>
+        <Num>123</Num>
+        <Street>Street</Street>
+        <Index>fifth</Index>
+      </Address>
+    </Sender>
+    <Receiver>
+      <Name>Company B</Name>
+      <Address>
+        <Num>456</Num>
+        <Street>Avenue</Street>
+        <Index>third</Index>
+      </Address>
+    </Receiver>
+    <ItemDescription>Не Чай</ItemDescription>
+    <Amount>30</Amount>
+  </DocumentBase>
+  <DocumentBase xsi:type="Check">
+    <Date>
+      <Day>21</Day>
+      <Month>11</Month>
+      <Year>2024</Year>
+    </Date>
+    <Issuer>
+      <Name>Company B</Name>
+      <Address>
+        <Num>456</Num>
+        <Street>Avenue</Street>
+        <Index>third</Index>
+      </Address>
+    </Issuer>
+    <Amount>1000</Amount>
+  </DocumentBase>
+  <DocumentBase xsi:type="Check">
+    <Date>
+      <Day>1</Day>
+      <Month>2</Month>
+      <Year>2000</Year>
+    </Date>
+    <Issuer>
+      <Name>Company B</Name>
+      <Address>
+        <Num>456</Num>
+        <Street>Avenue</Street>
+        <Index>third</Index>
+      </Address>
+    </Issuer>
+    <Amount>1000</Amount>
+  </DocumentBase>
+  <DocumentBase xsi:type="Check">
+    <Date>
+      <Day>10</Day>
+      <Month>2</Month>
+      <Year>2000</Year>
+    </Date>
+    <Issuer>
+      <Name>Company B</Name>
+      <Address>
+        <Num>456</Num>
+        <Street>Avenue</Street>
+        <Index>third</Index>
+      </Address>
+    </Issuer>
+    <Amount>1000</Amount>
+  </DocumentBase>
+</ArrayOfDocumentBase>

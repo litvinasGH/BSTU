@@ -1,0 +1,94 @@
+﻿Сборка начата 20.11.2024 18:26:09.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\user\source\repos\SELab17\SELab17\SELab17.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Обращение к "x64\Debug\SELab17.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt Error.cpp FST.cpp In.cpp IT.cpp Log.cpp LT.cpp main.cpp Out.cpp Parm.cpp
+         Error.cpp
+         FST.cpp
+         In.cpp
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(62,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(795,36): error C2059: синтаксическая ошибка: ,
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(802,5): error C2046: недопустимый вариант выбора
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(815,45): error C2059: синтаксическая ошибка: ,
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(815,88): error C2059: синтаксическая ошибка: )
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(820,5): error C2046: недопустимый вариант выбора
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(822,63): error C2065: i: необъявленный идентификатор
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(822,12): error C2660: strcmp: функция не принимает 1 аргументов
+             C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\string.h(100,13):
+              см. объявление "strcmp"
+             C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(822,12):
+             при попытке сопоставить список аргументов "(char *)"
+         
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(823,8): error C2065: l: необъявленный идентификатор
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(827,36): error C2065: l: необъявленный идентификатор
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(818,6): error C2044: недопустимый continue
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(819,6): error C2043: недопустимый break
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(829,6): error C2044: недопустимый continue
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(830,6): error C2043: недопустимый break
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(834,9): error C2065: symbols: необъявленный идентификатор
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(834,5): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(834,18): error C2440: инициализация: невозможно преобразовать "char" в "int [0]"
+             C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(834,18):
+             Не существует преобразований в типы массивов, хотя существуют преобразования в ссылки или указатели на массивы
+         
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(836,5): error C2059: синтаксическая ошибка: throw
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(838,8): error C2065: symbols: необъявленный идентификатор
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(838,4): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(838,17): error C2440: инициализация: невозможно преобразовать "char" в "int [0]"
+             C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(838,17):
+             Не существует преобразований в типы массивов, хотя существуют преобразования в ссылки или указатели на массивы
+         
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(840,3): error C2059: синтаксическая ошибка: }
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(840,3): error C2143: синтаксическая ошибка: отсутствие ";" перед "}"
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(841,2): error C2143: синтаксическая ошибка: отсутствие ";" перед "}"
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(841,2): error C2059: синтаксическая ошибка: }
+         IT.cpp
+         Log.cpp
+         LT.cpp
+         main.cpp
+         Out.cpp
+         Parm.cpp
+         Создание кода...
+     1>Сборка проекта "C:\Users\user\source\repos\SELab17\SELab17\SELab17.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+       "C:\Users\user\source\repos\SELab17\SELab17\SELab17.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(62,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+
+
+       "C:\Users\user\source\repos\SELab17\SELab17\SELab17.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(795,36): error C2059: синтаксическая ошибка: ,
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(802,5): error C2046: недопустимый вариант выбора
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(815,45): error C2059: синтаксическая ошибка: ,
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(815,88): error C2059: синтаксическая ошибка: )
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(820,5): error C2046: недопустимый вариант выбора
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(822,63): error C2065: i: необъявленный идентификатор
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(822,12): error C2660: strcmp: функция не принимает 1 аргументов
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(823,8): error C2065: l: необъявленный идентификатор
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(827,36): error C2065: l: необъявленный идентификатор
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(818,6): error C2044: недопустимый continue
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(819,6): error C2043: недопустимый break
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(829,6): error C2044: недопустимый continue
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(830,6): error C2043: недопустимый break
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(834,9): error C2065: symbols: необъявленный идентификатор
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(834,5): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(834,18): error C2440: инициализация: невозможно преобразовать "char" в "int [0]"
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(836,5): error C2059: синтаксическая ошибка: throw
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(838,8): error C2065: symbols: необъявленный идентификатор
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(838,4): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(838,17): error C2440: инициализация: невозможно преобразовать "char" в "int [0]"
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(840,3): error C2059: синтаксическая ошибка: }
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(840,3): error C2143: синтаксическая ошибка: отсутствие ";" перед "}"
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(841,2): error C2143: синтаксическая ошибка: отсутствие ";" перед "}"
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(841,2): error C2059: синтаксическая ошибка: }
+
+    Предупреждений: 1
+    Ошибок: 24
+
+Прошло времени 00:00:05.73

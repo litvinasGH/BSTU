@@ -1,0 +1,82 @@
+Тест без ошибок 
+Тест без ошибок 
+
+--—- Протокол ——--
+Дата: 06.11.24 18:41:37
+--—- Параметры ——--
+ -in: 	in.txt
+ -out:	in.txt.out
+ -log:	in.txt.log
+--—- Исходные данные ——-- 
+Кол-во символов:	579
+Кол-во строк:   	36
+Пропущенно:     	0
+
+--—- Представления кода в виде лексем ——-- 
+
+01 tfi|1|(ti|2|,ti|3|)
+02 {
+03 dti|4|;
+04 i|4|=i|2|v(i|2|vi|3|);
+05 ri|4|;
+06 };
+07 tfi|5|(ti|6|,ti|7|)
+08 {
+09 dti|8|;
+10 dtfi|9|(ti|10|,ti|11|,
+11 ti|12|);
+12 i|8|=i|9|(i|10|,l,l)vi|7|;
+13 ri|8|;
+14 };
+15 m
+16 {
+17 dti|15|;
+18 dti|16|;
+19 dti|17|;
+20 dti|18|;
+21 dti|19|;
+22 dti|20|;
+23 dtfi|21|(ti|22|);
+24 i|15|=l;
+25 i|16|=l;
+26 i|18|=l;
+27 i|19|=l;
+28 i|17|=i|1|(i|15|,i|16|);
+29 i|20|=i|5|(i|18|,i|19|);
+30 pl;
+31 pi|17|;
+32 l
+33 pi|20|;
+34 pi|21|(i|20|);
+35 rl;
+36 };
+--—- Индетификаторы ——-- 
+01 fi int param 3 i 0
+02 x int param 6 i 0
+03 y int param 9 i 0
+04 z int variable 14 i 2
+05 fs str param 33 i 6
+06 a str param 36 i 6
+07 b str param 39 i 6
+08 c str variable 44 i 8
+09 substr str variable 49 i 9
+10 a str param 52 i 9
+11 p int param 55 i 9
+12 n int param 58 i 10
+13 1 int lit 67 l 11
+14 3 int lit 69 l 11
+15 x int variable 83 i 16
+16 y int variable 87 i 17
+17 z int variable 91 i 18
+18 sa str variable 95 i 19
+19 sb str variable 99 i 20
+20 sc str variable 103 i 21
+21 strlen int variable 108 i 22
+22 p str param 111 i 22
+23 1 int lit 116 l 23
+24 5 int lit 120 l 24
+25 '1234567890' str lit 124 l 25
+26 '1234567890' str lit 128 l 26
+27 'контрольный   пример' str lit 149 l 29
+28 4 int lit 154 l 31
+29 0 int lit 165 l 34

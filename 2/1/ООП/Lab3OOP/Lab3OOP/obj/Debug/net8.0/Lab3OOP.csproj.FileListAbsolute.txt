@@ -1,0 +1,14 @@
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\bin\Debug\net8.0\Lab3OOP.exe
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\bin\Debug\net8.0\Lab3OOP.deps.json
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\bin\Debug\net8.0\Lab3OOP.runtimeconfig.json
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\bin\Debug\net8.0\Lab3OOP.dll
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\bin\Debug\net8.0\Lab3OOP.pdb
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\obj\Debug\net8.0\Lab3OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\obj\Debug\net8.0\Lab3OOP.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\obj\Debug\net8.0\Lab3OOP.AssemblyInfo.cs
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\obj\Debug\net8.0\Lab3OOP.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\obj\Debug\net8.0\Lab3OOP.dll
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\obj\Debug\net8.0\refint\Lab3OOP.dll
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\obj\Debug\net8.0\Lab3OOP.pdb
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\obj\Debug\net8.0\Lab3OOP.genruntimeconfig.cache
+C:\Users\user\source\repos\Lab3OOP\Lab3OOP\obj\Debug\net8.0\ref\Lab3OOP.dll

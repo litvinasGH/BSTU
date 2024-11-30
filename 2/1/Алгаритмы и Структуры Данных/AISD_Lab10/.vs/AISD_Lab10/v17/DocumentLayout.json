@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u0410\u043B\u0433\u0430\u0440\u0438\u0442\u043C\u044B \u0438 \u0421\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u044B \u0414\u0430\u043D\u043D\u044B\u0445\\AISD_Lab10\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE4BCBB-4BEF-46CC-A10F-AC0E8783D175}|AISD_Lab10\\AISD_Lab10.vcxproj|C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u0410\u043B\u0433\u0430\u0440\u0438\u0442\u043C\u044B \u0438 \u0421\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u044B \u0414\u0430\u043D\u043D\u044B\u0445\\AISD_Lab10\\AISD_Lab10\\AISD_Lab10.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5AE4BCBB-4BEF-46CC-A10F-AC0E8783D175}|AISD_Lab10\\AISD_Lab10.vcxproj|solutionrelative:AISD_Lab10\\AISD_Lab10.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AISD_Lab10.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u0410\u043B\u0433\u0430\u0440\u0438\u0442\u043C\u044B \u0438 \u0421\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u044B \u0414\u0430\u043D\u043D\u044B\u0445\\AISD_Lab10\\AISD_Lab10\\AISD_Lab10.cpp",
+              "RelativeDocumentMoniker": "AISD_Lab10\\AISD_Lab10.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u0410\u043B\u0433\u0430\u0440\u0438\u0442\u043C\u044B \u0438 \u0421\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u044B \u0414\u0430\u043D\u043D\u044B\u0445\\AISD_Lab10\\AISD_Lab10\\AISD_Lab10.cpp",
+              "RelativeToolTip": "AISD_Lab10\\AISD_Lab10.cpp",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAYwLIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-29T11:28:12.097Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
