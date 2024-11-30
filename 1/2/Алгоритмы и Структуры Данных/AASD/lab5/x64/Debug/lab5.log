@@ -1,0 +1,31 @@
+﻿Сборка начата 10.04.2024 19:07:40.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\user\source\repos\AASD\lab5\lab5.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Создание "x64\Debug\lab5.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "x64\Debug\lab5.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt main.cpp
+         main.cpp
+     1>C:\Users\user\source\repos\AASD\lab5\main.cpp(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+     1>C:\Users\user\source\repos\AASD\lab5\main.cpp(22,7): warning C4101: a: неиспользованная локальная переменная
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\source\repos\AASD\x64\Debug\lab5.exe" /INCREMENTAL /ILK:"x64\Debug\lab5.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\source\repos\AASD\x64\Debug\lab5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\source\repos\AASD\x64\Debug\lab5.lib" /MACHINE:X64 x64\Debug\main.obj
+         lab5.vcxproj -> C:\Users\user\source\repos\AASD\x64\Debug\lab5.exe
+       FinalizeBuildStatus:
+         Файл "x64\Debug\lab5.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Debug\lab5.tlog\lab5.lastbuildstate".
+     1>Сборка проекта "C:\Users\user\source\repos\AASD\lab5\lab5.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+       "C:\Users\user\source\repos\AASD\lab5\lab5.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\user\source\repos\AASD\lab5\main.cpp(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\user\source\repos\AASD\lab5\main.cpp(22,7): warning C4101: a: неиспользованная локальная переменная
+
+    Предупреждений: 2
+    Ошибок: 0
+
+Прошло времени 00:00:01.18
