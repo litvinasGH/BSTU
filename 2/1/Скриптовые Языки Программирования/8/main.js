@@ -251,7 +251,7 @@ let user7Copy = {
           ...user7.studies.exams[0].professor,
           articles: [
             { ...user7.studies.exams[0].professor.articles[0] },
-            { ...user7.studies.exams[0].professor.articles[1], pagesNumber: 3 },
+            { ...user7.studies.exams[0].professor.articles[1]},
             { ...user7.studies.exams[0].professor.articles[2] }
           ]
         }
