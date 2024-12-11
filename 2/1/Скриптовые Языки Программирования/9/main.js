@@ -1,45 +1,64 @@
-
-class Shape {
-  constructor(type) {
-    this.type = type; 
+let square = {
+  width:100,
+  height:100,
+  color:"yellow",
+  getSquare(){
+      return this.width*this.height;
+  },
+  getInfo(){
+      return `height:${this.height} width:${this.width} color:${this.color}`;
   }
-}
+};
+let small_square = {
+  __proto__:square,
+  width:50,
+  height:50
+};
 
-class Circle extends Shape {
-  constructor(color) {
-    super("circle");
-    this.color = color; 
+let circle = {
+  radius:100,
+  color:"white",
+  getSquare(){
+      return Math.PI*Math.pow(this.radius,2);
+  },
+  getInfo(){
+      `radius:${this.radius} color:${this.color}`;
   }
-}
+};
 
+let another_circle = {
+  __proto__:circle,
+  color:"green"
+};
 
-class Square extends Shape {
-  constructor(size, color) {
-    super("square");
-    this.size = size; 
-    this.color = color; 
+let triangle_with_lines = {
+  base:20,
+  height:40,
+  lines:1,
+  color:"white",
+  getSquare(){
+      return (this.base/2)*this.height;
+  },
+  getInfo(){
+      return ` lines: ${this.lines}  color:${this.color} `;
   }
-}
+};
 
-class Triangle extends Shape {
-  constructor(lines, color = null) {
-    super("triangle");
-    this.lines = lines; 
-    this.color = color; 
-  }
-}
-
-const yellowSquare = new Square("large", "yellow");
-const smallSquare = new Square("small", "yellow");
-const greenCircle = new Circle("green");
-const emptyCircle = new Circle(null);
-const triangleWithLines = new Triangle(3);
-const emptyTriangle = new Triangle(0);
+let another_triangle = {
+  __proto__:triangle_with_lines,
+  lines:3
+};
+console.group("Figures");
+console.log(square.getInfo());
+console.log(small_square.getInfo());
+console.log(circle.getInfo());
+console.log(another_circle.getInfo());
+console.log(triangle_with_lines.getInfo());
+console.log(another_triangle.getInfo());
+console.groupEnd();
 
 
-console.log("Свойства зеленого круга:", greenCircle);
-console.log("Свойства треугольника с тремя линиями:", triangleWithLines);
-console.log("Цвет маленького квадрата:", smallSquare.color);
+
 
 
 
@@ -84,7 +103,9 @@ class Human {
   }
 }
 
-
+const hum = new Human("FN", "LN", 2000, "Adress")
+hum.age = 20;
+console.log(hum.birthYear)
 
 class Student extends Human {
   constructor(firstName, lastName, birthYear, address, faculty, course, group, recordBookNumber) {
@@ -193,6 +214,7 @@ const student1 = new Student("Иван", "Иванов", 2006, "Минск", "Ф
 const student2 = new Student("Алексей", "Смирнов", 2005, "Гродно", "ФИТ", 3, 7, "71202302");
 const student3 = new Student("Мария", "Кузнецова", 2004, "Минск", "ФИТ", 4, 6, "71301303");
 
+student1.changeAddress("New Address")
 
 
 const fitFaculty = new Faculty("Факультет информационных технологий", 10, 100);

@@ -24,7 +24,7 @@ namespace Lab4OOP
                 //containerE.Get(5);
                 //int EN = 0;
                 //EN /= EN;
-                //Debug.Assert(false, "Test");
+                Debug.Assert(false, "Test");
 
 
 

@@ -29,7 +29,6 @@ z = fi(x,y);
 sc = fs(sa,sb);
 print 'контрольный   пример';
 print z;
-4 
 print sc;
 print strlen(sc);
 return 0;

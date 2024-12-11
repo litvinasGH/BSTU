@@ -2,15 +2,148 @@
 Тест без ошибок 
 
 --—- Протокол ——--
-Дата: 28.11.24 16:00:46
+Дата: 10.12.24 13:54:15
 --—- Параметры ——--
  -in: 	in.txt
  -out:	in.txt.out
  -log:	in.txt.log
 --—- Исходные данные ——-- 
-Кол-во символов:	579
-Кол-во строк:   	36
+Кол-во символов:	576
+Кол-во строк:   	35
 Пропущенно:     	0
+------Преобразованный код-------
+integer function fi(integer x, integer y)|{|declare integer z;|z= x * (x+y);|return z;|} ; |string function fs (string a, string b)|{|declare string c;|declare string function substr(string a, integer p,|integer n);|c = substr(a, 1,3)+ b;|return c;|};|main|{|declare integer x;|declare integer y;|declare integer z;|declare string sa;|declare string sb;|declare string sc;|declare integer function strlen(string p);|x = 1;|y = 5;|sa = '1234567890';|sb = '1234567890';|z = fi(x,y);|sc = fs(sa,sb);|print 'контрольный   пример';|print z;|print sc;|print strlen(sc);|return 0;|};
 
 --—- Представления кода в виде лексем ——-- 
 
+01 tfi|1|(ti|2|,ti|3|)
+02 {
+03 dti|4|;
+04 i|4|=i|2|v(i|2|vi|3|);
+05 ri|4|;
+06 };
+07 tfi|5|(ti|6|,ti|7|)
+08 {
+09 dti|8|;
+10 dtfi|9|(ti|10|,ti|11|,
+11 ti|12|);
+12 i|8|=i|9|(i|10|,l,l)vi|7|;
+13 ri|8|;
+14 };
+15 m
+16 {
+17 dti|15|;
+18 dti|16|;
+19 dti|17|;
+20 dti|18|;
+21 dti|19|;
+22 dti|20|;
+23 dtfi|21|(ti|22|);
+24 i|15|=l;
+25 i|16|=l;
+26 i|18|=l;
+27 i|19|=l;
+28 i|17|=i|1|(i|15|,i|16|);
+29 i|20|=i|5|(i|18|,i|19|);
+30 pl;
+31 pi|17|;
+32 pi|20|;
+33 pi|21|(i|20|);
+34 rl;
+35 };
+--—------------------------------------------- Идентификаторы ---------------------------------------——-- 
+|  Номер  |    id    | Тип данных |    Тип    | Связь (Номер Лексема Строка) | Значение?
+---------------------------------------------------------------------------------------------------------
+| 0000001 |       fi |        int |      func |         3        i        1  | 
+| 0000002 |        x |        int |     param |         6        i        1  | 
+| 0000003 |        y |        int |     param |         9        i        1  | 
+| 0000004 |        z |        int |  variable |        14        i        3  | 
+| 0000005 |       fs |        str |      func |        33        i        7  | 
+| 0000006 |        a |        str |     param |        36        i        7  | 
+| 0000007 |        b |        str |     param |        39        i        7  | 
+| 0000008 |        c |        str |  variable |        44        i        9  | 
+| 0000009 |   substr |        str |  variable |        49        i       10  | 
+| 0000010 |        a |        str |     param |        52        i       10  | 
+| 0000011 |        p |        int |     param |        55        i       10  | 
+| 0000012 |        n |        int |     param |        58        i       11  | 
+| 0000013 |  LitINT0 |        int |       lit |        67        l       12  | 1 
+| 0000014 |  LitINT1 |        int |       lit |        69        l       12  | 3 
+| 0000015 |        x |        int |  variable |        83        i       17  | 
+| 0000016 |        y |        int |  variable |        87        i       18  | 
+| 0000017 |        z |        int |  variable |        91        i       19  | 
+| 0000018 |       sa |        str |  variable |        95        i       20  | 
+| 0000019 |       sb |        str |  variable |        99        i       21  | 
+| 0000020 |       sc |        str |  variable |       103        i       22  | 
+| 0000021 |   strlen |        int |  variable |       108        i       23  | 
+| 0000022 |        p |        str |     param |       111        i       23  | 
+| 0000023 |  LitINT2 |        int |       lit |       116        l       24  | 1 
+| 0000024 |  LitINT3 |        int |       lit |       120        l       25  | 5 
+| 0000025 |  LitSTR4 |        str |       lit |       124        l       26  | 10 '1234567890' 
+| 0000026 |  LitSTR5 |        str |       lit |       149        l       30  | 20 'контрольный   пример' 
+| 0000027 |  LitINT6 |        int |       lit |       164        l       34  | 0 
+---------------------------------------------------------------------------------------------------------
+
+----------Правила-----------
+0   : S->tfi(F){NrE;};S   
+4   : F->ti,F             
+7   : F->ti               
+11  : N->dti;N            
+15  : N->i=E;             
+17  : E->iM               
+18  : M->vE               
+19  : E->(E)              
+20  : E->iM               
+21  : M->vE               
+22  : E->i                
+26  : E->i                
+30  : S->tfi(F){NrE;};S   
+34  : F->ti,F             
+37  : F->ti               
+41  : N->dti;N            
+45  : N->dtfi(F);N        
+50  : F->ti,F             
+53  : F->ti,F             
+56  : F->ti               
+60  : N->i=E;             
+62  : E->i(W)M            
+64  : W->i,W              
+66  : W->l,W              
+68  : W->l                
+70  : M->vE               
+71  : E->i                
+74  : E->i                
+78  : S->m{NrE;};         
+80  : N->dti;N            
+84  : N->dti;N            
+88  : N->dti;N            
+92  : N->dti;N            
+96  : N->dti;N            
+100 : N->dti;N            
+104 : N->dtfi(F);N        
+109 : F->ti               
+113 : N->i=E;N            
+115 : E->l                
+117 : N->i=E;N            
+119 : E->l                
+121 : N->i=E;N            
+123 : E->l                
+125 : N->i=E;N            
+127 : E->l                
+129 : N->i=E;N            
+131 : E->i(W)             
+133 : W->i,W              
+135 : W->i                
+138 : N->i=E;N            
+140 : E->i(W)             
+142 : W->i,W              
+144 : W->i                
+147 : N->pE;N             
+148 : E->l                
+150 : N->pE;N             
+151 : E->i                
+153 : N->pE;N             
+154 : E->i                
+156 : N->pE;              
+157 : E->i(W)             
+159 : W->i                
+163 : E->l                

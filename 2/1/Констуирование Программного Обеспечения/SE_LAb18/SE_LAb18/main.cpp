@@ -11,8 +11,8 @@
 
 
 
-
 using namespace std;
+
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -58,7 +58,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	
 	exit(0);
-#endif // DEBUG
+#endif 
 
 
 
@@ -88,6 +88,15 @@ int _tmain(int argc, _TCHAR* argv[])
 		IT::IdTable idtable = IT::Create(in.count_words);
 		FST::GetLexOrID(in, lextable, idtable);
 		Log::WriteLex(log, lextable, idtable);
+
+		MFST_TRACE_START
+			MFST::Mfst mfst(lextable, GRB::getGreibach());
+		mfst.start(log);
+
+		mfst.savededucation();
+
+		mfst.printrules(log);
+
 		IT::Delete(idtable);
 		LT::Delete(lextable);
 		In::Delete(in);
@@ -97,20 +106,20 @@ int _tmain(int argc, _TCHAR* argv[])
 	{
 		
 		if (e.id == 111) {
-			cout << e.inext.text << endl;
-			cout << "Ошибка " << e.id << ": " << e.message << endl;
-			cout << "Cтрока " << e.inext.line + 1 << " позиция " << e.inext.col + 1 << "\n\n";
+			cout << e.inext.text << endl; 
+			cout << "\033[31mОшибка\033[32m " << e.id << "\033[0m: " << e.message << endl; 
+			cout << "Cтрока " << "\033[32m" << e.inext.line + 1 << "\033[0m"
+				<< " позиция " << "\033[32m" << e.inext.col + 1 << "\033[0m\n\n"; 
 			Out::WriteError(out, e);
 		}
 		else if (e.id == 118) {
-			cout << e.inext.rtext << endl;
-			cout << "Ошибка " << e.id << ": " << e.message << endl;
-			cout << "Cтрока " << e.inext.line + 1 << std::endl << "Лексема \"" << e.inext.text << "\"\n\n";
-			delete[] e.inext.text;
-			delete[] e.inext.rtext;
+			cout << e.inext.rtext << endl; 
+			cout << "\033[31mОшибка\033[32m " << e.id << "\033[0m: " << e.message << endl; 
+			cout << "Cтрока " << "\033[32m" << e.inext.line + 1 << "\033[0m"
+				<< std::endl << "Лексема \"" << e.inext.text << "\"\n\n"; 
 		}
 		else {
-			cout << "Ошибка " << e.id << ": " << e.message << endl;
+			cout << "\033[31mОшибка\033[32m " << e.id << "\033[0m: " << e.message << endl; 
 		}
 		if (log.stream != NULL)
 			Log::WriteError(log, e);
@@ -119,7 +128,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	Log::Close(log);
 	system("pause");
 
-	//_CrtDumpMemoryLeaks();
+	
 	return 0;
 }
 

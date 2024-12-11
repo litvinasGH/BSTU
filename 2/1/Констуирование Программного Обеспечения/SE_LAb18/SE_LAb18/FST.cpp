@@ -402,6 +402,21 @@ namespace FST
 		);
 		if (execute(Mlex))
 			return LEX_MAIN;
+
+		FST Rlex(
+			(char*)word,
+			7,
+			NODE(1, RELATION('r', 1)),
+			NODE(1, RELATION('e', 2)),
+			NODE(1, RELATION('t', 3)),
+			NODE(1, RELATION('u', 4)),
+			NODE(1, RELATION('r', 5)),
+			NODE(1, RELATION('n', 6)),
+			NODE()
+		);
+		if (execute(Rlex))
+			return LEX_RETURN;
+
 	}
 	bool check_int(char* word) {
 		FST integer_au(
@@ -515,7 +530,7 @@ namespace FST
 					} while (in.words[i][0] == (unsigned char)' ' || in.words[i][0] == (unsigned char)'\0' || in.words[i][0] == '|');
 					if (GetID((char*)in.words[i]) == 'I') {
 						LT::Add(lextable, { 'i', str, idtable.size });
-						IT::Add(idtable, { lextable.size - 1,(char*)in.words[i], datatypeIT, IT::P });
+						IT::Add(idtable, { lextable.size - 1,(char*)in.words[i], datatypeIT, IT::F });
 						ret[symbols++] = 'i';
 					}
 					else {
@@ -683,9 +698,9 @@ namespace FST
 
 					tmp_literal_name[g] = '\0';
 					id++;
-
+					while (in.words[i][j++] != '\0');
 					entry = { lextable.size - 1, tmp_literal_name , datatype, type};
-					entry.value.vstr = { j - 1, ((char*)in.words[i])};
+					entry.value.vstr = { j - 3, ((char*)in.words[i])};
 					IT::Add(idtable, entry);
 				}
 				ret[symbols++] = 'l';

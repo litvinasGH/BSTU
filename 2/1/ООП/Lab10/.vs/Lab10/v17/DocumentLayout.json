@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab10\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{69E506C0-AAFB-4FA6-9CC8-B950EEC649C1}|Lab10\\Lab10.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab10\\lab10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69E506C0-AAFB-4FA6-9CC8-B950EEC649C1}|Lab10\\Lab10.csproj|solutionrelative:lab10\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69E506C0-AAFB-4FA6-9CC8-B950EEC649C1}|Lab10\\Lab10.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab10\\lab10\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69E506C0-AAFB-4FA6-9CC8-B950EEC649C1}|Lab10\\Lab10.csproj|solutionrelative:lab10\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab10\\Lab10\\Class1.cs",
+              "RelativeDocumentMoniker": "Lab10\\Class1.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab10\\Lab10\\Class1.cs",
+              "RelativeToolTip": "Lab10\\Class1.cs",
+              "ViewState": "AgIAALIAAAAAAAAAAAAuwL8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T08:09:09.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab10\\Lab10\\Program.cs",
+              "RelativeDocumentMoniker": "Lab10\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab10\\Lab10\\Program.cs",
+              "RelativeToolTip": "Lab10\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T12:22:51.928Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

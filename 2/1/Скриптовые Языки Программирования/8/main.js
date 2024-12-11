@@ -270,6 +270,7 @@ let user7Copy = {
     ]
   }
 };
+user7Copy.studies.exams[0].professor.articles[0].title = "About js"
 
 // 10
 let storeCopy = {

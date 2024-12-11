@@ -68,7 +68,7 @@ public:
 
     Ant(int v) : visited(v, false), routeLength(0) {}
 
-    float countPassProbability(Graph& graph, int verticleI, int verticleJ, int alfa, int beta) {
+    float countPassProbability(Graph& graph, int verticleI, int verticleJ, float alfa, float beta) {
         if (visited[verticleJ] || graph.matList[verticleI][verticleJ] == INT_MAX) {
             return 0.0;
         }
@@ -86,7 +86,7 @@ public:
         return (sum == 0.0) ? 0.0 : (pow(pher, alfa) * pow(attractivness, beta)) / sum;
     }
 
-    void sendAnt(Graph& graph, int alfa, int beta) {
+    void sendAnt(Graph& graph, float alfa, float beta) {
         int start = rand() % visited.size();
         visited[start] = true;
         route.push_back(start);
@@ -151,20 +151,20 @@ int main() {
         if (iterations > 1) break;
     }
 
-    int alfa;
+    float alfa;
     while (true) {
-        cout << "Введите alfa(>1): ";
+        cout << "Введите alfa(>0): ";
         cin >> alfa;
 
-        if (alfa > 1) break;
+        if (alfa > 0) break;
     }
 
-    int beta;
+    float beta;
     while (true) {
-        cout << "Введите beta(>1): ";
+        cout << "Введите beta(>0): ";
         cin >> beta;
 
-        if (beta > 1) break;
+        if (beta > 0) break;
     }
 
     Graph graph(cityAmount);
