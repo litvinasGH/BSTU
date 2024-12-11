@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <mbstring.h>
+#include <stack>
 
 using namespace std;
 
@@ -28,8 +29,11 @@ using namespace std;
 #include "LT.h"
 #include "IT.h"
 #include "FST.h"
+#include "GRB.h"
+#include "MFST.h"
+
 
 //#define DEBUG
-
+#define FULLINFO
 
 

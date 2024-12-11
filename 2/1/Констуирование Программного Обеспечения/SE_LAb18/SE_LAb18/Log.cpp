@@ -81,6 +81,8 @@ namespace Log
 			<< "Кол-во символов:\t" << in.size << "\n"
 			<< "Кол-во строк:   \t" << in.lines << "\n"
 			<< "Пропущенно:     \t" << in.ignor << "\n";
+		(*log.stream) << "------Преобразованный код-------\n" <<
+			in.text << endl;
 	};
 
 	void WriteLex(LOG log, LT::LexTable lextable, IT::IdTable idtable) {
@@ -159,7 +161,7 @@ namespace Log
 
 			LT::Entry en = LT::GetEntry(lextable, idtable.table[i].idxfirstLE);
 			cout << std::setw(9) <<idtable.table[i].idxfirstLE + 1 << std::setw(9) << en.lexema << std::setw(9) << en.sn << "  | ";
-			(*log.stream) << std::setw(9) << idtable.table[i].idxfirstLE + 1 << std::setw(9) << en.lexema << std::setw(9) << en.sn << "  | ";
+			(*log.stream) << std::setw(9) << idtable.table[i].idxfirstLE + 1 << std::setw(9) << en.lexema << std::setw(9) << en.sn + 1 << "  | ";
 
 			if (idtable.table[i].idtype == IT::L && idtable.table[i].iddatatype == IT::INT) {
 				cout << idtable.table[i].value.vint << " ";
