@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "LdMn/Bm6pxI=",
+  "success": true,
+  "projectFilePath": "D:\\git\\BSTU\\2\\1\\ООП\\Lab13\\Lab13\\Lab13.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Litvinas_COMP\\.nuget\\packages\\soapformatter\\1.1.9\\soapformatter.1.1.9.nupkg.sha512"
+  ],
+  "logs": []
+}

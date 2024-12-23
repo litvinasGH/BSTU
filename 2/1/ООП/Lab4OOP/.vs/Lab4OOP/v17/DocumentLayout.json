@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\",
+  "WorkspaceRootPath": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab4oop\\lab4oop\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|solutionrelative:lab4oop\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab4oop\\lab4oop\\class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|solutionrelative:lab4oop\\class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab4oop\\lab4oop\\class3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab4oop\\lab4oop\\class3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|solutionrelative:lab4oop\\class3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab4oop\\lab4oop\\tofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|solutionrelative:lab4oop\\tofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab4oop\\lab4oop\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|solutionrelative:lab4oop\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab4oop\\lab4oop\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|solutionrelative:lab4oop\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab4oop\\lab4oop\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|solutionrelative:lab4oop\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab4oop\\lab4oop\\class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|solutionrelative:lab4oop\\class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab4oop\\lab4oop\\tofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75AB0693-B348-40A3-B08A-47D8D5522F49}|Lab4OOP\\Lab4OOP.csproj|solutionrelative:lab4oop\\tofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,23 +38,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Main.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Main.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Main.cs",
               "RelativeDocumentMoniker": "Lab4OOP\\Main.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Main.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Main.cs",
               "RelativeToolTip": "Lab4OOP\\Main.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBEAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAwF0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T12:00:04.053Z"
+              "WhenOpened": "2024-11-21T12:00:04.053Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ToFile.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\ToFile.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\ToFile.cs",
               "RelativeDocumentMoniker": "Lab4OOP\\ToFile.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\ToFile.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\ToFile.cs",
               "RelativeToolTip": "Lab4OOP\\ToFile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -62,38 +63,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Class3.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Class3.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Class3.cs",
               "RelativeDocumentMoniker": "Lab4OOP\\Class3.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Class3.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Class3.cs",
               "RelativeToolTip": "Lab4OOP\\Class3.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T12:17:04.683Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Class2.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Class2.cs",
-              "RelativeDocumentMoniker": "Lab4OOP\\Class2.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Class2.cs",
-              "RelativeToolTip": "Lab4OOP\\Class2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T07:29:20.762Z",
+              "WhenOpened": "2024-11-12T12:17:04.683Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Class2.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Class2.cs",
+              "RelativeDocumentMoniker": "Lab4OOP\\Class2.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Class2.cs",
+              "RelativeToolTip": "Lab4OOP\\Class2.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T07:29:20.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Class1.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Class1.cs",
               "RelativeDocumentMoniker": "Lab4OOP\\Class1.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Class1.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab4OOP\\Lab4OOP\\Class1.cs",
               "RelativeToolTip": "Lab4OOP\\Class1.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIwAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T12:23:03.392Z",
               "EditorCaption": ""
