@@ -1,0 +1,15 @@
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\bin\Debug\net8.0\Lab12.1.exe
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\bin\Debug\net8.0\Lab12.1.deps.json
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\bin\Debug\net8.0\Lab12.1.runtimeconfig.json
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\bin\Debug\net8.0\Lab12.1.dll
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\bin\Debug\net8.0\Lab12.1.pdb
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\obj\Debug\net8.0\Lab12.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\obj\Debug\net8.0\Lab12.1.AssemblyInfoInputs.cache
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\obj\Debug\net8.0\Lab12.1.AssemblyInfo.cs
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\obj\Debug\net8.0\Lab12.1.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\obj\Debug\net8.0\Lab12.1.sourcelink.json
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\obj\Debug\net8.0\Lab12.1.dll
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\obj\Debug\net8.0\refint\Lab12.1.dll
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\obj\Debug\net8.0\Lab12.1.pdb
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\obj\Debug\net8.0\Lab12.1.genruntimeconfig.cache
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab12.1\Lab12.1\obj\Debug\net8.0\ref\Lab12.1.dll

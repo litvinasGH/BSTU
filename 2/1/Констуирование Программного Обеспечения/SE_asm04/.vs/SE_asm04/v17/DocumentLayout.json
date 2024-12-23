@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041A\u043E\u043D\u0441\u0442\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0433\u043E \u041E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F\\SE_asm04\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C0D8EF9-3E4C-44EB-A77D-627267965E65}|assm\\assm.vcxproj|C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041A\u043E\u043D\u0441\u0442\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0433\u043E \u041E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F\\SE_asm04\\DES\\data.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{1C0D8EF9-3E4C-44EB-A77D-627267965E65}|assm\\assm.vcxproj|solutionrelative:DES\\data.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{6BB1A26D-8870-4DC3-BF59-A7BA0872B563}|DES\\DES.vcxproj|C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041A\u043E\u043D\u0441\u0442\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0433\u043E \u041E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F\\SE_asm04\\DES\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6BB1A26D-8870-4DC3-BF59-A7BA0872B563}|DES\\DES.vcxproj|solutionrelative:DES\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6344A758-90E3-4DD6-A7E2-891546B079D3}|SE_asm04\\SE_asm04.vcxproj|C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041A\u043E\u043D\u0441\u0442\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0433\u043E \u041E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F\\SE_asm04\\SE_asm04\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6344A758-90E3-4DD6-A7E2-891546B079D3}|SE_asm04\\SE_asm04.vcxproj|solutionrelative:SE_asm04\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BB1A26D-8870-4DC3-BF59-A7BA0872B563}|DES\\DES.vcxproj|C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041A\u043E\u043D\u0441\u0442\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0433\u043E \u041E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F\\SE_asm04\\DES\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6BB1A26D-8870-4DC3-BF59-A7BA0872B563}|DES\\DES.vcxproj|solutionrelative:DES\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{1C0D8EF9-3E4C-44EB-A77D-627267965E65}|assm\\assm.vcxproj|C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041A\u043E\u043D\u0441\u0442\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0433\u043E \u041E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F\\SE_asm04\\DES\\data.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1C0D8EF9-3E4C-44EB-A77D-627267965E65}|assm\\assm.vcxproj|solutionrelative:DES\\data.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6344A758-90E3-4DD6-A7E2-891546B079D3}|SE_asm04\\SE_asm04.vcxproj|C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041A\u043E\u043D\u0441\u0442\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0433\u043E \u041E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F\\SE_asm04\\SE_asm04\\data.bin||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{6344A758-90E3-4DD6-A7E2-891546B079D3}|SE_asm04\\SE_asm04.vcxproj|solutionrelative:SE_asm04\\data.bin||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +26,26 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "data.bin",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041A\u043E\u043D\u0441\u0442\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0433\u043E \u041E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F\\SE_asm04\\SE_asm04\\data.bin",
+              "RelativeDocumentMoniker": "SE_asm04\\data.bin",
+              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041A\u043E\u043D\u0441\u0442\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0433\u043E \u041E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F\\SE_asm04\\SE_asm04\\data.bin",
+              "RelativeToolTip": "SE_asm04\\data.bin",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-12T12:48:49.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "data.asm",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041A\u043E\u043D\u0441\u0442\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0433\u043E \u041E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F\\SE_asm04\\DES\\data.asm",
               "RelativeDocumentMoniker": "DES\\data.asm",
@@ -34,18 +53,17 @@
               "RelativeToolTip": "DES\\data.asm",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-12-11T14:15:17.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T14:15:17.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041A\u043E\u043D\u0441\u0442\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0433\u043E \u041E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F\\SE_asm04\\DES\\main.cpp",
               "RelativeDocumentMoniker": "DES\\main.cpp",
               "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041A\u043E\u043D\u0441\u0442\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0433\u043E \u041E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F\\SE_asm04\\DES\\main.cpp",
               "RelativeToolTip": "DES\\main.cpp",
-              "ViewState": "AgIAABEAAAAAAAAAAADwvx8AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-11T14:06:21.025Z",
               "EditorCaption": ""
@@ -58,7 +76,7 @@
               "RelativeDocumentMoniker": "SE_asm04\\main.cpp",
               "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041A\u043E\u043D\u0441\u0442\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0433\u043E \u041E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F\\SE_asm04\\SE_asm04\\main.cpp",
               "RelativeToolTip": "SE_asm04\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-11T14:04:57.724Z",
               "EditorCaption": ""

@@ -1,7 +1,7 @@
     integer function fi(integer x, integer y)
 {
 declare integer z;
-z= x   *   (x+y);
+z= x   *   (x+y) + fi(1, -1);
 return z;
    }  ;   
 string function fs (string a, string b)
@@ -29,7 +29,6 @@ z = fi(x,y);
 sc = fs(sa,sb);
 print 'контрольный   пример';
 print z;
-4 
 print sc;
 print strlen(sc);
 return 0;

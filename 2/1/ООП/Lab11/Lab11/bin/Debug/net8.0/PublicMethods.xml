@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PublicMethods>
+  <Method>get_Number</Method>
+  <Method>set_Number</Method>
+  <Method>get_Text</Method>
+  <Method>set_Text</Method>
+  <Method>PrintMessage</Method>
+  <Method>AddNumbers</Method>
+  <Method>CompareTo</Method>
+  <Method>GetType</Method>
+  <Method>ToString</Method>
+  <Method>Equals</Method>
+  <Method>GetHashCode</Method>
+</PublicMethods>

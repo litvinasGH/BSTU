@@ -16,8 +16,7 @@ using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-
-	setlocale(LC_ALL, "RUS");
+	system("color");	setlocale(LC_ALL, "RUS");
 
 #ifdef DEBUG
 	try {
