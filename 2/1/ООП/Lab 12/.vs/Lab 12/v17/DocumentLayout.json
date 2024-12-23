@@ -1,0 +1,127 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab 12\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1DBD0519-023D-4FBF-8E6F-EF2465C02043}|Lab 12\\Lab 12.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab 12\\lab 12\\kvvlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DBD0519-023D-4FBF-8E6F-EF2465C02043}|Lab 12\\Lab 12.csproj|solutionrelative:lab 12\\kvvlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DBD0519-023D-4FBF-8E6F-EF2465C02043}|Lab 12\\Lab 12.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab 12\\lab 12\\kvvdiskinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DBD0519-023D-4FBF-8E6F-EF2465C02043}|Lab 12\\Lab 12.csproj|solutionrelative:lab 12\\kvvdiskinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DBD0519-023D-4FBF-8E6F-EF2465C02043}|Lab 12\\Lab 12.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab 12\\lab 12\\kvvfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DBD0519-023D-4FBF-8E6F-EF2465C02043}|Lab 12\\Lab 12.csproj|solutionrelative:lab 12\\kvvfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DBD0519-023D-4FBF-8E6F-EF2465C02043}|Lab 12\\Lab 12.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab 12\\lab 12\\kvvdirinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DBD0519-023D-4FBF-8E6F-EF2465C02043}|Lab 12\\Lab 12.csproj|solutionrelative:lab 12\\kvvdirinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DBD0519-023D-4FBF-8E6F-EF2465C02043}|Lab 12\\Lab 12.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab 12\\lab 12\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DBD0519-023D-4FBF-8E6F-EF2465C02043}|Lab 12\\Lab 12.csproj|solutionrelative:lab 12\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DBD0519-023D-4FBF-8E6F-EF2465C02043}|Lab 12\\Lab 12.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab 12\\lab 12\\kvvfileinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DBD0519-023D-4FBF-8E6F-EF2465C02043}|Lab 12\\Lab 12.csproj|solutionrelative:lab 12\\kvvfileinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KVVLog.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab 12\\Lab 12\\KVVLog.cs",
+              "RelativeDocumentMoniker": "Lab 12\\KVVLog.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab 12\\Lab 12\\KVVLog.cs",
+              "RelativeToolTip": "Lab 12\\KVVLog.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAuwEwAAACMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T18:46:11.087Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KVVFileManager.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab 12\\Lab 12\\KVVFileManager.cs",
+              "RelativeDocumentMoniker": "Lab 12\\KVVFileManager.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab 12\\Lab 12\\KVVFileManager.cs",
+              "RelativeToolTip": "Lab 12\\KVVFileManager.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAEwFwAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T19:02:53.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "KVVDirInfo.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab 12\\Lab 12\\KVVDirInfo.cs",
+              "RelativeDocumentMoniker": "Lab 12\\KVVDirInfo.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab 12\\Lab 12\\KVVDirInfo.cs",
+              "RelativeToolTip": "Lab 12\\KVVDirInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T19:00:37.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "KVVFileInfo.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab 12\\Lab 12\\KVVFileInfo.cs",
+              "RelativeDocumentMoniker": "Lab 12\\KVVFileInfo.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab 12\\Lab 12\\KVVFileInfo.cs",
+              "RelativeToolTip": "Lab 12\\KVVFileInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T18:55:45.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KVVDiskInfo.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab 12\\Lab 12\\KVVDiskInfo.cs",
+              "RelativeDocumentMoniker": "Lab 12\\KVVDiskInfo.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab 12\\Lab 12\\KVVDiskInfo.cs",
+              "RelativeToolTip": "Lab 12\\KVVDiskInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T18:54:11.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab 12\\Lab 12\\Program.cs",
+              "RelativeDocumentMoniker": "Lab 12\\Program.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab 12\\Lab 12\\Program.cs",
+              "RelativeToolTip": "Lab 12\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T18:45:39.752Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

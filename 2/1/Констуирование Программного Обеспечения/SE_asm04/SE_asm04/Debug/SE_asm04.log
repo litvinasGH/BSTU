@@ -1,8 +1,7 @@
-﻿Сборка начата 11.12.2024 17:18:56.
+﻿Сборка начата 12.12.2024 15:47:55.
 Уровень детализации журнала: Normal.     1>Проект "C:\Users\user\Documents\BSTU\2\1\Констуирование Программного Обеспечения\SE_asm04\SE_asm04\SE_asm04.vcxproj" в узле 2 (целевые объекты Build).
      1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
-         Создание каталога "Debug\SE_asm04.tlog\".
        InitializeBuildStatus:
          Создание "Debug\SE_asm04.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
          Обращение к "Debug\SE_asm04.tlog\unsuccessfulbuild".
@@ -21,4 +20,4 @@
     Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:02.64
+Прошло времени 00:00:02.62

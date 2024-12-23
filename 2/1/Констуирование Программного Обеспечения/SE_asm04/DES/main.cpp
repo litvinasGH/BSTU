@@ -1,21 +1,21 @@
-// DataDeserializer.cpp
+
 #include <iostream>
 #include <fstream>
 #include <cstdint>
 
-// Определение структуры данных
+
 struct Data {
     long longValue;
     uint8_t unsignedCharValue;
 
-    // Десериализация данных из бинарного потока
+    
     void deserialize(std::ifstream& inFile) {
         inFile.read(reinterpret_cast<char*>(&longValue), sizeof(longValue));
         inFile.read(reinterpret_cast<char*>(&unsignedCharValue), sizeof(unsignedCharValue));
     }
 };
 
-// Генерация ассемблерного кода
+
 void generateAsm(const Data& data, const std::string& asmFileName) {
     std::ofstream asmFile(asmFileName);
     if (!asmFile) {
@@ -27,8 +27,8 @@ void generateAsm(const Data& data, const std::string& asmFileName) {
         "ExitProcess PROTO :DWORD\n" <<
         ".stack 4096\n\n";
     asmFile << ".data\n";
-    asmFile << "longValue dq " << data.longValue << "\n";          // Определение переменной long
-    asmFile << "unsignedCharValue db " << static_cast<int>(data.unsignedCharValue) << "\n"; // Определение переменной uint8_t
+    asmFile << "longValue dq " << data.longValue << "\n";          
+    asmFile << "unsignedCharValue db " << static_cast<int>(data.unsignedCharValue) << "\n"; 
     asmFile << "\n\n.CODE\nmain PROC\nSTART:\npush -1\ncall ExitProcess\nmain ENDP\nend main";
 
     asmFile.close();
@@ -36,27 +36,27 @@ void generateAsm(const Data& data, const std::string& asmFileName) {
     std::cout << "Ассемблерный код сгенерирован в " << asmFileName << std::endl;
 }
 
-// Главная функция
+
 int main() {
     setlocale(LC_ALL, "RUS");
-    // Открытие файла для чтения
+    
     std::ifstream inFile("../SE_asm04/data.bin", std::ios::binary);
     if (!inFile) {
         std::cerr << "Ошибка открытия файла для чтения!" << std::endl;
         return -1;
     }
 
-    // Десериализация данных
+    
     Data data;
     data.deserialize(inFile);
     inFile.close();
 
-    // Вывод десериализованных данных
+    
     std::cout << "Десериализованные данные:\n";
     std::cout << "longValue: " << data.longValue << "\n";
     std::cout << "unsignedCharValue: " << static_cast<int>(data.unsignedCharValue) << "\n";
 
-    // Генерация ассемблерного файла
+    
     generateAsm(data, "data.asm");
 
     return 0;
