@@ -1,7 +1,6 @@
 Список файлов: 
 some text.txt
 Список папок: 
-Hello
 Hi
 Hi_copy
 Hi_new_copy

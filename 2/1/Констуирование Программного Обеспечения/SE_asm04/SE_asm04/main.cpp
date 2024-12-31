@@ -30,15 +30,15 @@ struct Data {
         switch (type)
         {
         case lv:
-            outFile.write(reinterpret_cast<const char*>(char(lv)), sizeof(char));
+            outFile.write(reinterpret_cast<const char*>(type), sizeof(char));
             outFile.write(reinterpret_cast<const char*>(data.longValue), sizeof(data.longValue));
             break;
         case uc:
-            outFile.write(reinterpret_cast<const char*>(char(uc)), sizeof(char));
+            outFile.write(reinterpret_cast<const char*>(type), sizeof(char));
             outFile.write(reinterpret_cast<const char*>(data.unsignedCharValue), sizeof(data.unsignedCharValue));
             break;
         default:
-            std::cout << "Не поддерживается"
+            std::cout << "Не поддерживается";
             break;
         }
         /*outFile.write(reinterpret_cast<const char*>(&longValue), sizeof(longValue));
@@ -50,7 +50,9 @@ struct Data {
 int main() {
     setlocale(LC_ALL, "RUS");
     
-    Data data = { 123456789L, 0x7F };
+    Data data = {};
+    data.type = lv;
+    data.data.longValue = 7837L;
 
     
     std::ofstream outFile("data.bin", std::ios::binary);

@@ -27,7 +27,7 @@ namespace Lab_12
             Console.WriteLine("\n\n--------Архивация-и-разархивация--------");
             KVVFileManager.ToZip(@"KVV\archLinux.zip", @"KVV\HI_copy", @"KVV\HI_new_copy");
 
-            Console.WriteLine("\n\n------Поиск-по-\"Создание архива\"------");
+            Console.WriteLine("\n\n-------Поиск-по-\"Создание архива\"-------");
             KVVLog.SearchLogByAction("Создание архива");
             Console.WriteLine("\n\n-----Поиск-по-времени(последний-час)----");
             KVVLog.SearchByTimeRange(DateTime.Now.AddHours(-1), DateTime.Now);

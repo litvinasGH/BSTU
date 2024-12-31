@@ -29,7 +29,7 @@ class Sudoku {
 
                 cell.addEventListener('input', (e) => {
                     const value = parseInt(e.target.value, 10);
-                    this.board[row][col] = value >= 1 && value <= 9 ? value : null;
+                    this.board[row][col] = value >= 1 && value <= 9 ? value : 0;
                     e.target.value = value >= 1 && value <= 9 ? value : null;
                     cell.style.backgroundColor = '';
                 });
@@ -73,8 +73,8 @@ class Sudoku {
         for (let i = 0; i < (9*9)-5; i++) {
             let xcord = Math.floor(Math.random() * 9);
             let ycord = Math.floor(Math.random() * 9);
-            if (this.board[xcord][ycord] != null){
-                this.board[xcord][ycord] = null
+            if (this.board[xcord][ycord] != 0){
+                this.board[xcord][ycord] = 0
             }
             else{
                 i--
@@ -86,6 +86,9 @@ class Sudoku {
             row.forEach((value, colIndex) => {
                 const cell = this.cellInputs[rowIndex * 9 + colIndex];
                 cell.value = value;
+                if (value == 0){
+                    cell.value = null;
+                }
             });
         });
     }

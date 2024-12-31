@@ -1,15 +1,30 @@
-23.12.2024 22:27:56|Получение информации о диске|C:\|C:\
-23.12.2024 22:27:56|Получение информации о диске|D:\|D:\
-23.12.2024 22:27:56|Получение информации о диске|G:\|G:\
-23.12.2024 22:27:56|Получение информации о файле|kvvlogfile.txt|D:\git\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0
-23.12.2024 22:27:56|Получение информации о директории|KVV|D:\git\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV
-23.12.2024 22:27:56|Получение файлов и папок|KVV|D:\git\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\KVVInspect\kvvdirinfo.txt
-23.12.2024 22:27:56|Перемещение файлов|KVVFiles|D:\git\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\HI_copy\KVVFiles
-23.12.2024 22:28:35|Получение информации о диске|C:\|C:\
-23.12.2024 22:28:35|Получение информации о диске|D:\|D:\
-23.12.2024 22:28:35|Получение информации о диске|G:\|G:\
-23.12.2024 22:28:35|Получение информации о файле|kvvlogfile.txt|D:\git\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0
-23.12.2024 22:28:35|Получение информации о директории|KVV|D:\git\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV
-23.12.2024 22:28:35|Получение файлов и папок|KVV|D:\git\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\KVVInspect\kvvdirinfo.txt
-23.12.2024 22:28:35|Перемещение файлов|KVVFiles|D:\git\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\HI_copy\KVVFiles
-23.12.2024 22:28:35|Создание архива|archLinux.zip|KVV\archLinux.zip
+24.12.2024 16:54:42|Получение информации о диске|C:\|C:\
+24.12.2024 16:54:42|Получение информации о файле|kvvlogfile.txt|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0
+24.12.2024 16:54:42|Получение информации о директории|KVV|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV
+24.12.2024 16:54:42|Получение файлов и папок|KVV|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\KVVInspect\kvvdirinfo.txt
+24.12.2024 16:54:42|Перемещение файлов|KVVFiles|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\HI_copy\KVVFiles
+24.12.2024 16:54:42|Создание архива|archLinux.zip|KVV\archLinux.zip
+24.12.2024 16:57:56|Получение информации о диске|C:\|C:\
+24.12.2024 16:57:56|Получение информации о файле|kvvlogfile.txt|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0
+24.12.2024 16:57:56|Получение информации о директории|KVV|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV
+24.12.2024 16:57:56|Получение файлов и папок|KVV|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\KVVInspect\kvvdirinfo.txt
+24.12.2024 16:57:56|Перемещение файлов|KVVFiles|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\HI_copy\KVVFiles
+24.12.2024 16:57:56|Создание архива|archLinux.zip|KVV\archLinux.zip
+24.12.2024 17:02:52|Получение информации о диске|C:\|C:\
+24.12.2024 17:02:52|Получение информации о файле|kvvlogfile.txt|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0
+24.12.2024 17:02:52|Получение информации о директории|KVV|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV
+24.12.2024 17:02:52|Получение файлов и папок|KVV|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\KVVInspect\kvvdirinfo.txt
+24.12.2024 17:02:52|Перемещение файлов|KVVFiles|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\HI_copy\KVVFiles
+24.12.2024 17:02:52|Создание архива|archLinux.zip|KVV\archLinux.zip
+24.12.2024 17:03:10|Получение информации о диске|C:\|C:\
+24.12.2024 17:03:10|Получение информации о файле|kvvlogfile.txt|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0
+24.12.2024 17:03:10|Получение информации о директории|KVV|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV
+24.12.2024 17:03:10|Получение файлов и папок|KVV|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\KVVInspect\kvvdirinfo.txt
+24.12.2024 17:03:10|Перемещение файлов|KVVFiles|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\HI_copy\KVVFiles
+24.12.2024 17:03:10|Создание архива|archLinux.zip|KVV\archLinux.zip
+24.12.2024 17:05:46|Получение информации о диске|C:\|C:\
+24.12.2024 17:05:46|Получение информации о файле|kvvlogfile.txt|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0
+24.12.2024 17:05:46|Получение информации о директории|KVV|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV
+24.12.2024 17:05:46|Получение файлов и папок|KVV|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\KVVInspect\kvvdirinfo.txt
+24.12.2024 17:05:46|Перемещение файлов|KVVFiles|C:\Users\user\Documents\BSTU\2\1\ООП\Lab 12\Lab 12\bin\Debug\net8.0\KVV\HI_copy\KVVFiles
+24.12.2024 17:05:46|Создание архива|archLinux.zip|KVV\archLinux.zip

@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\",
+  "WorkspaceRootPath": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4793AD2-87CC-4A87-8B1E-AA9F1CE164F6}|Lab14\\Lab14.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab14\\lab14\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4793AD2-87CC-4A87-8B1E-AA9F1CE164F6}|Lab14\\Lab14.csproj|solutionrelative:lab14\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4793AD2-87CC-4A87-8B1E-AA9F1CE164F6}|Lab14\\Lab14.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab14\\lab14\\processmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4793AD2-87CC-4A87-8B1E-AA9F1CE164F6}|Lab14\\Lab14.csproj|solutionrelative:lab14\\processmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4793AD2-87CC-4A87-8B1E-AA9F1CE164F6}|Lab14\\Lab14.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab14\\lab14\\threadsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C4793AD2-87CC-4A87-8B1E-AA9F1CE164F6}|Lab14\\Lab14.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab14\\lab14\\threadsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4793AD2-87CC-4A87-8B1E-AA9F1CE164F6}|Lab14\\Lab14.csproj|solutionrelative:lab14\\threadsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4793AD2-87CC-4A87-8B1E-AA9F1CE164F6}|Lab14\\Lab14.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab14\\lab14\\lab14.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{C4793AD2-87CC-4A87-8B1E-AA9F1CE164F6}|Lab14\\Lab14.csproj|solutionrelative:lab14\\lab14.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{C4793AD2-87CC-4A87-8B1E-AA9F1CE164F6}|Lab14\\Lab14.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab14\\lab14\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4793AD2-87CC-4A87-8B1E-AA9F1CE164F6}|Lab14\\Lab14.csproj|solutionrelative:lab14\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,13 +30,26 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProcessManager.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\Lab14\\ProcessManager.cs",
+              "RelativeDocumentMoniker": "Lab14\\ProcessManager.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\Lab14\\ProcessManager.cs",
+              "RelativeToolTip": "Lab14\\ProcessManager.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T13:47:30.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ThreadsManager.cs",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\Lab14\\ThreadsManager.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\Lab14\\ThreadsManager.cs",
               "RelativeDocumentMoniker": "Lab14\\ThreadsManager.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\Lab14\\ThreadsManager.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\Lab14\\ThreadsManager.cs",
               "RelativeToolTip": "Lab14\\ThreadsManager.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAK4AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAK4AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-24T08:17:12.848Z",
               "EditorCaption": ""
@@ -44,24 +57,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Lab14",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\Lab14\\Lab14.csproj",
-              "RelativeDocumentMoniker": "Lab14\\Lab14.csproj",
-              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\Lab14\\Lab14.csproj",
-              "RelativeToolTip": "Lab14\\Lab14.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-24T08:07:43.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\Lab14\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\Lab14\\Program.cs",
               "RelativeDocumentMoniker": "Lab14\\Program.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\Lab14\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab14\\Lab14\\Program.cs",
               "RelativeToolTip": "Lab14\\Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowDMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwDMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-24T06:46:01.84Z",
               "EditorCaption": ""

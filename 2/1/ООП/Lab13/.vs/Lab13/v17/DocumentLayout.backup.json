@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\",
+  "WorkspaceRootPath": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab13\\lab13\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab13\\lab13\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|solutionrelative:lab13\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab13\\lab13\\serializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab13\\lab13\\serializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|solutionrelative:lab13\\serializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab13\\lab13\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab13\\lab13\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|solutionrelative:lab13\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab13\\lab13\\class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab13\\lab13\\class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|solutionrelative:lab13\\class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|d:\\git\\bstu\\2\\1\\\u043E\u043E\u043F\\lab13\\lab13\\lab13.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|c:\\users\\user\\documents\\bstu\\2\\1\\\u043E\u043E\u043F\\lab13\\lab13\\lab13.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{D535CAB6-C3C1-482B-8A6C-7D5546464C50}|Lab13\\Lab13.csproj|solutionrelative:lab13\\lab13.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
@@ -40,62 +40,58 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Lab13",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Lab13.csproj",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Lab13.csproj",
               "RelativeDocumentMoniker": "Lab13\\Lab13.csproj",
-              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Lab13.csproj",
+              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Lab13.csproj",
               "RelativeToolTip": "Lab13\\Lab13.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-23T21:09:56.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T21:09:56.008Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Serializer.cs",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Serializer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Serializer.cs",
               "RelativeDocumentMoniker": "Lab13\\Serializer.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Serializer.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Serializer.cs",
               "RelativeToolTip": "Lab13\\Serializer.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAcwDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T21:08:50.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T21:08:50.678Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Class2.cs",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Class2.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Class2.cs",
               "RelativeDocumentMoniker": "Lab13\\Class2.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Class2.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Class2.cs",
               "RelativeToolTip": "Lab13\\Class2.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAiwFAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T19:57:32.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T19:57:32.276Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Class1.cs",
               "RelativeDocumentMoniker": "Lab13\\Class1.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Class1.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Class1.cs",
               "RelativeToolTip": "Lab13\\Class1.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAkwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T19:57:32.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T19:57:32.106Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Program.cs",
               "RelativeDocumentMoniker": "Lab13\\Program.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Program.cs*",
-              "RelativeToolTip": "Lab13\\Program.cs*",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAQwF8AAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\\u041E\u041E\u041F\\Lab13\\Lab13\\Program.cs",
+              "RelativeToolTip": "Lab13\\Program.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T19:47:55.992Z",
               "EditorCaption": ""
