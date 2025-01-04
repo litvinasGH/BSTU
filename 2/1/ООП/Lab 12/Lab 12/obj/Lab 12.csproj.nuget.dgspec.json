@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\git\\BSTU\\2\\1\\ООП\\Lab 12\\Lab 12\\Lab 12.csproj": {}
+    "C:\\Users\\user\\Documents\\BSTU\\2\\1\\ООП\\Lab 12\\Lab 12\\Lab 12.csproj": {}
   },
   "projects": {
-    "D:\\git\\BSTU\\2\\1\\ООП\\Lab 12\\Lab 12\\Lab 12.csproj": {
+    "C:\\Users\\user\\Documents\\BSTU\\2\\1\\ООП\\Lab 12\\Lab 12\\Lab 12.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\git\\BSTU\\2\\1\\ООП\\Lab 12\\Lab 12\\Lab 12.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\ООП\\Lab 12\\Lab 12\\Lab 12.csproj",
         "projectName": "Lab 12",
-        "projectPath": "D:\\git\\BSTU\\2\\1\\ООП\\Lab 12\\Lab 12\\Lab 12.csproj",
-        "packagesPath": "C:\\Users\\Litvinas_COMP\\.nuget\\packages\\",
-        "outputPath": "D:\\git\\BSTU\\2\\1\\ООП\\Lab 12\\Lab 12\\obj\\",
+        "projectPath": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\ООП\\Lab 12\\Lab 12\\Lab 12.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\ООП\\Lab 12\\Lab 12\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Litvinas_COMP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

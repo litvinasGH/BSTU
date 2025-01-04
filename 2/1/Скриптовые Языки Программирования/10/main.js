@@ -70,7 +70,7 @@ multiply(value);
 
 //f9
 console.log("Фрагмент 9");
-[1, 2, 3, 4].reduce((x, y) => console.log(x, y));
+[1, 2, 3, 4].reduce((x, y) => {console.log(x, y); return y; });
 
 
 
