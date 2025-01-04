@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Documents\\BSTU\\2\\1\\ООП\\Lab14\\Lab14\\Lab14.csproj": {}
+    "D:\\git\\BSTU\\2\\1\\ООП\\Lab14\\Lab14\\Lab14.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Documents\\BSTU\\2\\1\\ООП\\Lab14\\Lab14\\Lab14.csproj": {
+    "D:\\git\\BSTU\\2\\1\\ООП\\Lab14\\Lab14\\Lab14.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\ООП\\Lab14\\Lab14\\Lab14.csproj",
+        "projectUniqueName": "D:\\git\\BSTU\\2\\1\\ООП\\Lab14\\Lab14\\Lab14.csproj",
         "projectName": "Lab14",
-        "projectPath": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\ООП\\Lab14\\Lab14\\Lab14.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\BSTU\\2\\1\\ООП\\Lab14\\Lab14\\obj\\",
+        "projectPath": "D:\\git\\BSTU\\2\\1\\ООП\\Lab14\\Lab14\\Lab14.csproj",
+        "packagesPath": "C:\\Users\\Litvinas_COMP\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\BSTU\\2\\1\\ООП\\Lab14\\Lab14\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Litvinas_COMP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
