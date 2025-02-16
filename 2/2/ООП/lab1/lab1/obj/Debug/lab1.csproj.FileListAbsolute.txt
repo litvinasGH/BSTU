@@ -1,0 +1,10 @@
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\bin\Debug\lab1.exe.config
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\bin\Debug\lab1.exe
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\bin\Debug\lab1.pdb
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.csproj.AssemblyReference.cache
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.Form1.resources
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.Properties.Resources.resources
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.csproj.GenerateResource.cache
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.csproj.CoreCompileInputs.cache
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.exe
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.pdb

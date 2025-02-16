@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ASPA001.props" />
+</Project>
