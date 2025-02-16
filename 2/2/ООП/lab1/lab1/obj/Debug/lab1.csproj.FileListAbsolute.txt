@@ -8,3 +8,13 @@ C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.csproj.Generat
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.csproj.CoreCompileInputs.cache
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.exe
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.pdb
+D:\git\BSTU\2\2\ООП\lab1\lab1\bin\Debug\lab1.exe.config
+D:\git\BSTU\2\2\ООП\lab1\lab1\bin\Debug\lab1.exe
+D:\git\BSTU\2\2\ООП\lab1\lab1\bin\Debug\lab1.pdb
+D:\git\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.csproj.AssemblyReference.cache
+D:\git\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.Form1.resources
+D:\git\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.Properties.Resources.resources
+D:\git\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.csproj.GenerateResource.cache
+D:\git\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.csproj.CoreCompileInputs.cache
+D:\git\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.exe
+D:\git\BSTU\2\2\ООП\lab1\lab1\obj\Debug\lab1.pdb
