@@ -48,3 +48,16 @@ function rotate(nums, k) {
 var nums = [1, 2, 3, 4, 5, 6, 7];
 rotate(nums, 3);
 console.log(nums); // [5, 6, 7, 1, 2, 3, 4]
+//4
+function findMedianArrays(nums1, nums2) {
+    var ret = nums1.concat(nums2);
+    ret.sort();
+    if (ret.length % 2) {
+        return ret[Math.floor(ret.length / 2)];
+    }
+    else {
+        return (ret[ret.length / 2] + ret[ret.length / 2 - 1]) / 2;
+    }
+}
+console.log(findMedianArrays([1, 3], [2]));
+console.log(findMedianArrays([1, 2], [3, 4]));
