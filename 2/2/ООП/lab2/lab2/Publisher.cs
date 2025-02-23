@@ -2,10 +2,11 @@
 
 namespace lab2
 {
+    [Serializable]
     /// <summary>
     /// Класс издателя 
     /// </summary>
-    internal class Publisher
+    public class Publisher
     {
         private string name;
         private string contry;
@@ -59,13 +60,22 @@ namespace lab2
         /// <param name="city">Город издателя</param>
         /// <param name="year">Год издателя</param>
         /// <param name="state_owned">Является ли гос</param>
-        Publisher(string name, string contry, string city, int year, bool state_owned)
+        public Publisher(string name, string contry, string city, int year, bool state_owned)
         {
             Name = name;
             Contry = contry;
             City = city;
             Year = year;
             State_owned = state_owned;
+        }
+
+        public Publisher()
+        {
+
+        }
+        public override string ToString()
+        {
+            return $"{name}({contry}, {city}, {year}, гос: {state_owned})";
         }
     }
 }

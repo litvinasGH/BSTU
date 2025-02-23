@@ -1,34 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lab2
 {
+    [Serializable]
     /// <summary>
     /// Класс автора
     /// </summary>
-    internal class Author
+    public class Author
     {
         private readonly int _id;
         private string full_name;
         private string contry;
+        private DateTime birDate;
         private static int count = 0;
 
-        int Id
+        public int Id
         {
             get { return _id; }
         }
-        string FullName
+        public string FullName
         {
             get { return full_name; }
             set { full_name = value; }
         }
-        string Contry
+        public string Contry
         {
             get { return contry; }
             set { contry = value; }
+        }
+        public DateTime BirDate
+        {
+            get { return birDate; }
+            set { birDate = value; }
         }
 
         /// <summary>
@@ -36,11 +39,18 @@ namespace lab2
         /// </summary>
         /// <param name="fullname">Фио автора</param>
         /// <param name="contry">Страна автора</param>
-        Author (string fullname, string contry)
+        public Author(string fullname, string contry, DateTime bir)
         {
             FullName = fullname;
             Contry = contry;
+            birDate = bir;
             _id = count++;
+        }
+
+        public Author() { }
+        public override string ToString()
+        {
+            return $"{_id}: {full_name} ({Contry}, {birDate.Day}.{birDate.Month}.{birDate.Year})";
         }
     }
 }

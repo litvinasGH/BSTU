@@ -3,7 +3,12 @@ using System.Collections.Generic;
 
 namespace lab2
 {
-    internal class FileBook
+    [Serializable]
+
+    /// <summary>
+    /// Класс книга
+    /// </summary>
+    public class FileBook
     {
         private string genre;
         private double file_size;
@@ -14,29 +19,29 @@ namespace lab2
         private List<Author> authorList;
         private double price;
 
-        string Genre
+        public string Genre
         {
             get { return genre; }
             set { genre = value; }
         }
-        double FileSize
+        public double FileSize
         {
             get { return file_size; }
             set { file_size = value; }
         }
-        string Title
+        public string Title
         { get { return title; } set { title = value; } }
-        int CountOfPage
+        public int CountOfPage
         {
             get { return count_of_page; }
             set { count_of_page = value; }
         }
-        Publisher _publisher
+        public Publisher _publisher
         {
             get { return publisher; }
             set { publisher = value; }
         }
-        int Year
+        public int Year
         {
             get
             { return year; }
@@ -47,28 +52,28 @@ namespace lab2
                 year = value;
             }
         }
-        List<Author> AuthorList
+        public List<Author> AuthorList
         {
             get { return authorList; }
             set { authorList = value; }
         }
-        double Price
+        public double Price
         {
             get { return price; }
             set { price = value; }
         }
 
         /// <summary>
-        /// 
+        /// Класс книга
         /// </summary>
-        /// <param name="title"></param>
-        /// <param name="genre"></param>
-        /// <param name="size"></param>
-        /// <param name="count"></param>
-        /// <param name="publisher"></param>
-        /// <param name="year"></param>
-        /// <param name="authors"></param>
-        /// <param name="price"></param>
+        /// <param name="title">имя книги</param>
+        /// <param name="genre">Жанр</param>
+        /// <param name="size">Разиер файла</param>
+        /// <param name="count">Кол-во страниц</param>
+        /// <param name="publisher">Издатель</param>
+        /// <param name="year">Год издания</param>
+        /// <param name="authors">Список авторов</param>
+        /// <param name="price">цена</param>
         public FileBook(string title, string genre, double size, int count,
             Publisher publisher, int year, List<Author> authors, double price)
         {
@@ -80,6 +85,13 @@ namespace lab2
             Year = year;
             AuthorList = authors;
             Price = price;
+        }
+
+        public FileBook() { }
+        public override string ToString()
+        {
+            
+            return $"{title}|{Genre}|{AuthorList[0].FullName}{(AuthorList.Count != 1 ? "..." : "")}|{publisher.Name}|{FileSize}кб|{count_of_page}стр|{year}г|{price}д.е";
         }
     }
 }

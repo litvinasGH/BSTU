@@ -8,3 +8,15 @@ C:\Users\litvi\Documents\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.csproj.Generat
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.csproj.CoreCompileInputs.cache
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.exe
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.pdb
+D:\git\BSTU\2\2\ООП\lab2\lab2\bin\Debug\lab2.exe.config
+D:\git\BSTU\2\2\ООП\lab2\lab2\bin\Debug\lab2.exe
+D:\git\BSTU\2\2\ООП\lab2\lab2\bin\Debug\lab2.pdb
+D:\git\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.csproj.AssemblyReference.cache
+D:\git\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.Form1.resources
+D:\git\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.Properties.Resources.resources
+D:\git\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.csproj.GenerateResource.cache
+D:\git\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.csproj.CoreCompileInputs.cache
+D:\git\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.exe
+D:\git\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.pdb
+D:\git\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.Auth.resources
+D:\git\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.Publ.resources
