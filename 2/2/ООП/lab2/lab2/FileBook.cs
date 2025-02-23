@@ -91,7 +91,7 @@ namespace lab2
         public override string ToString()
         {
             
-            return $"{title}|{Genre}|{AuthorList[0].FullName}{(AuthorList.Count != 1 ? "..." : "")}|{publisher.Name}|{FileSize}кб|{count_of_page}стр|{year}г|{price}д.е";
+            return $"{title}|{Genre}|{AuthorList[0].FullName}{(AuthorList.Count != 1 ? $"...[{AuthorList.Count}]" : "")}|{publisher.Name}|{FileSize}кб|{count_of_page}стр|{year}г|{price}д.е";
         }
     }
 }
