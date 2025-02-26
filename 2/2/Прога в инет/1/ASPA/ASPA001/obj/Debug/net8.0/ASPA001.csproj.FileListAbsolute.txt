@@ -27,3 +27,4 @@ C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\1\ASPA\ASPA001\obj\Debu
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\1\ASPA\ASPA001\obj\Debug\net8.0\ASPA001.pdb
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\1\ASPA\ASPA001\obj\Debug\net8.0\ASPA001.genruntimeconfig.cache
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\1\ASPA\ASPA001\obj\Debug\net8.0\ref\ASPA001.dll
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\1\ASPA\ASPA001\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
