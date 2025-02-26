@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (isValid) {
-            const city = document.getElementById('city').value.trim();
+            const city = document.getElementById('city').value;
             const course = document.querySelector('input[name="course"]:checked')?.value;
             const isBstuChecked = document.getElementById('bstu').checked;
 
