@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace lab2
@@ -86,11 +87,18 @@ namespace lab2
                     }
                 }
             }
-            Add_button.Enabled = true;
+            string pattern = @"^[a-zA-Zа-яА-Я\s]+$";
             if (!double.TryParse(textBox_size.Text, out var size) ||
-                !double.TryParse(textBox_price.Text, out var size2))
+                !double.TryParse(textBox_price.Text, out var size2)||
+                !Regex.IsMatch(textBox_genre.Text, pattern)||
+                size < 0 || size2 < 0 
+                )
             {
                 Add_button.Enabled = false;
+            }
+            else
+            {
+                Add_button.Enabled = true;
             }
 
         }

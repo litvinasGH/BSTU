@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace lab2
@@ -45,7 +46,19 @@ namespace lab2
                     }
                 }
             }
-            Add_button.Enabled = true;
+            string pattern = @"^[a-zA-Zа-яА-Я\s]+$";
+            if (
+                !Regex.IsMatch(textBox_genre.Text, pattern) ||
+                !Regex.IsMatch(textBox_title.Text, pattern) ||
+                !Regex.IsMatch(textBox_city.Text, pattern)
+                )
+            {
+                Add_button.Enabled = false;
+            }
+            else
+            {
+                Add_button.Enabled = true;
+            }
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)

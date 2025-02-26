@@ -17,7 +17,11 @@
             margin-bottom: 15px;
         }
 
-        
+        .error-message {
+            color: red;
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
 
         input, textarea {
             width: 100%;
@@ -65,32 +69,36 @@
     </style>
 </head>
 <body>
-    <form>
+    <form novalidate>
         <h2>Заполните форму</h2>
         <div class="form-group">
             <h4>Фамилия</h4>
-            <input type="text">
+            <input type="text" id="surname">
+            <div class="error-message" id="surname-error"></div>
         </div>
 
         <div class="form-group">
             <h4>Имя</h4>
-            <input type="text">
+            <input type="text" id="name">
+            <div class="error-message" id="name-error"></div>
         </div>
 
         <div class="form-group">
             <h4>E-mail</h4>
-            <input type="email">
+            <input type="email" id="email">
+            <div class="error-message" id="email-error"></div>
         </div>
 
         <div class="form-group">
             <h4>Телефон (0xx)xxx-xx-xx</h4>
-            <input type="tel" 
-                   placeholder="(0xx)xxx-xx-xx">
+            <input type="tel" id="phone" placeholder="(0xx)xxx-xx-xx">
+            <div class="error-message" id="phone-error"></div>
         </div>
 
         <div class="form-group">
             <h4>Город</h4>
-            <input type="text">
+            <input type="text" id="city">
+            <div class="error-message" id="city-error"></div>
         </div>
 
         <div class="checkbox-group">
@@ -100,19 +108,21 @@
 
         <div class="form-group">
             <h4>На каком курсе Вы учитесь?</h4>
-            <input type="radio" id="r">
-            <label for="r">1</label>
-            <input type="radio" id="2r">
-            <label>2</label>
-            <input type="radio" id="3r"> 
-            <label>3</label>
-            <input type="radio" id="4r"> 
-            <label>4</label>
+            <input type="radio" id="course1" name="course" value="1">
+            <label for="course1">1</label>
+            <input type="radio" id="course2" name="course" value="2">
+            <label for="course2">2</label>
+            <input type="radio" id="course3" name="course" value="3"> 
+            <label for="course3">3</label>
+            <input type="radio" id="course4" name="course" value="4"> 
+            <label for="course4">4</label>
+            <div class="error-message" id="course-error"></div>
         </div>
 
         <div class="form-group">
             <h4>Расскажите о себе</h4>
-            <textarea rows="4"></textarea>
+            <textarea rows="4" id="about"></textarea>
+            <div class="error-message" id="about-error"></div>
         </div>
 
         <button type="submit">Проверить</button>

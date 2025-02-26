@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -51,7 +52,18 @@ namespace lab2
                     }
                 }
             }
-            Add_button.Enabled = true;
+            string pattern = @"^[a-zA-Zа-яА-Я\s]+$";
+            if (
+                !Regex.IsMatch(textBox_genre.Text, pattern) ||
+                !Regex.IsMatch(textBox_title.Text, pattern)
+                )
+            {
+                Add_button.Enabled = false;
+            }
+            else
+            {
+                Add_button.Enabled = true;
+            }
 
         }
 

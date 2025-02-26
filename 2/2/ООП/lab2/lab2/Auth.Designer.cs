@@ -32,13 +32,13 @@
             this.Add_button = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.textBox_genre = new System.Windows.Forms.TextBox();
             this.textBox_title = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.label4 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ToolStripMenuItem_delete = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
@@ -49,9 +49,10 @@
             // 
             this.Add_button.Enabled = false;
             this.Add_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Add_button.Location = new System.Drawing.Point(8, 423);
+            this.Add_button.Location = new System.Drawing.Point(11, 521);
+            this.Add_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Add_button.Name = "Add_button";
-            this.Add_button.Size = new System.Drawing.Size(246, 56);
+            this.Add_button.Size = new System.Drawing.Size(328, 69);
             this.Add_button.TabIndex = 18;
             this.Add_button.Text = "Добавить";
             this.Add_button.UseVisualStyleBackColor = true;
@@ -60,10 +61,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 56);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(7, 69);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(55, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Страна";
             // 
@@ -76,79 +76,78 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox_title);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(401, 42);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(535, 52);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(265, 484);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(353, 596);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Добавление книги";
+            this.groupBox1.Text = "Добавление автора";
             // 
-            // textBox_genre
+            // label4
             // 
-            this.textBox_genre.Location = new System.Drawing.Point(8, 72);
-            this.textBox_genre.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_genre.Name = "textBox_genre";
-            this.textBox_genre.Size = new System.Drawing.Size(254, 20);
-            this.textBox_genre.TabIndex = 3;
-            // 
-            // textBox_title
-            // 
-            this.textBox_title.Location = new System.Drawing.Point(8, 34);
-            this.textBox_title.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_title.Name = "textBox_title";
-            this.textBox_title.Size = new System.Drawing.Size(254, 20);
-            this.textBox_title.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 18);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ФИО";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Файлы книг";
-            // 
-            // listBox1
-            // 
-            this.listBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(11, 42);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(386, 485);
-            this.listBox1.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 16);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "День рождения";
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(8, 140);
+            this.monthCalendar1.Location = new System.Drawing.Point(11, 172);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.ShowToday = false;
             this.monthCalendar1.ShowTodayCircle = false;
             this.monthCalendar1.TabIndex = 19;
             // 
-            // label4
+            // textBox_genre
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 118);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 13);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "День рождения";
+            this.textBox_genre.Location = new System.Drawing.Point(11, 89);
+            this.textBox_genre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_genre.Name = "textBox_genre";
+            this.textBox_genre.Size = new System.Drawing.Size(337, 22);
+            this.textBox_genre.TabIndex = 3;
+            // 
+            // textBox_title
+            // 
+            this.textBox_title.Location = new System.Drawing.Point(11, 42);
+            this.textBox_title.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_title.Name = "textBox_title";
+            this.textBox_title.Size = new System.Drawing.Size(337, 22);
+            this.textBox_title.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ФИО";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Авторы";
+            // 
+            // listBox1
+            // 
+            this.listBox1.ContextMenuStrip = this.contextMenuStrip1;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(15, 52);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(513, 596);
+            this.listBox1.TabIndex = 7;
             // 
             // contextMenuStrip1
             // 
@@ -156,26 +155,27 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_delete});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(135, 28);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // ToolStripMenuItem_delete
             // 
             this.ToolStripMenuItem_delete.Name = "ToolStripMenuItem_delete";
-            this.ToolStripMenuItem_delete.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem_delete.Size = new System.Drawing.Size(134, 24);
             this.ToolStripMenuItem_delete.Text = "Удалить";
             this.ToolStripMenuItem_delete.Click += new System.EventHandler(this.ToolStripMenuItem_delete_Click);
             // 
             // Auth
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 533);
+            this.ClientSize = new System.Drawing.Size(892, 646);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
-            this.MaximumSize = new System.Drawing.Size(687, 572);
-            this.MinimumSize = new System.Drawing.Size(687, 572);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(910, 693);
+            this.MinimumSize = new System.Drawing.Size(910, 693);
             this.Name = "Auth";
             this.Text = "Auth";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Auth_FormClosing);
