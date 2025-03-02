@@ -1,0 +1,3 @@
+wwwroot\css\style.css
+wwwroot\Neumann.html
+wwwroot\scripts\Calc.js

@@ -84,9 +84,15 @@ let group: GroupType = {
     marksFilter (mark: number)
     {return this.students.filter(student => student.marks.some(m => m.mark == mark))},
     deleteStudent (id: number)
-    {return this.students = this.students.filter(student => student.id != id)},
+    { this.students = this.students.filter(student => student.id != id)},
     mark: 10,
     group: 6,
 
 }
+
+console.log(group.studentsFilter(6))
+console.log(group.marksFilter(4))
+console.log(group.marksFilter(1))
+group.deleteStudent(3)
+console.log(group.students)
 

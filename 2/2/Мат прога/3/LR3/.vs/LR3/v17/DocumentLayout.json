@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\3\\LR3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B7BDB0B-2407-4898-B884-2965510711EF}|LR3\\LR3.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\3\\LR3\\LR3\\LR3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B7BDB0B-2407-4898-B884-2965510711EF}|LR3\\LR3.vcxproj|solutionrelative:LR3\\LR3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B7BDB0B-2407-4898-B884-2965510711EF}|LR3\\LR3.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\3\\LR3\\LR3\\Salesman.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B7BDB0B-2407-4898-B884-2965510711EF}|LR3\\LR3.vcxproj|solutionrelative:LR3\\Salesman.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B7BDB0B-2407-4898-B884-2965510711EF}|LR3\\LR3.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\3\\LR3\\LR3\\Salesman.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B7BDB0B-2407-4898-B884-2965510711EF}|LR3\\LR3.vcxproj|solutionrelative:LR3\\Salesman.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B7BDB0B-2407-4898-B884-2965510711EF}|LR3\\LR3.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\3\\LR3\\LR3\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B7BDB0B-2407-4898-B884-2965510711EF}|LR3\\LR3.vcxproj|solutionrelative:LR3\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\3\\LR3\\LR3\\stdafx.h",
+              "RelativeDocumentMoniker": "LR3\\stdafx.h",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\3\\LR3\\LR3\\stdafx.h",
+              "RelativeToolTip": "LR3\\stdafx.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-28T13:15:22.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Salesman.h",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\3\\LR3\\LR3\\Salesman.h",
+              "RelativeDocumentMoniker": "LR3\\Salesman.h",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\3\\LR3\\LR3\\Salesman.h",
+              "RelativeToolTip": "LR3\\Salesman.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-28T13:15:22.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Salesman.cpp",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\3\\LR3\\LR3\\Salesman.cpp",
+              "RelativeDocumentMoniker": "LR3\\Salesman.cpp",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\3\\LR3\\LR3\\Salesman.cpp",
+              "RelativeToolTip": "LR3\\Salesman.cpp",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T13:15:22.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LR3.cpp",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\3\\LR3\\LR3\\LR3.cpp",
+              "RelativeDocumentMoniker": "LR3\\LR3.cpp",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\3\\LR3\\LR3\\LR3.cpp",
+              "RelativeToolTip": "LR3\\LR3.cpp",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAQwB0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-28T13:15:22.94Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
