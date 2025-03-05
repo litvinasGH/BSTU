@@ -27,7 +27,12 @@ var group = {
     ],
     studentsFilter: function (group) { return this.students.filter(function (student) { return student.group == group; }); },
     marksFilter: function (mark) { return this.students.filter(function (student) { return student.marks.some(function (m) { return m.mark == mark; }); }); },
-    deleteStudent: function (id) { return this.students = this.students.filter(function (student) { return student.id != id; }); },
+    deleteStudent: function (id) { this.students = this.students.filter(function (student) { return student.id != id; }); },
     mark: 10,
     group: 6,
 };
+console.log(group.studentsFilter(6));
+console.log(group.marksFilter(4));
+console.log(group.marksFilter(1));
+group.deleteStudent(3);
+console.log(group.students);
