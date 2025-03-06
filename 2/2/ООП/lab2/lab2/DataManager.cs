@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -46,5 +48,22 @@ namespace lab2
                 return (DataContainer)serializer.Deserialize(reader);
             }
         }
+    }
+
+
+    public static class ModelValidator
+    {
+        public static bool Validate(object obj, out List<ValidationResult> errors)
+        {
+            errors = new List<ValidationResult>();
+            var context = new ValidationContext(obj);
+
+            bool isValid = Validator.TryValidateObject(obj, context, errors, true);
+
+
+            return isValid && errors.Count == 0;
+        }
+
+       
     }
 }

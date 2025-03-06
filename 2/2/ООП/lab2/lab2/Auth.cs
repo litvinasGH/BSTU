@@ -22,50 +22,40 @@ namespace lab2
 
             listBox1.DataSource = authors;
 
-            foreach (Control control in groupBox1.Controls)
-            {
-                if (control is TextBox textBox)
-                {
-                    textBox.TextChanged += CheckForm;
-                }
-                else if (control is MonthCalendar monthCalendar)
-                {
-                    monthCalendar.DateChanged += CheckForm;
-                }
-            }
+            
 
 
             monthCalendar1.MaxDate = DateTime.Today;
         }
 
-        private void CheckForm(object sender, EventArgs e)
-        {
-            foreach (Control control in groupBox1.Controls)
-            {
-                if (control is TextBox textBox)
-                {
-                    if (string.IsNullOrWhiteSpace(textBox.Text))
-                    {
-                        Add_button.Enabled = false;
+        //private void CheckForm(object sender, EventArgs e)
+        //{
+        //    foreach (Control control in groupBox1.Controls)
+        //    {
+        //        if (control is TextBox textBox)
+        //        {
+        //            if (string.IsNullOrWhiteSpace(textBox.Text))
+        //            {
+        //                Add_button.Enabled = false;
                         
-                        return;
-                    }
-                }
-            }
-            string pattern = @"^[a-zA-Zа-яА-Я\s]+$";
-            if (
-                !Regex.IsMatch(textBox_genre.Text, pattern) ||
-                !Regex.IsMatch(textBox_title.Text, pattern)
-                )
-            {
-                Add_button.Enabled = false;
-            }
-            else
-            {
-                Add_button.Enabled = true;
-            }
+        //                return;
+        //            }
+        //        }
+        //    }
+        //    string pattern = @"^[a-zA-Zа-яА-Я\s]+$";
+        //    if (
+        //        !Regex.IsMatch(textBox_genre.Text, pattern) ||
+        //        !Regex.IsMatch(textBox_title.Text, pattern)
+        //        )
+        //    {
+        //        Add_button.Enabled = false;
+        //    }
+        //    else
+        //    {
+        //        Add_button.Enabled = true;
+        //    }
 
-        }
+        //}
 
         private void Auth_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -87,6 +77,11 @@ namespace lab2
         private void Add_button_Click(object sender, EventArgs e)
         {
             Author author = new Author(textBox_title.Text, textBox_genre.Text, monthCalendar1.SelectionStart);
+            if (!ModelValidator.Validate(author, out var errors))
+            {
+                MessageBox.Show($"Ошибки:\n- {string.Join("\n- ", errors.Select(x => x.ErrorMessage))}", "Валидация", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             authors.Add(author);
         }
 

@@ -3,48 +3,52 @@
   "WorkspaceRootPath": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|d:\\git\\bstu\\2\\2\\\u043E\u043E\u043F\\lab2\\lab2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|d:\\git\\bstu\\2\\2\\\u043E\u043E\u043F\\lab2\\lab2\\findform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\findform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|d:\\git\\bstu\\2\\2\\\u043E\u043E\u043F\\lab2\\lab2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\publ.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\publ.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\publ.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\publ.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|d:\\git\\bstu\\2\\2\\\u043E\u043E\u043F\\lab2\\lab2\\findform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\findform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\filebook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\filebook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\publ.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\publ.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\publ.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\publ.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|d:\\git\\bstu\\2\\2\\\u043E\u043E\u043F\\lab2\\lab2\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDC1743D-0D19-4E6B-B2F5-6DDC236EFA55}|lab2\\lab2.csproj|solutionrelative:lab2\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -62,9 +66,9 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Form1.cs",
               "RelativeDocumentMoniker": "lab2\\Form1.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Form1.cs",
-              "RelativeToolTip": "lab2\\Form1.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAiwKUAAAAJAAAAAAAAAA==",
+              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Form1.cs*",
+              "RelativeToolTip": "lab2\\Form1.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwDAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-23T15:07:16.188Z",
               "IsPinned": true,
@@ -76,7 +80,83 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FindForm.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\FindForm.cs",
+              "RelativeDocumentMoniker": "lab2\\FindForm.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\FindForm.cs",
+              "RelativeToolTip": "lab2\\FindForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T18:31:18.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FindForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\FindForm.cs",
+              "RelativeDocumentMoniker": "lab2\\FindForm.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\FindForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "lab2\\FindForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T18:26:10.773Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FileBook.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\FileBook.cs",
+              "RelativeDocumentMoniker": "lab2\\FileBook.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\FileBook.cs",
+              "RelativeToolTip": "lab2\\FileBook.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAswH4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T12:54:31.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Form1.cs",
+              "RelativeDocumentMoniker": "lab2\\Form1.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "lab2\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T12:46:02.927Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Auth.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Auth.cs",
+              "RelativeDocumentMoniker": "lab2\\Auth.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Auth.cs",
+              "RelativeToolTip": "lab2\\Auth.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAFMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T17:07:04.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Publisher.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Publisher.cs",
+              "RelativeDocumentMoniker": "lab2\\Publisher.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Publisher.cs",
+              "RelativeToolTip": "lab2\\Publisher.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAiwDYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T12:56:17.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Auth.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Auth.cs",
               "RelativeDocumentMoniker": "lab2\\Auth.cs",
@@ -88,111 +168,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FileBook.cs",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\FileBook.cs",
-              "RelativeDocumentMoniker": "lab2\\FileBook.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\FileBook.cs",
-              "RelativeToolTip": "lab2\\FileBook.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAowFYAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Publ.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Publ.cs",
+              "RelativeDocumentMoniker": "lab2\\Publ.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Publ.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "lab2\\Publ.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T12:54:31.397Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Form1.cs",
-              "RelativeDocumentMoniker": "lab2\\Form1.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "lab2\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T12:46:02.927Z",
+              "WhenOpened": "2025-02-23T17:49:22.069Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Publ.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Publ.cs",
-              "RelativeDocumentMoniker": "lab2\\Publ.cs",
-              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Publ.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T17:49:22.069Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "DataManager.cs",
               "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\DataManager.cs",
               "RelativeDocumentMoniker": "lab2\\DataManager.cs",
               "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\DataManager.cs",
               "RelativeToolTip": "lab2\\DataManager.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAEwBwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAADwvzsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T18:09:04.689Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Publ.cs",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Publ.cs",
-              "RelativeDocumentMoniker": "lab2\\Publ.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Publ.cs",
-              "RelativeToolTip": "lab2\\Publ.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAowDQAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T17:51:14.931Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Auth.cs",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Auth.cs",
-              "RelativeDocumentMoniker": "lab2\\Auth.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Auth.cs",
-              "RelativeToolTip": "lab2\\Auth.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAowEEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T17:07:04.582Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Author.cs",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Author.cs",
-              "RelativeDocumentMoniker": "lab2\\Author.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Author.cs",
-              "RelativeToolTip": "lab2\\Author.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAwwDEAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T12:55:58.358Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "lab2\\Form1.Designer.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Form1.Designer.cs",
-              "RelativeToolTip": "lab2\\Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T18:33:54.484Z",
+              "WhenOpened": "2025-02-23T18:09:04.689Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Publisher.cs",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Publisher.cs",
-              "RelativeDocumentMoniker": "lab2\\Publisher.cs",
-              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Publisher.cs",
-              "RelativeToolTip": "lab2\\Publisher.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAIwEkAAAAAAAAAAAAAAA==",
+              "Title": "Publ.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Publ.cs",
+              "RelativeDocumentMoniker": "lab2\\Publ.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Publ.cs",
+              "RelativeToolTip": "lab2\\Publ.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowE0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T12:56:17.386Z"
+              "WhenOpened": "2025-02-23T17:51:14.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Author.cs",
+              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Author.cs",
+              "RelativeDocumentMoniker": "lab2\\Author.cs",
+              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab2\\lab2\\Author.cs",
+              "RelativeToolTip": "lab2\\Author.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T20:31:55.288Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,24 +1,28 @@
 ﻿#include <iostream>
 #include <ctime>
 #include <vector>
+#include <chrono>
 #include "Matrix.h"
 
 int main() {
     setlocale(LC_ALL, "rus");
-    std::vector<int> dimensions = { 7, 10, 18, 21, 28, 38, 49 };
+    std::vector<int> dimensions = { 20, 15, 30, 53, 10, 20, 11 };
     int n = dimensions.size();
 
-    clock_t start_r = clock();
+    // Измерение времени для рекурсивного решения
+    auto startRecursive = std::chrono::high_resolution_clock::now();
     int result_recursive = MatrixChainOrderRecursive(dimensions, 1, n - 1);
-    clock_t end_r = clock();
-    double time_recursive = double(end_r - start_r) / CLOCKS_PER_SEC;
+    auto endRecursive = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double, std::milli> time_recursive = endRecursive - startRecursive;
 
+    // Измерение времени для решения с использованием динамического программирования
     std::vector<std::vector<int>> s(n, std::vector<int>(n, 0));
-    clock_t start_dp = clock();
+    auto startDP = std::chrono::high_resolution_clock::now();
     int result_dp = MatrixChainOrderDP(dimensions, s);
-    clock_t end_dp = clock();
-    double time_dp = double(end_dp - start_dp) / CLOCKS_PER_SEC;
+    auto endDP = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double, std::milli> time_dp = endDP - startDP;
 
+    // Вывод результатов
     std::cout << "-- Расстановка скобок (рекурсивное решение) --" << std::endl;
     std::cout << "Размерности матриц: ";
     for (int i = 0; i < n - 1; ++i) {
@@ -46,8 +50,8 @@ int main() {
     PrintOptimalParens(s, 1, n - 1);
     std::cout << std::endl;
 
-    std::cout << "Время выполнения рекурсивного решения: " << time_recursive << " секунд" << std::endl;
-    std::cout << "Время выполнения решения с использованием динамического программирования: " << time_dp << " секунд" << std::endl;
+    std::cout << "Время выполнения рекурсивного решения: " << time_recursive.count() << " мс" << std::endl;
+    std::cout << "Время выполнения решения с использованием динамического программирования: " << time_dp.count() << " мс" << std::endl;
 
     return 0;
 }
