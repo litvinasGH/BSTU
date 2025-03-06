@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace lab2
 {
@@ -8,74 +9,48 @@ namespace lab2
     /// </summary>
     public class Publisher
     {
-        private string name;
-        private string contry;
-        private string city;
-        private int year;
-        private bool state_owned;
+        [Required(ErrorMessage = "Название издателя обязательно для заполнения")]
+        [RegularExpression(@"^[a-zA-Zа-яА-Я\s\-\.]+$",
+            ErrorMessage = "Название может содержать только буквы, пробелы, дефисы и точки")]
+        public string Name { get; set; }
 
-        public string Name
-        {
-            get
-            { return name; }
-            set
-            { name = value; }
-        }
-        public string Contry
-        {
-            get
-            { return contry; }
-            set
-            { contry = value; }
-        }
-        public string City
-        {
-            get
-            { return city; }
-            set
-            { city = value; }
-        }
-        public int Year
-        {
-            get
-            { return year; }
-            set 
-            {
-                if (year < 0 || year > DateTime.Today.Year)
-                    throw new Exception("Не верный год!");
-                year = value;
-            }
-        }
-        public bool State_owned
-        {
-            get { return state_owned; }
-            set { state_owned = value; }
-        }
+        [Required(ErrorMessage = "Страна обязательна для заполнения")]
+        [RegularExpression(@"^[a-zA-Zа-яА-Я\s\-]+$",
+            ErrorMessage = "Название страны может содержать только буквы, пробелы и дефисы")]
+        public string Country { get; set; } // Исправлено с Contry → Country
+
+        [Required(ErrorMessage = "Город обязателен для заполнения")]
+        [RegularExpression(@"^[a-zA-Zа-яА-Я\s\-]+$",
+            ErrorMessage = "Название города может содержать только буквы, пробелы и дефисы")]
+        public string City { get; set; }
+
+        [Range(1500, 2100, ErrorMessage = "Год должен быть между 1500 и 2100")]
+        public int Year { get; set; }
+
+        public bool StateOwned { get; set; } // Переименовано в PascalCase
 
         /// <summary>
-        /// Класс издателя 
+        /// Конструктор издателя
         /// </summary>
-        /// <param name="name">Имя издателя</param>
-        /// <param name="contry">Страна издателя</param>
-        /// <param name="city">Город издателя</param>
-        /// <param name="year">Год издателя</param>
-        /// <param name="state_owned">Является ли гос</param>
-        public Publisher(string name, string contry, string city, int year, bool state_owned)
+        public Publisher(
+            string name,
+            string country,
+            string city,
+            int year,
+            bool stateOwned)
         {
             Name = name;
-            Contry = contry;
+            Country = country;
             City = city;
             Year = year;
-            State_owned = state_owned;
+            StateOwned = stateOwned;
         }
 
-        public Publisher()
-        {
+        public Publisher() { }
 
-        }
         public override string ToString()
         {
-            return $"{name}({contry}, {city}, {year}, гос: {state_owned})";
+            return $"{Name} ({Country}, {City}, {Year}, гос.: {StateOwned})";
         }
     }
 }
