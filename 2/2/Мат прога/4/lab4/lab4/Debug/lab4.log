@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\litvi\Documents\BSTU\2\2\Мат прога\4\lab4\lab4\main.cpp(80,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\litvi\Documents\BSTU\2\2\Мат прога\4\lab4\lab4\main.cpp(99,90): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\litvi\Documents\BSTU\2\2\Мат прога\4\lab4\lab4\main.cpp(99,69): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\litvi\Documents\BSTU\2\2\Мат прога\4\lab4\lab4\main.cpp(106,86): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\litvi\Documents\BSTU\2\2\Мат прога\4\lab4\lab4\main.cpp(106,69): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  lab4.vcxproj -> C:\Users\litvi\Documents\BSTU\2\2\Мат прога\4\lab4\Debug\lab4.exe
