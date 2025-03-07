@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\git\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\",
+  "WorkspaceRootPath": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B8CAACD0-E817-4CC0-8BC3-F9FEFAB145F0}|lab4\\lab4.vcxproj|D:\\git\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\lab4\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B8CAACD0-E817-4CC0-8BC3-F9FEFAB145F0}|lab4\\lab4.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\lab4\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B8CAACD0-E817-4CC0-8BC3-F9FEFAB145F0}|lab4\\lab4.vcxproj|solutionrelative:lab4\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE9F644F-E3C3-4D55-8317-79C0B6DEAAFF}|Project1\\Project1.vcxproj|D:\\git\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{AE9F644F-E3C3-4D55-8317-79C0B6DEAAFF}|Project1\\Project1.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Matrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AE9F644F-E3C3-4D55-8317-79C0B6DEAAFF}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Matrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE9F644F-E3C3-4D55-8317-79C0B6DEAAFF}|Project1\\Project1.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{AE9F644F-E3C3-4D55-8317-79C0B6DEAAFF}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE9F644F-E3C3-4D55-8317-79C0B6DEAAFF}|Project1\\Project1.vcxproj|D:\\git\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Matrix.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{AE9F644F-E3C3-4D55-8317-79C0B6DEAAFF}|Project1\\Project1.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Matrix.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{AE9F644F-E3C3-4D55-8317-79C0B6DEAAFF}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Matrix.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE9F644F-E3C3-4D55-8317-79C0B6DEAAFF}|Project1\\Project1.vcxproj|D:\\git\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Matrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AE9F644F-E3C3-4D55-8317-79C0B6DEAAFF}|Project1\\Project1.vcxproj|solutionrelative:Project1\\Matrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,22 +36,22 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\lab4\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\lab4\\main.cpp",
               "RelativeDocumentMoniker": "lab4\\main.cpp",
-              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\lab4\\main.cpp",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\lab4\\main.cpp",
               "RelativeToolTip": "lab4\\main.cpp",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAmwG4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAmwFkAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-05T21:05:19.451Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Matrix.h",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Matrix.h",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Matrix.h",
               "RelativeDocumentMoniker": "Project1\\Matrix.h",
-              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Matrix.h",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Matrix.h",
               "RelativeToolTip": "Project1\\Matrix.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -59,28 +59,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Matrix.cpp",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Matrix.cpp",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Matrix.cpp",
               "RelativeDocumentMoniker": "Project1\\Matrix.cpp",
-              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Matrix.cpp",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Matrix.cpp",
               "RelativeToolTip": "Project1\\Matrix.cpp",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwC4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T21:03:07.973Z"
+              "WhenOpened": "2025-03-05T21:03:07.973Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Main.cpp",
-              "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Main.cpp",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Main.cpp",
               "RelativeDocumentMoniker": "Project1\\Main.cpp",
-              "ToolTip": "D:\\git\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Main.cpp",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\4\\lab4\\Project1\\Main.cpp",
               "RelativeToolTip": "Project1\\Main.cpp",
               "ViewState": "AgIAACAAAAAAAAAAAAAwwDUAAAB4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-05T21:02:48.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T21:02:48.882Z"
             }
           ]
         }

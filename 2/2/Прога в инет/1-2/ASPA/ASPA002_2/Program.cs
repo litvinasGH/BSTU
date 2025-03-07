@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.FileProviders;
 
 internal class Program
 {
@@ -15,6 +16,11 @@ internal class Program
         app.UseStaticFiles();
 
         app.UseStaticFiles("/static");
+        app.UseStaticFiles(new StaticFileOptions()
+        {
+            FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Picture")),
+            RequestPath = "/Picture"
+        });
 
         app.Run();
     }
