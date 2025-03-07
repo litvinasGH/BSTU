@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>s7g8opi79i</Fingerprint>
-      <Integrity>GADbliKBdioRLgUKjX8rSLDMz9UpKAPA9uf6t4MMqkk=</Integrity>
+      <Fingerprint>2j6k65dxwj</Fingerprint>
+      <Integrity>DmgDDWRrkp5Bo+ZhoRfshp29EAZFDCYyhgmrePZ6DlM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Neumann.html'))</OriginalItemSpec>

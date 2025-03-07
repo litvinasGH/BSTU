@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Fw8UZv+sdlgasWsM4w7XTA0qArOOWoP+6mWgnesWUCk=",
+  "Hash": "P+2kDhmRNFj+9NCymrkSwZ5fdyisapLlvFjibATyL6U=",
   "Source": "ASPA002_2",
   "BasePath": "_content/ASPA002_2",
   "Mode": "Default",
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "s7g8opi79i",
-      "Integrity": "GADbliKBdioRLgUKjX8rSLDMz9UpKAPA9uf6t4MMqkk=",
+      "Fingerprint": "2j6k65dxwj",
+      "Integrity": "DmgDDWRrkp5Bo+ZhoRfshp29EAZFDCYyhgmrePZ6DlM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Neumann.html"
@@ -164,6 +164,51 @@
       ]
     },
     {
+      "Route": "Neumann.2j6k65dxwj.html",
+      "AssetFile": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\Neumann.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "702"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmgDDWRrkp5Bo+ZhoRfshp29EAZFDCYyhgmrePZ6DlM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Mar 2025 14:05:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2j6k65dxwj"
+        },
+        {
+          "Name": "label",
+          "Value": "Neumann.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmgDDWRrkp5Bo+ZhoRfshp29EAZFDCYyhgmrePZ6DlM="
+        }
+      ]
+    },
+    {
       "Route": "Neumann.html",
       "AssetFile": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\Neumann.html",
       "Selectors": [],
@@ -174,7 +219,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "704"
+          "Value": "702"
         },
         {
           "Name": "Content-Type",
@@ -182,11 +227,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GADbliKBdioRLgUKjX8rSLDMz9UpKAPA9uf6t4MMqkk=\""
+          "Value": "\"DmgDDWRrkp5Bo+ZhoRfshp29EAZFDCYyhgmrePZ6DlM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Feb 2025 17:58:58 GMT"
+          "Value": "Fri, 07 Mar 2025 14:05:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -196,52 +241,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-GADbliKBdioRLgUKjX8rSLDMz9UpKAPA9uf6t4MMqkk="
-        }
-      ]
-    },
-    {
-      "Route": "Neumann.s7g8opi79i.html",
-      "AssetFile": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\Neumann.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GADbliKBdioRLgUKjX8rSLDMz9UpKAPA9uf6t4MMqkk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Feb 2025 17:58:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "s7g8opi79i"
-        },
-        {
-          "Name": "label",
-          "Value": "Neumann.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-GADbliKBdioRLgUKjX8rSLDMz9UpKAPA9uf6t4MMqkk="
+          "Value": "sha256-DmgDDWRrkp5Bo+ZhoRfshp29EAZFDCYyhgmrePZ6DlM="
         }
       ]
     },
