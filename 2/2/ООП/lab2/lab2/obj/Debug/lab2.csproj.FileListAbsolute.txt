@@ -23,3 +23,4 @@ D:\git\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.Publ.resources
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.Auth.resources
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.Publ.resources
 D:\git\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.FindForm.resources
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab2\lab2\obj\Debug\lab2.FindForm.resources
