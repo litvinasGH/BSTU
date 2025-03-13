@@ -1,0 +1,160 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\Graphs_Optimization.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|solutionrelative:lab\\Graphs_Optimization.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\Graph.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|solutionrelative:lab\\Graph.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\DFS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|solutionrelative:lab\\DFS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\DFS.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|solutionrelative:lab\\DFS.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\BFS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|solutionrelative:lab\\BFS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\BFS.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|solutionrelative:lab\\BFS.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|solutionrelative:lab\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\Graph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A92332F-3199-457E-8C76-C7D82EF71F2E}|lab\\lab.vcxproj|solutionrelative:lab\\Graph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Graphs_Optimization.cpp",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\Graphs_Optimization.cpp",
+              "RelativeDocumentMoniker": "lab\\Graphs_Optimization.cpp",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\Graphs_Optimization.cpp",
+              "RelativeToolTip": "lab\\Graphs_Optimization.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-13T22:06:44.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DFS.cpp",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\DFS.cpp",
+              "RelativeDocumentMoniker": "lab\\DFS.cpp",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\DFS.cpp",
+              "RelativeToolTip": "lab\\DFS.cpp",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-13T22:04:56.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Graph.cpp",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\Graph.cpp",
+              "RelativeDocumentMoniker": "lab\\Graph.cpp",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\Graph.cpp",
+              "RelativeToolTip": "lab\\Graph.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-13T22:03:10.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DFS.h",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\DFS.h",
+              "RelativeDocumentMoniker": "lab\\DFS.h",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\DFS.h",
+              "RelativeToolTip": "lab\\DFS.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-13T22:04:51.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BFS.cpp",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\BFS.cpp",
+              "RelativeDocumentMoniker": "lab\\BFS.cpp",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\BFS.cpp",
+              "RelativeToolTip": "lab\\BFS.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-13T22:04:08.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BFS.h",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\BFS.h",
+              "RelativeDocumentMoniker": "lab\\BFS.h",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\BFS.h",
+              "RelativeToolTip": "lab\\BFS.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-13T22:04:00.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\stdafx.h",
+              "RelativeDocumentMoniker": "lab\\stdafx.h",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\stdafx.h",
+              "RelativeToolTip": "lab\\stdafx.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-13T22:03:42.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Graph.h",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\Graph.h",
+              "RelativeDocumentMoniker": "lab\\Graph.h",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041C\u0430\u0442 \u043F\u0440\u043E\u0433\u0430\\6\\lab\\lab\\Graph.h",
+              "RelativeToolTip": "lab\\Graph.h",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-13T22:02:29.94Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
