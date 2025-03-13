@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\1-2\\ASPA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C280C69-1347-432A-A266-5ACFF09032E1}|ASPA003\\ASPA003.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\1-2\\aspa\\aspa003\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C280C69-1347-432A-A266-5ACFF09032E1}|ASPA003\\ASPA003.csproj|solutionrelative:aspa003\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA08CC3E-5B96-4442-9B50-E8CC50709D0C}|DAL003\\DAL003.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\1-2\\aspa\\dal003\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA08CC3E-5B96-4442-9B50-E8CC50709D0C}|DAL003\\DAL003.csproj|solutionrelative:dal003\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3E751EA-5563-419D-95D5-C10854DF0544}|TEST_DAL003\\TEST_DAL003.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\1-2\\aspa\\test_dal003\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3E751EA-5563-419D-95D5-C10854DF0544}|TEST_DAL003\\TEST_DAL003.csproj|solutionrelative:test_dal003\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA08CC3E-5B96-4442-9B50-E8CC50709D0C}|DAL003\\DAL003.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\1-2\\aspa\\dal003\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA08CC3E-5B96-4442-9B50-E8CC50709D0C}|DAL003\\DAL003.csproj|solutionrelative:dal003\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C280C69-1347-432A-A266-5ACFF09032E1}|ASPA003\\ASPA003.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\1-2\\aspa\\aspa003\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C280C69-1347-432A-A266-5ACFF09032E1}|ASPA003\\ASPA003.csproj|solutionrelative:aspa003\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,24 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\1-2\\ASPA\\DAL003\\Repository.cs",
               "RelativeDocumentMoniker": "DAL003\\Repository.cs",
               "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\1-2\\ASPA\\DAL003\\Repository.cs",
               "RelativeToolTip": "DAL003\\Repository.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAmwEEAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAADUAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T19:27:00.81Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
@@ -49,23 +49,22 @@
               "RelativeDocumentMoniker": "TEST_DAL003\\Program.cs",
               "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\1-2\\ASPA\\TEST_DAL003\\Program.cs",
               "RelativeToolTip": "TEST_DAL003\\Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAwD4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwAcAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T19:25:40.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\1-2\\ASPA\\ASPA003\\Program.cs",
               "RelativeDocumentMoniker": "ASPA003\\Program.cs",
               "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\1-2\\ASPA\\ASPA003\\Program.cs",
               "RelativeToolTip": "ASPA003\\Program.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBMAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T19:03:12.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T19:03:12.535Z"
             }
           ]
         }
