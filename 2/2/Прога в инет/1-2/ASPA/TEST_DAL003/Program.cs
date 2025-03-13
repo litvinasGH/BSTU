@@ -8,7 +8,7 @@ internal class Program
             Console.WriteLine(repository.BasePath);
             foreach (Celebrity celebrity in repository.GetAllCelebrities())
             {
-                Console.WriteLine($"Id= {celebrity.Id}, First name = {celebrity.Firstname}, " +
+                Console.WriteLine($"Id = {celebrity.Id}, First name = {celebrity.Firstname}, " +
                     $"Surename = {celebrity.Surname},Photo Path = {celebrity.PhotoPath} ");
             }
 
