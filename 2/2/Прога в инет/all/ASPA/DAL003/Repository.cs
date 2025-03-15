@@ -24,11 +24,11 @@ namespace DAL003
             this.filePath = Path.Combine(BasePath, JSONFileName);
             if (!Directory.Exists(this.BasePath))
             {
-                Directory.CreateDirectory(this.BasePath);
+                throw new Exception("Нет папки");
             }
             if (!File.Exists(this.filePath))
             {
-                File.WriteAllText(this.filePath, "[]");
+                throw new Exception("Нет файла");
             }
             LoadData();
         }

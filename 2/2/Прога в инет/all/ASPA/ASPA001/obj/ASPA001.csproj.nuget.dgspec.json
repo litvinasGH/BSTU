@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA001\\ASPA001.csproj": {}
+    "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA001\\ASPA001.csproj": {}
   },
   "projects": {
-    "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA001\\ASPA001.csproj": {
+    "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA001\\ASPA001.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA001\\ASPA001.csproj",
+        "projectUniqueName": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA001\\ASPA001.csproj",
         "projectName": "ASPA001",
-        "projectPath": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA001\\ASPA001.csproj",
+        "projectPath": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA001\\ASPA001.csproj",
         "packagesPath": "C:\\Users\\litvi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA001\\obj\\",
+        "outputPath": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA001\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
