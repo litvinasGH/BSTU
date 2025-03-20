@@ -13,8 +13,8 @@ export const Counter: React.FC = () => {
   };
 
   return (
-    <div style={{textAlign: 'center', marginTop: '50px'}}>
-      <h1>Counter: {count}</h1>
+    <div className='counter' style={{textAlign: 'center', marginTop: '50px'}}>
+      <h1>{count}</h1>
       <div>
         <Button
           title="Increase"
