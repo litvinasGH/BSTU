@@ -17,7 +17,7 @@ namespace DAL004
         int saveChanges();
     }
 
-    public record Celebrity(int Id, string Firstname, string Surname, string PhotoPath);
+    public record Celebrity(int? Id, string Firstname, string Surname, string PhotoPath);
     public class Repository : IRepository
     {
         public static string JSONFileName = "Celebrities.json";
@@ -37,7 +37,6 @@ namespace DAL004
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-
             }
 
 
@@ -69,8 +68,25 @@ namespace DAL004
 
         public int? addCelebrity(Celebrity celeb)
         {
-            this.celebrities.Add(celeb);
-            return celeb.Id;
+            //if (!File.Exists(Path.Combine(FullFilePath, celeb.PhotoPath)))
+            //    throw new ArgumentException("Нет такой фотографии!");
+            if (celeb.Id == null)
+            {
+                HashSet<int?> usedIds = new HashSet<int?>(celebrities.Select(item => item.Id));
+                int candidate = 0;
+                while (usedIds.Contains(candidate))
+                {
+                    candidate++;
+                }
+                this.celebrities.Add(new Celebrity(candidate, celeb.Firstname, celeb.Surname, celeb.PhotoPath));
+                return candidate;
+            }
+            else
+            {
+                if (celebrities.Any((celebA) => celebA.Id == celeb.Id)) return null;
+                this.celebrities.Add(celeb);
+                return celeb.Id;
+            }
         }
 
         public bool delCelebrity(int id)
@@ -109,17 +125,6 @@ namespace DAL004
             return afterUpdLength - beforeUpdLength;
         }
 
-        public int FindUnusedId()
-        {
-            HashSet<int> usedIds = new HashSet<int>(celebrities.Select(item => item.Id));
-
-            int candidate = 0;
-            while (usedIds.Contains(candidate))
-            {
-                candidate++;
-            }
-            return candidate;
-        }
 
         public void Dispose()
         {
