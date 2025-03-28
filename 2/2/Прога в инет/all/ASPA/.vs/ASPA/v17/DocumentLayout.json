@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CFD86EF6-0754-48C2-BEF0-3D1CE52ED1BF}|ASPA004_3\\ASPA004_3.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\aspa\\aspa004_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFD86EF6-0754-48C2-BEF0-3D1CE52ED1BF}|ASPA004_3\\ASPA004_3.csproj|solutionrelative:aspa004_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C5834808-8906-4E86-9920-D8D74C7D8A6F}|ASPA005_1\\ASPA005_1.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\aspa\\aspa005_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5834808-8906-4E86-9920-D8D74C7D8A6F}|ASPA005_1\\ASPA005_1.csproj|solutionrelative:aspa005_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E97E592-A216-4192-AAF7-C34CED761758}|DAL004\\DAL004.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\aspa\\dal004\\repositiry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,24 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\ASPA004_3\\Program.cs",
-              "RelativeDocumentMoniker": "ASPA004_3\\Program.cs",
-              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\ASPA004_3\\Program.cs",
-              "RelativeToolTip": "ASPA004_3\\Program.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwCsAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T19:40:23.38Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -45,9 +32,21 @@
               "RelativeDocumentMoniker": "DAL004\\Repositiry.cs",
               "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\DAL004\\Repositiry.cs",
               "RelativeToolTip": "DAL004\\Repositiry.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAkwBMAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAwEcAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T19:25:28.364Z",
+              "WhenOpened": "2025-03-26T19:06:57.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\ASPA005_1\\Program.cs",
+              "RelativeDocumentMoniker": "ASPA005_1\\Program.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\ASPA005_1\\Program.cs",
+              "RelativeToolTip": "ASPA005_1\\Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwDwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:29:26.421Z",
               "EditorCaption": ""
             }
           ]
