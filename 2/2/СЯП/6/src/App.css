@@ -1,38 +1,120 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+  color: #fff;
+}
+
+.App.light {
+  background: #f0f0f0;
+  /* color: #333; */
+}
+
+.App.dark {
+  background: #333;
+  color: #fff;
+}
+
+.calculator {
+  width: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.App.light .calculator{
+  background: #969696;
+}
+
+.App.dark .calculator{
+  background: #444;
+}
+
+.display {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: right;
+}
+
+.App.App.light .display{
+  background: #8d8c8c;
+} 
+.App.dark .display{
+  background: #222;
+}
+
+.input {
+  min-height: 20px;
+  font-size: 20px;
+}
+.App.light .input{
+  color: #292929;
+}
+.App.dark .input{ 
+  color: #ababab;
+}
+
+.result {
+  min-height: 40px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.button {
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #666;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  background: #777;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.history {
+  margin-top: 20px;
+  padding: 10px;
+  background: #555;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.history h3 {
+  margin: 0 0 10px 0;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history li {
+  padding: 5px 0;
+  border-bottom: 1px solid #666;
 }

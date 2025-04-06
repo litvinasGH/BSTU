@@ -1,0 +1,15 @@
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\bin\Debug\lab4.exe.config
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\bin\Debug\lab4.exe
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\bin\Debug\lab4.pdb
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\obj\Debug\lab4.csproj.AssemblyReference.cache
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\obj\Debug\singup.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\obj\Debug\App.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\obj\Debug\lab4_MarkupCompile.cache
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\obj\Debug\lab4_MarkupCompile.lref
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\obj\Debug\singup.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\obj\Debug\lab4.g.resources
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\obj\Debug\lab4.Properties.Resources.resources
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\obj\Debug\lab4.csproj.GenerateResource.cache
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\obj\Debug\lab4.csproj.CoreCompileInputs.cache
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\obj\Debug\lab4.exe
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\obj\Debug\lab4.pdb
