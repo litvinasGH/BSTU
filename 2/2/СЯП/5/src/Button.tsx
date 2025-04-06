@@ -1,23 +1,20 @@
-import React from 'react';
+import { ReactNode } from "react";
 
-interface ButtonProps {
-  title: string;
-  callback: () => void;
-  disabled?: boolean;
+interface IProps{
+    title: string;
+    callback: () => void;
+    disabled?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({
-  title,
-  callback,
-  disabled = false
-}) => {
-  return (
-    <button 
-      onClick={callback}
-      disabled={disabled}
-      style={{margin: '0 5px', padding: '5px 15px'}}
-    >
-      {title}
-    </button>
-  );
-};
+
+export function MyButton(props: IProps){
+
+    return(
+        <button id = {props.title} 
+        onClick = {props.callback}
+        disabled = {(props.disabled == undefined ? false : props.disabled)}>
+            {props.title}
+        </button>
+    );
+
+}

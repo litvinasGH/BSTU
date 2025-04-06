@@ -7,8 +7,24 @@
       "RelativeMoniker": "D:0:0:{C5834808-8906-4E86-9920-D8D74C7D8A6F}|ASPA005_1\\ASPA005_1.csproj|solutionrelative:aspa005_1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E97E592-A216-4192-AAF7-C34CED761758}|DAL004\\DAL004.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\aspa\\dal004\\repositiry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E97E592-A216-4192-AAF7-C34CED761758}|DAL004\\DAL004.csproj|solutionrelative:dal004\\repositiry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{698F1F2D-8EEB-4258-995E-6A39670983E3}|Test_ASPA005_3\\Test_ASPA005_3.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\aspa\\test_aspa005_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{698F1F2D-8EEB-4258-995E-6A39670983E3}|Test_ASPA005_3\\Test_ASPA005_3.csproj|solutionrelative:test_aspa005_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A6A69DB-FC25-494B-9B8F-041C9A2B1276}|ASPA005_3\\ASPA005_3.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\aspa\\aspa005_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A6A69DB-FC25-494B-9B8F-041C9A2B1276}|ASPA005_3\\ASPA005_3.csproj|solutionrelative:aspa005_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA707681-BB7E-4BED-8048-66E80EFFA367}|ASPA005_2\\ASPA005_2.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\aspa\\aspa005_2\\filters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA707681-BB7E-4BED-8048-66E80EFFA367}|ASPA005_2\\ASPA005_2.csproj|solutionrelative:aspa005_2\\filters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA707681-BB7E-4BED-8048-66E80EFFA367}|ASPA005_2\\ASPA005_2.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\aspa\\aspa005_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA707681-BB7E-4BED-8048-66E80EFFA367}|ASPA005_2\\ASPA005_2.csproj|solutionrelative:aspa005_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA707681-BB7E-4BED-8048-66E80EFFA367}|ASPA005_2\\ASPA005_2.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\aspa\\aspa005_2\\aspa005_2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DA707681-BB7E-4BED-8048-66E80EFFA367}|ASPA005_2\\ASPA005_2.csproj|solutionrelative:aspa005_2\\aspa005_2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,15 +42,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Repositiry.cs",
-              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\DAL004\\Repositiry.cs",
-              "RelativeDocumentMoniker": "DAL004\\Repositiry.cs",
-              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\DAL004\\Repositiry.cs",
-              "RelativeToolTip": "DAL004\\Repositiry.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAwEcAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T19:06:57.77Z"
+              "DocumentIndex": 5,
+              "Title": "ASPA005_2",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\ASPA005_2\\ASPA005_2.csproj",
+              "RelativeDocumentMoniker": "ASPA005_2\\ASPA005_2.csproj",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\ASPA005_2\\ASPA005_2.csproj",
+              "RelativeToolTip": "ASPA005_2\\ASPA005_2.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-04T16:54:51.932Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -44,9 +61,61 @@
               "RelativeDocumentMoniker": "ASPA005_1\\Program.cs",
               "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\ASPA005_1\\Program.cs",
               "RelativeToolTip": "ASPA005_1\\Program.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwDwAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAACAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T18:29:26.421Z",
+              "WhenOpened": "2025-04-04T16:43:09.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\Test_ASPA005_3\\Program.cs",
+              "RelativeDocumentMoniker": "Test_ASPA005_3\\Program.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\Test_ASPA005_3\\Program.cs",
+              "RelativeToolTip": "Test_ASPA005_3\\Program.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAQwGIAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T16:43:06.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\ASPA005_3\\Program.cs",
+              "RelativeDocumentMoniker": "ASPA005_3\\Program.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\ASPA005_3\\Program.cs",
+              "RelativeToolTip": "ASPA005_3\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T10:46:44.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Filters.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\ASPA005_2\\Filters.cs",
+              "RelativeDocumentMoniker": "ASPA005_2\\Filters.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\ASPA005_2\\Filters.cs",
+              "RelativeToolTip": "ASPA005_2\\Filters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T10:36:47.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\ASPA005_2\\Program.cs",
+              "RelativeDocumentMoniker": "ASPA005_2\\Program.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041F\u0440\u043E\u0433\u0430 \u0432 \u0438\u043D\u0435\u0442\\all\\ASPA\\ASPA005_2\\Program.cs",
+              "RelativeToolTip": "ASPA005_2\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwCMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T10:21:51.06Z",
               "EditorCaption": ""
             }
           ]

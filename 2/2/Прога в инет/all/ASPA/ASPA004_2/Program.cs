@@ -33,7 +33,7 @@ internal partial class Program
             app.MapDelete("/Celebrities/{id:int}", (int id) =>
             {
                 if (!repository.delCelebrity(id)) throw new DelByIdException($"DELETE /Celebrities error, Id = {id}");
-                else if (repository.saveChanges() <= 0) throw new SaveException("/Celebrities error, SaveChanges() <= 0");
+                else if (repository.saveChanges() >= 0) throw new SaveException("/Celebrities error, SaveChanges() <= 0");
                 return $"Celebrity with Id = {id} deleted";
             });
 

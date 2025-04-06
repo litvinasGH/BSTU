@@ -1,19 +1,25 @@
 import React from 'react';
 
 interface ButtonProps {
-  label: string;
-  onClick: () => void;
+  value: string;
+  onClick: (value: string) => void;
   className?: string;
+  disabled?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick, className }) => {
+const Button: React.FC<ButtonProps> = ({ 
+  value, 
+  onClick, 
+  className = '', 
+  disabled = false 
+}) => {
   return (
     <button
-      className={`p-4 text-xl font-medium rounded-lg transition-colors 
-        ${className || 'bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600'}`}
-      onClick={onClick}
+      className={`button ${className} ${disabled ? 'disabled' : ''}`}
+      onClick={() => !disabled && onClick(value)}
+      disabled={disabled}
     >
-      {label}
+      {value}
     </button>
   );
 };
