@@ -15,8 +15,7 @@ const Calculator: React.FC = () => {
 
   const evaluateExpression = useCallback((expression: string): string => {
     try {
-      const sanitized = expression.replace(/--/g, '+');
-      const result = eval(sanitized);
+      const result = eval(expression);
 
 
       

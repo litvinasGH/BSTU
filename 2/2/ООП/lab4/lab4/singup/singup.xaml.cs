@@ -23,5 +23,15 @@ namespace lab4
         {
             InitializeComponent();
         }
+
+        private void btnRussian_Click(object sender, RoutedEventArgs e)
+        {
+            App.SwitchLanguage("ru-RU");
+        }
+
+        private void btnEnglish_Click(object sender, RoutedEventArgs e)
+        {
+            App.SwitchLanguage("en-US");
+        }
     }
 }
