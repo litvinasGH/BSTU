@@ -82,11 +82,17 @@ internal partial class Program
                     if (ex is FoundByIdException) rc = Results.NotFound(ex.Message);
                     else if (ex is BadHttpRequestException) rc = Results.BadRequest(ex.Message);
                     else if (ex is SaveException) rc = Results.Problem(title: "ASPA001/SaveChanges", detail: ex.Message, instance: app.Environment.EnvironmentName, statusCode: 500);
+                    else if (ex is CelebrityArgumentException)
+                    {
+                        CelebrityArgumentException exc = (CelebrityArgumentException)ex;
+                        rc = Results.Problem(title: exc.titel,
+                        detail: exc.Message,
+                        instance: app.Environment.EnvironmentName, statusCode: exc.code);
+                    }
                     else if (ex is AddCelebrityException) rc = Results.Problem(title: "ASPA004/addCelebrity", detail: ex.Message, instance: app.Environment.EnvironmentName, statusCode: 500);
                     else if (ex is FileNotFoundException) rc = Results.Problem(title: "ASPA00", detail: ex.Message, instance: app.Environment.EnvironmentName, statusCode: 500);
                     else if (ex is DelByIdException) rc = Results.NotFound(ex.Message);
                     else if (ex is UpdByIdExeption) rc = Results.NotFound(ex.Message);
-
                 }
                 return rc;
             });
