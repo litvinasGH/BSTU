@@ -1,0 +1,50 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Общие термины -->
+    <sys:String x:Key="AppTitle">Printinvest</sys:String>
+    <sys:String x:Key="AdminPanelTitle">Панель администратора</sys:String>
+    <sys:String x:Key="SaveButton">Сохранить</sys:String>
+    <sys:String x:Key="DeleteButton">Удалить</sys:String>
+    <sys:String x:Key="AddNewButton">Добавить</sys:String>
+
+    <!-- Услуги -->
+    <sys:String x:Key="Service">Услуга</sys:String>
+    <sys:String x:Key="Repair">Ремонт</sys:String>
+    <sys:String x:Key="Maintenance">Техническое обслуживание</sys:String>
+    <sys:String x:Key="Refill">Заправка картриджа</sys:String>
+    <sys:String x:Key="Diagnostics">Диагностика</sys:String>
+    <sys:String x:Key="Installation">Установка</sys:String>
+
+    <!-- Оборудование -->
+    <sys:String x:Key="Equipment">Оборудование</sys:String>
+    <sys:String x:Key="Xerox">Xerox</sys:String>
+    <sys:String x:Key="Canon">Canon</sys:String>
+    <sys:String x:Key="HP">HP</sys:String>
+    <sys:String x:Key="Epson">Epson</sys:String>
+    <sys:String x:Key="Brother">Brother</sys:String>
+    <sys:String x:Key="Other">Другое</sys:String>
+
+    <!-- Поля ввода -->
+    <sys:String x:Key="NameLabel">Название:</sys:String>
+    <sys:String x:Key="PriceLabel">Цена (₽):</sys:String>
+    <sys:String x:Key="DurationLabel">Срок выполнения (дни):</sys:String>
+    <sys:String x:Key="BrandLabel">Бренд:</sys:String>
+    <sys:String x:Key="ModelLabel">Модель:</sys:String>
+
+    <!-- Добавляем новые ключи -->
+    <sys:String x:Key="SearchPlaceholder">Поиск услуг и оборудования</sys:String>
+    <sys:String x:Key="PriceRangeLabel">Диапазон цен:</sys:String>
+    <sys:String x:Key="AllServices">Все услуги</sys:String>
+    <sys:String x:Key="AllBrands">Все бренды</sys:String>
+
+
+    <sys:String x:Key="LanguageSwitchButton">🌐</sys:String>
+    <sys:String x:Key="ChangeLanguageToolTip">Сменить язык</sys:String>
+    <sys:String x:Key="AdminPanelButton">Админ-панель</sys:String>
+
+
+    <sys:String x:Key="ServicesButton">Услуги</sys:String>
+    <sys:String x:Key="EquipmentButton">Оборудование</sys:String>
+</ResourceDictionary>

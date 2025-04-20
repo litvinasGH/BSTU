@@ -1,0 +1,64 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Основные цвета -->
+    <Color x:Key="PrimaryColor">#0F6985</Color>
+    <Color x:Key="DarkAccentColor">#054256</Color>
+
+    <!-- Кисти -->
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}"/>
+    <SolidColorBrush x:Key="DarkAccentBrush" Color="{StaticResource DarkAccentColor}"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource PrimaryColor}"/>
+
+    <!-- Стиль для окон -->
+    <Style TargetType="Window">
+        <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+    <!-- Стиль для текстовых блоков -->
+    <Style TargetType="TextBlock">
+        <Setter Property="Margin" Value="0 5"/>
+    </Style>
+
+    <!-- Стиль для текстовых полей -->
+    <Style TargetType="TextBox" x:Key="ModernTextBox">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="8"/>
+        <Setter Property="MinWidth" Value="200"/>
+    </Style>
+
+
+    <!-- Стиль для комбобоксов -->
+    <Style x:Key="FilterComboBox" TargetType="ComboBox">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+        <Setter Property="ItemTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Converter={StaticResource EnumToLocalizedStringConverter}}"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Шаблон для брендов -->
+    <DataTemplate x:Key="BrandTemplate">
+        <TextBlock Text="{Binding Converter={StaticResource EnumToLocalizedStringConverter}}"/>
+    </DataTemplate>
+
+    <!-- Шаблон для типов услуг -->
+    <DataTemplate x:Key="ServiceTypeTemplate">
+        <TextBlock Text="{Binding Converter={StaticResource EnumToLocalizedStringConverter}}"/>
+    </DataTemplate>
+
+    <!-- Стиль для слайдера -->
+    <Style x:Key="RangeSlider" TargetType="Slider">
+        <Setter Property="Minimum" Value="0"/>
+        <Setter Property="Maximum" Value="100000"/>
+        <Setter Property="TickFrequency" Value="5000"/>
+    </Style>
+</ResourceDictionary>

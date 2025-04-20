@@ -1,0 +1,9 @@
+[
+  {
+    "Brand": "Xerox",
+    "Model": "Phaser 6020",
+    "Price": 34990.00,
+    "SupportedServices": ["Refill", "Maintenance"], 
+    "ImagePath": "Assets/Images/Printers/xerox_phaser_6020.jpg"
+  }
+]

@@ -1,0 +1,79 @@
+﻿<Window x:Class="Printinvest.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:Printinvest.Views.Controls"
+        xmlns:vm="clr-namespace:Printinvest.ViewModels"
+        xmlns:enums="clr-namespace:Printinvest.Models.Enums"
+        xmlns:utils="clr-namespace:Printinvest.Utils"
+        xmlns:models="clr-namespace:Printinvest.Models"
+        Title="{DynamicResource AppTitle}"
+        Height="768" Width="1366"
+        Icon="/Views/printinvest.png"
+        Cursor="/Assets/Icons/printer_cursor.cur"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Панель фильтров -->
+        <controls:FilterPanel Grid.Column="0"/>
+
+        <!-- Основной контент -->
+        <DockPanel Grid.Column="1" Margin="10 0 0 0">
+            <!-- Панель управления -->
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0 0 0 10">
+                <Button Content="{DynamicResource ServicesButton}" 
+            Command="{Binding SwitchToServicesCommand}"
+            Style="{StaticResource TabButton}"
+            IsEnabled="{Binding IsEquipmentMode, Converter={StaticResource InverseBooleanConverter}}"/>
+
+                <Button Content="{DynamicResource EquipmentButton}" 
+            Command="{Binding SwitchToEquipmentCommand}"
+            Style="{StaticResource TabButton}"
+            Margin="10 0 0 0"
+            IsEnabled="{Binding IsEquipmentMode}"/>
+
+                <Button Content="➕" 
+            Command="{Binding OpenAdminPanelCommand}"
+            Style="{StaticResource FloatingActionButton}"
+            Margin="20 0 0 0"
+            ToolTip="{DynamicResource AddNewButton}"
+            Visibility="{Binding AdminControlsVisibility}"/>
+            </StackPanel>
+
+            <!-- Список элементов -->
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding CurrentItems}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <!-- Упрощаем шаблон -->
+                            <ContentControl Content="{Binding}">
+                                <ContentControl.Resources>
+                                    <DataTemplate DataType="{x:Type models:Service}">
+                                        <controls:ServiceCard/>
+                                    </DataTemplate>
+                                    <DataTemplate DataType="{x:Type models:Equipment}">
+                                        <controls:EquipmentCard/>
+                                    </DataTemplate>
+                                </ContentControl.Resources>
+                            </ContentControl>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </DockPanel>
+    </Grid>
+</Window>

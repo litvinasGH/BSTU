@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- General terms -->
+    <sys:String x:Key="AppTitle">Printinvest</sys:String>
+    <sys:String x:Key="AdminPanelTitle">Admin Panel</sys:String>
+    <sys:String x:Key="SaveButton">Save</sys:String>
+    <sys:String x:Key="DeleteButton">Delete</sys:String>
+    <sys:String x:Key="AddNewButton">Add New</sys:String>
+
+    <!-- Services -->
+    <sys:String x:Key="Service">Service</sys:String>
+    <sys:String x:Key="Repair">Repair</sys:String>
+    <sys:String x:Key="Maintenance">Maintenance</sys:String>
+    <sys:String x:Key="Refill">Refill</sys:String>
+    <sys:String x:Key="Diagnostics">Diagnostics</sys:String>
+    <sys:String x:Key="Installation">Installation</sys:String>
+
+    <!-- Equipment -->
+    <sys:String x:Key="Equipment">Equipment</sys:String>
+    <sys:String x:Key="Xerox">Xerox</sys:String>
+    <sys:String x:Key="Canon">Canon</sys:String>
+    <sys:String x:Key="HP">HP</sys:String>
+    <sys:String x:Key="Epson">Epson</sys:String>
+    <sys:String x:Key="Brother">Brother</sys:String>
+    <sys:String x:Key="Other">Other</sys:String>
+
+    <!-- Input fields -->
+    <sys:String x:Key="NameLabel">Name:</sys:String>
+    <sys:String x:Key="PriceLabel">Price ($):</sys:String>
+    <sys:String x:Key="DurationLabel">Duration (days):</sys:String>
+    <sys:String x:Key="BrandLabel">Brand:</sys:String>
+    <sys:String x:Key="ModelLabel">Model:</sys:String>
+
+    <sys:String x:Key="SearchPlaceholder">Search services and equipment</sys:String>
+    <sys:String x:Key="PriceRangeLabel">Price range:</sys:String>
+    <sys:String x:Key="AllServices">All Services</sys:String>
+    <sys:String x:Key="AllBrands">All Brands</sys:String>
+
+
+    <sys:String x:Key="LanguageSwitchButton">🌐</sys:String>
+    <sys:String x:Key="ChangeLanguageToolTip">Change language</sys:String>
+    <sys:String x:Key="AdminPanelButton">Admin Panel</sys:String>
+
+    <sys:String x:Key="ServicesButton">Services</sys:String>
+    <sys:String x:Key="EquipmentButton">Equipment</sys:String>
+</ResourceDictionary>
