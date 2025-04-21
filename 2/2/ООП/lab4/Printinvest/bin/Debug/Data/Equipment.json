@@ -1,9 +1,95 @@
 [
   {
-    "Brand": "Xerox",
+    "ImagePath": null,
     "Model": "Phaser 6020",
     "Price": 34990.00,
-    "SupportedServices": ["Refill", "Maintenance"], 
-    "ImagePath": "Assets/Images/Printers/xerox_phaser_6020.jpg"
+    "Brand": "Xerox",
+    "SupportedServices": [
+      "Refill",
+      "Maintenance"
+    ]
+  },
+  {
+    "ImagePath": null,
+    "Model": "LaserJet Pro M404dn",
+    "Price": 27990.00,
+    "Brand": "HP",
+    "SupportedServices": [
+      "Maintenance"
+    ]
+  },
+  {
+    "ImagePath": null,
+    "Model": "PIXMA TS8350",
+    "Price": 15990.00,
+    "Brand": "Canon",
+    "SupportedServices": [
+      "Refill"
+    ]
+  },
+  {
+    "ImagePath": null,
+    "Model": "EcoTank L3250",
+    "Price": 18990.00,
+    "Brand": "Epson",
+    "SupportedServices": [
+      "Refill",
+      "Maintenance"
+    ]
+  },
+  {
+    "ImagePath": null,
+    "Model": "HL-L2350DW",
+    "Price": 12990.00,
+    "Brand": "Brother",
+    "SupportedServices": [
+      "Maintenance"
+    ]
+  },
+  {
+    "ImagePath": null,
+    "Model": "Xpress M2020W",
+    "Price": 9990.00,
+    "Brand": "Samsung",
+    "SupportedServices": [
+      "Refill"
+    ]
+  },
+  {
+    "ImagePath": null,
+    "Model": "SP C220DN",
+    "Price": 22990.00,
+    "Brand": "Ricoh",
+    "SupportedServices": [
+      "Maintenance"
+    ]
+  },
+  {
+    "ImagePath": null,
+    "Model": "bizhub C3300i",
+    "Price": 54990.00,
+    "Brand": "KonicaMinolta",
+    "SupportedServices": [
+      "Refill",
+      "Maintenance"
+    ]
+  },
+  {
+    "ImagePath": null,
+    "Model": "TASKalfa 3010i",
+    "Price": 49990.00,
+    "Brand": "Kyocera",
+    "SupportedServices": [
+      "Maintenance"
+    ]
+  },
+  {
+    "ImagePath": null,
+    "Model": "MS510dn",
+    "Price": 21990.00,
+    "Brand": "Lexmark",
+    "SupportedServices": [
+      "Refill"
+    ]
   }
 ]

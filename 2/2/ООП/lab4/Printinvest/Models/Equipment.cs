@@ -10,6 +10,7 @@ namespace Printinvest.Models
         private decimal _price;
         private Brand _brand;
         private List<ServiceType> _supportedServices;
+        public string ImagePath { get; set; }
 
         public string Model
         {

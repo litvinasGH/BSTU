@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\App.xaml
-12-535749849
+14-1337065707
 
-24-1213904198
+28-1889327447
 14423523189
-Localization\Resources.en-US.xaml;Localization\Resources.ru-RU.xaml;MainWindow.xaml;Styles\AppStyles.xaml;Styles\ButtonStyles.xaml;Styles\CardStyles.xaml;Views\AdminWindow.xaml;Views\Controls\EquipmentCard.xaml;Views\Controls\FilterPanel.xaml;Views\Controls\ServiceCard.xaml;Views\MainWindow.xaml;Views\ServiceDetailsWindow.xaml;
+Localization\Resources.en-US.xaml;Localization\Resources.ru-RU.xaml;Styles\AppStyles.xaml;Styles\ButtonStyles.xaml;Styles\CardStyles.xaml;Views\AdminPanelWindow.xaml;Views\Controls\EquipmentCard.xaml;Views\Controls\FilterPanel.xaml;Views\Controls\ServiceCard.xaml;Views\EquipmentDetailsWindow.xaml;Views\EquipmentEditWindow.xaml;Views\MainWindow.xaml;Views\PasswordWindow.xaml;Views\ServiceDetailsWindow.xaml;
 
-True
+False
 

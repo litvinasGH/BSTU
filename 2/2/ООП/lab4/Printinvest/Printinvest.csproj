@@ -60,14 +60,16 @@
     </ApplicationDefinition>
     <Compile Include="Utils\EnumToLocalizedStringConverter.cs" />
     <Compile Include="Utils\FilterViewModel.cs" />
+    <Compile Include="Utils\ImageCoverPathConverter.cs" />
     <Compile Include="Utils\InverseBooleanConverter.cs" />
     <Compile Include="Utils\LocalizationManager.cs" />
     <Compile Include="Utils\ObservableCollectionExtensions.cs" />
     <Compile Include="ViewModels\AdminViewModel.cs" />
+    <Compile Include="ViewModels\EquipmentViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
-    <Compile Include="Views\AdminWindow.xaml.cs">
-      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    <Compile Include="Views\AdminPanelWindow.xaml.cs">
+      <DependentUpon>AdminPanelWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Controls\EquipmentCard.xaml.cs">
       <DependentUpon>EquipmentCard.xaml</DependentUpon>
@@ -78,8 +80,17 @@
     <Compile Include="Views\Controls\ServiceCard.xaml.cs">
       <DependentUpon>ServiceCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\EquipmentDetailsWindow.xaml.cs">
+      <DependentUpon>EquipmentDetailsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EquipmentEditWindow.xaml.cs">
+      <DependentUpon>EquipmentEditWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PasswordWindow.xaml.cs">
+      <DependentUpon>PasswordWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ServiceDetailsWindow.xaml.cs">
       <DependentUpon>ServiceDetailsWindow.xaml</DependentUpon>
@@ -92,16 +103,8 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Styles\AppStyles.xaml">
@@ -116,7 +119,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AdminWindow.xaml">
+    <Page Include="Views\AdminPanelWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,7 +135,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\EquipmentDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EquipmentEditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PasswordWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,6 +206,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\printinvest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\default_cover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

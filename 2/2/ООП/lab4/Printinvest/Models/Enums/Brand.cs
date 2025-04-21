@@ -10,6 +10,10 @@
         Brother,
         Ricoh,
         Kyocera,
+        Samsung,
+        KonicaMinolta,
+        Lexmark,
         Other
+
     }
 }

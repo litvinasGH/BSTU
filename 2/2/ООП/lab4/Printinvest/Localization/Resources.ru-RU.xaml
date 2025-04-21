@@ -28,7 +28,7 @@
 
     <!-- Поля ввода -->
     <sys:String x:Key="NameLabel">Название:</sys:String>
-    <sys:String x:Key="PriceLabel">Цена (₽):</sys:String>
+    <sys:String x:Key="PriceLabel">Цена (BYN):</sys:String>
     <sys:String x:Key="DurationLabel">Срок выполнения (дни):</sys:String>
     <sys:String x:Key="BrandLabel">Бренд:</sys:String>
     <sys:String x:Key="ModelLabel">Модель:</sys:String>
@@ -47,4 +47,55 @@
 
     <sys:String x:Key="ServicesButton">Услуги</sys:String>
     <sys:String x:Key="EquipmentButton">Оборудование</sys:String>
+
+
+
+
+    <!-- Общие -->
+    
+    
+
+    <!-- FilterPanel -->
+    <sys:String x:Key="Filter_Search">Поиск:</sys:String>
+    <sys:String x:Key="Filter_Brand">Бренд:</sys:String>
+    <sys:String x:Key="Filter_ServiceType">Тип услуги:</sys:String>
+    <sys:String x:Key="Filter_MaxPrice">Макс. цена:</sys:String>
+
+    <!-- AdminPanelWindow -->
+    <sys:String x:Key="Admin_AddEquipment_Title">Добавить оборудование</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Brand">Бренд:</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Model">Модель:</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Price">Цена:</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Services">Услуги (Refill,Maintenance):</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Image">Изображение:</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Browse">Обзор...</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_AddButton">Добавить</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Cancel">Отмена</sys:String>
+
+    <!-- EquipmentDetailsWindow -->
+    <sys:String x:Key="Details_Title">Детали оборудования</sys:String>
+    <sys:String x:Key="Details_SupportedServices">Поддерживаемые услуги:</sys:String>
+
+    <!-- EquipmentEditWindow -->
+    <sys:String x:Key="Edit_Title">Редактирование оборудования</sys:String>
+    <sys:String x:Key="Edit_Model">Модель:</sys:String>
+    <sys:String x:Key="Edit_Price">Цена:</sys:String>
+    <sys:String x:Key="Edit_Brand">Бренд:</sys:String>
+    <sys:String x:Key="Edit_Save">Сохранить</sys:String>
+    <sys:String x:Key="Edit_Cancel">Отмена</sys:String>
+
+    <!-- PasswordWindow -->
+    <sys:String x:Key="Password_Title">Введите пароль</sys:String>
+    <sys:String x:Key="Password_Ok">OK</sys:String>
+    <sys:String x:Key="Password_Cancel">Отмена</sys:String>
+
+    <!-- Enum names -->
+    <sys:String x:Key="Brand_HP">HP</sys:String>
+    <sys:String x:Key="Brand_Canon">Canon</sys:String>
+    <sys:String x:Key="Brand_Epson">Epson</sys:String>
+    <!-- ... остальные бренды -->
+
+    <sys:String x:Key="ServiceType_Refill">Заправка</sys:String>
+    <sys:String x:Key="ServiceType_Maintenance">Обслуживание</sys:String>
+    <!-- ... остальные типы услуг -->
 </ResourceDictionary>

@@ -3,7 +3,7 @@ using Newtonsoft.Json.Converters;
 using Printinvest.Models;
 using Printinvest.Models.Enums;
 using Printinvest.Utils;
-using Printinvest.Views;
+using Printinvest.Views;                        // Для окна деталей
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,6 +11,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;         // Для CallerMemberName
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
@@ -23,25 +24,82 @@ namespace Printinvest.ViewModels
         private readonly string _equipmentPath = "Data/Equipment.json";
 
         private bool _isEquipmentMode;
-        private string _searchQuery;
-        private ServiceType _selectedServiceType;
-        private Brand _selectedBrand;
-        private decimal _maxPrice;
+        private string _searchQuery = string.Empty;
+        private ServiceType _selectedServiceType = ServiceType.None;
+        private Brand _selectedBrand = Brand.None;
+        private decimal _maxPrice = decimal.MaxValue;
+
+        private bool _isAdminUnlocked;
+        public bool IsAdminUnlocked
+        {
+            get => _isAdminUnlocked;
+            set { _isAdminUnlocked = value; OnPropertyChanged(); }
+        }
+
+        public ICommand UnlockAdminCommand { get; }
+        public ICommand EditEquipmentCommand { get; }
+        public ICommand DeleteEquipmentCommand { get; }
 
         public ObservableCollection<Service> Services { get; } = new ObservableCollection<Service>();
         public ObservableCollection<Equipment> Equipment { get; } = new ObservableCollection<Equipment>();
-
-        public ICollectionView CurrentItems => _isEquipmentMode
-            ? CollectionViewSource.GetDefaultView(Equipment)
-            : CollectionViewSource.GetDefaultView(Services);
+        public ICollectionView CurrentItems { get; private set; }
 
         public bool IsEquipmentMode
         {
             get => _isEquipmentMode;
             set
             {
+                if (_isEquipmentMode == value) return;
                 _isEquipmentMode = value;
-                OnPropertyChanged(nameof(IsEquipmentMode));
+                OnPropertyChanged();
+                SwitchCollectionView();
+            }
+        }
+
+        public string SearchQuery
+        {
+            get => _searchQuery;
+            set
+            {
+                if (_searchQuery == value) return;
+                _searchQuery = value;
+                OnPropertyChanged();
+                CurrentItems.Refresh();
+            }
+        }
+
+        public ServiceType SelectedServiceType
+        {
+            get => _selectedServiceType;
+            set
+            {
+                if (_selectedServiceType == value) return;
+                _selectedServiceType = value;
+                OnPropertyChanged();
+                CurrentItems.Refresh();
+            }
+        }
+
+        public Brand SelectedBrand
+        {
+            get => _selectedBrand;
+            set
+            {
+                if (_selectedBrand == value) return;
+                _selectedBrand = value;
+                OnPropertyChanged();
+                CurrentItems.Refresh();
+            }
+        }
+
+        public decimal MaxPrice
+        {
+            get => _maxPrice;
+            set
+            {
+                if (_maxPrice == value) return;
+                _maxPrice = value;
+                OnPropertyChanged();
                 CurrentItems.Refresh();
             }
         }
@@ -49,31 +107,140 @@ namespace Printinvest.ViewModels
         public ICommand SwitchToServicesCommand { get; }
         public ICommand SwitchToEquipmentCommand { get; }
         public ICommand OpenAdminPanelCommand { get; }
+        public ICommand ShowEquipmentDetailsCommand { get; }
+        public ICommand SwitchToEnglishCommand { get; }
+        public ICommand SwitchToRussianCommand { get; }
 
 
 
         public MainViewModel()
         {
-            LoadData();
+            // Инициализация коллекции по умолчанию
+            _isEquipmentMode = true;
+            CurrentItems = CollectionViewSource.GetDefaultView(Equipment);
+            CurrentItems.Filter = FilterItems;
+
+            
 
             SwitchToServicesCommand = new RelayCommand(_ => IsEquipmentMode = false);
             SwitchToEquipmentCommand = new RelayCommand(_ => IsEquipmentMode = true);
             OpenAdminPanelCommand = new RelayCommand(_ => OpenAdminPanel());
+            ShowEquipmentDetailsCommand = new RelayCommand(obj => {
+                if (obj is Equipment eq)
+                {
+                    var wnd = new EquipmentDetailsWindow { DataContext = eq, Owner = Application.Current.MainWindow };
+                    wnd.ShowDialog();
+                }
+            });
+            SwitchToEnglishCommand = new RelayCommand(_ => ChangeLanguage("en-US"));
+            SwitchToRussianCommand = new RelayCommand(_ => ChangeLanguage("ru-RU"));
 
+
+
+            UnlockAdminCommand = new RelayCommand(_ => ShowPasswordDialog());
+            EditEquipmentCommand = new RelayCommand(obj => EditEquipment(obj as Equipment), obj => IsAdminUnlocked);
+            DeleteEquipmentCommand = new RelayCommand(obj => DeleteEquipment(obj as Equipment), obj => IsAdminUnlocked);
+
+            LoadData();
+            
+            SwitchCollectionView();
+
+        }
+
+        private void ChangeLanguage(string cultureCode)
+        {
+            // строим pack URI к словарю
+            var dict = new ResourceDictionary
+            {
+                Source = new Uri(
+                    $"pack://application:,,,/Printinvest;component/Localization/Resources.{cultureCode}.xaml",
+                    UriKind.Absolute)
+            };
+            // удаляем старые словари локализации
+            var merged = Application.Current.Resources.MergedDictionaries;
+            // допустим, у вас в App.xaml уже лежит какой‑то общий словарь — его лучше не убирать.
+            // поэтому удаляем только те, чьё имя начинается на "Resources."
+            for (int i = merged.Count - 1; i >= 0; i--)
+            {
+                var md = merged[i];
+                if (md.Source != null &&
+                    md.Source.OriginalString.Contains("/Localization/Resources."))
+                {
+                    merged.RemoveAt(i);
+                }
+            }
+            // и добавляем новый
+            merged.Add(dict);
+        }
+
+
+        private void ShowPasswordDialog()
+        {
+            var pwdWindow = new PasswordWindow { Owner = Application.Current.MainWindow };
+            if (pwdWindow.ShowDialog() == true && pwdWindow.Password == "1234")
+            {
+                IsAdminUnlocked = true;
+            }
+        }
+
+        private void EditEquipment(Equipment eq)
+        {
+            if (eq == null) return;
+            var vm = new EquipmentViewModel(eq);
+            var editWnd = new EquipmentEditWindow
+            {
+                DataContext = vm,
+                Owner = Application.Current.MainWindow
+            };
+            if (editWnd.ShowDialog() == true)
+            {
+                vm.ApplyChanges();           // <-- переносим изменения в модель
+                SaveEquipmentToJson();
+                CurrentItems.Refresh();
+            }
+        }
+
+        private void DeleteEquipment(Equipment eq)
+        {
+            if (eq == null) return;
+            if (MessageBox.Show($"Удалить оборудование {eq.Model}?", "Подтвердите удаление", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                Equipment.Remove(eq);
+                SaveEquipmentToJson();
+                CurrentItems.Refresh();
+            }
+        }
+
+        private void SaveEquipmentToJson()
+        {
+            var settings = new JsonSerializerSettings { Converters = { new StringEnumConverter() }, Formatting = Formatting.Indented };
+            File.WriteAllText(_equipmentPath, JsonConvert.SerializeObject(Equipment, settings));
+        }
+
+        private void SwitchCollectionView()
+        {
+            CurrentItems = CollectionViewSource.GetDefaultView(_isEquipmentMode ? (IEnumerable<object>)Equipment : Services);
             CurrentItems.Filter = FilterItems;
+            CurrentItems.Refresh();
+            OnPropertyChanged(nameof(CurrentItems));
         }
 
         private bool FilterItems(object item)
         {
-            if (item is Service service)
-                return service.Price <= _maxPrice &&
-                       (_selectedServiceType == ServiceType.None || service.Type == _selectedServiceType) &&
-                       (string.IsNullOrEmpty(_searchQuery) || service.Name.Contains(_searchQuery));
+            if (_isEquipmentMode && item is Equipment e)
+                return e.Price <= _maxPrice
+                       && (_selectedBrand == Brand.None || e.Brand == _selectedBrand)
+                       && (_selectedServiceType == ServiceType.None || e.SupportedServices.Contains(_selectedServiceType))
+                       && (string.IsNullOrEmpty(_searchQuery)
+                           || (e.Model != null &&
+                               e.Model.IndexOf(_searchQuery, StringComparison.OrdinalIgnoreCase) >= 0));
 
-            if (item is Equipment equipment)
-                return equipment.Price <= _maxPrice &&
-                       (_selectedBrand == Brand.None || equipment.Brand == _selectedBrand) &&
-                       (string.IsNullOrEmpty(_searchQuery) || equipment.Model.Contains(_searchQuery));
+            if (!_isEquipmentMode && item is Service s)
+                return s.Price <= _maxPrice
+                       && (_selectedServiceType == ServiceType.None || s.Type == _selectedServiceType)
+                       && (string.IsNullOrEmpty(_searchQuery)
+                           || (s.Name != null &&
+                               s.Name.IndexOf(_searchQuery, StringComparison.OrdinalIgnoreCase) >= 0));
 
             return false;
         }
@@ -84,53 +251,41 @@ namespace Printinvest.ViewModels
             {
                 var settings = new JsonSerializerSettings
                 {
-                    Converters = { new StringEnumConverter() } // Добавляем конвертер enum
+                    Converters = { new StringEnumConverter() }
                 };
-
-                var services = JsonConvert.DeserializeObject<List<Service>>(
-                    File.ReadAllText(_servicesPath),
-                    settings
-                );
+                var services = JsonConvert.DeserializeObject<List<Service>>(File.ReadAllText(_servicesPath), settings);
+                Services.Clear();
                 Services.AddRange(services);
             }
-
             if (File.Exists(_equipmentPath))
             {
                 var settings = new JsonSerializerSettings
                 {
-                    Converters = { new StringEnumConverter() } // Аналогично для оборудования
+                    Converters = { new StringEnumConverter() }
                 };
-
-                var equipment = JsonConvert.DeserializeObject<List<Equipment>>(
-                    File.ReadAllText(_equipmentPath),
-                    settings
-                );
+                var equipment = JsonConvert.DeserializeObject<List<Equipment>>(File.ReadAllText(_equipmentPath), settings);
+                Equipment.Clear();
                 Equipment.AddRange(equipment);
             }
-            Application.Current.Dispatcher.Invoke(() =>
-            {
-                CurrentItems.Refresh();
-            });
+
+            Application.Current.Dispatcher.Invoke(() => CurrentItems.Refresh());
         }
 
         private void OpenAdminPanel()
         {
-            var adminWindow = new AdminWindow();
-            adminWindow.ShowDialog();
-            LoadData(); // Перезагружаем данные после закрытия
+            var win = new AdminPanelWindow { Owner = Application.Current.MainWindow };
+            if (win.ShowDialog() == true)
+            {
+                // Перезагрузить список
+                LoadData();
+                CurrentItems.Refresh();
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName) =>
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
-
-    public class InverseBooleanConverter : IValueConverter
-    {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture) =>
-            !(bool)(value ?? false);
-
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) =>
-            !(bool)(value ?? false);
+        }
     }
 }

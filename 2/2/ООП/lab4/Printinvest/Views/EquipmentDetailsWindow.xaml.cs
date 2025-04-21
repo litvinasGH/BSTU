@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Printinvest.Views
 {
     /// <summary>
-    /// Логика взаимодействия для AdminWindow.xaml
+    /// Логика взаимодействия для EquipmentDetailsWindow.xaml
     /// </summary>
-    public partial class AdminWindow : Window
+    public partial class EquipmentDetailsWindow : Window
     {
-        public AdminWindow()
+        public EquipmentDetailsWindow()
         {
             InitializeComponent();
         }

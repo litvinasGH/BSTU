@@ -4,13 +4,17 @@
              xmlns:enums="clr-namespace:Printinvest.Models.Enums"
              xmlns:utils="clr-namespace:Printinvest.Utils"
              Style="{StaticResource EquipmentCardStyle}">
+    <UserControl.Resources>
+        <utils:ImageCoverPathConverter x:Key="ImageCoverPathConverter"/>
+        <Image x:Key="DefaultCover" Source="/Assets/default_cover.png"/>
+    </UserControl.Resources>
 
     <Border Background="White" CornerRadius="8" Padding="15" >
         <Border.Effect>
             <DropShadowEffect BlurRadius="8" Opacity="0.2" ShadowDepth="2"/>
         </Border.Effect>
         <StackPanel>
-            <Image Source="{Binding ImagePath}"
+            <Image Source="{Binding ImagePath, Converter={StaticResource ImageCoverPathConverter}}"
                    Height="120"
                    Stretch="Uniform"/>
 
@@ -26,7 +30,7 @@
             <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
                 <TextBlock Text="{DynamicResource PriceLabel}"
                            Foreground="{StaticResource DarkAccentBrush}"/>
-                <TextBlock Text="{Binding Price, StringFormat={}{0}₽}"
+                <TextBlock Text="{Binding Price, StringFormat={}{0}BYN}"
                            Foreground="{StaticResource PrimaryBrush}"
                            FontWeight="Bold"/>
             </StackPanel>

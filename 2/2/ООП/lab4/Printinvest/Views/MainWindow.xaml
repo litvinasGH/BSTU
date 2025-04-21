@@ -3,9 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:controls="clr-namespace:Printinvest.Views.Controls"
         xmlns:vm="clr-namespace:Printinvest.ViewModels"
-        xmlns:enums="clr-namespace:Printinvest.Models.Enums"
-        xmlns:utils="clr-namespace:Printinvest.Utils"
-        xmlns:models="clr-namespace:Printinvest.Models"
         Title="{DynamicResource AppTitle}"
         Height="768" Width="1366"
         Icon="/Views/printinvest.png"
@@ -16,6 +13,12 @@
         <vm:MainViewModel/>
     </Window.DataContext>
 
+    <!-- InputBinding для сочетания клавиш -->
+    <Window.InputBindings>
+        <KeyBinding Gesture="Ctrl+Alt+A"
+                    Command="{Binding UnlockAdminCommand}"/>
+    </Window.InputBindings>
+
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300"/>
@@ -25,51 +28,68 @@
         <!-- Панель фильтров -->
         <controls:FilterPanel Grid.Column="0"/>
 
-        <!-- Основной контент -->
-        <DockPanel Grid.Column="1" Margin="10 0 0 0">
-            <!-- Панель управления -->
-            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0 0 0 10">
-                <Button Content="{DynamicResource ServicesButton}" 
-            Command="{Binding SwitchToServicesCommand}"
-            Style="{StaticResource TabButton}"
-            IsEnabled="{Binding IsEquipmentMode, Converter={StaticResource InverseBooleanConverter}}"/>
+        <DockPanel Grid.Column="1" Margin="10,0,0,0">
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Right">
+                <!-- Кнопки смены языка -->
+                <Button Content="EN"
+                Command="{Binding SwitchToEnglishCommand}"
+                Margin="0,0,5,0"
+                ToolTip="Switch to English"/>
+                <Button Content="RU"
+                Command="{Binding SwitchToRussianCommand}"
+                Margin="0,0,20,0"
+                ToolTip="Переключить на русский"/>
 
-                <Button Content="{DynamicResource EquipmentButton}" 
-            Command="{Binding SwitchToEquipmentCommand}"
-            Style="{StaticResource TabButton}"
-            Margin="10 0 0 0"
-            IsEnabled="{Binding IsEquipmentMode}"/>
-
-                <Button Content="➕" 
-            Command="{Binding OpenAdminPanelCommand}"
-            Style="{StaticResource FloatingActionButton}"
-            Margin="20 0 0 0"
-            ToolTip="{DynamicResource AddNewButton}"
-            Visibility="{Binding AdminControlsVisibility}"/>
+                <!-- Существующая кнопка добавления -->
+                <Button Content="➕"
+                Command="{Binding OpenAdminPanelCommand}"
+                Style="{StaticResource FloatingActionButton}"
+                Visibility="{Binding IsAdminUnlocked, Converter={StaticResource BooleanToVisibilityConverter}}"
+                ToolTip="{DynamicResource AddNewButton}"/>
             </StackPanel>
 
-            <!-- Список элементов -->
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <ItemsControl ItemsSource="{Binding CurrentItems}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <WrapPanel Orientation="Horizontal"/>
+                            <WrapPanel Orientation="Horizontal"
+                                       HorizontalAlignment="Center"
+                                       ItemWidth="220"
+                                       ItemHeight="350"/>
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
-
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <!-- Упрощаем шаблон -->
-                            <ContentControl Content="{Binding}">
-                                <ContentControl.Resources>
-                                    <DataTemplate DataType="{x:Type models:Service}">
-                                        <controls:ServiceCard/>
-                                    </DataTemplate>
-                                    <DataTemplate DataType="{x:Type models:Equipment}">
-                                        <controls:EquipmentCard/>
-                                    </DataTemplate>
-                                </ContentControl.Resources>
-                            </ContentControl>
+                            <!-- Single root container -->
+                            <StackPanel>
+                                <!-- Equipment card button -->
+                                <Button
+                Command="{Binding DataContext.ShowEquipmentDetailsCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                CommandParameter="{Binding}"
+                Style="{StaticResource CardButtonStyle}">
+                                    <controls:EquipmentCard />
+                                </Button>
+
+                                <!-- Admin actions, shown only when IsAdminUnlocked == true -->
+                                <StackPanel
+                Orientation="Horizontal"
+                Margin="0,10,0,0"
+                Visibility="{Binding DataContext.IsAdminUnlocked,
+                                     RelativeSource={RelativeSource AncestorType=Window},
+                                     Converter={StaticResource BooleanToVisibilityConverter}}">
+                                    <Button
+                    Content="Изменить"
+                    Command="{Binding DataContext.EditEquipmentCommand,
+                                      RelativeSource={RelativeSource AncestorType=Window}}"
+                    CommandParameter="{Binding}"
+                    Margin="0,0,5,0"/>
+                                    <Button
+                    Content="Удалить"
+                    Command="{Binding DataContext.DeleteEquipmentCommand,
+                                      RelativeSource={RelativeSource AncestorType=Window}}"
+                    CommandParameter="{Binding}"/>
+                                </StackPanel>
+                            </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>

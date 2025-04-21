@@ -31,6 +31,20 @@
         <Setter Property="MinWidth" Value="200"/>
     </Style>
 
+    <Style x:Key="CardButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <!-- Стиль для комбобоксов -->
     <Style x:Key="FilterComboBox" TargetType="ComboBox">
