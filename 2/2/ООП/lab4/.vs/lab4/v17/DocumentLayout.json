@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{FB60D007-1970-452C-873C-F4DB0CFC385B}|Printinvest\\Printinvest.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\printinvest\\models\\enums\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB60D007-1970-452C-873C-F4DB0CFC385B}|Printinvest\\Printinvest.csproj|solutionrelative:printinvest\\models\\enums\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -176,6 +177,50 @@
     {
       "AbsoluteMoniker": "D:0:0:{06C5C35C-FABB-4D5D-8F54-B5B9AF1AE4AB}|lab4\\lab4.csproj|D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\lab4\\resources\\local.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06C5C35C-FABB-4D5D-8F54-B5B9AF1AE4AB}|lab4\\lab4.csproj|solutionrelative:lab4\\resources\\local.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u043E\u043E\u043F\\lab4\\printinvest\\other\\authviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|solutionrelative:printinvest\\other\\authviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\printinvest\\other\\resources.ru-ru.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|solutionrelative:printinvest\\other\\resources.ru-ru.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\printinvest\\other\\resources.en-us.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|solutionrelative:printinvest\\other\\resources.en-us.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\printinvest\\loginpage\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|solutionrelative:printinvest\\loginpage\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\printinvest\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|solutionrelative:printinvest\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\printinvest\\loginpage\\registrationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|solutionrelative:printinvest\\loginpage\\registrationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\printinvest\\other\\passwordboxassistant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|solutionrelative:printinvest\\other\\passwordboxassistant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\printinvest\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|solutionrelative:printinvest\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\printinvest\\other\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|solutionrelative:printinvest\\other\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\printinvest\\other\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|solutionrelative:printinvest\\other\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\printinvest\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49FD2FBF-CFED-4F55-881A-2104A6E69877}|Printinvest\\Printinvest.csproj|solutionrelative:printinvest\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 9d4b0e5 (hz)
     }
   ],
   "DocumentGroupContainers": [
@@ -185,7 +230,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 6,
+=======
+          "SelectedChildIndex": 5,
+>>>>>>> 9d4b0e5 (hz)
           "Children": [
             {
               "$type": "Bookmark",
@@ -198,6 +247,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+<<<<<<< HEAD
               "Title": "ImageCoverPathConverter.cs",
               "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\Utils\\ImageCoverPathConverter.cs",
               "RelativeDocumentMoniker": "Printinvest\\Utils\\ImageCoverPathConverter.cs",
@@ -257,11 +307,21 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T19:23:40.975Z",
+=======
+              "Title": "Resources.en-US.xaml",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\other\\Resources.en-US.xaml",
+              "RelativeDocumentMoniker": "Printinvest\\other\\Resources.en-US.xaml",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\other\\Resources.en-US.xaml",
+              "RelativeToolTip": "Printinvest\\other\\Resources.en-US.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-18T09:53:21.834Z",
+>>>>>>> 9d4b0e5 (hz)
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\ViewModels\\MainViewModel.cs",
               "RelativeDocumentMoniker": "Printinvest\\ViewModels\\MainViewModel.cs",
@@ -282,10 +342,70 @@
               "RelativeToolTip": "Printinvest\\Localization\\Resources.ru-RU.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-20T19:16:39.245Z",
+=======
+              "Title": "Resources.ru-RU.xaml",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\other\\Resources.ru-RU.xaml",
+              "RelativeDocumentMoniker": "Printinvest\\other\\Resources.ru-RU.xaml",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\other\\Resources.ru-RU.xaml",
+              "RelativeToolTip": "Printinvest\\other\\Resources.ru-RU.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-18T08:58:55.234Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\App.xaml",
+              "RelativeDocumentMoniker": "Printinvest\\App.xaml",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\App.xaml",
+              "RelativeToolTip": "Printinvest\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-18T08:58:10.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\other\\AuthViewModel.cs",
+              "RelativeDocumentMoniker": "Printinvest\\other\\AuthViewModel.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\other\\AuthViewModel.cs",
+              "RelativeToolTip": "Printinvest\\other\\AuthViewModel.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAwwEEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T08:56:09.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PasswordBoxAssistant.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\other\\PasswordBoxAssistant.cs",
+              "RelativeDocumentMoniker": "Printinvest\\other\\PasswordBoxAssistant.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\other\\PasswordBoxAssistant.cs",
+              "RelativeToolTip": "Printinvest\\other\\PasswordBoxAssistant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T09:39:58.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\LoginPage\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Printinvest\\LoginPage\\LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\LoginPage\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "Printinvest\\LoginPage\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T09:21:21.846Z",
+>>>>>>> 9d4b0e5 (hz)
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 9,
               "Title": "Resources.en-US.xaml",
               "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\Localization\\Resources.en-US.xaml",
@@ -330,11 +450,22 @@
               "RelativeToolTip": "Printinvest\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-20T19:47:10.847Z",
+=======
+              "DocumentIndex": 5,
+              "Title": "RegistrationWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\LoginPage\\RegistrationWindow.xaml",
+              "RelativeDocumentMoniker": "Printinvest\\LoginPage\\RegistrationWindow.xaml",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\LoginPage\\RegistrationWindow.xaml",
+              "RelativeToolTip": "Printinvest\\LoginPage\\RegistrationWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-18T08:57:52.995Z",
+>>>>>>> 9d4b0e5 (hz)
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+<<<<<<< HEAD
               "Title": "PasswordWindow.xaml",
               "DocumentMoniker": "D:\\git\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\Views\\PasswordWindow.xaml",
               "RelativeDocumentMoniker": "Printinvest\\Views\\PasswordWindow.xaml",
@@ -728,6 +859,51 @@
               "RelativeToolTip": "lab4\\app\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-07T13:53:40.322Z"
+=======
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Printinvest\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\MainWindow.xaml",
+              "RelativeToolTip": "Printinvest\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-18T08:53:57.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\other\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "Printinvest\\other\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\other\\RelayCommand.cs",
+              "RelativeToolTip": "Printinvest\\other\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T09:09:39.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\other\\User.cs",
+              "RelativeDocumentMoniker": "Printinvest\\other\\User.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\other\\User.cs",
+              "RelativeToolTip": "Printinvest\\other\\User.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T08:54:24.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Printinvest\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u041E\u041E\u041F\\lab4\\Printinvest\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Printinvest\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T08:53:57.298Z"
+>>>>>>> 9d4b0e5 (hz)
             }
           ]
         }

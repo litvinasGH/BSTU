@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab4", "lab4\lab4.csproj", "{06C5C35C-FABB-4D5D-8F54-B5B9AF1AE4AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Printinvest", "Printinvest\Printinvest.csproj", "{49FD2FBF-CFED-4F55-881A-2104A6E69877}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Printinvest", "Printinvest\Printinvest.csproj", "{FB60D007-1970-452C-873C-F4DB0CFC385B}"
 EndProject
@@ -13,6 +13,7 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{06C5C35C-FABB-4D5D-8F54-B5B9AF1AE4AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{06C5C35C-FABB-4D5D-8F54-B5B9AF1AE4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06C5C35C-FABB-4D5D-8F54-B5B9AF1AE4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -21,6 +22,12 @@ Global
 		{FB60D007-1970-452C-873C-F4DB0CFC385B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB60D007-1970-452C-873C-F4DB0CFC385B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB60D007-1970-452C-873C-F4DB0CFC385B}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{49FD2FBF-CFED-4F55-881A-2104A6E69877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49FD2FBF-CFED-4F55-881A-2104A6E69877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49FD2FBF-CFED-4F55-881A-2104A6E69877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49FD2FBF-CFED-4F55-881A-2104A6E69877}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 9d4b0e5 (hz)
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

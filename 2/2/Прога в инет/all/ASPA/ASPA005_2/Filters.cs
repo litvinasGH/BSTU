@@ -31,7 +31,7 @@ namespace ASPA005_2
             if (celebrity == null)
                 throw new CelebrityArgumentException("Celebrity is null", 500);
 
-            if (!File.Exists(Path.Combine(Rep.FullFilePath, celebrity.PhotoPath)))
+            if (!File.Exists(Path.Combine(Rep.BasePath, celebrity.PhotoPath)))
                 context.HttpContext.Response.Headers["X-Celebrity"] = $"NotFound = {celebrity.PhotoPath}";
 
             return await next(context);

@@ -50,7 +50,7 @@ internal partial class Program
                 Celebrity? cel = context.GetArgument<Celebrity>(0);
                 if (cel == null)
                     throw new CelebrityArgumentException("Celebrity is null", 500);
-                if (!File.Exists(Path.Combine(repository.FullFilePath, cel.PhotoPath)))
+                if (!File.Exists(Path.Combine(repository.BasePath, cel.PhotoPath)))
                     context.HttpContext.Response.Headers["X-Celebrity"] = $"NotFound = {cel.PhotoPath}";
                 return await next(context);
             });

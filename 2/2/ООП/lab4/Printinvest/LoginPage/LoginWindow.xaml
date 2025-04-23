@@ -1,0 +1,44 @@
+﻿<Window x:Class="Printinvest.LoginPage.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:helpers="clr-namespace:Printinvest.other"
+        Title="{DynamicResource LoginTitle}" Height="300" Width="400" MinWidth="324" MinHeight="216">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Выбор языка -->
+        <ComboBox Grid.Row="0" 
+          SelectedValue="{Binding SelectedLanguage}"
+          HorizontalAlignment="Right">
+            <ComboBoxItem Content="Русский" Tag="ru-RU"/>
+            <ComboBoxItem Content="English" Tag="en-US"/>
+        </ComboBox>
+
+        <!-- Поля ввода -->
+        <TextBox Grid.Row="1" 
+                 Text="{Binding CurrentUser.Email}" 
+                 Style="{StaticResource AuthTextBox}"
+                 Tag="{DynamicResource EmailHint}"/>
+
+        <PasswordBox Grid.Row="2" 
+                     helpers:PasswordBoxAssistant.BoundPassword="{Binding CurrentUser.Password, Mode=TwoWay}"
+                     Style="{StaticResource AuthPasswordBox}"
+                     Tag="{DynamicResource PasswordHint}"/>
+
+        <!-- Кнопки -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="{DynamicResource LoginButton}" 
+                    Command="{Binding LoginCommand}" 
+                    Style="{StaticResource PrimaryButton}"/>
+            <Button Content="{DynamicResource RegisterButton}" 
+                    Command="{Binding RegisterCommand}" 
+                    Style="{StaticResource SecondaryButton}" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

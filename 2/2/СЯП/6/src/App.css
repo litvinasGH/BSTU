@@ -3,109 +3,158 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 0.3s, color 0.3s;
-  color: #fff;
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
 }
 
+
 .App.light {
-  background: #f0f0f0;
-  /* color: #333; */
+  background: #f5f5f5;
+  color: #333;
 }
 
 .App.dark {
-  background: #333;
+  background: #0a0a0a;
   color: #fff;
 }
 
+
 .calculator {
-  width: 320px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 340px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border: 2px solid #ff4444;
 }
 
-.App.light .calculator{
-  background: #969696;
+.App.light .calculator {
+  background: #ffffff;
+  border-color: #ff4444;
 }
 
-.App.dark .calculator{
-  background: #444;
+.App.dark .calculator {
+  background: #1a1a1a;
+  border-color: #ff4444;
 }
+
 
 .display {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
   text-align: right;
+  border: 2px solid #ff4444;
 }
 
-.App.App.light .display{
-  background: #8d8c8c;
-} 
-.App.dark .display{
+.App.light .display {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.App.dark .display {
   background: #222;
+  color: #fff;
 }
 
 .input {
-  min-height: 20px;
-  font-size: 20px;
-}
-.App.light .input{
-  color: #292929;
-}
-.App.dark .input{ 
-  color: #ababab;
+  min-height: 30px;
+  font-size: 24px;
+  color: #ff4444 !important;
 }
 
 .result {
-  min-height: 40px;
-  font-size: 32px;
-  font-weight: bold;
+  min-height: 50px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ff4444;
 }
+
 
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
+  gap: 8px;
 }
 
 .button {
   padding: 20px;
-  font-size: 18px;
+  font-size: 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  background: #666;
+  transition: all 0.2s ease;
+  background: #333;
   color: white;
 }
 
 .button:hover {
-  background: #777;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(255,68,68,0.3);
 }
 
+.App.light .button {
+  background: #e0e0e0;
+  color: #333;
+}
 
+.App.dark .button {
+  background: #333;
+  color: white;
+}
+
+.button.operator {
+  background: #ff4444 !important;
+  color: white !important;
+}
+
+.button.operator:hover {
+  background: #ff5555 !important; 
+  color: white !important;
+}
+
+.button.equals {
+  background: #cc0000 !important;
+  color: white !important;
+}
 
 .theme-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border: 2px solid #ff4444;
+  background: transparent;
+  color: #ff4444;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
+
+.theme-toggle:hover {
+  background: #ff4444;
+  color: white;
+}
+
 
 .history {
   margin-top: 20px;
-  padding: 10px;
-  background: #555;
-  border-radius: 5px;
-  max-height: 200px;
-  overflow-y: auto;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #ff4444;
+}
+
+.App.light .history {
+  background: #ffffff;
+}
+
+.App.dark .history {
+  background: #1a1a1a;
 }
 
 .history h3 {
-  margin: 0 0 10px 0;
+  color: #ff4444;
+  margin: 0 0 15px 0;
 }
 
 .history ul {
@@ -115,6 +164,7 @@
 }
 
 .history li {
-  padding: 5px 0;
-  border-bottom: 1px solid #666;
+  padding: 8px 0;
+  border-bottom: 1px solid #ff4444;
+  color: inherit;
 }
