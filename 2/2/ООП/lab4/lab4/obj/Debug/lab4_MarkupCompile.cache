@@ -4,12 +4,20 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 D:\git\BSTU\2\2\ООП\lab4\lab4\obj\Debug\
+=======
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\obj\Debug\
+>>>>>>> dc14c10 (gg)
 lab4
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 D:\git\BSTU\2\2\ООП\lab4\lab4\app\App.xaml
+=======
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\lab4\app\App.xaml
+>>>>>>> dc14c10 (gg)
 3159048699
 
 61029850821

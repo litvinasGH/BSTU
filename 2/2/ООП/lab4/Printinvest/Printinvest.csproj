@@ -5,6 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ProjectGuid>{FB60D007-1970-452C-873C-F4DB0CFC385B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Printinvest</RootNamespace>
@@ -17,6 +18,13 @@
     <AssemblyName>Printinvest</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
 >>>>>>> 9d4b0e5 (hz)
+=======
+    <ProjectGuid>{FB60D007-1970-452C-873C-F4DB0CFC385B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Printinvest</RootNamespace>
+    <AssemblyName>Printinvest</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+>>>>>>> dc14c10 (gg)
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -44,11 +52,17 @@
   </PropertyGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
 =======
 >>>>>>> 9d4b0e5 (hz)
+=======
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+>>>>>>> dc14c10 (gg)
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -70,6 +84,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dc14c10 (gg)
     <Compile Include="Utils\EnumToLocalizedStringConverter.cs" />
     <Compile Include="Utils\FilterViewModel.cs" />
     <Compile Include="Utils\ImageCoverPathConverter.cs" />
@@ -108,6 +125,7 @@
       <DependentUpon>ServiceDetailsWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Localization\Resources.en-US.xaml">
+<<<<<<< HEAD
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -117,22 +135,28 @@
     </Page>
 =======
     <Page Include="LoginPage\LoginWindow.xaml">
+=======
+>>>>>>> dc14c10 (gg)
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LoginPage\RegistrationWindow.xaml">
+    <Page Include="Localization\Resources.ru-RU.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+<<<<<<< HEAD
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
 >>>>>>> 9d4b0e5 (hz)
+=======
+>>>>>>> dc14c10 (gg)
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Page Include="Styles\AppStyles.xaml">
       <SubType>Designer</SubType>
@@ -196,22 +220,75 @@
     </Page>
     <Page Include="other\Resources.ru-RU.xaml">
 >>>>>>> 9d4b0e5 (hz)
+=======
+    <Page Include="Styles\AppStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\CardStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminPanelWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\EquipmentCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\FilterPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\ServiceCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EquipmentDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EquipmentEditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PasswordWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ServiceDetailsWindow.xaml">
+>>>>>>> dc14c10 (gg)
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dc14c10 (gg)
     <Compile Include="Models\Enums\Brand.cs" />
     <Compile Include="Models\Enums\ServiceType.cs" />
     <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\Service.cs" />
+<<<<<<< HEAD
 =======
     <Compile Include="other\AuthViewModel.cs" />
     <Compile Include="other\PasswordBoxAssistant.cs" />
     <Compile Include="other\RelayCommand.cs" />
     <Compile Include="other\User.cs" />
 >>>>>>> 9d4b0e5 (hz)
+=======
+>>>>>>> dc14c10 (gg)
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -230,9 +307,13 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <None Include="packages.config" />
 =======
 >>>>>>> 9d4b0e5 (hz)
+=======
+    <None Include="packages.config" />
+>>>>>>> dc14c10 (gg)
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -242,6 +323,9 @@
     <None Include="App.config" />
   </ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dc14c10 (gg)
   <ItemGroup>
     <Resource Include="Assets\Icons\printinvest.png" />
   </ItemGroup>
@@ -265,7 +349,10 @@
   <ItemGroup>
     <Resource Include="Assets\default_cover.png" />
   </ItemGroup>
+<<<<<<< HEAD
 =======
 >>>>>>> 9d4b0e5 (hz)
+=======
+>>>>>>> dc14c10 (gg)
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

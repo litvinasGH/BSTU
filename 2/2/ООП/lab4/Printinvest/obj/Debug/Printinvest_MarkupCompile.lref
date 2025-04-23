@@ -9,8 +9,17 @@ FD:\git\BSTU\2\2\ООП\lab4\Printinvest\Views\ServiceDetailsWindow.xaml;;
 FD:\git\BSTU\2\2\ООП\lab4\Printinvest\Views\EquipmentDetailsWindow.xaml;;
 =======
 FC:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\App.xaml;;
+<<<<<<< HEAD
 FC:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\LoginPage\RegistrationWindow.xaml;;
 FC:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\MainWindow.xaml;;
 FC:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\LoginPage\LoginWindow.xaml;;
 >>>>>>> 9d4b0e5 (hz)
+=======
+FC:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\Views\Controls\EquipmentCard.xaml;;
+FC:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\Views\Controls\FilterPanel.xaml;;
+FC:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\Views\Controls\ServiceCard.xaml;;
+FC:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\Views\EquipmentDetailsWindow.xaml;;
+FC:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\Views\MainWindow.xaml;;
+FC:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\Views\ServiceDetailsWindow.xaml;;
+>>>>>>> dc14c10 (gg)
 

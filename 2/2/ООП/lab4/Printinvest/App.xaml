@@ -2,6 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 <<<<<<< HEAD
+<<<<<<< HEAD
              StartupUri="Views/MainWindow.xaml"
              xmlns:utils="clr-namespace:Printinvest.Utils">
     <Application.Resources>
@@ -38,12 +39,42 @@
 =======
              xmlns:local="clr-namespace:Printinvest"
              StartupUri="LoginPage/LoginWindow.xaml">
+=======
+             StartupUri="Views/MainWindow.xaml"
+             xmlns:utils="clr-namespace:Printinvest.Utils">
+>>>>>>> dc14c10 (gg)
     <Application.Resources>
         <ResourceDictionary>
-           
+            <!-- Основные цвета темы -->
+            <Color x:Key="PrimaryBlue">#0F6985</Color>
+            <Color x:Key="DarkAccent">#054256</Color>
+            <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryBlue}"/>
+            <SolidColorBrush x:Key="DarkAccentBrush" Color="{StaticResource DarkAccent}"/>
+
+            <!-- Базовые цвета интерфейса -->
+            <SolidColorBrush x:Key="BackgroundBrush" Color="#F5F5F5"/>
+            <!-- Светло-серый фон -->
+            <SolidColorBrush x:Key="TextPrimary" Color="#333333"/>
+
+            <ImageSource x:Key="DefaultCover">/Assets/default_cover.png</ImageSource>
+            <!-- Тёмно-серый текст -->
+
+            <utils:EnumToLocalizedStringConverter x:Key="EnumToLocalizedStringConverter"/>
+            <utils:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+
+            <!-- Подключение стилей -->
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/other/Resources.ru-RU.xaml"/>
+                <!-- Глобальные стили -->
+                <ResourceDictionary Source="/Styles/AppStyles.xaml"/>
+                <!-- Стили кнопок -->
+                <ResourceDictionary Source="/Styles/ButtonStyles.xaml"/>
+                <!-- Стили карточек -->
+                <ResourceDictionary Source="/Styles/CardStyles.xaml"/>
+                <!-- Локализация -->
+                <ResourceDictionary Source="/Localization/Resources.ru-RU.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+<<<<<<< HEAD
 
             <Style x:Key="AuthTextBox" TargetType="TextBox">
                 <Setter Property="Margin" Value="0,5"/>
@@ -73,6 +104,8 @@
                 <Setter Property="Foreground" Value="White"/>
             </Style>
 >>>>>>> 9d4b0e5 (hz)
+=======
+>>>>>>> dc14c10 (gg)
         </ResourceDictionary>
     </Application.Resources>
 </Application>

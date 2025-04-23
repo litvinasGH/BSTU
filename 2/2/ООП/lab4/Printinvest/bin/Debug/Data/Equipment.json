@@ -91,5 +91,28 @@
     "SupportedServices": [
       "Refill"
     ]
+<<<<<<< HEAD
   }
 ]
+=======
+  },
+  {
+    "ImagePath": "Assets/Images\\thumb-1920-676481-1741383921.jpg",
+    "Model": "otherrr",
+    "Price": 99999.0,
+    "Brand": "Other",
+    "SupportedServices": [
+      "Refill"
+    ]
+  },
+  {
+    "ImagePath": "Assets/Images\\Grand Theft Auto V Super-Resolution 2024.12.29 - 13.21.36.94.png",
+    "Model": "othe",
+    "Price": 10.0,
+    "Brand": "Ricoh",
+    "SupportedServices": [
+      "Refill"
+    ]
+  }
+]
+>>>>>>> dc14c10 (gg)

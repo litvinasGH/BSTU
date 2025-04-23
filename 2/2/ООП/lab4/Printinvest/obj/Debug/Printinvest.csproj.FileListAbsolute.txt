@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dc14c10 (gg)
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest.csproj.AssemblyReference.cache
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Localization\Resources.en-US.baml
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Localization\Resources.ru-RU.baml
@@ -40,6 +43,7 @@ D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\EquipmentEditWindow.g.cs
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\PasswordWindow.g.cs
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\AdminPanelWindow.baml
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\AdminPanelWindow.g.cs
+<<<<<<< HEAD
 =======
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest.csproj.AssemblyReference.cache
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\LoginPage\LoginWindow.baml
@@ -51,17 +55,52 @@ C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\MainWindow.g
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\App.g.cs
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest_MarkupCompile.cache
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest_MarkupCompile.lref
+=======
+>>>>>>> dc14c10 (gg)
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\bin\Debug\Printinvest.exe.config
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\bin\Debug\Printinvest.exe
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\bin\Debug\Printinvest.pdb
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest.csproj.AssemblyReference.cache
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Localization\Resources.en-US.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Localization\Resources.ru-RU.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Styles\AppStyles.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Styles\ButtonStyles.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Styles\CardStyles.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\AdminPanelWindow.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\EquipmentEditWindow.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\PasswordWindow.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\AdminPanelWindow.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\Controls\EquipmentCard.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\Controls\FilterPanel.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\Controls\ServiceCard.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\EquipmentDetailsWindow.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\EquipmentEditWindow.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\MainWindow.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\PasswordWindow.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\ServiceDetailsWindow.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\App.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest_MarkupCompile.cache
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest_MarkupCompile.lref
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\App.baml
-C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\MainWindow.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\Controls\EquipmentCard.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\Controls\FilterPanel.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\Controls\ServiceCard.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\EquipmentDetailsWindow.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\MainWindow.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\ServiceDetailsWindow.baml
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest.g.resources
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest.Properties.Resources.resources
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest.csproj.GenerateResource.cache
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest.csproj.CoreCompileInputs.cache
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinv.CD2B204C.Up2Date
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest.exe
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest.pdb
+<<<<<<< HEAD
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\other\Resources.en-US.baml
 >>>>>>> 9d4b0e5 (hz)
+=======
+>>>>>>> dc14c10 (gg)

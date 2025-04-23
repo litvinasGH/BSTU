@@ -5,14 +5,19 @@ winexe
 C#
 .cs
 <<<<<<< HEAD
+<<<<<<< HEAD
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\
 =======
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\
 >>>>>>> 9d4b0e5 (hz)
+=======
+D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\
+>>>>>>> dc14c10 (gg)
 Printinvest
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 <<<<<<< HEAD
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\App.xaml
 14-1337065707
@@ -28,6 +33,14 @@ C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\App.xaml
 13-1310406943
 LoginPage\LoginWindow.xaml;LoginPage\RegistrationWindow.xaml;MainWindow.xaml;other\Resources.en-US.xaml;other\Resources.ru-RU.xaml;
 >>>>>>> 9d4b0e5 (hz)
+=======
+D:\git\BSTU\2\2\ООП\lab4\Printinvest\App.xaml
+14-1337065707
+
+28-1889327447
+14423523189
+Localization\Resources.en-US.xaml;Localization\Resources.ru-RU.xaml;Styles\AppStyles.xaml;Styles\ButtonStyles.xaml;Styles\CardStyles.xaml;Views\AdminPanelWindow.xaml;Views\Controls\EquipmentCard.xaml;Views\Controls\FilterPanel.xaml;Views\Controls\ServiceCard.xaml;Views\EquipmentDetailsWindow.xaml;Views\EquipmentEditWindow.xaml;Views\MainWindow.xaml;Views\PasswordWindow.xaml;Views\ServiceDetailsWindow.xaml;
+>>>>>>> dc14c10 (gg)
 
 False
 
