@@ -1,17 +1,24 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SignUp from './SignUp';
-import SignIn from './SignIn';
-import ResetPassword from './ResetPassword';
+import React, { useEffect } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
+import ResetPassword from './pages/ResetPassword';
 
-export default function App() {
+const App: React.FC = () => {
+  useEffect(() => {
+    console.log('App component mounted');
+  }, []);
+
   return (
-    <BrowserRouter>
+    <div className="app-container">
       <Routes>
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/reset-password" element={<ResetPassword />} />
-        <Route path="*" element={<SignIn />} />
+        <Route path="*" element={<Navigate to="/sign-in" replace />} />
       </Routes>
-    </BrowserRouter>
+    </div>
   );
-}
+};
+
+export default App;
