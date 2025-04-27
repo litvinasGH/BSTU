@@ -8,11 +8,7 @@
         HP,
         Epson,
         Brother,
-<<<<<<< HEAD
         Ricoh,
-=======
-        Ricoh, 
->>>>>>> dc14c10 (gg)
         Kyocera,
         Samsung,
         KonicaMinolta,

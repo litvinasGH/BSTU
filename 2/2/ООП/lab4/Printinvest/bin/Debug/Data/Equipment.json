@@ -91,10 +91,6 @@
     "SupportedServices": [
       "Refill"
     ]
-<<<<<<< HEAD
-  }
-]
-=======
   },
   {
     "ImagePath": "Assets/Images\\thumb-1920-676481-1741383921.jpg",
@@ -115,4 +111,3 @@
     ]
   }
 ]
->>>>>>> dc14c10 (gg)

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "DAL_Celebrity/1.0.0": {
+        "runtime": {
+          "DAL_Celebrity.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DAL_Celebrity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

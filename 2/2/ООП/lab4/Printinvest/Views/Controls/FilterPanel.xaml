@@ -42,13 +42,9 @@
                     Maximum="100000"
                     Value="{Binding MaxPrice, UpdateSourceTrigger=PropertyChanged}"
                     Width="150"/>
-<<<<<<< HEAD
-            <TextBlock Text="{Binding MaxPrice, StringFormat={}{0} ₽}"
-=======
-            <TextBlock Text="{Binding MaxPrice, StringFormat={}{0} BYN}"
->>>>>>> dc14c10 (gg)
-                       Margin="10,0,0,0"
-                       VerticalAlignment="Center"/>
+
+            <TextBlock Text="{Binding MaxPrice, StringFormat={}{0} BYN}"/>
+
         </StackPanel>
     </StackPanel>
 </UserControl>

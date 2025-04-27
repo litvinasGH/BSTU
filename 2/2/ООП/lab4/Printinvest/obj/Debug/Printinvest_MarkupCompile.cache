@@ -4,36 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\
-=======
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\
->>>>>>> 9d4b0e5 (hz)
 Printinvest
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-D:\git\BSTU\2\2\ООП\lab4\Printinvest\App.xaml
-14-1337065707
-
-27483861728
-14423523189
-Localization\Resources.en-US.xaml;Localization\Resources.ru-RU.xaml;Styles\AppStyles.xaml;Styles\ButtonStyles.xaml;Styles\CardStyles.xaml;Views\AdminPanelWindow.xaml;Views\Controls\EquipmentCard.xaml;Views\Controls\FilterPanel.xaml;Views\Controls\ServiceCard.xaml;Views\EquipmentDetailsWindow.xaml;Views\EquipmentEditWindow.xaml;Views\MainWindow.xaml;Views\PasswordWindow.xaml;Views\ServiceDetailsWindow.xaml;
-=======
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\App.xaml
-14-1337065707
+182080627540
 
-<<<<<<< HEAD
-112027950196
-13-1310406943
-LoginPage\LoginWindow.xaml;LoginPage\RegistrationWindow.xaml;MainWindow.xaml;other\Resources.en-US.xaml;other\Resources.ru-RU.xaml;
->>>>>>> 9d4b0e5 (hz)
-=======
-27483861728
+33932157791
 14-101266956
-Localization\Resources.en-US.xaml;Localization\Resources.ru-RU.xaml;Styles\AppStyles.xaml;Styles\ButtonStyles.xaml;Styles\CardStyles.xaml;Views\AdminPanelWindow.xaml;Views\Controls\EquipmentCard.xaml;Views\Controls\FilterPanel.xaml;Views\Controls\ServiceCard.xaml;Views\EquipmentDetailsWindow.xaml;Views\EquipmentEditWindow.xaml;Views\MainWindow.xaml;Views\PasswordWindow.xaml;Views\ServiceDetailsWindow.xaml;
->>>>>>> dc14c10 (gg)
+LoginPage\LoginWindow.xaml;LoginPage\RegistrationWindow.xaml;Views\AdminPanelWindow.xaml;Views\Controls\EquipmentCard.xaml;Views\Controls\FilterPanel.xaml;Views\Controls\ServiceCard.xaml;Views\EquipmentDetailsWindow.xaml;Views\EquipmentEditWindow.xaml;Views\MainWindow.xaml;Views\PasswordWindow.xaml;Views\ServiceDetailsWindow.xaml;Styles\AppStyles.xaml;Styles\ButtonStyles.xaml;Styles\CardStyles.xaml;Localization\Resources.en-US.xaml;Localization\Resources.ru-RU.xaml;other\Resources.en-US.xaml;other\Resources.ru-RU.xaml;
 
 False
 
