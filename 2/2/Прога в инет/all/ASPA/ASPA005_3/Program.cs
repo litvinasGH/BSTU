@@ -13,7 +13,7 @@ internal class Program
         app.MapGet("/A/{x:max(100)}", (HttpContext context, [FromRoute] int? x) => Results.Ok(new { path = context.Request.Path.Value, x = x }));
         app.MapPost("/A/{x:int:range(0,100)}", (HttpContext context, [FromRoute] int? x) => Results.Ok(new { path = context.Request.Path.Value, x = x }));
         app.MapPut("/A/{x:min(1)}/{y:min(1)}", (HttpContext context, [FromRoute] int? x, [FromRoute] int? y) => Results.Ok(new { path = context.Request.Path.Value, x = x, y = y }));
-        app.MapDelete("/A/{x:int:min(1)}-{y:int:min(1)}", (HttpContext context, [FromRoute] int? x, [FromRoute] int? y) => Results.Ok(new { path = context.Request.Path.Value, x = x, y = y }));
+        app.MapDelete("/A/{x:int:min(1)}-{y:int:max(100)}", (HttpContext context, [FromRoute] int? x, [FromRoute] int? y) => Results.Ok(new { path = context.Request.Path.Value, x = x, y = y }));
         //B
         app.MapGet("/B/{x:float}", (HttpContext context, [FromRoute] float x) => Results.Ok(new { path = context.Request.Path.Value, x = x }));
         app.MapPost("/B/{x:float}/{y:float}", (HttpContext context, [FromRoute] float x, [FromRoute] float y) => Results.Ok(new { path = context.Request.Path.Value, x = x, y = y }));

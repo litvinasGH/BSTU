@@ -1,0 +1,97 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- General terms -->
+    <sys:String x:Key="AppTitle">Printinvest</sys:String>
+    <sys:String x:Key="AdminPanelTitle">Admin Panel</sys:String>
+    <sys:String x:Key="SaveButton">Save</sys:String>
+    <sys:String x:Key="DeleteButton">Delete</sys:String>
+    <sys:String x:Key="AddNewButton">Add New</sys:String>
+
+    <!-- Services -->
+    <sys:String x:Key="Service">Service</sys:String>
+    <sys:String x:Key="Repair">Repair</sys:String>
+    <sys:String x:Key="Maintenance">Maintenance</sys:String>
+    <sys:String x:Key="Refill">Refill</sys:String>
+    <sys:String x:Key="Diagnostics">Diagnostics</sys:String>
+    <sys:String x:Key="Installation">Installation</sys:String>
+
+    <!-- Equipment -->
+    <sys:String x:Key="Equipment">Equipment</sys:String>
+    <sys:String x:Key="Xerox">Xerox</sys:String>
+    <sys:String x:Key="Canon">Canon</sys:String>
+    <sys:String x:Key="HP">HP</sys:String>
+    <sys:String x:Key="Epson">Epson</sys:String>
+    <sys:String x:Key="Brother">Brother</sys:String>
+    <sys:String x:Key="Other">Other</sys:String>
+
+    <!-- Input fields -->
+    <sys:String x:Key="NameLabel">Name:</sys:String>
+    <sys:String x:Key="PriceLabel">Price (BYN):</sys:String>
+    <sys:String x:Key="DurationLabel">Duration (days):</sys:String>
+    <sys:String x:Key="BrandLabel">Brand:</sys:String>
+    <sys:String x:Key="ModelLabel">Model:</sys:String>
+
+    <sys:String x:Key="SearchPlaceholder">Search services and equipment</sys:String>
+    <sys:String x:Key="PriceRangeLabel">Price range:</sys:String>
+    <sys:String x:Key="AllServices">All Services</sys:String>
+    <sys:String x:Key="AllBrands">All Brands</sys:String>
+
+
+    <sys:String x:Key="LanguageSwitchButton">🌐</sys:String>
+    <sys:String x:Key="ChangeLanguageToolTip">Change language</sys:String>
+    <sys:String x:Key="AdminPanelButton">Admin Panel</sys:String>
+
+    <sys:String x:Key="ServicesButton">Services</sys:String>
+    <sys:String x:Key="EquipmentButton">Equipment</sys:String>
+
+
+    <!-- Common -->
+    
+
+
+    <!-- FilterPanel -->
+    <sys:String x:Key="Filter_Search">Search:</sys:String>
+    <sys:String x:Key="Filter_Brand">Brand:</sys:String>
+    <sys:String x:Key="Filter_ServiceType">Service Type:</sys:String>
+    <sys:String x:Key="Filter_MaxPrice">Max. Price:</sys:String>
+
+    <!-- AdminPanelWindow -->
+    <sys:String x:Key="Admin_AddEquipment_Title">Add Equipment</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Brand">Brand:</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Model">Model:</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Price">Price:</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Services">Services (Refill,Maintenance):</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Image">Image:</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Browse">Browse...</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_AddButton">Add</sys:String>
+    <sys:String x:Key="Admin_AddEquipment_Cancel">Cancel</sys:String>
+
+    <!-- EquipmentDetailsWindow -->
+    <sys:String x:Key="Details_Title">Equipment Details</sys:String>
+    <sys:String x:Key="Details_SupportedServices">Supported Services:</sys:String>
+
+    <!-- EquipmentEditWindow -->
+    <sys:String x:Key="Edit_Title">Edit Equipment</sys:String>
+    <sys:String x:Key="Edit_Model">Model:</sys:String>
+    <sys:String x:Key="Edit_Price">Price:</sys:String>
+    <sys:String x:Key="Edit_Brand">Brand:</sys:String>
+    <sys:String x:Key="Edit_Save">Save</sys:String>
+    <sys:String x:Key="Edit_Cancel">Cancel</sys:String>
+
+    <!-- PasswordWindow -->
+    <sys:String x:Key="Password_Title">Enter Password</sys:String>
+    <sys:String x:Key="Password_Ok">OK</sys:String>
+    <sys:String x:Key="Password_Cancel">Cancel</sys:String>
+
+    <!-- Enum names -->
+    <sys:String x:Key="Brand_HP">HP</sys:String>
+    <sys:String x:Key="Brand_Canon">Canon</sys:String>
+    <sys:String x:Key="Brand_Epson">Epson</sys:String>
+    <!-- ... other brands -->
+
+    <sys:String x:Key="ServiceType_Refill">Refill</sys:String>
+    <sys:String x:Key="ServiceType_Maintenance">Maintenance</sys:String>
+    <!-- ... other service types -->
+</ResourceDictionary>

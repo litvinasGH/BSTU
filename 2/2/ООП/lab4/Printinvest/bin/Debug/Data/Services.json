@@ -1,0 +1,8 @@
+[
+  {
+    "Name": "Заправка картриджа",
+    "Type": "Refill", 
+    "Price": 1500.00,
+    "DurationDays": 1
+  }
+]

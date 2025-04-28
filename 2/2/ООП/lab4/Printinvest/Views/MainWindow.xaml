@@ -1,0 +1,99 @@
+﻿<Window x:Class="Printinvest.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:Printinvest.Views.Controls"
+        xmlns:vm="clr-namespace:Printinvest.ViewModels"
+        Title="{DynamicResource AppTitle}"
+        Height="768" Width="1366"
+        Icon="/Views/printinvest.png"
+        Cursor="/Assets/Icons/printer_cursor.cur"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+
+    <!-- InputBinding для сочетания клавиш -->
+    <Window.InputBindings>
+        <KeyBinding Gesture="Ctrl+Alt+A"
+                    Command="{Binding UnlockAdminCommand}"/>
+    </Window.InputBindings>
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Панель фильтров -->
+        <controls:FilterPanel Grid.Column="0"/>
+
+        <DockPanel Grid.Column="1" Margin="10,0,0,0">
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Right">
+                <!-- Кнопки смены языка -->
+                <Button Content="EN"
+                Command="{Binding SwitchToEnglishCommand}"
+                Margin="0,0,5,0"
+                ToolTip="Switch to English"/>
+                <Button Content="RU"
+                Command="{Binding SwitchToRussianCommand}"
+                Margin="0,0,20,0"
+                ToolTip="Переключить на русский"/>
+
+                <!-- Существующая кнопка добавления -->
+                <Button Content="➕"
+                Command="{Binding OpenAdminPanelCommand}"
+                Style="{StaticResource FloatingActionButton}"
+                Visibility="{Binding IsAdminUnlocked, Converter={StaticResource BooleanToVisibilityConverter}}"
+                ToolTip="{DynamicResource AddNewButton}"/>
+            </StackPanel>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding CurrentItems}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal"
+                                       HorizontalAlignment="Center"
+                                       ItemWidth="220"
+                                       ItemHeight="350"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <!-- Single root container -->
+                            <StackPanel>
+                                <!-- Equipment card button -->
+                                <Button
+                Command="{Binding DataContext.ShowEquipmentDetailsCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                CommandParameter="{Binding}"
+                Style="{StaticResource CardButtonStyle}">
+                                    <controls:EquipmentCard />
+                                </Button>
+
+                                <!-- Admin actions, shown only when IsAdminUnlocked == true -->
+                                <StackPanel
+                Orientation="Horizontal"
+                Margin="0,10,0,0"
+                Visibility="{Binding DataContext.IsAdminUnlocked,
+                                     RelativeSource={RelativeSource AncestorType=Window},
+                                     Converter={StaticResource BooleanToVisibilityConverter}}">
+                                    <Button
+                    Content="Изменить"
+                    Command="{Binding DataContext.EditEquipmentCommand,
+                                      RelativeSource={RelativeSource AncestorType=Window}}"
+                    CommandParameter="{Binding}"
+                    Margin="0,0,5,0"/>
+                                    <Button
+                    Content="Удалить"
+                    Command="{Binding DataContext.DeleteEquipmentCommand,
+                                      RelativeSource={RelativeSource AncestorType=Window}}"
+                    CommandParameter="{Binding}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </DockPanel>
+    </Grid>
+</Window>

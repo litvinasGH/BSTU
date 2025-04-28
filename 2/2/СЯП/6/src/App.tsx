@@ -17,8 +17,6 @@ const Calculator: React.FC = () => {
     try {
       const result = eval(expression);
 
-
-      
       if (typeof result !== 'number' || isNaN(result)) {
         throw new Error('Invalid expression');
       }
@@ -123,18 +121,18 @@ const Calculator: React.FC = () => {
           {[7, 8, 9].map(n => (
             <Button key={n} value={n.toString()} onClick={handleNumber} />
           ))}
-          <Button value="/" onClick={handleOperator} />
+          <Button value="/" onClick={handleOperator} className="operator"/>
           {[4, 5, 6].map(n => (
             <Button key={n} value={n.toString()} onClick={handleNumber} />
           ))}
-          <Button value="*" onClick={handleOperator} />
+          <Button value="*" onClick={handleOperator} className="operator"/>
           {[1, 2, 3].map(n => (
             <Button key={n} value={n.toString()} onClick={handleNumber} />
           ))}
-          <Button value="-" onClick={handleOperator} />
+          <Button value="-" onClick={handleOperator} className="operator"/>
           <Button value="0" onClick={handleNumber} />
           <Button value="." onClick={handleDecimal} />
-          <Button value="+" onClick={handleOperator} />
+          <Button value="+" onClick={handleOperator} className="operator"/>
           <Button value="=" onClick={handleEqual} className="equals" />
         </div>
         <History history={history} />
