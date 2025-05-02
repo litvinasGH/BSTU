@@ -25,7 +25,7 @@ const SignIn: React.FC = () => {
     e.preventDefault();
     const validation = validate();
     if (Object.keys(validation).length === 0) {
-      if (values.email === 'test@test.com' && values.password === 'test') {
+      if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email) && /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/.test(values.password)) {
         setSuccess('Login successful!'); setErrors({});
       } else { setErrors({ form: 'Invalid credentials' }); setSuccess(''); }
     } else { setErrors(validation); setSuccess(''); }
