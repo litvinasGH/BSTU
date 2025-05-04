@@ -18,6 +18,8 @@
 
             <ImageSource x:Key="DefaultCover">/Assets/default_cover.png</ImageSource>
             <!-- Тёмно-серый текст -->
+            
+            
 
             <utils:EnumToLocalizedStringConverter x:Key="EnumToLocalizedStringConverter"/>
             <utils:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
@@ -31,6 +33,10 @@
                 <ResourceDictionary Source="/Styles/ButtonStyles.xaml"/>
                 <!-- Стили карточек -->
                 <ResourceDictionary Source="/Styles/CardStyles.xaml"/>
+                <!-- Стили триггеров -->
+                <ResourceDictionary Source="/Styles/TriggerStyles.xaml"/>
+                <!-- Тема -->
+                <ResourceDictionary Source="/Themes/LightTheme.xaml"/>
                 <!-- Локализация -->
                 <ResourceDictionary Source="/Localization/Resources.ru-RU.xaml"/>
             </ResourceDictionary.MergedDictionaries>

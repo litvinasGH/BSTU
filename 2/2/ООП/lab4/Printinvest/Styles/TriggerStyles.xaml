@@ -1,0 +1,103 @@
+﻿<!-- TriggerStyles.xaml -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:i="http://schemas.microsoft.com/expression/interaction"
+                    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions">
+
+    <!-- 1) MultiTrigger для Slider -->
+    <Style x:Key="ReactiveSlider" TargetType="Slider">
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="Value" Value="0"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="ToolTip" Value="Минимум достигнут"/>
+                <MultiTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                              To="Red" Duration="0:0:0.3" AutoReverse="True"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiTrigger.EnterActions>
+            </MultiTrigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="Value" Value="{Binding Maximum, RelativeSource={RelativeSource Self}}"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="ToolTip" Value="Максимум достигнут"/>
+                <MultiTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+                              To="Green" Duration="0:0:0.3" AutoReverse="True"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiTrigger.EnterActions>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- 2) DataTrigger для TextBox -->
+    <Style x:Key="ValidatedTextBox" TargetType="TextBox">
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Text.Length, RelativeSource={RelativeSource Self}}" Value="0">
+                <Setter Property="BorderBrush" Value="OrangeRed"/>
+                <DataTrigger.EnterActions>
+                    <!-- Логирование в файл через вызов метода в коде-бехайнд -->
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <!-- Пустая анимация, чтобы триггер «сработал» -->
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <!--<DataTrigger.EnterActions>
+                        <InvokeCommandAction Command="{Binding LogEmptyTextCommand}"/>
+                    </DataTrigger.EnterActions>-->
+                </DataTrigger.EnterActions>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- 3) EventTrigger для кнопки с анимацией -->
+    <Style x:Key="AnimatedButton" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource TextPrimaryBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}"
+                  CornerRadius="4">
+                        <ContentPresenter HorizontalAlignment="Center"
+                              VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <!-- Простое увеличение нажатой кнопки -->
+                                    <DoubleAnimation Storyboard.TargetName="border"
+                                   Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                   To="1.1" Duration="0:0:0.1" AutoReverse="True"/>
+                                    <DoubleAnimation Storyboard.TargetName="border"
+                                   Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                                   To="1.1" Duration="0:0:0.1" AutoReverse="True"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <ScaleTransform ScaleX="1" ScaleY="1"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

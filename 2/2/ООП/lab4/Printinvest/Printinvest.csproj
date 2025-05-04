@@ -62,6 +62,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\User.cs" />
     <!-- Utils -->
     <Compile Include="Utils\EnumToLocalizedStringConverter.cs" />
     <Compile Include="Utils\FilterViewModel.cs" />
@@ -71,7 +72,9 @@
     <Compile Include="Utils\ObservableCollectionExtensions.cs" />
     <!-- ViewModels -->
     <Compile Include="ViewModels\AdminViewModel.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\EquipmentViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <!-- Models -->
@@ -80,16 +83,11 @@
     <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\Service.cs" />
     <!-- Login and Auth -->
-    <Compile Include="LoginPage\LoginWindow.xaml.cs">
-      <DependentUpon>LoginWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LoginPage\RegistrationWindow.xaml.cs">
-      <DependentUpon>RegistrationWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="other\AuthViewModel.cs" />
     <Compile Include="other\PasswordBoxAssistant.cs" />
     <Compile Include="other\RelayCommand.cs" />
     <Compile Include="other\User.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
     <!-- Views -->
     <Compile Include="Views\AdminPanelWindow.xaml.cs">
       <DependentUpon>AdminPanelWindow.xaml</DependentUpon>
@@ -109,6 +107,9 @@
     <Compile Include="Views\EquipmentEditWindow.xaml.cs">
       <DependentUpon>EquipmentEditWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -120,13 +121,17 @@
       <DependentUpon>ServiceDetailsWindow.xaml</DependentUpon>
     </Compile>
     <!-- XAML Pages -->
-    <Page Include="LoginPage\LoginWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Styles\TriggerStyles.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LoginPage\RegistrationWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Themes\DarkTheme.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\LightTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AdminPanelWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -151,6 +156,10 @@
     <Page Include="Views\EquipmentEditWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
