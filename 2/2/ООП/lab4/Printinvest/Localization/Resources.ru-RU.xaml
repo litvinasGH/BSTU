@@ -98,4 +98,12 @@
     <sys:String x:Key="ServiceType_Refill">Заправка</sys:String>
     <sys:String x:Key="ServiceType_Maintenance">Обслуживание</sys:String>
     <!-- ... остальные типы услуг -->
+
+
+    <sys:String x:Key="WindowTitle">Вход</sys:String>
+    <sys:String x:Key="UsernameLabel">Логин:</sys:String>
+    <sys:String x:Key="PasswordLabel">Пароль:</sys:String>
+    <sys:String x:Key="LoginButton">Войти</sys:String>
+    <sys:String x:Key="LoginSuccessMessage">Вы успешно вошли в систему!</sys:String>
+    <sys:String x:Key="LoginTitle">Вход</sys:String>
 </ResourceDictionary>

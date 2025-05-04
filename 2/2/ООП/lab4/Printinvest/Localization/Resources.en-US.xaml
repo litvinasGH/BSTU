@@ -94,4 +94,12 @@
     <sys:String x:Key="ServiceType_Refill">Refill</sys:String>
     <sys:String x:Key="ServiceType_Maintenance">Maintenance</sys:String>
     <!-- ... other service types -->
+
+
+    <sys:String x:Key="WindowTitle">Login</sys:String>
+    <sys:String x:Key="UsernameLabel">Username:</sys:String>
+    <sys:String x:Key="PasswordLabel">Password:</sys:String>
+    <sys:String x:Key="LoginButton">Login</sys:String>
+    <sys:String x:Key="LoginSuccessMessage">You have successfully logged in!</sys:String>
+    <sys:String x:Key="LoginTitle">Login</sys:String>
 </ResourceDictionary>

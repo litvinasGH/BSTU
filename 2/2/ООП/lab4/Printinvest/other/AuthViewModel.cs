@@ -9,7 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
-using Printinvest.LoginPage;
+
 
 namespace Printinvest.other
 {
@@ -66,8 +66,8 @@ namespace Printinvest.other
         public void Register(object obj)
         {
             // Открытие окна регистрации
-            var registrationWindow = new RegistrationWindow();
-            registrationWindow.Show();
+            //var registrationWindow = new RegistrationWindow();
+            //registrationWindow.Show();
         }
 
         private void SwitchLanguage(object parameter = null)
