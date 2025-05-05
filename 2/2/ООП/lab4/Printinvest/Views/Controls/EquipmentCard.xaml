@@ -9,7 +9,7 @@
         <Image x:Key="DefaultCover" Source="/Assets/default_cover.png"/>
     </UserControl.Resources>
 
-    <Border Background="White" CornerRadius="8" Padding="15" >
+    <Border Background="{DynamicResource BackgroundBrush}" CornerRadius="8" Padding="15" >
         <Border.Effect>
             <DropShadowEffect BlurRadius="8" Opacity="0.2" ShadowDepth="2"/>
         </Border.Effect>
@@ -24,7 +24,7 @@
                        Margin="0 10 0 0"/>
 
             <TextBlock Text="{Binding Model}"
-                       Foreground="{StaticResource TextPrimary}"
+                       Foreground="{DynamicResource TextPrimary}"
                        FontSize="14"/>
 
             <StackPanel Orientation="Horizontal" Margin="0 10 0 0">

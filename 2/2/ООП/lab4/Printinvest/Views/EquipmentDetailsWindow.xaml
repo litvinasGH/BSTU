@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:utils="clr-namespace:Printinvest.Utils"
         Title="{DynamicResource Details_Title}"
+        Style="{StaticResource W}"
         Height="400" Width="600"
         WindowStartupLocation="CenterOwner">
     <Window.Resources>

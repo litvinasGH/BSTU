@@ -22,6 +22,7 @@
             
 
             <utils:EnumToLocalizedStringConverter x:Key="EnumToLocalizedStringConverter"/>
+            
             <utils:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
             <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
 

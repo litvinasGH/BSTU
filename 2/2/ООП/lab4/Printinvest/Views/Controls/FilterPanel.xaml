@@ -23,24 +23,24 @@
 
     <StackPanel Margin="10">
         <TextBlock Text="{DynamicResource Filter_Search}"/>
-        <TextBox Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}"
+        <TextBox Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource ModernTextBox}"
                  Margin="0,5,0,10"/>
 
         <TextBlock Text="{DynamicResource Filter_Brand}"/>
         <ComboBox ItemsSource="{Binding Source={StaticResource BrandValues}}"
-                  SelectedItem="{Binding SelectedBrand}"
+                  SelectedItem="{Binding SelectedBrand}" 
                   Margin="0,5,0,10"/>
 
         <TextBlock Text="{DynamicResource Filter_ServiceType}"/>
         <ComboBox ItemsSource="{Binding Source={StaticResource ServiceTypeValues}}"
-                  SelectedItem="{Binding SelectedServiceType}"
+                  SelectedItem="{Binding SelectedServiceType}" 
                   Margin="0,5,0,10"/>
 
         <TextBlock Text="{DynamicResource Filter_MaxPrice}"/>
         <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
             <Slider Minimum="0"
                     Maximum="100000"
-                    Value="{Binding MaxPrice, UpdateSourceTrigger=PropertyChanged}"
+                    Value="{Binding MaxPrice, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource ReactiveSlider}"
                     Width="150"/>
 
             <TextBlock Text="{Binding MaxPrice, StringFormat={}{0} BYN}"/>
