@@ -93,3 +93,5 @@ D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\other\Resources.en-US.baml
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\other\Resources.ru-RU.baml
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\LoginWindow.baml
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\LoginWindow.g.cs
+D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\ProfileWindow.g.cs
+D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\ProfileWindow.baml

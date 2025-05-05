@@ -173,13 +173,32 @@ namespace Printinvest.ViewModels
             merged.Add(dict);
         }
 
+        private User _currentUser;
+        public User CurrentUser
+        {
+            get => _currentUser;
+            set { _currentUser = value; OnPropertyChanged(); }
+        }
+
 
         private void ShowPasswordDialog()
         {
-            var pwdWindow = new PasswordWindow { Owner = Application.Current.MainWindow };
-            if (pwdWindow.ShowDialog() == true && pwdWindow.Password == "1234")
+            if (CurrentUser != null) // уже авторизован
             {
-                IsAdminUnlocked = true;
+                var profile = new ProfileWindow();
+                profile.DataContext = new ProfileViewModel(CurrentUser);
+                profile.ShowDialog();
+            }
+            else
+            { // не авторизован
+                var loginWindow = new LoginWindow();
+                if (loginWindow.ShowDialog() == true)
+                {
+                    var vm = loginWindow.DataContext as LoginViewModel;
+                    CurrentUser = vm.AuthenticatedUser;
+                    if (CurrentUser.IsAdmin)
+                        IsAdminUnlocked = true;
+                }
             }
         }
 
@@ -194,6 +213,7 @@ namespace Printinvest.ViewModels
             };
             if (editWnd.ShowDialog() == true)
             {
+                SaveState();
                 vm.ApplyChanges();           // <-- переносим изменения в модель
                 SaveEquipmentToJson();
                 CurrentItems.Refresh();
@@ -205,6 +225,7 @@ namespace Printinvest.ViewModels
             if (eq == null) return;
             if (MessageBox.Show($"Удалить оборудование {eq.Model}?", "Подтвердите удаление", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
+                SaveState();
                 Equipment.Remove(eq);
                 SaveEquipmentToJson();
                 CurrentItems.Refresh();
@@ -276,10 +297,48 @@ namespace Printinvest.ViewModels
             var win = new AdminPanelWindow { Owner = Application.Current.MainWindow };
             if (win.ShowDialog() == true)
             {
+                SaveState();
                 // Перезагрузить список
                 LoadData();
                 CurrentItems.Refresh();
             }
+        }
+
+
+
+        Stack<ObservableCollection<Equipment>> _undoStack = new Stack<ObservableCollection<Equipment>>();
+        Stack<ObservableCollection<Equipment>> _redoStack = new Stack<ObservableCollection<Equipment>>();
+        public void Undo()
+        {
+            if (_undoStack.Count > 0)
+            {
+                var lastState = _undoStack.Pop();
+                _redoStack.Push(new ObservableCollection<Equipment>(Equipment));
+                Equipment.Clear();
+                foreach (var item in lastState)
+                    Equipment.Add(item);
+                CurrentItems.Refresh();
+            }
+        }
+        public void Redo()
+        {
+            if (_redoStack.Count > 0)
+            {
+                var lastState = _redoStack.Pop();
+                _undoStack.Push(new ObservableCollection<Equipment>(Equipment));
+                Equipment.Clear();
+                foreach (var item in lastState)
+                    Equipment.Add(item);
+                CurrentItems.Refresh();
+            }
+        }
+
+        public ICommand UndoCommand => new RelayCommand(_ => Undo(), _ => _undoStack.Count > 0);
+        public ICommand RedoCommand => new RelayCommand(_ => Redo(), _ => _redoStack.Count > 0);
+        public void SaveState()
+        {
+            _undoStack.Push(new ObservableCollection<Equipment>(Equipment));
+            _redoStack.Clear();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -96,10 +96,33 @@
     <!-- ... other service types -->
 
 
-    <sys:String x:Key="WindowTitle">Login</sys:String>
-    <sys:String x:Key="UsernameLabel">Username:</sys:String>
-    <sys:String x:Key="PasswordLabel">Password:</sys:String>
-    <sys:String x:Key="LoginButton">Login</sys:String>
-    <sys:String x:Key="LoginSuccessMessage">You have successfully logged in!</sys:String>
-    <sys:String x:Key="LoginTitle">Login</sys:String>
+
+
+
+    <!-- Общие -->
+    <sys:String x:Key="TitleWindow">Sign Up / Log In</sys:String>
+
+    <!-- Вкладки -->
+    <sys:String x:Key="TabHeaderLogin">Login</sys:String>
+    <sys:String x:Key="TabHeaderRegister">Register</sys:String>
+
+    <!-- Login -->
+    <sys:String x:Key="NameLogIN">Login</sys:String>
+    <sys:String x:Key="LabelUsername">Username</sys:String>
+    <sys:String x:Key="LabelPassword">Password</sys:String>
+    <sys:String x:Key="BtnLogin">Log In</sys:String>
+
+    <!-- Register -->
+    <sys:String x:Key="TitleRegister">Create Account</sys:String>
+    <sys:String x:Key="LabelConfirmPassword">Confirm Password</sys:String>
+    <sys:String x:Key="BtnRegister">Register</sys:String>
+
+
+    <sys:String x:Key="ProfileWindowTitle">Profile</sys:String>
+    <sys:String x:Key="UserProfileHeader">User Profile</sys:String>
+    <sys:String x:Key="NamePlaceholder">Full Name</sys:String>
+    <sys:String x:Key="LoginPlaceholder">Login</sys:String>
+   
+    <sys:String x:Key="LightTheme">Light</sys:String>
+    <sys:String x:Key="DarkTheme">Dark</sys:String>
 </ResourceDictionary>

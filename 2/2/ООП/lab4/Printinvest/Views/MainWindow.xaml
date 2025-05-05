@@ -7,6 +7,7 @@
         Height="768" Width="1366"
         Icon="/Views/printinvest.png"
         Cursor="/Assets/Icons/printer_cursor.cur"
+        Style="{StaticResource W}"
         WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
@@ -41,11 +42,26 @@
                 ToolTip="Переключить на русский"/>
 
                 <!-- Существующая кнопка добавления -->
+                <Button Content="А"
+                Command="{Binding UnlockAdminCommand}"
+                Style="{StaticResource FloatingActionButton}"
+                ToolTip="{DynamicResource AddNewButton}"/>
                 <Button Content="➕"
                 Command="{Binding OpenAdminPanelCommand}"
                 Style="{StaticResource FloatingActionButton}"
                 Visibility="{Binding IsAdminUnlocked, Converter={StaticResource BooleanToVisibilityConverter}}"
                 ToolTip="{DynamicResource AddNewButton}"/>
+                <Button Content="↩"
+                Command="{Binding UndoCommand}"
+                Style="{StaticResource FloatingActionButton}"
+                Visibility="{Binding IsAdminUnlocked, Converter={StaticResource BooleanToVisibilityConverter}}"
+                ToolTip="{DynamicResource AddNewButton}"/>
+                <Button Content="↪"
+                Command="{Binding RedoCommand}"
+                Style="{StaticResource FloatingActionButton}"
+                Visibility="{Binding IsAdminUnlocked, Converter={StaticResource BooleanToVisibilityConverter}}"
+                ToolTip="{DynamicResource AddNewButton}"/>
+
             </StackPanel>
 
             <ScrollViewer VerticalScrollBarVisibility="Auto">

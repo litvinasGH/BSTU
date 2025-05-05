@@ -100,10 +100,31 @@
     <!-- ... остальные типы услуг -->
 
 
-    <sys:String x:Key="WindowTitle">Вход</sys:String>
-    <sys:String x:Key="UsernameLabel">Логин:</sys:String>
-    <sys:String x:Key="PasswordLabel">Пароль:</sys:String>
-    <sys:String x:Key="LoginButton">Войти</sys:String>
-    <sys:String x:Key="LoginSuccessMessage">Вы успешно вошли в систему!</sys:String>
-    <sys:String x:Key="LoginTitle">Вход</sys:String>
+    <!-- Общие -->
+    <sys:String x:Key="TitleWindow">Регистрация / Вход</sys:String>
+
+    <!-- Вкладки -->
+    <sys:String x:Key="TabHeaderLogin">Вход</sys:String>
+    <sys:String x:Key="TabHeaderRegister">Регистрация</sys:String>
+
+    <!-- Login -->
+    <sys:String x:Key="NameLogIN">Вход</sys:String>
+    <sys:String x:Key="LabelUsername">Имя пользователя</sys:String>
+    <sys:String x:Key="LabelPassword">Пароль</sys:String>
+    <sys:String x:Key="BtnLogin">Войти</sys:String>
+
+    <!-- Register -->
+    <sys:String x:Key="TitleRegister">Создание аккаунта</sys:String>
+    <sys:String x:Key="LabelConfirmPassword">Повторите пароль</sys:String>
+    <sys:String x:Key="BtnRegister">Зарегистрироваться</sys:String>
+
+
+
+    <sys:String x:Key="ProfileWindowTitle">Профиль</sys:String>
+    <sys:String x:Key="UserProfileHeader">Профиль пользователя</sys:String>
+    <sys:String x:Key="NamePlaceholder">Имя и фамилия</sys:String>
+    <sys:String x:Key="LoginPlaceholder">Логин</sys:String>
+    
+    <sys:String x:Key="LightTheme">Светлая</sys:String>
+    <sys:String x:Key="DarkTheme">Тёмная</sys:String>
 </ResourceDictionary>

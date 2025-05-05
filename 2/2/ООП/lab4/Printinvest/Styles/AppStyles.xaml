@@ -19,7 +19,7 @@
     <SolidColorBrush x:Key="BorderBrush"      Color="{StaticResource PrimaryColor}"/>
 
     <!-- Стиль для окон -->
-    <Style TargetType="Window">
+    <Style TargetType="Window" x:Key="W">
         <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
         <Setter Property="Foreground" Value="{StaticResource TextPrimaryBrush}"/>
         <Setter Property="FontFamily" Value="Segoe UI"/>
@@ -27,12 +27,21 @@
     </Style>
 
     <!-- Стиль для текстовых блоков -->
-    <Style TargetType="TextBlock">
+    <Style TargetType="TextBlock" x:Key="TB">
         <Setter Property="Margin" Value="0,5"/>
     </Style>
 
     <!-- Стиль для текстовых полей -->
     <Style TargetType="TextBox" x:Key="ModernTextBox">
+        <Setter Property="Background" Value="{StaticResource SurfaceBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource TextPrimaryBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="8"/>
+        <Setter Property="MinWidth" Value="200"/>
+    </Style>
+
+    <Style TargetType="PasswordBox" x:Key="ModernTextBoxP">
         <Setter Property="Background" Value="{StaticResource SurfaceBrush}"/>
         <Setter Property="Foreground" Value="{StaticResource TextPrimaryBrush}"/>
         <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
@@ -73,5 +82,10 @@
         <Setter Property="Maximum" Value="100000"/>
         <Setter Property="TickFrequency" Value="5000"/>
     </Style>
+    
+    
+    
+    
+    
 
 </ResourceDictionary>

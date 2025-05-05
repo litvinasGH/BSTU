@@ -68,6 +68,7 @@
     <Compile Include="Utils\FilterViewModel.cs" />
     <Compile Include="Utils\ImageCoverPathConverter.cs" />
     <Compile Include="Utils\InverseBooleanConverter.cs" />
+    <Compile Include="Utils\IsAtMaxConverter.cs" />
     <Compile Include="Utils\LocalizationManager.cs" />
     <Compile Include="Utils\ObservableCollectionExtensions.cs" />
     <!-- ViewModels -->
@@ -76,6 +77,7 @@
     <Compile Include="ViewModels\EquipmentViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\ProfileViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <!-- Models -->
     <Compile Include="Models\Enums\Brand.cs" />
@@ -116,6 +118,9 @@
     </Compile>
     <Compile Include="Views\PasswordWindow.xaml.cs">
       <DependentUpon>PasswordWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProfileWindow.xaml.cs">
+      <DependentUpon>ProfileWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ServiceDetailsWindow.xaml.cs">
       <DependentUpon>ServiceDetailsWindow.xaml</DependentUpon>
@@ -168,6 +173,10 @@
     <Page Include="Views\PasswordWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ProfileWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ServiceDetailsWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

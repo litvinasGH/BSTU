@@ -2,41 +2,46 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:i="http://schemas.microsoft.com/expression/interaction"
-                    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions">
+                    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+                    xmlns:conv="clr-namespace:Printinvest.Utils">
+    <conv:IsAtMaxConverter x:Key="IsAtMaxConverter"/>
 
     <!-- 1) MultiTrigger для Slider -->
     <Style x:Key="ReactiveSlider" TargetType="Slider">
         <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
         <Setter Property="BorderThickness" Value="1"/>
+
         <Style.Triggers>
-            <MultiTrigger>
-                <MultiTrigger.Conditions>
-                    <Condition Property="Value" Value="0"/>
-                </MultiTrigger.Conditions>
+            <!-- минимум -->
+            <DataTrigger Binding="{Binding Value, RelativeSource={RelativeSource Self}}" Value="0">
                 <Setter Property="ToolTip" Value="Минимум достигнут"/>
-                <MultiTrigger.EnterActions>
+                <DataTrigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
                             <ColorAnimation Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
                               To="Red" Duration="0:0:0.3" AutoReverse="True"/>
                         </Storyboard>
                     </BeginStoryboard>
-                </MultiTrigger.EnterActions>
-            </MultiTrigger>
-            <MultiTrigger>
-                <MultiTrigger.Conditions>
-                    <Condition Property="Value" Value="{Binding Maximum, RelativeSource={RelativeSource Self}}"/>
-                </MultiTrigger.Conditions>
+                </DataTrigger.EnterActions>
+            </DataTrigger>
+
+            <!-- максимум -->
+            <DataTrigger 
+        Binding="{Binding RelativeSource={RelativeSource Self}, 
+                          Path=Value, 
+                          Converter={StaticResource IsAtMaxConverter}, 
+                          ConverterParameter={RelativeSource Self}}"
+        Value="True">
                 <Setter Property="ToolTip" Value="Максимум достигнут"/>
-                <MultiTrigger.EnterActions>
+                <DataTrigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
                             <ColorAnimation Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
                               To="Green" Duration="0:0:0.3" AutoReverse="True"/>
                         </Storyboard>
                     </BeginStoryboard>
-                </MultiTrigger.EnterActions>
-            </MultiTrigger>
+                </DataTrigger.EnterActions>
+            </DataTrigger>
         </Style.Triggers>
     </Style>
 
