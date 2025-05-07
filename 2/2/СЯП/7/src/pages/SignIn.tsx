@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import FormInput from '../components/FormInput';
+import { validateEmail, validatePassword } from '../utils/validation';
 
 interface SignInValues { email: string; password: string; }
 
@@ -11,9 +12,9 @@ const SignIn: React.FC = () => {
 
   const validate = () => {
     const errs: Partial<Record<keyof SignInValues, string>> = {};
-    if (!values.email) errs.email = 'Email is required';
-    if (!values.password) errs.password = 'Password is required';
-    return errs;
+    errs.email = validateEmail(values.email) || '';
+    errs.password = validatePassword(values.password) || '';
+    return Object.fromEntries(Object.entries(errs).filter(([_, v]) => v)) as Partial<Record<keyof SignInValues, string>>;
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

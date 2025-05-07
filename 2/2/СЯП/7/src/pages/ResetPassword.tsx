@@ -1,23 +1,32 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import FormInput from '../components/FormInput';
+import { validateEmail } from '../utils/validation';
 
 const ResetPassword: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [success, setSuccess] = useState<string>('');
 
-  const validate = (): string => {
-    if (!email) return 'Email is required';
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return 'Invalid email';
-    return '';
-  };
-
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    const errText = validate();
-    if (!errText) { setSuccess(`Your new password is: NewPass123`); setError(''); }
-    else { setError(errText); setSuccess(''); }
+    const errText = validateEmail(email);
+    if (!errText) { 
+      let pass = '';
+      const symbols = "!@#$%^&*()_+-=[]{}|;:,.<>?";
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" + symbols;
+
+      for (let i = 0; i < 12; i++) {
+        const randomIndex = Math.floor(Math.random() * chars.length);
+        pass += chars[randomIndex];
+      }
+
+      setSuccess(`Your new password is: ${pass}`); 
+      setError('');
+    } else { 
+      setError(errText); 
+      setSuccess(''); 
+    }
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value);
