@@ -265,7 +265,7 @@ namespace Printinvest.ViewModels
 
             return false;
         }
-
+ 
         private void LoadData()
         {
             if (File.Exists(_servicesPath))

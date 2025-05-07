@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\git\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA005_3\\ASPA005_3.csproj": {}
+    "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA005_3\\ASPA005_3.csproj": {}
   },
   "projects": {
-    "D:\\git\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA005_3\\ASPA005_3.csproj": {
+    "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA005_3\\ASPA005_3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\git\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA005_3\\ASPA005_3.csproj",
+        "projectUniqueName": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA005_3\\ASPA005_3.csproj",
         "projectName": "ASPA005_3",
-        "projectPath": "D:\\git\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA005_3\\ASPA005_3.csproj",
-        "packagesPath": "C:\\Users\\Litvinas_COMP\\.nuget\\packages\\",
-        "outputPath": "D:\\git\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA005_3\\obj\\",
+        "projectPath": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA005_3\\ASPA005_3.csproj",
+        "packagesPath": "C:\\Users\\litvi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA005_3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Litvinas_COMP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\litvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -69,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

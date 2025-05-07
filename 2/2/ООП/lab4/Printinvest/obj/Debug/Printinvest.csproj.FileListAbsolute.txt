@@ -40,11 +40,7 @@ D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\PasswordWindow.g.cs
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\AdminPanelWindow.baml
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\AdminPanelWindow.g.cs
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest.csproj.AssemblyReference.cache
-C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\LoginPage\LoginWindow.baml
-C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\LoginPage\RegistrationWindow.baml
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\other\Resources.ru-RU.baml
-C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\LoginPage\LoginWindow.g.cs
-C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\LoginPage\RegistrationWindow.g.cs
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\App.g.cs
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest_MarkupCompile.cache
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest_MarkupCompile.lref
@@ -95,3 +91,10 @@ D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\LoginWindow.baml
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\LoginWindow.g.cs
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\ProfileWindow.g.cs
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\ProfileWindow.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Themes\DarkTheme.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Themes\LightTheme.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\LoginWindow.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\ProfileWindow.g.cs
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Styles\TriggerStyles.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\LoginWindow.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\ProfileWindow.baml
