@@ -82,23 +82,5 @@
     "SupportedServices": [
       "Maintenance"
     ]
-  },
-  {
-    "ImagePath": null,
-    "Model": "MS510dn",
-    "Price": 21990.00,
-    "Brand": "Lexmark",
-    "SupportedServices": [
-      "Refill"
-    ]
-  },
-  {
-    "ImagePath": "Assets/Images\\Grand Theft Auto V Super-Resolution 2024.12.29 - 13.21.36.94.png",
-    "Model": "othe",
-    "Price": 10.0,
-    "Brand": "Ricoh",
-    "SupportedServices": [
-      "Refill"
-    ]
   }
 ]
