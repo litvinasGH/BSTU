@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import FormInput from '../components/FormInput';
+import { validateName, validateEmail, validatePassword, validateConfirmPassword } from '../utils/validation';
 
 interface SignUpValues {
   name: string;
@@ -16,20 +17,11 @@ const SignUp: React.FC = () => {
 
   const validate = () => {
     const errs: Partial<Record<keyof SignUpValues, string>> = {};
-    if (!values.name.trim()) errs.name = 'Name is required';
-    else if (!/^[A-Za-zА-Яа-яЁё ]{2,50}$/.test(values.name)) errs.name = 'Invalid name';
-
-    if (!values.email) errs.email = 'Email is required';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) errs.email = 'Invalid email';
-
-    if (!values.password) errs.password = 'Password is required';
-    else if (values.password.length < 8) errs.password = 'Minimum 8 chars';
-    else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/.test(values.password)) errs.password = 'Must include uppercase, lowercase and digit';
-
-    if (!values.confirm) errs.confirm = 'Confirm password';
-    else if (values.confirm !== values.password) errs.confirm = 'Passwords do not match';
-
-    return errs;
+    errs.name = validateName(values.name) || '';
+    errs.email = validateEmail(values.email) || '';
+    errs.password = validatePassword(values.password) || '';
+    errs.confirm = validateConfirmPassword(values.password, values.confirm) || '';
+    return Object.fromEntries(Object.entries(errs).filter(([_, v]) => v)) as Partial<Record<keyof SignUpValues, string>>;
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

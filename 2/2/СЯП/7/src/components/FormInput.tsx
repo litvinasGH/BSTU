@@ -35,7 +35,7 @@ const FormInput: React.FC<FormInputProps> = ({ label, type, name, value, onChang
             className="toggle-btn"
             onClick={() => setShow(prev => !prev)}
           >
-            {show ? 'Hide' : 'Show'}
+            {show ? '◠' : '⚆'}
           </button>
         )}
       </div>
