@@ -27,7 +27,7 @@ namespace Printinvest.ViewModels
         private string _searchQuery = string.Empty;
         private ServiceType _selectedServiceType = ServiceType.None;
         private Brand _selectedBrand = Brand.None;
-        private decimal _maxPrice = decimal.MaxValue;
+        private decimal _maxPrice = 100000;
 
         private bool _isAdminUnlocked;
         public bool IsAdminUnlocked
@@ -128,8 +128,9 @@ namespace Printinvest.ViewModels
             ShowEquipmentDetailsCommand = new RelayCommand(obj => {
                 if (obj is Equipment eq)
                 {
-                    var wnd = new EquipmentDetailsWindow { DataContext = eq, Owner = Application.Current.MainWindow };
+                    var wnd = new EquipmentDetailsWindow { DataContext = new EquipmentDetailsWindowVM(eq, CurrentUser), Owner = Application.Current.MainWindow };
                     wnd.ShowDialog();
+                    SaveEquipmentToJson();
                 }
             });
             SwitchToEnglishCommand = new RelayCommand(_ => ChangeLanguage("en-US"));

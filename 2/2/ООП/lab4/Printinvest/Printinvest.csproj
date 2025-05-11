@@ -62,6 +62,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\User.cs" />
     <!-- Utils -->
     <Compile Include="Utils\EnumToLocalizedStringConverter.cs" />
@@ -74,6 +75,7 @@
     <!-- ViewModels -->
     <Compile Include="ViewModels\AdminViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\EquipmentDetailsWindowVM.cs" />
     <Compile Include="ViewModels\EquipmentViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -94,6 +96,8 @@
     <Compile Include="Views\AdminPanelWindow.xaml.cs">
       <DependentUpon>AdminPanelWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Controls\CommentsControl.cs" />
+    <Compile Include="Views\Controls\NumericUpDown.cs" />
     <Compile Include="Views\Controls\EquipmentCard.xaml.cs">
       <DependentUpon>EquipmentCard.xaml</DependentUpon>
     </Compile>
@@ -133,6 +137,10 @@
     <Page Include="Themes\DarkTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\LightTheme.xaml">
       <SubType>Designer</SubType>

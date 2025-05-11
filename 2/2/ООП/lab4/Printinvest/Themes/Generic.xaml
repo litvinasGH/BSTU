@@ -1,0 +1,74 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CustomControls">
+
+    <!-- NumericUpDown Template -->
+    <!-- NumericUpDown Template -->
+    <Style TargetType="{x:Type local:NumericUpDown}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:NumericUpDown">
+                    <DockPanel>
+                        <!-- Increment and Decrement buttons on the right -->
+                        <StackPanel Orientation="Vertical" DockPanel.Dock="Right" Margin="5,0,0,0">
+                            <Button x:Name="PART_Increase" Content="+" Width="20" Height="20"/>
+                            <Button x:Name="PART_Decrease" Content="-" Width="20" Height="20" Margin="0,5,0,0"/>
+                        </StackPanel>
+
+                        <!-- Editable textbox showing the value -->
+                        <TextBox Text="{Binding Value, RelativeSource={RelativeSource TemplatedParent}, StringFormat=N0, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                 VerticalContentAlignment="Center"
+                                 HorizontalAlignment="Stretch"
+                                 Padding="2"
+                                 MinWidth="50"/>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:CommentsControl}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:CommentsControl}">
+                    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Padding="8" Background="{DynamicResource DarkBackground}">
+                        <StackPanel>
+
+                            <ScrollViewer Height="150">
+                                <ItemsControl ItemsSource="{TemplateBinding Comments}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border BorderBrush="#DDD" BorderThickness="0,0,0,1" Padding="4">
+                                                <StackPanel>
+                                                    <TextBlock Text="{Binding Author}" FontWeight="Bold" Foreground="{DynamicResource LightText}"/>
+                                                    <TextBlock Text="{Binding Text}" TextWrapping="Wrap" Margin="0,2,0,0" Foreground="{DynamicResource LightText}"/>
+                                                    <TextBlock Text="{Binding Timestamp, StringFormat={}{0:G}}" Foreground="{DynamicResource LightText}"
+                                     FontStyle="Italic" FontSize="10"
+                                     HorizontalAlignment="Right"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </ScrollViewer>
+
+
+                            <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                                <TextBlock Text="{Binding LoggedInUser.Name}" VerticalAlignment="Center" Foreground="{DynamicResource LightText}"/>
+                                <TextBox x:Name="PART_TextBox"
+                         Width="200"
+                         Text="{TemplateBinding NewCommentText}"
+                         VerticalAlignment="Center"/>
+
+                                <Button x:Name="PART_AddButton"
+                        Content="Add"
+                        Margin="8,0,0,0"
+                        VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
