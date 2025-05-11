@@ -23,5 +23,5 @@ export const validateConfirmPassword = (password: string, confirm: string): stri
     return null;
 };
 
-// Добавляем пустой экспорт, чтобы файл считался модулем
+
 export {};
