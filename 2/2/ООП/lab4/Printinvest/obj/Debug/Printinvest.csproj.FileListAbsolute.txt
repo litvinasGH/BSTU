@@ -98,3 +98,4 @@ C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\Profil
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Styles\TriggerStyles.baml
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\LoginWindow.baml
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\ProfileWindow.baml
+D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Themes\Generic.baml

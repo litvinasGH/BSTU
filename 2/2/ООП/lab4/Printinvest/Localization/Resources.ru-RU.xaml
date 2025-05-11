@@ -127,4 +127,8 @@
     
     <sys:String x:Key="LightTheme">Светлая</sys:String>
     <sys:String x:Key="DarkTheme">Тёмная</sys:String>
+
+
+
+    <sys:String x:Key="CommentsLabel">Комментарии:</sys:String>
 </ResourceDictionary>
