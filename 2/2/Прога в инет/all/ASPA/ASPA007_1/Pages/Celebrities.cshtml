@@ -1,0 +1,13 @@
+﻿@page 
+@model ASPA007_1.Pages.CelebritiesModel
+@using DAL_Celebrity;
+@using DAL_Celebrity_MSSQL;
+@using static DAL_Celebrity_MSSQL.DAL_Celebrity_MSSQL;
+@{
+}
+
+<h1>Celebrity</h1>
+@foreach(Celebrity celebrity in Model.Celebrities)
+{
+    <img src="@celebrity.ReqPhotoPath" />
+}

@@ -1026,7 +1026,10 @@
         },
         "runtime": {
           "bin/placeholder/DAL_Celebrity_MSSQL.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
