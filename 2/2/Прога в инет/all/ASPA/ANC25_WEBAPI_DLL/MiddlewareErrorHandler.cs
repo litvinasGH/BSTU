@@ -131,21 +131,26 @@ namespace ANC25_WEBAPl_DLL
             });
         }
 
-        public static RouteHandlerBuilder MapPhotoCelebrities(this IEndpointRouteBuilder routeBuilder, string? prefix = "/api/Lifewents")
+        public static RouteHandlerBuilder MapPhotoCelebrities(this IEndpointRouteBuilder routeBuilder, string? prefix)
         {
-            if (string.IsNullOrEmpty(prefix)) prefix = routeBuilder.ServiceProvider.GetRequiredService<IOptions<CelebritiesConfig>>().Value.PhotosRequestPath;
+            if (string.IsNullOrEmpty(prefix))
+                prefix = routeBuilder.ServiceProvider.GetRequiredService<IOptions<CelebritiesConfig>>().Value.PhotosRequestPath;
+
             return routeBuilder.MapGet($"{prefix}/{{fname}}", async (IOptions<CelebritiesConfig> iconfig, HttpContext context, string fname) =>
             {
-                CelebritiesConfig config = iconfig.Value;
-                string filepath = Path.Combine(config.PhotosFolder, fname);
-                FileStream file = File.OpenRead(filepath);
-                BinaryReader sr = new BinaryReader(file);
-                BinaryReader sw = new BinaryReader(context.Response.BodyWriter.AsStream());
-                int n = 0; byte[] buffer = new byte[2048];
+                var config = iconfig.Value;
+                var filepath = Path.Combine(config.PhotosFolder, fname);
+                if (!File.Exists(filepath))
+                {
+                    context.Response.StatusCode = StatusCodes.Status404NotFound;
+                    return;
+                }
                 context.Response.ContentType = "image/jpeg";
                 context.Response.StatusCode = StatusCodes.Status200OK;
-                while ((n = await sr.BaseStream.ReadAsync(buffer, 0, 2048)) > 0) await sw.BaseStream.WriteAsync(buffer, 0, n);
-                sr.Close(); sw.Close();
+                await using (var fileStream = new FileStream(filepath, FileMode.Open, FileAccess.Read))
+                {
+                    await fileStream.CopyToAsync(context.Response.Body);
+                }
             });
         }
 
@@ -209,6 +214,7 @@ namespace ANC25_WEBAPl_DLL
             });
         }
 
+
         public class ANC25Exception : Exception
         {
 
@@ -216,6 +222,16 @@ namespace ANC25_WEBAPl_DLL
 
 
             public string ErrorCode { get; }
+
+            public ANC25Exception(int status, string code, string message, string detail)
+            : base(message)
+            {
+                StatusCode = (HttpStatusCode)status;
+                ErrorCode = code;
+                Detail = detail;
+            }
+
+            public string? Detail { get; } // Новое свойство для хранения деталей
 
             public ANC25Exception(int status, string code, string detail)
                 : base(detail)
@@ -235,5 +251,36 @@ namespace ANC25_WEBAPl_DLL
             {
             }
         }
+
+
+
+
+
+        public static IApplicationBuilder UseANCErrorHandler(this IApplicationBuilder app, string prefix) =>
+                app.Use(async (ctx, next) =>
+                {
+                    try { await next(); }
+                    catch (Exception ex)
+                    {
+                        ctx.Response.StatusCode = ex is ANC25Exception e ? (int)e.StatusCode : 500;
+                        await ctx.Response.WriteAsJsonAsync(ex is ANC25Exception e2
+                            ? new
+                            {
+                                StatusCode = (int)e2.StatusCode,
+                                ErrorCode = $"{prefix}-{e2.ErrorCode}",
+                                e2.Message,
+                                e2.Detail,
+                                Timestamp = DateTime.UtcNow
+                            }
+                            : new
+                            {
+                                StatusCode = 500,
+                                ErrorCode = $"{prefix}-UNKNOWN",
+                                ex.Message,
+                                Detail = "Internal server error",
+                                Timestamp = DateTime.UtcNow
+                            });
+                    }
+                });
     }
 }

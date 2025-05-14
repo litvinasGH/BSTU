@@ -18,19 +18,19 @@ internal class Program
             // все фотогалории
             options.Conventions.AddPageRoute("/Celebrities", "/");
             // добавление новой знаменитости
-            //options.Conventions.AddPageRoute("/NewCelebrity", "/0");
+            options.Conventions.AddPageRoute("/NewCelebrity", "/0");
             // отображение знаменитости с id
-            //options.Conventions.AddPageRoute("/Celebrity", "/Celebrities/{id:int:min(1)}");
+            options.Conventions.AddPageRoute("/Celebrity", "/Celebrities/{id:int:min(1)}");
             // отображение знаменитости с id
-            //options.Conventions.AddPageRoute("/Celebrity", "/{id:int:min(1)}");
+            options.Conventions.AddPageRoute("/Celebrity", "/{id:int:min(1)}");
         });
 
         var app = builder.Build();
         app.UseStaticFiles();
 
         // обработка исключений Celebrities
-
-        //app.UseANCErrorHandler("ANC27X");
+        
+        app.UseANCErrorHandler("ANC27X");
 
         if (!app.Environment.IsDevelopment())
         {
@@ -46,7 +46,7 @@ internal class Program
         // API Lifeevents
         app.MapLifewents();
         // API для фотографий
-        app.MapPhotoCelebrities();
+        app.MapPhotoCelebrities(null);
 
         app.Run();
     }
