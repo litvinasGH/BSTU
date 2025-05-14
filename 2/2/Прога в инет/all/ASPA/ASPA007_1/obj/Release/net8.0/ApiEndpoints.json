@@ -196,28 +196,6 @@
   },
   {
     "ContainingType": "ANC25_WEBAPl_DLL.MiddlewareErrorHandler\u002B\u003C\u003Ec",
-    "Method": "\u003CMapPhotoCelebrities\u003Eb__1_0",
-    "RelativePath": "api/Lifewents/{fname}",
-    "HttpMethod": "GET",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "fname",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ANC25_WEBAPl_DLL.MiddlewareErrorHandler\u002B\u003C\u003Ec",
     "Method": "\u003CMapLifewents\u003Eb__2_1",
     "RelativePath": "api/Lifewents/{id:int:min(1)}",
     "HttpMethod": "GET",
@@ -298,6 +276,28 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ANC25_WEBAPl_DLL.MiddlewareErrorHandler\u002B\u003C\u003Ec",
+    "Method": "\u003CMapPhotoCelebrities\u003Eb__1_0",
+    "RelativePath": "api/Photos/{fname}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fname",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

@@ -1,0 +1,29 @@
+﻿@page
+@model ASPA007_1.Pages.CelebrityModel
+@using static DAL_Celebrity_MSSQL.DAL_Celebrity_MSSQL;
+@{
+    Celebrity celebrity = (Model.celebrity is null) ?
+                new Celebrity() { id = 0, FullName = "Celebrity Name", Nationality = "UNKNOW", ReqPhotoPath = null }
+                : Model.celebrity;
+    string photopath = $"{Model.PhotosRequestPath}/{celebrity.ReqPhotoPath}";
+}
+<div>
+    <h1>@celebrity.FullName</h1>
+    <img id="@celebrity.id"
+    src="@photopath"
+    onload="onPhotoLoad(this, 200, 0)" />
+    
+</div>
+
+<script>
+        function onPhotoLoad(e, h, w) {
+        let ratio = e.naturalWidth / e.naturalHeight;
+
+        if (h != 0 && w == 0) {
+            e.width = Math.round(ratio * h);
+        }
+        if (h == 0 && w != 0) {
+            e.height = Math.round(w / ratio);
+        }
+    }
+</script>

@@ -7,7 +7,28 @@
 }
 
 <h1>Celebrity</h1>
+<a href="/0">
+<img src="@Model.PhotosRequestPath/newCelebrity.jpg" onload="onPhotoLoad(this, 200, 0)" />
+</a>
 @foreach(Celebrity celebrity in Model.Celebrities)
 {
-    <img src="@celebrity.ReqPhotoPath" />
+    <a href="/@celebrity.id">
+    <img id="@celebrity.id" 
+    src="@Model.PhotosRequestPath/@celebrity.ReqPhotoPath" 
+    onload="onPhotoLoad(this, 200, 0)"
+    />
+    </a>
 }
+
+<script>
+        function onPhotoLoad(e, h, w) {
+        let ratio = e.naturalWidth / e.naturalHeight;
+
+        if (h != 0 && w == 0) {
+            e.width = Math.round(ratio * h);
+        }
+        if (h == 0 && w != 0) {
+            e.height = Math.round(w / ratio);
+        }
+    }
+</script>
