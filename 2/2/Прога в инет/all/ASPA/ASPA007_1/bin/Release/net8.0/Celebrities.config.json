@@ -1,0 +1,7 @@
+{
+  "Celebrities": {
+    "PhotosRequestPath": "/Photos",
+    "PhotosFolder": "D:\\VG_Projects\\AMC\\AMC25_wHEAD7_DL\\1\\Photos",
+    "ConnectionString": "Data source=27.16.192.98;Initial Catalog=LES01;TrustServerCertificate=True;User Id=;Password="
+  }
+}

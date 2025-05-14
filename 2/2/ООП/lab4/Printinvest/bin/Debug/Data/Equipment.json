@@ -7,6 +7,14 @@
     "SupportedServices": [
       "Refill",
       "Maintenance"
+    ],
+    "Comments": [
+      {
+        "Author": "Demo User",
+        "Text": "tteyt",
+        "Timestamp": "2025-05-12T10:57:38.2737428+03:00",
+        "Rating": 0.0
+      }
     ]
   },
   {
@@ -16,7 +24,8 @@
     "Brand": "HP",
     "SupportedServices": [
       "Maintenance"
-    ]
+    ],
+    "Comments": []
   },
   {
     "ImagePath": null,
@@ -25,7 +34,8 @@
     "Brand": "Canon",
     "SupportedServices": [
       "Refill"
-    ]
+    ],
+    "Comments": []
   },
   {
     "ImagePath": null,
@@ -35,7 +45,8 @@
     "SupportedServices": [
       "Refill",
       "Maintenance"
-    ]
+    ],
+    "Comments": []
   },
   {
     "ImagePath": null,
@@ -44,7 +55,8 @@
     "Brand": "Brother",
     "SupportedServices": [
       "Maintenance"
-    ]
+    ],
+    "Comments": []
   },
   {
     "ImagePath": null,
@@ -53,7 +65,8 @@
     "Brand": "Samsung",
     "SupportedServices": [
       "Refill"
-    ]
+    ],
+    "Comments": []
   },
   {
     "ImagePath": null,
@@ -62,7 +75,8 @@
     "Brand": "Ricoh",
     "SupportedServices": [
       "Maintenance"
-    ]
+    ],
+    "Comments": []
   },
   {
     "ImagePath": null,
@@ -72,7 +86,8 @@
     "SupportedServices": [
       "Refill",
       "Maintenance"
-    ]
+    ],
+    "Comments": []
   },
   {
     "ImagePath": null,
@@ -81,6 +96,7 @@
     "Brand": "Kyocera",
     "SupportedServices": [
       "Maintenance"
-    ]
+    ],
+    "Comments": []
   }
 ]
