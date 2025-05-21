@@ -12,7 +12,6 @@ const App: React.FC = () => {
   return (
     <Provider store={store}>
       <div className="app">
-        <h1>Todolist (RTK)</h1>
         <TodoForm
           editId={editId}
           editText={editText}
