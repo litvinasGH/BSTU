@@ -17,7 +17,6 @@ const App: React.FC = () => {
   return (
     <Provider store={store}>
       <div className="app">
-        <h1>Список дел</h1>
         <TodoForm
           editId={editId}
           editText={editText}

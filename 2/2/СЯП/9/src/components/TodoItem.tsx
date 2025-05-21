@@ -20,8 +20,8 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onEdit }) => {
       />
       <span>{todo.text}</span>
       <div className="buttonDiv">
-        <button onClick={() => onEdit(todo.id, todo.text)}>✏️</button>
-        <button onClick={() => dispatch(deleteTodo(todo.id))}>🗑️</button>
+        <button onClick={() => onEdit(todo.id, todo.text)}>Изменить</button>
+        <button onClick={() => dispatch(deleteTodo(todo.id))}>Удалить</button>
       </div>
     </div>
   );
