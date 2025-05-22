@@ -1,0 +1,23 @@
+﻿@using DAL_Celebrity_MSSQL;
+@using System.Globalization;
+@using ASPA008_1.Helpers;
+@model string;
+
+@{
+    // Views/Celebrities/NewHumanForm.cshtml
+    Layout = "_CelebritiesLayout";
+}
+
+@section subhead {}
+    <div style="display:flex;">
+        <div class="celebrity-box">
+            @Html.CelebrityPhoto(0, "New Celebrity", $"{@Model}/{"NewCelebrity.jpg"}")
+        </div>
+        <div class="celebrity-box">
+            <partial name="_InFormNewCelebrity"/>
+        </div>
+    </div>
+
+
+@section foot {
+}

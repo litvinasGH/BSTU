@@ -1,0 +1,27 @@
+﻿@using static DAL_Celebrity_MSSQL.DAL_Celebrity_MSSQL;
+@using ASPA008_1.Helpers;
+@model ASPA008_1.Controllers.CelebritiesController.IndexModel
+
+@{
+    // Celebrities/Index.cshtml
+    Layout = "_CelebritiesLayout";
+}
+@section subhead
+{
+    <h2>Celebrities/Index</h2>
+}
+
+
+@Html.CelebrityPhoto(0, "New Celebrity", $"{Model.PhotosRequestPath}/{"NewCelebrity.jpg"}");
+
+
+
+@foreach (Celebrity c in Model.Celebrities)          // по всем знаменитостям
+{
+    @Html.CelebrityPhoto(c.id, c.FullName, $"{Model.PhotosRequestPath}/{c.ReqPhotoPath}");
+}
+
+@section foot
+{
+    @* <h2>FOOT</h2> *@
+}

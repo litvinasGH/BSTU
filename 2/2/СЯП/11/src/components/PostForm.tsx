@@ -11,7 +11,7 @@ const PostForm: React.FC = () => {
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (title && body) {
-      const newPost: NewPost = { userId: 1, title, body };
+      const newPost: NewPost = {  userId: 1, title, body };
       dispatch(addNewPost(newPost));
       setTitle('');
       setBody('');
