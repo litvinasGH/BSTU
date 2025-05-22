@@ -26,8 +26,8 @@ const PostItem: React.FC<Props> = ({ post }) => {
         </>
       ) : (
         <>
-          <h2>{post.title}</h2>
-          <p>{post.body}</p>
+          <h2>{title}</h2>
+          <p>{body}</p>
           <button onClick={() => setIsEditing(true)}>Edit</button>
           <button onClick={() => dispatch(removePost(post.id))}>Delete</button>
         </>

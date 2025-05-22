@@ -16,6 +16,7 @@ namespace ANC25_WEBAPl_DLL
         public static IServiceCollection AddCelebritiesConfiguration(this WebApplicationBuilder builder, string celebrityJson = "Celebrities.config.json")
         {
             builder.Configuration.AddJsonFile(celebrityJson);
+            builder.Services.AddSingleton<CelebrityTitles>();
             return builder.Services.Configure<CelebritiesConfig>(builder.Configuration.GetSection("Celebrities"));
         }
         public static IServiceCollection AddCelebritiesServices(this WebApplicationBuilder builder)
@@ -26,6 +27,13 @@ namespace ANC25_WEBAPl_DLL
                 return new Repository(config.ConnectionString);
             });
             return builder.Services;
+        }
+
+        public class CelebrityTitles
+        {
+            public string? Title = "Celebrities";
+            public string? Head = "Celebrities Dictionary Internet Service";
+            public string? Copyright = "BSTU";
         }
     }
 }

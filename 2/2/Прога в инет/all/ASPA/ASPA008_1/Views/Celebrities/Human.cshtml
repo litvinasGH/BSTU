@@ -1,0 +1,35 @@
+﻿@using static DAL_Celebrity_MSSQL.DAL_Celebrity_MSSQL;
+@using System.Globalization;
+@using ASPA008_1.Helpers;
+@model ASPA008_1.Controllers.CelebritiesController.HumanModel;
+
+// Views/Celebrities/Human.cshtml
+@{
+    Layout = "_CelebritiesLayout";
+    Celebrity celebrity = Model.celebrity;
+    Dictionary<string, string> references = Model.references ?? new Dictionary<string, string>();
+    string photopath = $"{Model.photosrequestpath}/{celebrity.ReqPhotoPath}";
+}
+
+@section subhead {}
+    <div style="display:flex;">
+        <div class="celebrity-box">
+            @Html.CelebrityPhoto(celebrity.id, celebrity.FullName, photopath)
+        </div>
+        <div class="celebrity-box">
+            <h2>@celebrity.FullName</h2>
+            @foreach (Lifeevent live in Model.lifeevents)
+            {
+                <p>@live.Date?.ToString("dd.MM.yyyy", CultureInfo.InvariantCulture) @live.Description</p>
+            }
+            @foreach (KeyValuePair<string, string> info in references)
+            {
+                <a id="@info.Key" href="@info.Value" target="_blank" hidden>@info.Key</a>
+                <button onclick="document.getElementById('@info.Key').click();">@info.Key</button>
+            }
+        </div>
+    </div>
+
+
+@section foot {
+}

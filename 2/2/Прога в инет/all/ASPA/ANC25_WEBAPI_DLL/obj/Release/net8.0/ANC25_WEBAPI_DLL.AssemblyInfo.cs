@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ANC25_WEBAPI_DLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da91e06f5e996afa6a2bcf06bf2265137698ef12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+853c257bc9ac614a2934834889fc229074032e6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ANC25_WEBAPI_DLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ANC25_WEBAPI_DLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

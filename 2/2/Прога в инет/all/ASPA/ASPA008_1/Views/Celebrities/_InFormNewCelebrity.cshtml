@@ -1,0 +1,25 @@
+﻿@{
+}
+<form method="post" enctype="multipart/form-data">
+    <div class="row">
+            <input class="col-12" id="fullname" name="fullname" type="text" placeholder="Celebrities Name" required />
+            <input class="col-12" id="nationality" name="nationality" type="text" placeholder="Nationality" required minlength="2" maxlength="2" />
+    </div>
+    <div class="row">
+            <input id="upload" name="upload" type="file" style="display:none;" accept="image/jpeg" onchange="onChange(this)" required />
+            <button class="col-12" id="butupload" type="button" onclick="document.getElementById('upload').click()">Upload Photo</button>
+            </div>
+     <div class="row">
+        <button class="col-6" type="submit">OK</button>
+        <button class="col-6" type="reset">CANCEL</button>
+    </div>
+
+
+</form>
+
+<script>
+    function onChange(e) {
+        if (e.value == "") butupload.innerText = "Upload Photo";
+        else butupload.innerText = e.value;
+    }
+</script>

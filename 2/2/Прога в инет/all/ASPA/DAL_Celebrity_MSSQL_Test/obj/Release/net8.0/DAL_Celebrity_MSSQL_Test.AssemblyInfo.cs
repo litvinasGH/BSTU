@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DAL_Celebrity_MSSQL_Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96ce4f2967dc6a1266f0daad0bedffc88e0aa8f5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+853c257bc9ac614a2934834889fc229074032e6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("DAL_Celebrity_MSSQL_Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DAL_Celebrity_MSSQL_Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
