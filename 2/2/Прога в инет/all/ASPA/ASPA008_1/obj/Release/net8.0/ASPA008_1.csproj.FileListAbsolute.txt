@@ -273,3 +273,4 @@ C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA008_1\obj\
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA008_1\obj\Release\net8.0\ref\ASPA008_1.dll
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA008_1\bin\Release\net8.0\Celebrities.config.json
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA008_1\bin\Release\net8.0\Photos\Celeberities.json
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA008_1\bin\Release\net8.0\CountryCodes\Лабораторная_08__iso3166-1-alpha2-country-codes.json
