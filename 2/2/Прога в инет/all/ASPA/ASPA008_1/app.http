@@ -1,5 +1,5 @@
 ###
-@hp=https://localhost:7148
+@hp=https://localhost:5168
 @capi=/api/Celebrities
 ###
 
@@ -24,7 +24,7 @@ GET {{hp}}{{capi}}/Lifeevents/7
 
 ###.MapDelete("/{id:int:min(1)}",
 
-DELETE {{hp}}{{capi}}/8
+DELETE {{hp}}{{capi}}/14
 
 
 ### добавить новую знаменитость

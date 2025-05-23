@@ -2,12 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using System.Text.Json;
 using static DAL_Celebrity_MSSQL.DAL_Celebrity_MSSQL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ANC25_WEBAPl_DLL
 {
@@ -16,7 +12,6 @@ namespace ANC25_WEBAPl_DLL
         public static IServiceCollection AddCelebritiesConfiguration(this WebApplicationBuilder builder, string celebrityJson = "Celebrities.config.json")
         {
             builder.Configuration.AddJsonFile(celebrityJson);
-            builder.Services.AddSingleton<CelebrityTitles>();
             return builder.Services.Configure<CelebritiesConfig>(builder.Configuration.GetSection("Celebrities"));
         }
         public static IServiceCollection AddCelebritiesServices(this WebApplicationBuilder builder)
@@ -26,9 +21,25 @@ namespace ANC25_WEBAPl_DLL
                 CelebritiesConfig config = provider.GetRequiredService<IOptions<CelebritiesConfig>>().Value;
                 return new Repository(config.ConnectionString);
             });
+            builder.Services.AddSingleton<CelebrityTitles>();
+            builder.Services.AddSingleton<CountryCodes>((p) => new CountryCodes
+            (p.GetRequiredService<IOptions<CelebritiesConfig>>().Value.ISO3166alpha2Path));
             return builder.Services;
         }
+        public class CountryCodes : List<CountryCodes.ISOCountryCodes>
+        {
+            public record ISOCountryCodes(string code, string countryLabel);
+            public CountryCodes(string jsonCountryCodesPath) : base()
+            {
+                if (File.Exists(jsonCountryCodesPath))
+                {
+                    FileStream fs = new FileStream(jsonCountryCodesPath, FileMode.OpenOrCreate, FileAccess.Read);
+                    List<ISOCountryCodes>? cc = JsonSerializer.DeserializeAsync<List<ISOCountryCodes>>(fs).Result;
+                    if (cc != null) this.AddRange(cc);
+                }
+            }
 
+        }
         public class CelebrityTitles
         {
             public string? Title = "Celebrities";

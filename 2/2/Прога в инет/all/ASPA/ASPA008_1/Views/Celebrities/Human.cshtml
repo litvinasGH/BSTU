@@ -12,7 +12,7 @@
 }
 
 @section subhead {}
-    <div style="display:flex;">
+<div style="display:flex;background-color: #c59d67;">
         <div class="celebrity-box">
             @Html.CelebrityPhoto(celebrity.id, celebrity.FullName, photopath)
         </div>
@@ -28,6 +28,9 @@
                 <button onclick="document.getElementById('@info.Key').click();">@info.Key</button>
             }
         </div>
+
+    <a asp-action="Edit" asp-route-id="@celebrity.id" class="btn btn-sm btn-warning">Edit</a>
+    <a asp-action="Delete" asp-route-id="@celebrity.id" class="btn btn-sm btn-danger">Delete</a>
     </div>
 
 
