@@ -21,12 +21,6 @@ C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\Release\net8.0\staticwebassets.build.json
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\Release\net8.0\staticwebassets.development.json
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\Release\net8.0\staticwebassets.build.endpoints.json
-C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\Release\net8.0\staticwebassets\msbuild.ASPA007_1.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\Release\net8.0\staticwebassets\msbuild.ASPA007_1.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\Release\net8.0\staticwebassets\msbuild.build.ASPA007_1.props
-C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\Release\net8.0\staticwebassets\msbuild.buildMultiTargeting.ASPA007_1.props
-C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\Release\net8.0\staticwebassets\msbuild.buildTransitive.ASPA007_1.props
-C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\Release\net8.0\staticwebassets.pack.json
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\Release\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\Release\net8.0\ASPA007_1.dll
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\Release\net8.0\refint\ASPA007_1.dll
@@ -97,3 +91,4 @@ C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\bin\
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\bin\Release\net8.0\Celebrities.config.json
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\bin\Release\net8.0\ANC25_WEBAPI_DLL.dll
 C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\bin\Release\net8.0\ANC25_WEBAPI_DLL.pdb
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\obj\Release\net8.0\staticwebassets.build.json.cache
