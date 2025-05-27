@@ -5,6 +5,8 @@ namespace Printinvest.Models
 {
     public class Service : INotifyPropertyChanged
     {
+        private int _id;
+        public int Id { get => _id; set => _id = value; }
         private string _name;
         private decimal _price;
         private int _durationDays;

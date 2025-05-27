@@ -100,3 +100,6 @@ C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\LoginW
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\ProfileWindow.baml
 D:\git\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Themes\Generic.baml
 C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Themes\Generic.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Printinvest.exe.config
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\AdminWindow.baml
+C:\Users\litvi\Documents\BSTU\2\2\ООП\lab4\Printinvest\obj\Debug\Views\AdminWindow.g.cs

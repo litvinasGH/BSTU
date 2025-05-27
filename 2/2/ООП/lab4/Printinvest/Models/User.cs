@@ -5,6 +5,8 @@ using System.Runtime.CompilerServices;
 namespace Printinvest.Models { 
     public class User : INotifyPropertyChanged
     {
+        private int _id;
+        public int Id { get => _id; set => _id = value; }
         private string _login;
         private string _password;
         private string _name;

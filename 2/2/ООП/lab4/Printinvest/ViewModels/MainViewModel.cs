@@ -228,6 +228,7 @@ namespace Printinvest.ViewModels
             {
                 SaveState();
                 Equipment.Remove(eq);
+                Data.SERDB.database.DeleteEquipment(eq.Id);
                 SaveEquipmentToJson();
                 CurrentItems.Refresh();
             }
@@ -235,8 +236,16 @@ namespace Printinvest.ViewModels
 
         private void SaveEquipmentToJson()
         {
-            var settings = new JsonSerializerSettings { Converters = { new StringEnumConverter() }, Formatting = Formatting.Indented };
-            File.WriteAllText(_equipmentPath, JsonConvert.SerializeObject(Equipment, settings));
+            try
+            {
+                // Сохранение оборудования в базу данных
+                Data.SERDB.database.SaveAllEquipment(Equipment.ToList());
+            }
+            catch (Exception ex)
+            {
+                // Обработка ошибок при сохранении данных
+                MessageBox.Show($"Ошибка при сохранении оборудования: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void SwitchCollectionView()
@@ -266,36 +275,40 @@ namespace Printinvest.ViewModels
 
             return false;
         }
- 
+
         private void LoadData()
         {
-            if (File.Exists(_servicesPath))
+            try
             {
-                var settings = new JsonSerializerSettings
-                {
-                    Converters = { new StringEnumConverter() }
-                };
-                var services = JsonConvert.DeserializeObject<List<Service>>(File.ReadAllText(_servicesPath), settings);
+                // Загрузка услуг из базы данных
+                var services = Data.SERDB.database.GetServices();
                 Services.Clear();
-                Services.AddRange(services);
-            }
-            if (File.Exists(_equipmentPath))
-            {
-                var settings = new JsonSerializerSettings
+                foreach (var service in services)
                 {
-                    Converters = { new StringEnumConverter() }
-                };
-                var equipment = JsonConvert.DeserializeObject<List<Equipment>>(File.ReadAllText(_equipmentPath), settings);
-                Equipment.Clear();
-                Equipment.AddRange(equipment);
-            }
+                    Services.Add(service);
+                }
 
-            Application.Current.Dispatcher.Invoke(() => CurrentItems.Refresh());
+                // Загрузка оборудования из базы данных
+                var equipment = Data.SERDB.database.GetEquipment();
+                Equipment.Clear();
+                foreach (var eq in equipment)
+                {
+                    Equipment.Add(eq);
+                }
+
+                // Обновление представления данных
+                Application.Current.Dispatcher.Invoke(() => CurrentItems.Refresh());
+            }
+            catch (Exception ex)
+            {
+                // Обработка ошибок при загрузке данных
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void OpenAdminPanel()
         {
-            var win = new AdminPanelWindow { Owner = Application.Current.MainWindow };
+            var win = new AdminWindow(CurrentUser) { Owner = Application.Current.MainWindow };
             if (win.ShowDialog() == true)
             {
                 SaveState();
