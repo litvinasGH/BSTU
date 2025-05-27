@@ -8,12 +8,14 @@ namespace Printinvest.Models
 {
     public class Equipment : INotifyPropertyChanged
     {
+        private int _id;
         private string _model;
         private decimal _price;
         private Brand _brand;
         private ObservableCollection<Comment> _comments;
         private List<ServiceType> _supportedServices;
         public string ImagePath { get; set; }
+        public int Id { get => _id; set => _id = value; }
 
         public Equipment()
         {

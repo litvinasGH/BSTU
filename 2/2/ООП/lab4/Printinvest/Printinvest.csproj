@@ -39,6 +39,7 @@
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +65,7 @@
     </Compile>
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Utils\DatabaseManager.cs" />
     <!-- Utils -->
     <Compile Include="Utils\EnumToLocalizedStringConverter.cs" />
     <Compile Include="Utils\FilterViewModel.cs" />
@@ -72,8 +74,10 @@
     <Compile Include="Utils\IsAtMaxConverter.cs" />
     <Compile Include="Utils\LocalizationManager.cs" />
     <Compile Include="Utils\ObservableCollectionExtensions.cs" />
+    <Compile Include="Utils\TableToVisibilityConverter.cs" />
     <!-- ViewModels -->
     <Compile Include="ViewModels\AdminViewModel.cs" />
+    <Compile Include="ViewModels\AdminWindowViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\EquipmentDetailsWindowVM.cs" />
     <Compile Include="ViewModels\EquipmentViewModel.cs" />
@@ -95,6 +99,9 @@
     <!-- Views -->
     <Compile Include="Views\AdminPanelWindow.xaml.cs">
       <DependentUpon>AdminPanelWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Controls\CommentsControl.cs" />
     <Compile Include="Views\Controls\NumericUpDown.cs" />
@@ -149,6 +156,10 @@
     <Page Include="Views\AdminPanelWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Controls\EquipmentCard.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -255,7 +266,6 @@
   <ItemGroup>
     <Folder Include="Assets\Images\Logos\" />
     <Folder Include="Assets\Images\Printers\" />
-    <Folder Include="Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

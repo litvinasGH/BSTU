@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using Printinvest.Models;
@@ -45,22 +46,28 @@ namespace Printinvest.ViewModels
 
         private void OnLogin(object obj)
         {
-            // Demo auth: admin/admin; user/user
-            if (Login == "admin" && Password == "admin")
+            try
             {
-                AuthenticatedUser = new User { Login = "admin", Name = "Administrator", IsAdmin = true };
-                CloseDialog(obj as Window, true);
+                // Получение пользователей из базы данных через DatabaseManager
+                var users = Data.SERDB.database.GetUsers();
+                var user = users.FirstOrDefault(u => u.Login == Login && u.Password == Password);
+
+                if (user != null)
+                {
+                    AuthenticatedUser = user;
+                    CloseDialog(obj as Window, true);
+                }
+                else
+                {
+                    MessageBox.Show("Invalid credentials", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
             }
-            else if (Login == "user" && Password == "user")
+            catch (Exception ex)
             {
-                AuthenticatedUser = new User { Login = "user", Name = "Demo User", IsAdmin = false };
-                CloseDialog(obj as Window, true);
-            }
-            else
-            {
-                MessageBox.Show("Invalid credentials", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show($"Authentication error: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
         private void OnCancel(object obj)
         {
             CloseDialog(obj as Window, false);

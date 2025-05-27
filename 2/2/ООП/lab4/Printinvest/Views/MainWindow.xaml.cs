@@ -21,6 +21,7 @@ namespace Printinvest.Views
     {
         public MainWindow()
         {
+            Data.SERDB.database = new Data.DatabaseManager();
             InitializeComponent();
         }
     }
