@@ -61,8 +61,7 @@ const postsSlice = createSlice({
 
       // Добавление
       .addCase(addNewPost.fulfilled, (state, action) => {
-        const maxId = Math.max(...state.items.map((p) => p.id), 100);
-        const newPost: Post = { ...action.payload, id: maxId + 1 };
+        const newPost: Post = { ...action.payload }
         state.items.unshift(newPost);
       })
 

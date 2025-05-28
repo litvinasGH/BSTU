@@ -37,8 +37,7 @@ internal class Program
             if (!db.Posts.Any())
             {
                 db.Posts.AddRange(
-                    new Post { UserId = 1, Title = "Hello", Body = "World" },
-                    new Post { UserId = 1, Title = "Foo", Body = "Bar" }
+                    new Post { UserId = 1, Title = "Hello", Body = "World" }
                 );
                 db.SaveChanges();
             }

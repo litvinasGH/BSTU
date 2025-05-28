@@ -13,7 +13,7 @@ export interface NewPost {
   body: string;
 }
 
-const BASE_URL = 'https://localhost:7025/api/posts';
+const BASE_URL = 'http://localhost:5000/api/posts';
 
 export const fetchPosts = async (): Promise<Post[]> => {
   const res = await axios.get<Post[]>(BASE_URL);
