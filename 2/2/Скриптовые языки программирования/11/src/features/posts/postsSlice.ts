@@ -1,6 +1,14 @@
+// src/features/posts/postsSlice.ts
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchPosts, createPost, updatePost, deletePost, Post, NewPost } from './postsAPI';
-import { RootState } from '../../app/store';
+import {
+  fetchPosts,
+  createPost,
+  updatePost,
+  deletePost,
+  Post,
+  NewPost
+} from './postsAPI';
+import type { RootState } from '../../app/store';
 
 interface PostsState {
   items: Post[];
@@ -14,22 +22,23 @@ const initialState: PostsState = {
   error: null,
 };
 
-export const loadPosts = createAsyncThunk('posts/load', async () => {
-  return await fetchPosts();
-});
-
-export const addNewPost = createAsyncThunk('posts/add', async (newPost: NewPost) => {
-  return await createPost(newPost);
-});
-
-export const editPost = createAsyncThunk('posts/edit', async (post: Post) => {
-  return await updatePost(post);
-});
-
-export const removePost = createAsyncThunk('posts/remove', async (id: number) => {
-  await deletePost(id);
-  return id;
-});
+// Thunk’ы для CRUD
+export const loadPosts = createAsyncThunk<Post[]>('posts/load', fetchPosts);
+export const addNewPost = createAsyncThunk<Post, NewPost>(
+  'posts/add',
+  createPost
+);
+export const editPost = createAsyncThunk<Post, Post>(
+  'posts/edit',
+  updatePost
+);
+export const removePost = createAsyncThunk<number, number>(
+  'posts/remove',
+  async (id) => {
+    await deletePost(id);
+    return id;
+  }
+);
 
 const postsSlice = createSlice({
   name: 'posts',
@@ -37,7 +46,10 @@ const postsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(loadPosts.pending, (state) => { state.loading = true; })
+      // Загрузка
+      .addCase(loadPosts.pending, (state) => {
+        state.loading = true;
+      })
       .addCase(loadPosts.fulfilled, (state, action) => {
         state.items = action.payload;
         state.loading = false;
@@ -47,17 +59,24 @@ const postsSlice = createSlice({
         state.error = action.error.message || 'Failed to load posts';
       })
 
+      // Добавление
       .addCase(addNewPost.fulfilled, (state, action) => {
-        state.items.unshift(action.payload);
+        const maxId = Math.max(...state.items.map((p) => p.id), 100);
+        const newPost: Post = { ...action.payload, id: maxId + 1 };
+        state.items.unshift(newPost);
       })
 
+      // Редактирование (всегда через editPost)
       .addCase(editPost.fulfilled, (state, action) => {
-        const index = state.items.findIndex(p => p.id === action.payload.id);
-        if (index >= 0) state.items[index] = action.payload;
+        const idx = state.items.findIndex((p) => p.id === action.payload.id);
+        if (idx !== -1) {
+          state.items[idx] = action.payload;
+        }
       })
 
+      // Удаление
       .addCase(removePost.fulfilled, (state, action) => {
-        state.items = state.items.filter(p => p.id !== action.payload);
+        state.items = state.items.filter((p) => p.id !== action.payload);
       });
   },
 });

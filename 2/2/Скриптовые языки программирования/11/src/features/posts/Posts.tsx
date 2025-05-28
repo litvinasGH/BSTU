@@ -17,7 +17,7 @@ const Posts: React.FC = () => {
       <h1>Posts Manager</h1>
       <PostForm />
       {posts.map(post => (
-        <PostItem key={post.id} post={post} />
+        <PostItem key={post.id} post={post}  />
       ))}
     </div>
   );

@@ -13,21 +13,21 @@ export interface NewPost {
   body: string;
 }
 
-const BASE_URL = 'https://jsonplaceholder.typicode.com/posts';
+const BASE_URL = 'https://localhost:7025/api/posts';
 
 export const fetchPosts = async (): Promise<Post[]> => {
-  const response = await axios.get<Post[]>(BASE_URL);
-  return response.data;
+  const res = await axios.get<Post[]>(BASE_URL);
+  return res.data;
 };
 
 export const createPost = async (newPost: NewPost): Promise<Post> => {
-  const response = await axios.post<Post>(BASE_URL, newPost);
-  return response.data;
+  const res = await axios.post<Post>(BASE_URL, newPost);
+  return res.data;
 };
 
 export const updatePost = async (post: Post): Promise<Post> => {
-  const response = await axios.put<Post>(`${BASE_URL}/${post.id}`, post);
-  return response.data;
+  const res = await axios.put<Post>(`${BASE_URL}/${post.id}`, post);
+  return res.data;
 };
 
 export const deletePost = async (id: number): Promise<void> => {

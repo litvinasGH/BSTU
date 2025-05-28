@@ -1,0 +1,115 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u0421\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SLP11\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B9B753-648B-4082-BAFB-EA110CA3C779}|SLP11\\SLP11.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u0441\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\slp11\\slp11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9B9B753-648B-4082-BAFB-EA110CA3C779}|SLP11\\SLP11.csproj|solutionrelative:slp11\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B9B753-648B-4082-BAFB-EA110CA3C779}|SLP11\\SLP11.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u0441\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\slp11\\slp11\\models\\controllers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9B9B753-648B-4082-BAFB-EA110CA3C779}|SLP11\\SLP11.csproj|solutionrelative:slp11\\models\\controllers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B9B753-648B-4082-BAFB-EA110CA3C779}|SLP11\\SLP11.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u0441\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\slp11\\slp11\\models\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9B9B753-648B-4082-BAFB-EA110CA3C779}|SLP11\\SLP11.csproj|solutionrelative:slp11\\models\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B9B753-648B-4082-BAFB-EA110CA3C779}|SLP11\\SLP11.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u0441\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\slp11\\slp11\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F9B9B753-648B-4082-BAFB-EA110CA3C779}|SLP11\\SLP11.csproj|solutionrelative:slp11\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B9B753-648B-4082-BAFB-EA110CA3C779}|SLP11\\SLP11.csproj|c:\\users\\litvi\\documents\\bstu\\2\\2\\\u0441\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\slp11\\slp11\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9B9B753-648B-4082-BAFB-EA110CA3C779}|SLP11\\SLP11.csproj|solutionrelative:slp11\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 170,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u0421\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SLP11\\SLP11\\appsettings.json",
+              "RelativeDocumentMoniker": "SLP11\\appsettings.json",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u0421\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SLP11\\SLP11\\appsettings.json",
+              "RelativeToolTip": "SLP11\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-28T19:32:40.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Controllers.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u0421\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SLP11\\SLP11\\Models\\Controllers.cs",
+              "RelativeDocumentMoniker": "SLP11\\Models\\Controllers.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u0421\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SLP11\\SLP11\\Models\\Controllers.cs",
+              "RelativeToolTip": "SLP11\\Models\\Controllers.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwCUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T19:27:41.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u0421\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SLP11\\SLP11\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "SLP11\\Models\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u0421\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SLP11\\SLP11\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "SLP11\\Models\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T19:18:30.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Post.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u0421\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SLP11\\SLP11\\Models\\Post.cs",
+              "RelativeDocumentMoniker": "SLP11\\Models\\Post.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u0421\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SLP11\\SLP11\\Models\\Post.cs",
+              "RelativeToolTip": "SLP11\\Models\\Post.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T19:17:59.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u0421\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SLP11\\SLP11\\Program.cs",
+              "RelativeDocumentMoniker": "SLP11\\Program.cs",
+              "ToolTip": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\\u0421\u043A\u0440\u0438\u043F\u0442\u043E\u0432\u044B\u0435 \u044F\u0437\u044B\u043A\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F\\SLP11\\SLP11\\Program.cs",
+              "RelativeToolTip": "SLP11\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T19:17:10.39Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
