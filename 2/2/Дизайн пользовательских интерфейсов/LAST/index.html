@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина - Printinvest</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <button class="burger" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+      <img src="assets/logo.png" alt="Printinvest" class="logo">
+      <input type="text" placeholder="Пример" class="search">
+      <nav class="nav">
+        <a href="#">Каталог</a>
+        <a href="#">Избранные♡</a>
+        <a href="#">О нас</a>
+        <a href="#">Корзина</a>
+      </nav>
+      <div class="icons">
+        <img src="assets/cart.png" alt="Cart">
+        <img src="assets/user.png" alt="User" class="">
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="cart-header">
+        <h2>Товары в корзине:</h2>
+        <h2 class="not">Общая стоимость: <span class="price">9999BYN</span></h2>
+      </div>
+      <div class="cart-content">
+        <div class="product-info">
+          <img src="assets/printer.png" alt="Принтер">
+          <div class="details">
+            <h3>Имя</h3>
+            <p>Рейтинг: <span class="accent">5★</span></p>
+            <p><span class="gray">Категория:</span> МФУ</p>
+            <p class="not"><span class="gray">Функции:</span> Копир–Принтер–Сканер</p>
+            <p class="not"><span class="gray">Максимальный формат бумаги:</span> A4</p>
+            <p class="not"><span class="gray">Скорость печати A4:</span> 33 стр./мин</p>
+            <p class="not"><span class="gray">Разрешение печати:</span> 1200×600 dpi</p>
+            <p class="price-block" style="display: none;">Цена: <span class="accent">9999BYN</span></p>
+          </div>
+        </div>
+        <div class="purchase-info">
+            <div class="icons">
+          <img src="assets/fav.png" alt="Favorite">
+          <img src="assets/add-cart.png" alt="Add to cart">
+            </div>
+          <p>Дуплекс: <span class="gray">автоматический</span></p>
+          <p>Интерфейсы: <span class="gray">USB, Ethernet, Wi-Fi</span></p>
+          <p>⠀</p>
+          <p class="price-block">Цена: <span class="accent">9999BYN</span></p>
+          
+        </div>
+      </div>
+      <section class="checkout">
+        <h3>Оплата</h3>
+        <form>
+          <label>Способ оплаты</label>
+          <select>
+            <option>Карта</option>
+            <option>Наложенный платеж</option>
+            <option>Банковский перевод</option>
+          </select>
+          <label>Способ доставки</label>
+          <select>
+            <option>Курьер</option>
+            <option>Почта</option>
+            <option>Самовывоз</option>
+          </select>
+          <label>Адрес</label>
+          <input type="text" placeholder="Введите адрес">
+          <label>Номер карты</label>
+          <select>
+            <option>**** **** **** 1234</option>
+            <option>**** **** **** 5678</option>
+          </select>
+          <button type="submit" class="btn">Оплатить</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="assets/footer-logo.png" alt="Printinvest">
+      </div>
+      <div class="footer-nav">
+        <h4>Навигация</h4>
+        <a href="#">Каталог</a>
+        <a href="#">Избранные</a>
+        <a href="#">О нас</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Контакты</h4>
+        <p>8-017-215-22-18 или 8-017-272-64-46</p>
+        <p><a href="mailto:info@printinvest.by">info@printinvest.by</a></p>
+        <p>220113 г. Минск, Логойский тракт, д.1, пом.1н</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
