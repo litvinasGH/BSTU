@@ -14,7 +14,7 @@
       <input type="text" placeholder="Пример" class="search">
       <nav class="nav">
         <a href="#">Каталог</a>
-        <a href="#">Избранные♡</a>
+        <a href="#">Избранные</a>
         <a href="#">О нас</a>
         <a href="#">Корзина</a>
       </nav>
@@ -26,17 +26,16 @@
           <nav class="navBur">
             <button class="burger" onclick="document.querySelector('.navBur').classList.toggle('open')">☰</button>
         <a href="#">Каталог</a>
-        <a href="#">Избранные♡</a>
+        <a href="#">Избранные</a>
         <a href="#">О нас</a>
         <a href="#">Корзина</a>
       </nav>
   </header>
-
+      <p class="not pp"><span class="gray">/</span><span class="accent">корзина</p>
   <main class="main">
     <div class="container">
       <div class="cart-header">
         <h2>Товары в корзине:</h2>
-        <h2 class="not">Общая стоимость: <span class="price">9999BYN</span></h2>
       </div>
       <div class="cart-content">
         <div class="product-info">
@@ -60,9 +59,10 @@
           <p>Дуплекс: <span class="gray">автоматический</span></p>
           <p>Интерфейсы: <span class="gray">USB, Ethernet, Wi-Fi</span></p>
           <p>⠀</p>
-          <p class="price-block">Цена: <span class="accent">9999BYN</span></p>
+          <p class="price-block"><span class="price">9999BYN</span></p>
           
         </div>
+        <h2 class="not">Общая стоимость: <span class="price">9999BYN</span></h2>
       </div>
       <section class="checkout">
         <h3>Оплата</h3>
