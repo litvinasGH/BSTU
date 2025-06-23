@@ -9,7 +9,7 @@
 <body>
   <header class="header">
     <div class="container">
-      <button class="burger" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+      <button class="burger" onclick="document.querySelector('.navBur').classList.toggle('open')">☰</button>
       <img src="assets/logo.png" alt="Printinvest" class="logo">
       <input type="text" placeholder="Пример" class="search">
       <nav class="nav">
@@ -23,6 +23,13 @@
         <img src="assets/user.png" alt="User" class="">
       </div>
     </div>
+          <nav class="navBur">
+            <button class="burger" onclick="document.querySelector('.navBur').classList.toggle('open')">☰</button>
+        <a href="#">Каталог</a>
+        <a href="#">Избранные♡</a>
+        <a href="#">О нас</a>
+        <a href="#">Корзина</a>
+      </nav>
   </header>
 
   <main class="main">

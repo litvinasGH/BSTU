@@ -14,15 +14,14 @@
 
   /* Container */
   .container {
-    width: calc(100% - 32px);
-   margin-left: 100px;
-   margin-right: 100px;
+    /* width: calc(100% - 32px); */
     margin: 0 auto;
     padding: 24px 16px;
   }
 
   .header .container *{
     margin-left: auto; margin-right: auto;
+
   }
 
 
@@ -37,7 +36,8 @@
   .logo { width: 120px; margin-right: auto; }
   .search {
     flex: 1;
-    max-width: 400px;
+    box-sizing: border-box;
+    max-width: 300px;
     min-width: 200px;
     padding: 8px;
     border-radius: 4px;
@@ -64,7 +64,7 @@
   }
 
   /* Main */
-  .main { padding-top: 32px; padding-bottom: 32px; }
+  .main { padding: 32px 100px;}
   .cart-header {
     display: flex;
     justify-content: space-between;
@@ -113,10 +113,7 @@
   }
   .btn:hover { background-color: #008cba; }
 
-  main{
-    padding-left: 300px;
-    padding-right: 300px;
-  }
+ 
   .checkout{
     width: 50%;
     margin-left: auto;
@@ -132,6 +129,8 @@
     border: 1px solid #ccc; border-radius: 4px;
   }
   .checkout button { justify-self: center; padding: 8px 24px; }
+
+  .navBur {display: none;}
 
   /* Footer */
   .footer { background-color: #006679; color: #ffffff; padding: 24px 0; }
@@ -155,14 +154,38 @@
     .cart-content { grid-template-columns: 1fr; }
     .checkout form { grid-template-columns: 1fr; }
 
-    .nav.open { display: flex; flex-direction: column; width: 100%; background-color: #006679; padding: 8px 0; }
-    .nav.open a { padding: 8px 16px; }
+    .navBur {
+      display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #006679;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-left: 20px;
+    gap: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .navBur *{
+    display: block;
+    margin-top: 30px;
+  }
+  .navBur *:first-child{ margin-top: 0px;}
+
+  .navBur.open {
+    transform: translateX(0);
+  }
 
     .footer .container { flex-direction: column; align-items: center; text-align: center; }
 
      main{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px !important;
+
   }
   .product-info{
     flex-direction: column;
