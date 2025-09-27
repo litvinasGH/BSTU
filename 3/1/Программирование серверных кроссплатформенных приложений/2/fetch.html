@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+
+<body>
+    <p id="user-data"></p>
+</body>
+<script>
+        let url = "http://localhost:5000/api/name";
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Response was not OK');
+                }
+                return response.text();
+            })
+            .then(data=>{
+                document.getElementById('user-data').innerText = data;
+            })
+            .catch(error => {
+                console.log("Error: ", error);
+            });
+</script>
+
+</html>
