@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cassert>
-#include "HT_api.h"
+#include "OS10_HTAPI.h"
 
 HT::Element* makeElem(const char* key, int keylen, const char* payload, int payloadlen) {
     return new HT::Element(key, keylen, payload, payloadlen);
@@ -27,10 +27,17 @@ void testInsertEdgeCases() {
     HT::HTHANDLE* h = HT::Create(2, 3, 10, 256, "Test2.koi");
     assert(h != NULL);
 
+    std::cout << "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << std::endl;
     HT::Insert(h, new HT::Element("k1", 2, "p1", 2));
     HT::Insert(h, new HT::Element("k1", 2, "p2", 2));
 
-    assert(h->CurrentElements == 2);
+
+    HT::Update(h, new HT::Element("k1", 2, "p1", 2), "ne", 2);
+
+
+
+
+    assert(h->countOfElements == 2);
 
     bool ok = HT::Insert(h, new HT::Element("k2", 2, "pp", 2));
     if (ok) {

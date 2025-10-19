@@ -42,7 +42,7 @@ int main() {
 #ifdef INSERTION_ENABLED
 		std::cout << std::endl << "----------Insertion Started----------" << std::endl << std::endl;
 		HT::Insert(handle, new HT::Element("key", 3, "payload", 7));
-		HT::Insert(handle, new HT::Element("key1", 4, "PAYLOAD1", 8));
+		HT::Insert(handle, new HT::Element("key1", 4, "payload1", 8));
 		HT::Insert(handle, new HT::Element("key2", 4, "payload2", 8));
 		HT::Insert(handle, new HT::Element("key2", 4, "payload3", 8));
 		std::cout << std::endl << "----------Insertion Ended----------" << std::endl;

@@ -259,9 +259,6 @@ namespace HT {
             return FALSE;
         }
 
-        OVERLAPPED ol = { 0 };
-        ol.hEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
-
         hthandle->lastsnaptime = time(nullptr);
 
         HANDLE HTSnapshot = CreateFileA(
@@ -270,7 +267,7 @@ namespace HT {
             0,
             NULL,
             CREATE_ALWAYS,
-            FILE_ATTRIBUTE_NORMAL | FILE_FLAG_OVERLAPPED,
+            FILE_ATTRIBUTE_NORMAL,
             NULL
         );
 
@@ -312,7 +309,6 @@ namespace HT {
         }
 
         CloseHandle(HTSnapshot);
-        CloseHandle(ol.hEvent);
         std::cout << std::endl << "----------Snap Complited----------" << std::endl;
         return TRUE;
     }
@@ -604,7 +600,7 @@ namespace HT {
 
             if (memcmp(current_slot, element->key, element->keylength) == 0) {
                 memcpy(current_slot + handle->MaxKeyLength, newpayload, newpayloadlength);
-                std::cout << "Update: Element updated =(" << std::endl;
+                std::cout << "Update: Element updated " << hashFunction(element->key, element->keylength, handle->Capacity) << std::endl;
                 return TRUE;
             }
         }

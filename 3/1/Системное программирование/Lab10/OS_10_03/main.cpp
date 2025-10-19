@@ -1,5 +1,5 @@
 #include <iostream>
-#include "HT_api.h"
+#include "OS10_HTAPI.h"
 
 
 //#define CREATION_ENABLED
@@ -89,7 +89,7 @@ int main() {
 
 		if (got_element1 != NULL) {
 			std::cout << "--Get from Storage 1 executed successfully--" << std::endl;
-			HT::Print(got_element1);
+			HT::print(got_element1);
 			delete got_element1;
 		}
 		else {
@@ -100,7 +100,7 @@ int main() {
 
 		if (got_element2 != NULL) {
 			std::cout << "--Get from Storage 2 executed successfully--" << std::endl;
-			HT::Print(got_element2);
+			HT::print(got_element2);
 			delete got_element2;
 		}
 		else {
