@@ -1,12 +1,6 @@
 var http = require('http');
-var readline = require('readline');
-
 const PORT = 5000;
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
 
 let appState = "norm";
 
@@ -23,31 +17,35 @@ const server = http.createServer((request, response) => {
 
 console.log(`Server running at http://localhost:${PORT}`);
 
-const changeState = () => {
-    rl.question(`${appState}->`, (input) => {
+process.stdin.setEncoding('utf-8');
 
-        input = input.trim().toLowerCase();
-        
-        switch (input){
-            case 'exit':
-                rl.close();
-                process.exit(0);
-                break;
 
-            case 'norm':
-            case 'stop':
-            case 'idle':
-                console.log(`reg = ${appState}-->${input}`);
-                appState = input;
-                break;
-
-            default:
-                console.log(`${input}`);
-                break;
-        }
-
-        changeState();
-    });
+if (process.stdin.isTTY) {
+  process.stdin.setRawMode(false);
 }
 
-changeState();  
+process.stdout.write(`${appState}->`);
+process.stdin.on('data', (data) => {
+  const input = data.trim().toLowerCase();
+
+  switch (input) {
+    case 'exit':
+      process.exit(0);
+      break;
+
+    case 'norm':
+    case 'stop':
+    case 'idle':
+      console.log(`reg = ${appState} --> ${input}`);
+      appState = input;
+      break;
+
+    default:
+      console.log(`${input}`);
+      break;
+  }
+
+  process.stdout.write(`${appState}->`);
+});
+
+
