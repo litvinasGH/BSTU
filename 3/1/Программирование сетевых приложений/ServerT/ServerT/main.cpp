@@ -39,6 +39,7 @@ int main(int argc, _TCHAR* argv[]) {
 		serv.sin_addr.S_un.S_addr = INADDR_ANY;
 
 
+
 		if (bind(serverSocket, (LPSOCKADDR)&serv, sizeof(serv)) == SOCKET_ERROR) {
 			throw SetErrorMsgText("Socket Parameter Binding: ", WSAGetLastError());
 		}

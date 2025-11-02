@@ -33,7 +33,7 @@ int main(int argc, _TCHAR* argv[]) {
 
 		serv.sin_family = AF_INET;
 		serv.sin_port = htons(2000);
-		if (inet_pton(AF_INET, "192.168.20.164", &serv.sin_addr.S_un.S_addr) <= 0) {
+		if (inet_pton(AF_INET, "192.168.203.19", &serv.sin_addr.S_un.S_addr) <= 0) {
 			throw SetErrorMsgText("Failed to set an IP address", WSAGetLastError());
 		}
 
@@ -72,8 +72,10 @@ int main(int argc, _TCHAR* argv[]) {
 		int LiNaBuffer = 0;
 
 		for (int i = 0; i < amountMessages; i++) {
+
+			Sleep(200);
+
 			outBuffer = "Hello from ClientU " + to_string(i);
-			Sleep(1500);
 			LoutBuffer = sendto(clientSocket, outBuffer.c_str(), outBuffer.size() + 1, NULL, (sockaddr*)&serv, sizeof(serv));
 
 			if (LoutBuffer == SOCKET_ERROR) {
@@ -81,8 +83,6 @@ int main(int argc, _TCHAR* argv[]) {
 			}
 
 			cout << "--message sent (" << outBuffer << ")" << endl;
-
-
 
 			LinBuffer = recvfrom(clientSocket, inBuffer, sizeof(inBuffer) - 1, NULL, (sockaddr*)&serv, &LinServ);
 

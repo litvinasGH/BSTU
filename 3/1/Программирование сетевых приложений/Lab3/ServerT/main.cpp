@@ -74,7 +74,7 @@ int main(int argc, _TCHAR* argv[]) {
 		while (true) {
 
 			LinBuffer = recvfrom(serverSocket, inBuffer, sizeof(inBuffer), NULL, (sockaddr*)&clientParameters, &LClient);
-
+			//Sleep(1000);
 			if (LinBuffer == SOCKET_ERROR) {
 				throw SetErrorMsgText("Failed to receive message from client", WSAGetLastError());
 			}
