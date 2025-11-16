@@ -20,9 +20,9 @@ console.log(`Server running at http://localhost:${PORT}`);
 process.stdin.setEncoding('utf-8');
 
 
-if (process.stdin.isTTY) {
-  process.stdin.setRawMode(false);
-}
+// if (process.stdin.isTTY) {
+//   process.stdin.setRawMode(false);
+// }
 
 process.stdout.write(`${appState}->`);
 process.stdin.on('data', (data) => {
