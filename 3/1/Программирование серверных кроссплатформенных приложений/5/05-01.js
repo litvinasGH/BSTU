@@ -69,6 +69,7 @@ db.on('COMMIT', async () => {
 http.createServer(function (request,response){
     if(request){
         serverStats.request_count++;
+        //console.log(request.url);
     }
     if(url.parse(request.url).pathname==="/api/db"){
         db.emit(request.method,request,response);
@@ -132,7 +133,6 @@ process.stdin.setEncoding('utf-8');
 // if (process.stdin.isTTY) {
 //   process.stdin.setRawMode(false);
 // }
-
 
 console.log("Server running at http://localhost:5000/");
 

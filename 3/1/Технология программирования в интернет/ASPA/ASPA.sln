@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultsCollection", "Result
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultsAuthenticate", "ResultsAuthenticate\ResultsAuthenticate.csproj", "{F8377DAB-A7A1-4A00-A9C1-2779E6ED6CC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPA_0011_1", "ASPA_0011_API\ASPA_0011_1.csproj", "{89B6EC24-4270-EF77-B425-6D6D181A9702}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F8377DAB-A7A1-4A00-A9C1-2779E6ED6CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8377DAB-A7A1-4A00-A9C1-2779E6ED6CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8377DAB-A7A1-4A00-A9C1-2779E6ED6CC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89B6EC24-4270-EF77-B425-6D6D181A9702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B6EC24-4270-EF77-B425-6D6D181A9702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B6EC24-4270-EF77-B425-6D6D181A9702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B6EC24-4270-EF77-B425-6D6D181A9702}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
