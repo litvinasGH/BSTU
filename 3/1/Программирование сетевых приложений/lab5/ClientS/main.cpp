@@ -125,7 +125,7 @@ int main() {
 			throw SetErrorMsgText("Failed to set socket options: ", WSAGetLastError());
 		}
 
-		const char* hostname = "ArchFanBTW";
+		const char* hostname = "DESKTOP-I";
 		const char* server_callsign = "Hello";
 
 		SOCKADDR_IN serv;

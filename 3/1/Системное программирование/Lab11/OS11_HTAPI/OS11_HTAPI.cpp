@@ -1,4 +1,3 @@
-//OS11 HTAPI functions implementation
 #include "pch.h"
 #include "OS_11DLL.h"
 #include <Windows.h>
@@ -12,7 +11,6 @@
 #include <future>
 
 #define METADATA_OFFSET 4*sizeof(int)
-//#define DEBUG
 
 using namespace std;
 
@@ -64,20 +62,7 @@ namespace HT {
         bool isLocked() const { return locked; }
     };
 
-    static size_t safe_strlen(const char* s, size_t maxlen) {
-        if (!s) {
-            return 0;
-        }
-
-        size_t i = 0;
-
-        for (; i < maxlen; ++i) {
-            if (s[i] == '/0') {
-                return i;
-            }
-        }
-        return maxlen;
-    }
+   
     //using classical DJB2 algorithm
 
     uint hashFunction(const void* key, int keyLength, int capacity) {
