@@ -1,0 +1,896 @@
+где у меня в коде метод z-буфера или алгоритм художника?
+#include "stdafx.h"
+
+double Function1(double x, double y)
+{
+    return x * x + y * y; //z=x^2+y^2
+};
+
+double Function2(double x, double y)
+{
+    return x * x - y * y; //z=x^2-y^2
+};
+
+double Function3(double x, double y) {
+    double r_sq = x * x + y * y; //z=sqrt(9-x^2-y^2) т.е. x^2+y^2<=9
+    if (r_sq >= 8.99) return 0;  // Плавный переход у границы
+    return sqrt(9.0 - r_sq);
+}
+
+CPlot3D::CPlot3D()
+{
+    pFunc = NULL;
+    ViewPoint.RedimMatrix(3);
+    WinRect.SetRect(0, 0, 200, 200);
+    ViewPoint(0) = 10, ViewPoint(1) = 30;
+    ViewPoint(2) = 45;
+};
+
+void CPlot3D::SetFunction(pfunc2 pF, CRectD RS, double dx, double dy)
+{
+    pFunc = pF;
+    SpaceRect.SetRectD(RS.left, RS.top, RS.right, RS.bottom);
+    MatrF.clear();
+    CreateMatrF(dx, dy);
+}
+
+void CPlot3D::SetViewPoint(double r, double fi, double q)
+{
+    ViewPoint(0) = r;
+    ViewPoint(1) = fi;
+    ViewPoint(2) = q;
+
+    MatrView.clear();
+    CreateMatrView();
+
+    MatrWindow.clear();
+    CreateMatrWindow();
+}
+
+CMatrix CPlot3D::GetViewPoint()
+{
+    return ViewPoint;
+}
+
+void CPlot3D::SetWinRect(CRect Rect)
+{
+    WinRect = Rect;
+    MatrWindow.clear();
+    CreateMatrWindow();
+}
+//------------------------------------------------------------------------------------------------------- создание матрицы точек поверхности
+void CPlot3D::CreateMatrF(double dx, double dy) //dx, dy — шаги дискретизации по осям X и Y (чем меньше, тем точнее поверхность).
+{
+    //SpaceRect — границы области (left, right, bottom, top)
+    double xL = SpaceRect.left;
+    double xH = SpaceRect.right;
+    double yL = SpaceRect.bottom;
+    double yH = SpaceRect.top;
+    CVecMatrix VecMatrix;
+    CMatrix V(4);
+    V(3) = 1;
+
+    for (double x = xL; x <= xH; x += dx) //Заполняет матрицу MatrF координатами точек поверхности в мировой системе координат (МСК).
+    {
+        VecMatrix.clear();
+        for (double y = yL; y <= yH; y += dy)
+        {
+            V(0) = x;
+            V(1) = y;
+            V(2) = pFunc(x, y);
+            VecMatrix.push_back(V);
+        }
+        MatrF.push_back(VecMatrix);
+    }
+}
+//------------------------------------------------------------------------ Определяет, как нужно рисовать полигоны (зависит от положения камеры).
+int CPlot3D::GetNumberRegion()
+{
+    CMatrix CartPoint = SphereToCart(ViewPoint); //Переводит сферические координаты камеры в декартовы (SphereToCart)
+    double xView = CartPoint(0);
+    double yView = CartPoint(1);
+
+    double xL = SpaceRect.left;
+    double xH = SpaceRect.right;
+    double yL = SpaceRect.bottom;
+    double yH = SpaceRect.top;
+
+    double y1 = yL + (yH - yL) * (xView - xL) / (xH - xL);
+    double y2 = yH - (yH - yL) * (xView - xL) / (xH - xL);
+    //Определяет, с какой стороны камера смотрит на объект:
+    if ((yView <= y1) && (yView <= y2)) return 1; // Сверху-слева → рисуем справа-налево, снизу-вверх.
+    if ((yView > y2) && (yView < y1)) return 2; // Сверху-справа → слева-направо, снизу-вверх.
+    if ((yView >= y1) && (yView >= y2)) return 3; // Снизу-справа → слева-направо, сверху-вниз.
+    if ((yView > y1) && (yView < y2)) return 4; //  Снизу-слева → справа-налево, сверху-вниз.
+
+    return 1; // default case
+}
+//-------------------------------------------------------------------------------------------- //применение: мировая → видовая система координат
+void CPlot3D::CreateMatrView() 
+{
+    CMatrix MV = CreateViewCoord(ViewPoint(0), ViewPoint(1), ViewPoint(2));
+    CVecMatrix VecMatrix;
+    CMatrix VX(4), V(3);
+    V(2) = 1;
+    double xmin = DBL_MAX;
+    double xmax = -DBL_MAX;
+    double ymin = DBL_MAX;
+    double ymax = -DBL_MAX;
+
+    for (size_t i = 0; i < MatrF.size(); i++)
+    {
+        VecMatrix.clear();
+        for (size_t j = 0; j < MatrF[i].size(); j++)
+        {
+            VX = MatrF[i][j];
+            VX = MV * VX;
+            V(0) = VX(0);
+            V(1) = VX(1);
+            VecMatrix.push_back(V);
+
+            if (V(0) < xmin) xmin = V(0);
+            if (V(0) > xmax) xmax = V(0);
+            if (V(1) < ymin) ymin = V(1);
+            if (V(1) > ymax) ymax = V(1);
+        }
+        MatrView.push_back(VecMatrix);
+    }
+    ViewRect.SetRectD(xmin, ymax, xmax, ymin);
+}
+//----------------------------------------------------------------------------------------- применение: видовая → оконная система координат
+void CPlot3D::CreateMatrWindow() 
+{
+    CMatrix MW = SpaceToWindow(ViewRect, WinRect);
+    CVecPoint VecPoint;
+    CMatrix V(3);
+
+    for (size_t i = 0; i < MatrView.size(); i++)
+    {
+        VecPoint.clear();
+        for (size_t j = 0; j < MatrView[i].size(); j++)
+        {
+            V = MatrView[i][j];
+            V = MW * V;
+            CPoint P(static_cast<int>(V(0)), static_cast<int>(V(1)));
+            VecPoint.push_back(P);
+        }
+        MatrWindow.push_back(VecPoint);
+    }
+}
+
+void CPlot3D::Draw(CDC& dc) // Рисует поверхность как набор четырёхугольников.
+{
+    if (MatrWindow.empty()) //Проверяется, что MatrWindow не пуста.
+    {
+        AfxMessageBox(_T("Массив данных для рисования в окне пуст!"));
+        return;
+    }
+
+    int kRegion = GetNumberRegion(); //Определяется порядок отрисовки (GetNumberRegion).
+    int nRows = static_cast<int>(MatrWindow.size());
+    int nCols = static_cast<int>(MatrWindow[0].size());
+
+    CPoint pt[4]; //Берутся 4 соседние точки, формируя полигон. Заливается цветом с использованием CPen и CBrush.
+    CPen pen(PS_SOLID, 1, RGB(0, 0, 0));
+    CBrush brush(HS_DIAGCROSS, RGB(200, 200, 255));
+    dc.SelectObject(&pen);
+    dc.SelectObject(&brush);
+
+    dc.SetPolyFillMode(WINDING);  // WINDING — сложные фигуры. ALTERNATE — стандартная заливка.
+    //dc.SetBkMode(TRANSPARENT);
+
+    CPen* pOldPen = dc.SelectObject(&pen);
+    CBrush* pOldBrush = dc.SelectObject(&brush);
+
+    //Рисуются 4 - угольные полигоны на основе точек из MatrWindow
+    switch (kRegion)
+    {
+    case 1:
+        for (int j = nCols - 1; j > 0; j--)
+            for (int i = 0; i < nRows - 1; i++)
+            {
+                pt[0] = MatrWindow[i][j];
+                pt[1] = MatrWindow[i][j - 1];
+                pt[2] = MatrWindow[i + 1][j - 1];
+                pt[3] = MatrWindow[i + 1][j];
+                dc.Polygon(pt, 4);
+            }
+        break;
+    case 2:
+        for (int i = 0; i < nRows - 1; i++)
+            for (int j = 0; j < nCols - 1; j++)
+            {
+                pt[0] = MatrWindow[i][j];
+                pt[1] = MatrWindow[i][j + 1];
+                pt[2] = MatrWindow[i + 1][j + 1];
+                pt[3] = MatrWindow[i + 1][j];
+                dc.Polygon(pt, 4);
+            }
+        break;
+    case 3:
+        for (int j = 0; j < nCols - 1; j++)
+            for (int i = 0; i < nRows - 1; i++)
+            {
+                pt[0] = MatrWindow[i][j];
+                pt[1] = MatrWindow[i][j + 1];
+                pt[2] = MatrWindow[i + 1][j + 1];
+                pt[3] = MatrWindow[i + 1][j];
+                dc.Polygon(pt, 4);
+            }
+        break;
+    case 4:
+        for (int i = nRows - 1; i > 0; i--)
+            for (int j = 0; j < nCols - 1; j++)
+            {
+                pt[0] = MatrWindow[i][j];
+                pt[1] = MatrWindow[i][j + 1];
+                pt[2] = MatrWindow[i - 1][j + 1];
+                pt[3] = MatrWindow[i - 1][j];
+                dc.Polygon(pt, 4);
+            }
+        break;
+    }
+
+    dc.SelectObject(pOldPen);
+    dc.SelectObject(pOldBrush);
+}
+
+
+
+
+
+
+#include "stdafx.h"
+
+CRectD::CRectD(double l, double t, double r, double b)
+{
+	left = l;
+	top = t;
+	right = r;
+	bottom = b;
+}
+//------------------------------------------------------------------------------
+void CRectD::SetRectD(double l, double t, double r, double b)
+{
+	left = l;
+	top = t;
+	right = r;
+	bottom = b;
+}
+
+//------------------------------------------------------------------------------
+CSizeD CRectD::SizeD()
+{
+	CSizeD cz;
+	cz.cx = fabs(right - left);	// Ширина прямоугольной области
+	cz.cy = fabs(top - bottom);	// Высота прямоугольной области
+	return cz;
+}
+
+//-------------------------------------------------------------------------- преобразование: видовая → оконная система координат, матрица 3х3
+CMatrix SpaceToWindow(CRectD& RS, CRect& RW)
+// Возвращает матрицу пересчета координат из мировых в оконные
+// RS - область в мировых координатах - double
+// RW - область в оконных координатах - int
+{
+	CMatrix M(3, 3);
+	CSize sz = RW.Size();	 // Размер области в ОКНЕ
+	int dwx = sz.cx;	     // Ширина
+	int dwy = sz.cy;	     // Высота
+	CSizeD szd = RS.SizeD(); // Размер области в МИРОВЫХ координатах
+
+	double dsx = szd.cx;    // Ширина в мировых координатах
+	double dsy = szd.cy;    // Высота в мировых координатах
+
+	double kx = (double)dwx / dsx;   // Масштаб по x
+	double ky = (double)dwy / dsy;   // Масштаб по y
+
+
+	M(0, 0) = kx;  M(0, 1) = 0;    M(0, 2) = (double)RW.left - kx * RS.left;		
+	M(1, 0) = 0;   M(1, 1) = -ky;  M(1, 2) = (double)RW.bottom + ky * RS.bottom;		
+	M(2, 0) = 0;   M(2, 1) = 0;    M(2, 2) = 1;
+	return M;
+}
+
+
+
+ //------------------------------------------------------------------------------
+
+void SetMyMode(CDC& dc, CRect& RS, CRect& RW)  //MFC
+// Устанавливает режим отображения MM_ANISOTROPIC и его параметры
+// dc - ссылка на класс CDC MFC
+// RS -  область в мировых координатах - int
+// RW -	 Область в оконных координатах - int  
+{
+	int dsx = RS.right - RS.left;
+	int dsy = RS.top - RS.bottom;
+	int xsL = RS.left;
+	int ysL = RS.bottom;
+
+	int dwx = RW.right - RW.left;
+	int dwy = RW.bottom - RW.top;
+	int xwL = RW.left;
+	int ywH = RW.bottom;
+
+	dc.SetMapMode(MM_ANISOTROPIC);
+	dc.SetWindowExt(dsx, dsy);
+	dc.SetViewportExt(dwx, -dwy);
+	dc.SetWindowOrg(xsL, ysL);
+	dc.SetViewportOrg(xwL, ywH);
+}
+//------------------------------------------------------------------------------------
+CMatrix CreateTranslate2D(double dx, double dy)
+// Формирует матрицу для преобразования координат объекта при его смещении 
+// на dx по оси X и на dy по оси Y в фиксированной системе координат
+// --- ИЛИ ---
+// Формирует матрицу для преобразования координат объекта при смещении начала
+// системы координат на -dx оси X и на -dy по оси Y при фиксированном положении объекта 
+{
+	CMatrix TM(3, 3);
+	TM(0, 0) = 1; TM(0, 2) = dx;
+	TM(1, 1) = 1;  TM(1, 2) = dy;
+	TM(2, 2) = 1;
+	return TM;
+}
+
+//-------------------------------------------------------------------------------------
+CMatrix CreateTranslate3D(double dx, double dy, double dz)
+// Формирует матрицу для преобразования координат объекта при его смещении 
+// на dx по оси X, на dy по оси Y,на dz по оси Z в фиксированной системе координат
+// --- ИЛИ ---
+// Формирует матрицу для преобразования координат объекта при смещении начала
+// системы координат на -dx оси X,на -dy по оси Y, на -dz по оси Z 
+// при фиксированном положении объекта 
+{
+	CMatrix TM(4, 4);
+	for (int i = 0; i < 4; i++) TM(i, i) = 1;
+	TM(0, 3) = dx;
+	TM(1, 3) = dy;
+	TM(2, 3) = dz;
+	return TM;
+}
+
+
+
+//------------------------------------------------------------------------------------
+CMatrix CreateRotate2D(double fi)
+// Формирует матрицу для преобразования координат объекта при его повороте
+// на угол fi (при fi>0 против часовой стрелки)в фиксированной системе координат
+// --- ИЛИ ---
+// Формирует матрицу для преобразования координат объекта при повороте начала
+// системы координат на угол -fi при фиксированном положении объекта 
+// fi - угол в градусах
+{
+	double fg = fmod(fi, 360.0);
+	double ff = (fg / 180.0)*pi; // Перевод в радианы
+	CMatrix RM(3, 3);
+	RM(0, 0) = cos(ff); RM(0, 1) = -sin(ff);
+	RM(1, 0) = sin(ff);  RM(1, 1) = cos(ff);
+	RM(2, 2) = 1;
+	return RM;
+}
+//--------------------------------------------------------------------------------
+
+CMatrix CreateRotate3DZ(double fi)
+// Формирует матрицу для преобразования координат объекта при его повороте вокруг оси Z
+// на угол fi (при fi>0 против часовой стрелки)в фиксированной системе координат
+// --- ИЛИ ---
+// Формирует матрицу для преобразования координат объекта при повороте начала
+// системы координат вокруг оси Z на угол -fi при фиксированном положении объекта 
+// fi - угол в градусах
+{
+	double fg = fmod(fi, 360.0);
+	double ff = (fg / 180.0)*pi; // Перевод в радианы
+	CMatrix RM(4, 4);
+	RM(0, 0) = cos(ff); RM(0, 1) = -sin(ff);
+	RM(1, 0) = sin(ff);  RM(1, 1) = cos(ff);
+	RM(2, 2) = 1;
+	RM(3, 3) = 1;
+	return RM;
+}
+//--------------------------------------------------------------------------------
+CMatrix CreateRotate3DX(double fi)
+// Формирует матрицу для преобразования координат объекта при его повороте вокруг оси X
+// на угол fi (при fi>0 против часовой стрелки)в фиксированной системе координат
+// --- ИЛИ ---
+// Формирует матрицу для преобразования координат объекта при повороте начала
+// системы координат вокруг оси X на угол -fi при фиксированном положении объекта 
+// fi - угол в градусах
+{
+	double fg = fmod(fi, 360.0);
+	double ff = (fg / 180.0)*pi; // Перевод в радианы
+	CMatrix RM(4, 4);
+	RM(0, 0) = 1;
+	RM(1, 1) = cos(ff); RM(1, 2) = -sin(ff);
+	RM(2, 1) = sin(ff); RM(2, 2) = cos(ff);
+	RM(3, 3) = 1;
+	return RM;
+}
+//--------------------------------------------------------------------------------
+CMatrix CreateRotate3DY(double fi)
+// Формирует матрицу для преобразования координат объекта при его повороте вокруг оси Y
+// на угол fi (при fi>0 против часовой стрелки)в фиксированной системе координат
+// --- ИЛИ ---
+// Формирует матрицу для преобразования координат объекта при повороте начала
+// системы координат вокруг оси Y на угол -fi при фиксированном положении объекта 
+// fi - угол в градусах
+{
+	double fg = fmod(fi, 360.0);
+	double ff = (fg / 180.0)*pi; // Перевод в радианы
+	CMatrix RM(4, 4);
+	RM(0, 0) = cos(ff); RM(0, 2) = sin(ff);
+	RM(1, 1) = 1;
+	RM(2, 0) = -sin(ff); RM(2, 2) = cos(ff);
+	RM(3, 3) = 1;
+	return RM;
+}
+
+//--------------------------------------------------------------------------------
+CMatrix VectorMult(CMatrix& V1, CMatrix& V2)
+// Вычисляет векторное произведение векторов V1 и V2
+{
+
+	int b1 = (V1.cols() == 1) && (V1.rows() == 3);
+	int b2 = (V2.cols() == 1) && (V2.rows() == 3);
+	int b = b1 && b2;
+	if (!b)
+	{
+		//char* error="VectorMult: неправильные размерности векторов! ";
+		const TCHAR error[] = _T("VectorMult: неправильные размерности векторов! ");
+		MessageBox(NULL, error, _T("Ошибка"), MB_ICONSTOP);
+		exit(1);
+	}
+	CMatrix W(3);
+	W(0) = V1(1)*V2(2) - V1(2)*V2(1);
+	//double x=W(0);
+	W(1) = -(V1(0)*V2(2) - V1(2)*V2(0));
+	//double y=W(1);
+	W(2) = V1(0)*V2(1) - V1(1)*V2(0);
+	//double z=W(2);
+	return W;
+}
+
+//-------------------------------------------------------------------------------
+double ScalarMult(CMatrix& V1, CMatrix& V2)
+// Вычисляет скалярное произведение векторов V1 и V2
+{
+	int b1 = (V1.cols() == 1) && (V1.rows() == 3);
+	int b2 = (V2.cols() == 1) && (V2.rows() == 3);
+	int b = b1 && b2;
+	if (!b)
+	{
+		char* error = "ScalarMult: неправильные размерности векторов! ";
+		//MessageBox(NULL, error, "Ошибка", MB_ICONSTOP);
+		exit(1);
+	}
+	double p = V1(0)*V2(0) + V1(1)*V2(1) + V1(2)*V2(2);
+	return p;
+}
+//-------------------------------------------------------------------------
+double ModVec(CMatrix& V)
+// Вычисляет модуль вектора V
+{
+	int b = (V.cols() == 1) && (V.rows() == 3);
+	if (!b)
+	{
+		char* error = "ModVec: неправильнfz размерность вектора! ";
+		//MessageBox(NULL, error, "Ошибка", MB_ICONSTOP);
+		exit(1);
+	}
+	double q = sqrt(V(0)*V(0) + V(1)*V(1) + V(2)*V(2));
+	return q;
+}
+//-------------------------------------------------------------------------
+double CosV1V2(CMatrix& V1, CMatrix& V2)
+// Вычисляет КОСИНУС угла между векторами V1 и V2
+{
+	double modV1 = ModVec(V1);
+	double modV2 = ModVec(V2);
+	int b = (modV1 < 1e-7) || (modV2 < 1e-7);
+	if (b)
+	{
+		char* error = "CosV1V2: модуль одного или обоих векторов < 1e-7!";
+		//MessageBox(NULL, error, "Ошибка", MB_ICONSTOP);
+		exit(1);
+	}
+	int b1 = (V1.cols() == 1) && (V1.rows() == 3);
+	int b2 = (V2.cols() == 1) && (V2.rows() == 3);
+	b = b1 && b2;
+	if (!b)
+	{
+		char* error = "CosV1V2: неправильные размерности векторов! ";
+		//MessageBox(NULL, error, "Ошибка", MB_ICONSTOP);
+		exit(1);
+	}
+	double cos_f = ScalarMult(V1, V2) / (modV1*modV2);
+	return cos_f;
+}
+
+
+//-------------------------------------------------------------------------
+double AngleV1V2(CMatrix& V1, CMatrix& V2)
+// Вычисляет угол между векторами V1 и V2 в градусах
+{
+	double modV1 = ModVec(V1);
+	double modV2 = ModVec(V2);
+	int b = (modV1 < 1e-7) || (modV2 < 1e-7);
+	if (!b)
+	{
+		char* error = "AngleV1V2: модуль одного или обоих векторов < 1e-7!";
+		//MessageBox(NULL, error, "Ошибка", MB_ICONSTOP);
+		exit(1);
+	}
+	int b1 = (V1.cols() == 1) && (V1.rows() == 3);
+	int b2 = (V2.cols() == 1) && (V2.rows() == 3);
+	b = b1 && b2;
+	if (!b)
+	{
+		char* error = "AngleV1V2: неправильные размерности векторов! ";
+		//MessageBox(NULL, error, "Ошибка", MB_ICONSTOP);
+		exit(1);
+	}
+	double cos_f = ScalarMult(V1, V2) / (modV1*modV2);
+	if (fabs(cos_f) > 1)
+	{
+		char* error = "AngleV1V2: модуль cos(f)>1! ";
+		//MessageBox(NULL, error, "Ошибка", MB_ICONSTOP);
+		exit(1);
+	}
+	double f;
+	if (cos_f > 0)f = acos(cos_f);
+	else f = pi - acos(cos_f);
+	double fg = (f / pi) * 180;
+	return fg;
+}
+//-------------------------------------------------------------------------- преобразование мировая → видовая система координат, матрица 4х4
+CMatrix CreateViewCoord(double r, double fi, double q)
+// Создает матрицу пересчета (4x4) точки из мировой системы координат в видовую
+// (r,fi,q)- координата ТОЧКИ НАБЛЮДЕНИЯ(начало видовой системы координат)
+// в мировой сферической системе координат( углы fi и q в градусах)
+{
+	double fg = fmod(fi, 360.0);
+	double ff = (fg / 180.0)*pi; // Перевод в радианы
+	fg = fmod(q, 360.0);
+	double qq = (fg / 180.0)*pi; // Перевод в радианы
+
+	CMatrix VM(4, 4);
+	VM(0, 0) = -sin(ff);   VM(0, 1) = cos(ff);
+	VM(1, 0) = -cos(qq)*cos(ff);	VM(1, 1) = -cos(qq)*sin(ff);	VM(1, 2) = sin(qq);
+	VM(2, 0) = -sin(qq)*cos(ff);	VM(2, 1) = -sin(qq)*sin(ff);	VM(2, 2) = -cos(qq); VM(2, 3) = r;
+	VM(3, 3) = 1;
+	return VM;
+}
+
+//-------------------------------------------------------------------------------- Преобразует сферические координаты PView  точки в декартовы
+CMatrix SphereToCart(CMatrix& PView)
+// Преобразует сферические координаты PView  точки в декартовы
+// PView(0) - r
+// PView(1) - fi - азимут(отсчет от оси X), град.
+// PView(2) - q - угол(отсчетот оси Z), град.
+// Результат: R(0)- x, R(1)- y, R(2)- z	
+{
+	CMatrix R(3);
+	double r = PView(0);
+	double fi = PView(1);						// Градусы
+	double q = PView(2);						// Градусы
+	double fi_rad = (fi / 180.0)*pi;	// Перевод fi в радианы
+	double q_rad = (q / 180.0)*pi;		// Перевод q в радианы
+	R(0) = r * sin(q_rad)*cos(fi_rad);	// x- координата точки наблюдения
+	R(1) = r * sin(q_rad)*sin(fi_rad);	// y- координата точки наблюдения
+	R(2) = r * cos(q_rad);							// z- координата точки наблюдения
+	return R;
+}
+
+//-------------------------- GetProjection -------------------------------------------
+
+void GetProjection(CRectD& RS, CMatrix& Data, CMatrix& PView, CRectD& PR)
+// Вычисляет координаты проекции охватывающего фигуру паралелепипеда на 
+// плоскость XY в ВИДОВОЙ системе координат
+// Data - матрица данных
+// RS - область на плоскости XY, на которую опирается отображаемая поверхность
+// PView - координаты точки наблюдения в мировой сферической системе координат
+// PR - проекция
+{
+	double Zmax = Data.MaxElement();
+	double Zmin = Data.MinElement();
+	CMatrix PS(4, 4);	// Точки в мировом пространстве
+	PS(3, 0) = 1; PS(3, 1) = 1;	PS(3, 2) = 1;	PS(3, 3) = 1;
+	CMatrix MV = CreateViewCoord(PView(0), PView(1), PView(2));	//Матрица(4x4) пересчета 
+																										//в видовую систему координат 
+	PS(0, 0) = RS.left;
+	PS(1, 0) = RS.top;
+	PS(2, 0) = Zmax;
+
+	PS(0, 1) = RS.left;
+	PS(1, 1) = RS.bottom;
+	PS(2, 1) = Zmax;
+
+	PS(0, 2) = RS.right;
+	PS(1, 2) = RS.top;
+	PS(2, 2) = Zmax;
+
+	PS(0, 3) = RS.right;
+	PS(1, 3) = RS.bottom;
+	PS(2, 3) = Zmax;
+
+	CMatrix Q = MV * PS;      // Координаты верхней плоскости паралелепипеда в видовой СК
+	CMatrix V = Q.GetRow(0);		// Строка X - координат
+	double Xmin = V.MinElement();
+	double Xmax = V.MaxElement();
+	V = Q.GetRow(1);           // Строка Y - координат
+	double Ymax = V.MaxElement();
+
+	PS(2, 0) = Zmin;
+	PS(2, 1) = Zmin;
+	PS(2, 2) = Zmin;
+	PS(2, 3) = Zmin;
+
+	Q = MV * PS;                 // Координаты нижней плоскости паралелепипеда в видовой СК
+	V = Q.GetRow(1);           // Строка Y - координат
+	double Ymin = V.MinElement();
+	PR.SetRectD(Xmin, Ymax, Xmax, Ymin);
+}
+// ChildView.cpp: реализация класса CChildView
+//
+
+#include "stdafx.h"
+#include "Lab08.h"
+#include "ChildView.h"
+#include <string>
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#endif
+
+
+// CChildView
+
+CChildView::CChildView()
+{		
+	Index = 0;	// Индикатор для OnPaint
+	PView.resize(3);
+	PView(0) = 10;
+	PView(1) = 45;
+	PView(2) = 45;
+}
+
+CChildView::~CChildView()
+{
+}
+
+// Реализация карты сообщений
+BEGIN_MESSAGE_MAP(CChildView, CWnd)
+	ON_WM_PAINT()
+	// сообщения меню выбора
+	ON_COMMAND(ID_CPlot3D_FUNC1, &CChildView::OnCPlot3DDef)
+	ON_COMMAND(ID_CPlot3D_FUNC2, &CChildView::OnCplot3dFunc1)
+	ON_COMMAND(ID_CPLOT3D_FUNC3, &CChildView::OnCplot3dFunc2)
+	ON_WM_KEYDOWN()
+	ON_COMMAND(ID_FUNCTION_32777, &CChildView::DefaultCameraPosition)
+	ON_COMMAND(ID_FUNCTION_32776, &CChildView::SetCameraPosition)
+END_MESSAGE_MAP()
+
+
+
+// Обработчики сообщений CChildView
+
+BOOL CChildView::PreCreateWindow(CREATESTRUCT& cs) 
+{
+	if (!CWnd::PreCreateWindow(cs))
+		return FALSE;
+
+	cs.dwExStyle |= WS_EX_CLIENTEDGE;
+	cs.style &= ~WS_BORDER;
+	cs.lpszClass = AfxRegisterWndClass(CS_HREDRAW|CS_VREDRAW|CS_DBLCLKS, 
+		::LoadCursor(nullptr, IDC_ARROW), reinterpret_cast<HBRUSH>(COLOR_WINDOW+1), nullptr);
+
+	return TRUE;
+}
+
+void CChildView::OnPaint()
+{
+	CPaintDC dc(this); // контекст устройства для рисования
+
+	CString ss;
+
+	if (Index == 1)
+		Graph1.Draw(dc); // Отрисовка эллиптического параболоида
+	if (Index == 2)
+		Graph2.Draw(dc); // Отрисовка гиперболического параболоида
+	if (Index == 3)
+		Graph3.Draw(dc); // Отрисовка полусферы
+	// Вывод текущих координат камеры
+	if (Index > 0)
+	{
+		ss.Format(L"f=%5.1f,  q=%5.1f", PView(1), PView(2));
+		dc.TextOutW(5, 5, ss);
+	}
+}
+
+void CChildView::OnCPlot3DDef()			// функция Function1
+{
+	double dx = 0.25, dy = 0.25;		// шаг для рисования
+	CRectD SpaceRect(-5, 5, 5, -5);		// область для рисования
+	CRect  WinRect;
+	this->GetClientRect(WinRect);		// получаем координаты окна
+	WinRect.SetRect(WinRect.left + 50, WinRect.top + 50, WinRect.right - 50, WinRect.bottom - 50);	// устанавливаем координаты окна
+	Graph1.SetFunction(Function1, SpaceRect, dx, dy);		// устанавливаем Function1
+	Graph1.SetViewPoint(PView(0), PView(1), PView(2));		// устанавливаем положение наблюдателя
+	Graph1.SetWinRect(WinRect);								// устанавливаем область в окне для рисования
+	Index = 1;
+	this->Invalidate();
+}
+
+void CChildView::OnCplot3dFunc1()		// функция Function2
+{
+	double dx = 0.25, dy = 0.25;
+	CRectD SpaceRect(-5, 5, 5, -5);
+	CRect  WinRect;
+	this->GetClientRect(WinRect);
+	WinRect.SetRect(WinRect.left + 50, WinRect.top + 50, WinRect.right - 50, WinRect.bottom - 50);
+	Graph2.SetFunction(Function2, SpaceRect, dx, dy);	
+	Graph2.SetViewPoint(PView(0), PView(1), PView(2));
+	Graph2.SetWinRect(WinRect);
+	Index = 2;
+	this->Invalidate();
+}
+
+void CChildView::OnCplot3dFunc2() { //Функция Function3
+	double dx = 0.05, dy = 0.05;  // Уменьшенный шаг
+	CRectD SpaceRect(-3, 3, 3, -3);
+	CRect  WinRect;
+	this->GetClientRect(WinRect);
+	WinRect.SetRect(WinRect.left + 50, WinRect.top + 50, WinRect.right - 50, WinRect.bottom - 50);
+	Graph3.SetFunction(Function3, SpaceRect, dx, dy);	// Function3. Указывает функцию z = sqrt(9 - x² - y²).
+	Graph3.SetViewPoint(PView(0), PView(1), PView(2));
+	Graph3.SetWinRect(WinRect);
+	Index = 3;
+	this->Invalidate();
+}
+
+void CChildView::DefaultCameraPosition()
+{
+	PView(0) = 10;
+	PView(1) = 45;
+	PView(2) = 45;
+
+	switch (Index)
+	{
+		case 1:
+			Graph1.SetViewPoint(PView(0), PView(1), PView(2));
+			break;
+		case 2:
+			Graph2.SetViewPoint(PView(0), PView(1), PView(2));
+			break;
+		case 3:
+			Graph3.SetViewPoint(PView(0), PView(1), PView(2));
+			break;
+	}
+
+	Invalidate();
+}
+
+//----------------------------------------------------------------------------------------------------- установка нового положения камеры
+void CChildView::SetCameraPosition()
+{
+	CFileDialog dlg(TRUE, _T("txt"), _T("camera_position.txt"),
+		OFN_FILEMUSTEXIST | OFN_HIDEREADONLY,
+		_T("Text Files (*.txt)|*.txt|All Files (*.*)|*.*||"));
+
+	if (dlg.DoModal() == IDOK)
+	{
+		CString path = dlg.GetPathName();
+		std::ifstream in(path);
+
+		if (in.is_open())
+		{
+			std::string line;
+			int fi = 0, teta = 0;
+
+			if (std::getline(in, line)) fi = std::stoi(line);
+			if (std::getline(in, line)) teta = std::stoi(line);
+
+			in.close();
+
+			PView(1) = fi;
+			PView(2) = teta;
+
+			switch (Index)
+			{
+			case 1: Graph1.SetViewPoint(PView(0), PView(1), PView(2)); break;
+			case 2: Graph2.SetViewPoint(PView(0), PView(1), PView(2)); break;
+			case 3: Graph3.SetViewPoint(PView(0), PView(1), PView(2)); break;
+			}
+
+			Invalidate();
+		}
+		else
+		{
+			AfxMessageBox(_T("Не удалось открыть файл с координатами камеры"));
+		}
+	}
+}
+
+
+void CChildView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
+{
+	return;
+	CMatrix P(3);
+	switch (Index)
+	{
+	case 1:
+	{
+		P = Graph1.GetViewPoint();
+		break;
+	}
+	case 2:
+	{
+		P = Graph2.GetViewPoint();
+		break;
+	}
+	case 3:
+	{
+		P = Graph3.GetViewPoint();
+		break;
+	}
+	}
+
+	PView(0) = P(0), PView(1) = P(1), PView(2) = P(2);
+	double delta_fi = 10, delta_q = 10;
+	switch (nChar)
+	{
+	case VK_UP:
+	{
+		double qx = PView(2) - delta_q;
+		if (qx >= 0)PView(2) = qx;
+		break;
+	}
+	case VK_DOWN:
+	{
+		double qx = PView(2) + delta_q;
+		if (qx <= 180)PView(2) = qx;
+		break;
+	}
+	case VK_LEFT:
+	{
+		double fix = PView(1) - delta_fi;
+		if (fix >= 0)PView(1) = fix;
+		break;
+	}
+	case VK_RIGHT:
+	{
+		double fix = PView(1) + delta_fi;
+		if (fix <= 360)PView(1) = fix;
+		break;
+	}
+	}
+
+	switch (Index)
+	{
+	case 1:
+	{
+		Graph1.SetViewPoint(PView(0), PView(1), PView(2));
+		break;
+	}
+
+	case 2:
+	{
+		Graph2.SetViewPoint(PView(0), PView(1), PView(2));
+		break;
+	}
+
+	case 3:
+	{
+		Graph3.SetViewPoint(PView(0), PView(1), PView(2));
+		break;
+	}
+	}
+	CWnd::OnKeyDown(nChar, nRepCnt, nFlags);
+	this->Invalidate();
+}
+
+

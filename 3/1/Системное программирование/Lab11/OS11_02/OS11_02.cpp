@@ -53,11 +53,6 @@ int main(int argc, char* argv[]) {
 	else {
 		std::cout << "Storage opened successfully" << std::endl;
 
-#ifdef DEBUG
-		std::cout << "Capacity: " << storage->Capacity << std::endl;
-		std::cout << "Current elements: " << storage->CurrentElements << std::endl;
-		system("pause");
-#endif // DEBUG
 	}
 
 
