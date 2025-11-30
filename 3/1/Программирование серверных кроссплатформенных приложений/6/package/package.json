@@ -1,0 +1,13 @@
+{
+  "name": "m06030liti",
+  "version": "1.0.1",
+  "description": "Send message BSTU test",
+  "main": "m0603.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Litvinas",
+  "license": "ISC",
+  "type": "commonjs"
+}

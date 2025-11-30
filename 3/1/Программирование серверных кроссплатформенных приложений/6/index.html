@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab6-1</title>
+    <style>
+        label{
+            display: block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <label for="from">From: </label>
+        <input type="email" name="from" id="from" required>
+        <br>
+        <label for="password">Password: </label>
+        <input type="text" name="password" id="password" required>
+        <br>
+        <label for="to">To:   </label>
+        <input type="email" name="to" id="to" required>
+        <br>
+        <label for="message">Message: </label>
+        <textarea name="message" id="message" required></textarea>
+        <br>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html> 
