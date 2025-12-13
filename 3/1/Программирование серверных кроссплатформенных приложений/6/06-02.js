@@ -1,7 +1,6 @@
 var http = require('http');
 var fs = require('fs');
 var nodemailer = require('nodemailer');
-var url = require('url');
 var querystring = require('querystring');
 const PORT = 5000;
 
@@ -30,7 +29,6 @@ const serverFunction = function (request, response) {
                     pass: password
                 },
                 secure: true
-
             });
 
 
@@ -51,7 +49,6 @@ const serverFunction = function (request, response) {
                     );
                 }
                 if (info) {
-                    console.log("Mail successfully sent");
                     response.writeHead(200, { 'content-type': 'text/html;charset=utf-8' });
                     response.end(
                         "<h1>200 Mail successfully sent</h1>"
