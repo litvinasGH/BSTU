@@ -1,0 +1,31 @@
+!!!все консоли запускаются от админа 
+cd /d E:\Универ\5 семестр\SP\labs\lab6\x64\Debug
+
+
+regsvr32 OS15_HTCOM.dll
+
+
+
+runas /user:HTUser01 cmd
+для создания зайти под юзером
+OS15_CREATE 1000 4 4 4 HT C:/storage/HTspace.ht
+
+
+OS15_Install от админа
+
+
+
+
+
+
+
+- OS_0402 HTUser01 123
+ 
+- OS_0402
+
+
+
+
+
+
+
