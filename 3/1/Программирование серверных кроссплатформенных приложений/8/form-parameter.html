@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-00</title>
+</head>
+
+    
+
+<body>
+    <form action="/formparameter" method="post" class="nice-form">
+        <div class="form-row">
+            <label for="word">Enter a word</label>
+            <input id="word" name="word" type="text" />
+        </div>
+
+        <div class="form-row">
+            <label for="number">Enter a number</label>
+            <input id="number" name="number" type="number" />
+        </div>
+
+        <div class="form-row">
+            <label for="date">Pick a date</label>
+            <input id="date" name="date" type="date" />
+        </div>
+
+        <div class="form-row checkbox-row">
+            <input id="check" name="check" type="checkbox" />
+            <label for="check">Check this pls</label>
+        </div>
+
+        <div class="form-row radio-row">
+            <input id="radio1" name="radio" type="radio" value="1" />
+            <label for="radio1">Option 1</label>
+            <input id="radio2" name="radio" type="radio" value="2" />
+            <label for="radio2">Option 2</label>
+        </div>
+
+        <div class="form-row">
+            <label for="text">Write or paste some text here</label>
+            <textarea id="text" name="text" rows="6"></textarea>
+        </div>
+
+        <div class="form-row submit-row">
+            <input class="btn primary" type="submit" id="submit1" value="Submit A" name="SubmitButton"/>
+            <input class="btn ghost" type="submit" id="submit2" value="Submit B" name="SubmitButton"/>
+        </div>
+    </form>
+</body>
+
+</html>

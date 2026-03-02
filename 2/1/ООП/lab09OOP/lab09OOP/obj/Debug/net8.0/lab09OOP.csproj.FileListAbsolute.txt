@@ -1,0 +1,15 @@
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\bin\Debug\net8.0\lab09OOP.exe
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\bin\Debug\net8.0\lab09OOP.deps.json
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\bin\Debug\net8.0\lab09OOP.runtimeconfig.json
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\bin\Debug\net8.0\lab09OOP.dll
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\bin\Debug\net8.0\lab09OOP.pdb
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\obj\Debug\net8.0\lab09OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\obj\Debug\net8.0\lab09OOP.AssemblyInfoInputs.cache
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\obj\Debug\net8.0\lab09OOP.AssemblyInfo.cs
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\obj\Debug\net8.0\lab09OOP.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\obj\Debug\net8.0\lab09OOP.sourcelink.json
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\obj\Debug\net8.0\lab09OOP.dll
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\obj\Debug\net8.0\refint\lab09OOP.dll
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\obj\Debug\net8.0\lab09OOP.pdb
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\obj\Debug\net8.0\lab09OOP.genruntimeconfig.cache
+C:\Users\user\Documents\BSTU\2\1\ООП\lab09OOP\lab09OOP\obj\Debug\net8.0\ref\lab09OOP.dll

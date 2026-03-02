@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Знаменитости</title>
+	<style>
+		#photoGrid img {
+			margin: 10px;
+			cursor: pointer;
+			border: 2px solid transparent;
+			transition: border 0.2s;
+		}
+
+		#photoGrid img:hover {
+			border: 2px solid #007bff;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h2>Фотографии знаменитостей</h2>
+	<div id="photoGrid"></div>
+
+	<div id="celebrityInfo">
+
+		<table id="celebrityTable" border="1" style="margin-top: 10px; display: none;">
+			<thead>
+				<tr>
+					<th>Имя</th>
+					<th>Дата</th>
+					<th>Описание</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+
+	<script src="js/Celebrities.js">
+
+	</script>
+</body>
+
+</html>

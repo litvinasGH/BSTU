@@ -1,0 +1,6 @@
+﻿  LR3.cpp
+  Salesman.cpp
+  Создание кода...
+C:\Users\litvi\Documents\BSTU\2\2\Мат прога\3\LR3\LR3\Salesman.cpp(62,11): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\litvi\Documents\BSTU\2\2\Мат прога\3\LR3\LR3\Salesman.cpp(70,22): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+  LR3.vcxproj -> C:\Users\litvi\Documents\BSTU\2\2\Мат прога\3\LR3\x64\Debug\LR3.exe

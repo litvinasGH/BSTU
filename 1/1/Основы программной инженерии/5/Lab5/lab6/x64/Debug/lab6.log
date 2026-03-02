@@ -1,0 +1,43 @@
+﻿Сборка начата 17.11.2023 15:56:08.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\user\source\repos\Lab5\lab6\lab6.vcxproj" в узле 2 (целевые объекты Build).
+     1>InitializeBuildStatus:
+         Обращение к "x64\Debug\lab6.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt error.cpp first_task.cpp main.cpp second_task.cpp third_task.cpp
+         error.cpp
+     1>C:\Users\user\source\repos\Lab5\lab6\first_task.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         first_task.cpp
+     1>C:\Users\user\source\repos\Lab5\lab6\first_task.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         main.cpp
+     1>C:\Users\user\source\repos\Lab5\lab6\first_task.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         second_task.cpp
+     1>C:\Users\user\source\repos\Lab5\lab6\first_task.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         third_task.cpp
+     1>C:\Users\user\source\repos\Lab5\lab6\first_task.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         Создание кода...
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\source\repos\Lab5\x64\Debug\lab6.exe" /INCREMENTAL /ILK:"x64\Debug\lab6.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\source\repos\Lab5\x64\Debug\lab6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\source\repos\Lab5\x64\Debug\lab6.lib" /MACHINE:X64 x64\Debug\error.obj
+         x64\Debug\first_task.obj
+         x64\Debug\main.obj
+         x64\Debug\second_task.obj
+         x64\Debug\third_task.obj
+         lab6.vcxproj -> C:\Users\user\source\repos\Lab5\x64\Debug\lab6.exe
+       FinalizeBuildStatus:
+         Файл "x64\Debug\lab6.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Debug\lab6.tlog\lab6.lastbuildstate".
+     1>Сборка проекта "C:\Users\user\source\repos\Lab5\lab6\lab6.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+       "C:\Users\user\source\repos\Lab5\lab6\lab6.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\user\source\repos\Lab5\lab6\first_task.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\user\source\repos\Lab5\lab6\first_task.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\user\source\repos\Lab5\lab6\first_task.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\user\source\repos\Lab5\lab6\first_task.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\user\source\repos\Lab5\lab6\first_task.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+
+    Предупреждений: 5
+    Ошибок: 0
+
+Прошло времени 00:00:06.72

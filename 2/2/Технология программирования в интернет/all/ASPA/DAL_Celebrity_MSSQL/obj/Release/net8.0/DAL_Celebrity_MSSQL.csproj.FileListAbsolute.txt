@@ -1,0 +1,16 @@
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\bin\Release\net8.0\DAL_Celebrity_MSSQL.deps.json
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\bin\Release\net8.0\DAL_Celebrity_MSSQL.dll
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\bin\Release\net8.0\DAL_Celebrity_MSSQL.pdb
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\bin\Release\net8.0\DAL_Celebrity.dll
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\bin\Release\net8.0\DAL_Celebrity.pdb
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\obj\Release\net8.0\DAL_Celebrity_MSSQL.csproj.AssemblyReference.cache
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\obj\Release\net8.0\DAL_Celebrity_MSSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\obj\Release\net8.0\DAL_Celebrity_MSSQL.AssemblyInfoInputs.cache
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\obj\Release\net8.0\DAL_Celebrity_MSSQL.AssemblyInfo.cs
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\obj\Release\net8.0\DAL_Celebrity_MSSQL.csproj.CoreCompileInputs.cache
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\obj\Release\net8.0\DAL_Celebrity_MSSQL.sourcelink.json
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\obj\Release\net8.0\DAL_Cele.76F26888.Up2Date
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\obj\Release\net8.0\DAL_Celebrity_MSSQL.dll
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\obj\Release\net8.0\refint\DAL_Celebrity_MSSQL.dll
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\obj\Release\net8.0\DAL_Celebrity_MSSQL.pdb
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity_MSSQL\obj\Release\net8.0\ref\DAL_Celebrity_MSSQL.dll

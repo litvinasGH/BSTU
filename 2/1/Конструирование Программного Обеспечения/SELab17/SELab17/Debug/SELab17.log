@@ -1,0 +1,40 @@
+﻿Сборка начата 14.11.2024 10:48:11.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\user\source\repos\SELab17\SELab17\SELab17.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Обращение к "Debug\SELab17.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt FST.cpp
+         FST.cpp
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(62,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(349,1): warning C4172: возвращение адреса локальной или временной переменной : ret
+     1>C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(327,1): warning C4715: FST::GetID: значение возвращается не при всех путях выполнения
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\source\repos\SELab17\Debug\SELab17.exe" /INCREMENTAL /ILK:"Debug\SELab17.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\source\repos\SELab17\Debug\SELab17.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\source\repos\SELab17\Debug\SELab17.lib" /MACHINE:X86 Debug\Error.obj
+         Debug\FST.obj
+         Debug\In.obj
+         Debug\IT.obj
+         Debug\Log.obj
+         Debug\LT.obj
+         Debug\main.obj
+         Debug\Out.obj
+         Debug\Parm.obj
+         SELab17.vcxproj -> C:\Users\user\source\repos\SELab17\Debug\SELab17.exe
+       FinalizeBuildStatus:
+         Файл "Debug\SELab17.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\SELab17.tlog\SELab17.lastbuildstate".
+     1>Сборка проекта "C:\Users\user\source\repos\SELab17\SELab17\SELab17.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+       "C:\Users\user\source\repos\SELab17\SELab17\SELab17.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(62,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(349,1): warning C4172: возвращение адреса локальной или временной переменной : ret
+         C:\Users\user\source\repos\SELab17\SELab17\FST.cpp(327,1): warning C4715: FST::GetID: значение возвращается не при всех путях выполнения
+
+    Предупреждений: 3
+    Ошибок: 0
+
+Прошло времени 00:00:02.14

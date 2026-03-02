@@ -1,0 +1,15 @@
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\bin\Debug\net8.0\Lab11.exe
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\bin\Debug\net8.0\Lab11.deps.json
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\bin\Debug\net8.0\Lab11.runtimeconfig.json
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\bin\Debug\net8.0\Lab11.dll
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\bin\Debug\net8.0\Lab11.pdb
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\obj\Debug\net8.0\Lab11.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\obj\Debug\net8.0\Lab11.AssemblyInfoInputs.cache
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\obj\Debug\net8.0\Lab11.AssemblyInfo.cs
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\obj\Debug\net8.0\Lab11.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\obj\Debug\net8.0\Lab11.sourcelink.json
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\obj\Debug\net8.0\Lab11.dll
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\obj\Debug\net8.0\refint\Lab11.dll
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\obj\Debug\net8.0\Lab11.pdb
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\obj\Debug\net8.0\Lab11.genruntimeconfig.cache
+C:\Users\user\Documents\BSTU\2\1\ООП\Lab11\Lab11\obj\Debug\net8.0\ref\Lab11.dll

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Check xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Date>
+    <Day>24</Day>
+    <Month>12</Month>
+    <Year>2024</Year>
+  </Date>
+  <someInfo>Info</someInfo>
+  <Issuer>
+    <Name>Company B</Name>
+    <Address>
+      <Num>456</Num>
+      <Street>Avenue</Street>
+      <Index>third</Index>
+    </Address>
+  </Issuer>
+  <Amount>1000</Amount>
+</Check>

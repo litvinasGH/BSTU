@@ -1,0 +1,24 @@
+﻿Сборка начата 11.12.2024 17:22:53.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\user\Documents\BSTU\2\1\Констуирование Программного Обеспечения\SE_asm04\assm\assm.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Создание "Debug\assm.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "Debug\assm.tlog\unsuccessfulbuild".
+       _MASM:
+         Assembling ..\DES\data.asm...
+         cmd.exe /C "C:\Users\user\AppData\Local\Temp\tmpb273961b562c427698462322448105d8.cmd"
+         ml.exe /c /nologo /Zi /Fo"Debug\data.obj" /Fl"Debug\\" /W3 /errorReport:prompt  /Ta..\DES\data.asm
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\Documents\BSTU\2\1\Констуирование Программного Обеспечения\SE_asm04\Debug\assm.exe" /INCREMENTAL /ILK:"Debug\assm.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\Documents\BSTU\2\1\Констуирование Программного Обеспечения\SE_asm04\Debug\assm.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\Documents\BSTU\2\1\Констуирование Программного Обеспечения\SE_asm04\Debug\assm.lib" /MACHINE:X86 Debug\data.obj
+         assm.vcxproj -> C:\Users\user\Documents\BSTU\2\1\Констуирование Программного Обеспечения\SE_asm04\Debug\assm.exe
+       FinalizeBuildStatus:
+         Файл "Debug\assm.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\assm.tlog\assm.lastbuildstate".
+     1>Сборка проекта "C:\Users\user\Documents\BSTU\2\1\Констуирование Программного Обеспечения\SE_asm04\assm\assm.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:01.16

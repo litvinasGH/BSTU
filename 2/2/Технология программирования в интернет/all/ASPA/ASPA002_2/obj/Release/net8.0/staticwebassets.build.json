@@ -1,0 +1,331 @@
+{
+  "Version": 1,
+  "Hash": "P+2kDhmRNFj+9NCymrkSwZ5fdyisapLlvFjibATyL6U=",
+  "Source": "ASPA002_2",
+  "BasePath": "_content/ASPA002_2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ASPA002_2\\wwwroot",
+      "Source": "ASPA002_2",
+      "ContentRoot": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\",
+      "BasePath": "_content/ASPA002_2",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\css\\style.css",
+      "SourceId": "ASPA002_2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\",
+      "BasePath": "_content/ASPA002_2",
+      "RelativePath": "css/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cwzwb8y9l0",
+      "Integrity": "RBfkgZ7rL+r3sgfNpyNmqa457PiAgF3xZAVR3kzQZ6w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\Neumann.html",
+      "SourceId": "ASPA002_2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\",
+      "BasePath": "_content/ASPA002_2",
+      "RelativePath": "Neumann#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2j6k65dxwj",
+      "Integrity": "DmgDDWRrkp5Bo+ZhoRfshp29EAZFDCYyhgmrePZ6DlM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Neumann.html"
+    },
+    {
+      "Identity": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\scripts\\Calc.js",
+      "SourceId": "ASPA002_2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\",
+      "BasePath": "_content/ASPA002_2",
+      "RelativePath": "scripts/Calc#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "v6q8dakvbc",
+      "Integrity": "l8vf4KzWuWASlao3iHW01m/I+xwfy1hHz5Tw1mfMYCs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\scripts\\Calc.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/style.css",
+      "AssetFile": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "149"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RBfkgZ7rL+r3sgfNpyNmqa457PiAgF3xZAVR3kzQZ6w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 17:34:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RBfkgZ7rL+r3sgfNpyNmqa457PiAgF3xZAVR3kzQZ6w="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.cwzwb8y9l0.css",
+      "AssetFile": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "149"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RBfkgZ7rL+r3sgfNpyNmqa457PiAgF3xZAVR3kzQZ6w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 17:34:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cwzwb8y9l0"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RBfkgZ7rL+r3sgfNpyNmqa457PiAgF3xZAVR3kzQZ6w="
+        }
+      ]
+    },
+    {
+      "Route": "Neumann.2j6k65dxwj.html",
+      "AssetFile": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\Neumann.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "702"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmgDDWRrkp5Bo+ZhoRfshp29EAZFDCYyhgmrePZ6DlM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Mar 2025 14:05:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2j6k65dxwj"
+        },
+        {
+          "Name": "label",
+          "Value": "Neumann.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmgDDWRrkp5Bo+ZhoRfshp29EAZFDCYyhgmrePZ6DlM="
+        }
+      ]
+    },
+    {
+      "Route": "Neumann.html",
+      "AssetFile": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\Neumann.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "702"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DmgDDWRrkp5Bo+ZhoRfshp29EAZFDCYyhgmrePZ6DlM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Mar 2025 14:05:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DmgDDWRrkp5Bo+ZhoRfshp29EAZFDCYyhgmrePZ6DlM="
+        }
+      ]
+    },
+    {
+      "Route": "scripts/Calc.js",
+      "AssetFile": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\scripts\\Calc.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "168"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l8vf4KzWuWASlao3iHW01m/I+xwfy1hHz5Tw1mfMYCs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 17:35:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-l8vf4KzWuWASlao3iHW01m/I+xwfy1hHz5Tw1mfMYCs="
+        }
+      ]
+    },
+    {
+      "Route": "scripts/Calc.v6q8dakvbc.js",
+      "AssetFile": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\1-2\\ASPA\\ASPA002_2\\wwwroot\\scripts\\Calc.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "168"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l8vf4KzWuWASlao3iHW01m/I+xwfy1hHz5Tw1mfMYCs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Feb 2025 17:35:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v6q8dakvbc"
+        },
+        {
+          "Name": "label",
+          "Value": "scripts/Calc.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-l8vf4KzWuWASlao3iHW01m/I+xwfy1hHz5Tw1mfMYCs="
+        }
+      ]
+    }
+  ]
+}

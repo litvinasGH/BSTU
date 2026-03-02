@@ -1,0 +1,12 @@
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL004\bin\Release\net8.0\DAL004.deps.json
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL004\bin\Release\net8.0\DAL004.dll
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL004\bin\Release\net8.0\DAL004.pdb
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL004\obj\Release\net8.0\DAL004.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL004\obj\Release\net8.0\DAL004.AssemblyInfoInputs.cache
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL004\obj\Release\net8.0\DAL004.AssemblyInfo.cs
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL004\obj\Release\net8.0\DAL004.csproj.CoreCompileInputs.cache
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL004\obj\Release\net8.0\DAL004.sourcelink.json
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL004\obj\Release\net8.0\DAL004.dll
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL004\obj\Release\net8.0\refint\DAL004.dll
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL004\obj\Release\net8.0\DAL004.pdb
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL004\obj\Release\net8.0\ref\DAL004.dll

@@ -1,0 +1,18 @@
+﻿  main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(89,34): error C2064: результатом вычисления фрагмента не является функция, принимающая 2 аргументов
+  (компиляция исходного файла "main.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(89,34):
+      контекст создания экземпляра шаблона (сначала самый старый)
+          C:\Users\litvi\Documents\BSTU\2\2\Мат прога\4\lab4\lab4\main.cpp(57,13):
+          выполняется компиляция ссылки на экземпляр шаблон функции "const _Ty &std::min<int,int>(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)"
+          with
+          [
+              _Ty=int,
+              _Pr=int
+          ]
+  
+C:\Users\litvi\Documents\BSTU\2\2\Мат прога\4\lab4\lab4\main.cpp(67,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\litvi\Documents\BSTU\2\2\Мат прога\4\lab4\lab4\main.cpp(81,83): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\litvi\Documents\BSTU\2\2\Мат прога\4\lab4\lab4\main.cpp(81,62): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\litvi\Documents\BSTU\2\2\Мат прога\4\lab4\lab4\main.cpp(88,79): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\litvi\Documents\BSTU\2\2\Мат прога\4\lab4\lab4\main.cpp(88,62): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных

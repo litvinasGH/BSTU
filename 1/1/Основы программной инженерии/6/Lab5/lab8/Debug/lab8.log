@@ -1,0 +1,29 @@
+﻿Сборка начата 08.12.2023 14:44:11.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\user\source\repos\Lab5\lab8\lab8.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+         Создание каталога "Debug\lab8.tlog\".
+       InitializeBuildStatus:
+         Создание "Debug\lab8.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "Debug\lab8.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt file_mul.cpp file_sum.cpp main.cpp
+         file_mul.cpp
+         file_sum.cpp
+         main.cpp
+         Создание кода...
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\source\repos\Lab5\Debug\lab8.exe" /INCREMENTAL /ILK:"Debug\lab8.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\source\repos\Lab5\Debug\lab8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\source\repos\Lab5\Debug\lab8.lib" /MACHINE:X86 Debug\file_mul.obj
+         Debug\file_sum.obj
+         Debug\main.obj
+         lab8.vcxproj -> C:\Users\user\source\repos\Lab5\Debug\lab8.exe
+       FinalizeBuildStatus:
+         Файл "Debug\lab8.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\lab8.tlog\lab8.lastbuildstate".
+     1>Сборка проекта "C:\Users\user\source\repos\Lab5\lab8\lab8.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:03.34

@@ -1,0 +1,7 @@
+Список файлов: 
+some text.txt
+Список папок: 
+Hi
+Hi_copy
+Hi_new_copy
+KVVInspect

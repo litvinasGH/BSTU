@@ -1,0 +1,34 @@
+﻿@page 
+@model ASPA007_1.Pages.CelebritiesModel
+@using DAL_Celebrity;
+@using DAL_Celebrity_MSSQL;
+@using static DAL_Celebrity_MSSQL.DAL_Celebrity_MSSQL;
+@{
+}
+
+<h1>Celebrity</h1>
+<a href="/0">
+<img src="@Model.PhotosRequestPath/newCelebrity.jpg" onload="onPhotoLoad(this, 200, 0)" />
+</a>
+@foreach(Celebrity celebrity in Model.Celebrities)
+{
+    <a href="/@celebrity.id">
+    <img id="@celebrity.id" 
+    src="@Model.PhotosRequestPath/@celebrity.ReqPhotoPath" 
+    onload="onPhotoLoad(this, 200, 0)"
+    />
+    </a>
+}
+
+<script>
+        function onPhotoLoad(e, h, w) {
+        let ratio = e.naturalWidth / e.naturalHeight;
+
+        if (h != 0 && w == 0) {
+            e.width = Math.round(ratio * h);
+        }
+        if (h == 0 && w != 0) {
+            e.height = Math.round(w / ratio);
+        }
+    }
+</script>

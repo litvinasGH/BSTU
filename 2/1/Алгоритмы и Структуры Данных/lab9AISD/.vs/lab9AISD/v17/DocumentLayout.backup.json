@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\lab9AISD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0E47A0AD-B28F-4F72-9989-9D98A13213E2}|lab9AISD\\lab9AISD.vcxproj|C:\\Users\\user\\source\\repos\\lab9AISD\\lab9AISD\\lab9AISD.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0E47A0AD-B28F-4F72-9989-9D98A13213E2}|lab9AISD\\lab9AISD.vcxproj|solutionrelative:lab9AISD\\lab9AISD.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "lab9AISD.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\lab9AISD\\lab9AISD\\lab9AISD.cpp",
+              "RelativeDocumentMoniker": "lab9AISD\\lab9AISD.cpp",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\lab9AISD\\lab9AISD\\lab9AISD.cpp",
+              "RelativeToolTip": "lab9AISD\\lab9AISD.cpp",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAqwK0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-22T06:03:47.969Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+C:\Users\user\source\repos\lab2OOP\lab2OOP\bin\Debug\net8.0\lab2OOP.exe
+C:\Users\user\source\repos\lab2OOP\lab2OOP\bin\Debug\net8.0\lab2OOP.deps.json
+C:\Users\user\source\repos\lab2OOP\lab2OOP\bin\Debug\net8.0\lab2OOP.runtimeconfig.json
+C:\Users\user\source\repos\lab2OOP\lab2OOP\bin\Debug\net8.0\lab2OOP.dll
+C:\Users\user\source\repos\lab2OOP\lab2OOP\bin\Debug\net8.0\lab2OOP.pdb
+C:\Users\user\source\repos\lab2OOP\lab2OOP\obj\Debug\net8.0\lab2OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\lab2OOP\lab2OOP\obj\Debug\net8.0\lab2OOP.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\lab2OOP\lab2OOP\obj\Debug\net8.0\lab2OOP.AssemblyInfo.cs
+C:\Users\user\source\repos\lab2OOP\lab2OOP\obj\Debug\net8.0\lab2OOP.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\lab2OOP\lab2OOP\obj\Debug\net8.0\lab2OOP.dll
+C:\Users\user\source\repos\lab2OOP\lab2OOP\obj\Debug\net8.0\refint\lab2OOP.dll
+C:\Users\user\source\repos\lab2OOP\lab2OOP\obj\Debug\net8.0\lab2OOP.pdb
+C:\Users\user\source\repos\lab2OOP\lab2OOP\obj\Debug\net8.0\lab2OOP.genruntimeconfig.cache
+C:\Users\user\source\repos\lab2OOP\lab2OOP\obj\Debug\net8.0\ref\lab2OOP.dll

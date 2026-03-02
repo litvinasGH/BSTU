@@ -1,0 +1,119 @@
+Microsoft (R) Macro Assembler Version 14.42.34435.0	    12/11/24 22:54:32
+main.asm						     Page 1 - 1
+
+
+				.586P
+				.MODEL FLAT, STDCALL
+				includelib kernel32.lib
+				
+				ExitProcess PROTO : DWORD
+				MessageBoxA PROTO : DWORD,:DWORD,:DWORD,:DWORD
+				
+				.STACK 4096
+				
+				
+ 00000000			.DATA
+				
+ 00000000 008A 003B 0044	myWords WORD 8Ah, 3Bh, 44h, 5Fh,99h
+	   005F 0099
+ 0000000A 00000000 R		myPointer DWORD myWords
+				
+ 0000000E 00000001		myArray DD 1,2,3,4,5,0,7
+	   00000002
+	   00000003
+	   00000004
+	   00000005
+	   00000000
+	   00000007
+				
+				
+ 0000002A 4D 79 20 74 68	STR1 DB "My third program",0
+	   69 72 64 20 70
+	   72 6F 67 72 61
+	   6D 00
+ 0000003B 53 75 6D 3A 00	STR2 DB "Sum:",0
+				
+ 00000000			.CODE
+				
+ 00000000			main PROC
+ 00000000			START:
+				    
+				    ;mov EDI, 2
+				    ;mov AX, [myWords + EDI]
+				    ;mov BX, myWords[0]
+				
+ 00000000  BE 0000000E R	    MOV ESI, OFFSET myArray
+ 00000005  B8 00000000		    MOV EAX, 0
+ 0000000A  B9 00000007		    MOV ECX , lengthof myArray
+ 0000000F			    CYCLE:
+				
+ 0000000F  03 06		        ADD EAX,[ESI]
+ 00000011  83 C6 04		        ADD ESI, 4
+ 00000014  E2 F9		        loop CYCLE
+				
+ 00000016  BE 0000000E R	    MOV ESI, OFFSET myArray
+ 0000001B  BB 00000001		    MOV EBX,1
+ 00000020			    SearchingForZero:
+ 00000020  8B 06		        MOV EAX, [ESI]
+ 00000022  83 C6 04		        ADD ESI,4
+ 00000025  85 C0		        TEST EAX,EAX
+ 00000027  74 02		        jz FoundZero
+				
+ 00000029  E2 F5		        loop SearchingForZero
+ 0000002B			    FoundZero:
+ 0000002B  BB 00000000		        MOV EBX,0
+				
+ 00000030  6A 00		    push 0
+ 00000032  E8 00000000 E	    call ExitProcess
+ 00000037			main ENDP
+				END main
+Microsoft (R) Macro Assembler Version 14.42.34435.0	    12/11/24 22:54:32
+main.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000040 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000037 Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+MessageBoxA  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+main . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000037 Public STDCALL
+  START  . . . . . . . . . . . .	L Near	 00000000 _TEXT	
+  CYCLE  . . . . . . . . . . . .	L Near	 0000000F _TEXT	
+  SearchingForZero . . . . . . .	L Near	 00000020 _TEXT	
+  FoundZero  . . . . . . . . . .	L Near	 0000002B _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+STR1 . . . . . . . . . . . . . .	Byte	 0000002A _DATA	
+STR2 . . . . . . . . . . . . . .	Byte	 0000003B _DATA	
+myArray  . . . . . . . . . . . .	DWord	 0000000E _DATA	
+myPointer  . . . . . . . . . . .	DWord	 0000000A _DATA	
+myWords  . . . . . . . . . . . .	Word	 00000000 _DATA	
+
+	   0 Warnings
+	   0 Errors

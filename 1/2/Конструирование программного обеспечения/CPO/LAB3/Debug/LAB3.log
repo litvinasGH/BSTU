@@ -1,0 +1,71 @@
+﻿Сборка начата 22.03.2024 18:26:44.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\user\source\repos\CPO\LAB3\LAB3.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+         Создание каталога "Debug\LAB3.tlog\".
+       InitializeBuildStatus:
+         Создание "Debug\LAB3.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "Debug\LAB3.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt difference.cpp events.cpp inputDate.cpp leap_year_definition.cpp main.cpp name_of_the_month.cpp sequential_number_counting.cpp struc.h
+         difference.cpp
+     1>C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "difference.cpp")
+         
+         events.cpp
+     1>C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "events.cpp")
+         
+         inputDate.cpp
+     1>C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "inputDate.cpp")
+         
+         leap_year_definition.cpp
+     1>C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "leap_year_definition.cpp")
+         
+         main.cpp
+     1>C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "main.cpp")
+         
+         name_of_the_month.cpp
+     1>C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "name_of_the_month.cpp")
+         
+         sequential_number_counting.cpp
+     1>C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         (компиляция исходного файла "sequential_number_counting.cpp")
+         
+         struc.h
+         Создание кода...
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\source\repos\CPO\Debug\LAB3.exe" /INCREMENTAL /ILK:"Debug\LAB3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\source\repos\CPO\Debug\LAB3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\source\repos\CPO\Debug\LAB3.lib" /MACHINE:X86 Debug\difference.obj
+         Debug\events.obj
+         Debug\inputDate.obj
+         Debug\leap_year_definition.obj
+         Debug\main.obj
+         Debug\name_of_the_month.obj
+         Debug\sequential_number_counting.obj
+         Debug\struc.obj
+         LAB3.vcxproj -> C:\Users\user\source\repos\CPO\Debug\LAB3.exe
+       FinalizeBuildStatus:
+         Файл "Debug\LAB3.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\LAB3.tlog\LAB3.lastbuildstate".
+     1>Сборка проекта "C:\Users\user\source\repos\CPO\LAB3\LAB3.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+       "C:\Users\user\source\repos\CPO\LAB3\LAB3.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+         C:\Users\user\source\repos\CPO\LAB3\stdafx.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+
+    Предупреждений: 7
+    Ошибок: 0
+
+Прошло времени 00:00:05.92

@@ -1,0 +1,133 @@
+﻿@page
+@model ASPA007_1.Pages.NewCelebrityModel
+@using static DAL_Celebrity_MSSQL.DAL_Celebrity_MSSQL;
+@{
+    bool Confirm = (bool)(ViewData["Confirm"] ?? false);
+    Celebrity celebrity = Model.Celebrity ?? new Celebrity();
+}
+<h2>New Celebrity</h2>
+
+<div style="display:flex;">
+    @if (!Confirm)
+    {
+        <img id="0"
+             style="border:solid 2px #c59d67;"
+             title="New Celderity"
+             src="@($"{Model.PhotosRequestPath}/newCelebrity.jpg")"
+             onload="onPhotoLoad(this, 200, 0)" />
+
+        <div style="height:200px; width:350px; background-color:#c59d67; border:solid 2px #c59d67; align-content:center;">
+            <form method="post" enctype="multipart/form-data">
+                <input id="fullname"
+                       name="fullname"
+                       type="text"
+                       placeholder="Celderities Name"
+                       style="align-content:center; width:79%,"
+                       required />
+
+                <input id="nationality"
+                       name="nationality"
+                       type="text"
+                       placeholder="Nationality"
+                       minlength="2"
+                       maxlength="2"
+                       style="width:20%;"
+                       required />
+
+                <input id="upload"
+                       name="upload"
+                       type="file"
+                       style="display:none;"
+                       accept="image/jpeg"
+                       onchange="onChange(this)"
+                       required />
+
+                <button id="actuaload"
+                        type="button"
+                        style="width:100%"
+                        onclick="document.getElementById('upload').click()">
+                    Upload Photo
+                </button>
+
+                <button type="submit" style="width:49%">
+                    OK
+                </button>
+                <button type="reset" style="width:49%">
+                    CANCEL
+                </button>
+            </form>
+        </div>
+    }
+    else
+    {
+        <img id="0"
+             style="border:solid 2px #c59d67"
+             title="New Celebrity"
+             src="@($"{Model.PhotosRequestPath}/{celebrity.ReqPhotoPath}")"
+             onload="onPhotoLoad(this, 200, 0)" />
+
+        <div style="height:200px; width:350px; background-color:#c59d67; border:solid 2px #c59d67; align-content:center;">
+            <form method="post">
+                <input name="fullname"
+                       type="text"
+                       value="@celebrity.FullName"
+                       style="align-content:center; width:100%"
+                       readonly />
+
+                <input name="nationality"
+                       type="text"
+                       value="@celebrity.Nationality"
+                       minlength="2"
+                       maxlength="2"
+                       style="width:20%;"
+                       readonly />
+
+                <input name="filename"
+                       type="hidden"
+                       readonly
+                       value="@celebrity.ReqPhotoPath" />
+
+                <button name="press"
+                        type="submit"
+                        value="Confirm"
+                        style="width:100%">
+                    CONFIRMATION
+                </button>
+
+                <button type="reset" style="width:100%">
+                    CANCEL
+                </button>
+            </form>
+        </div>
+    }
+
+    @if (ViewData["ValidMessage"] != null)
+    {
+        
+    }
+</div>
+
+<script>
+        function onPhotoLoad(e, h, w) {
+        let ratio = e.naturalWidth / e.naturalHeight;
+
+        if (h != 0 && w == 0) {
+            e.width = Math.round(ratio * h);
+        }
+        if (h == 0 && w != 0) {
+            e.height = Math.round(w / ratio);
+        }
+    }
+
+    document.getElementById('upload').addEventListener('change', function(e) {
+        const button = document.getElementById('actuaload');
+        const fileName = e.target.files[0]?.name || 'Upload Photo';
+        button.textContent = fileName;
+
+        if (fileName.length > 20) {
+            const extension = fileName.split('.').pop();
+            const shortName = fileName.substring(0, 15) + '...' + extension;
+            button.textContent = shortName;
+        }
+    });
+</script>

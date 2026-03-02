@@ -1,0 +1,102 @@
+[
+  {
+    "ImagePath": null,
+    "Model": "Phaser 6020",
+    "Price": 34990.00,
+    "Brand": "Xerox",
+    "SupportedServices": [
+      "Refill",
+      "Maintenance"
+    ],
+    "Comments": [
+      {
+        "Author": "Demo User",
+        "Text": "tteyt",
+        "Timestamp": "2025-05-12T10:57:38.2737428+03:00",
+        "Rating": 0.0
+      }
+    ]
+  },
+  {
+    "ImagePath": null,
+    "Model": "LaserJet Pro M404dn",
+    "Price": 27990.00,
+    "Brand": "HP",
+    "SupportedServices": [
+      "Maintenance"
+    ],
+    "Comments": []
+  },
+  {
+    "ImagePath": null,
+    "Model": "PIXMA TS8350",
+    "Price": 15990.00,
+    "Brand": "Canon",
+    "SupportedServices": [
+      "Refill"
+    ],
+    "Comments": []
+  },
+  {
+    "ImagePath": null,
+    "Model": "EcoTank L3250",
+    "Price": 18990.00,
+    "Brand": "Epson",
+    "SupportedServices": [
+      "Refill",
+      "Maintenance"
+    ],
+    "Comments": []
+  },
+  {
+    "ImagePath": null,
+    "Model": "HL-L2350DW",
+    "Price": 12990.00,
+    "Brand": "Brother",
+    "SupportedServices": [
+      "Maintenance"
+    ],
+    "Comments": []
+  },
+  {
+    "ImagePath": null,
+    "Model": "Xpress M2020W",
+    "Price": 9990.00,
+    "Brand": "Samsung",
+    "SupportedServices": [
+      "Refill"
+    ],
+    "Comments": []
+  },
+  {
+    "ImagePath": null,
+    "Model": "SP C220DN",
+    "Price": 22990.00,
+    "Brand": "Ricoh",
+    "SupportedServices": [
+      "Maintenance"
+    ],
+    "Comments": []
+  },
+  {
+    "ImagePath": null,
+    "Model": "bizhub C3300i",
+    "Price": 54990.00,
+    "Brand": "KonicaMinolta",
+    "SupportedServices": [
+      "Refill",
+      "Maintenance"
+    ],
+    "Comments": []
+  },
+  {
+    "ImagePath": null,
+    "Model": "TASKalfa 3010i",
+    "Price": 49990.00,
+    "Brand": "Kyocera",
+    "SupportedServices": [
+      "Maintenance"
+    ],
+    "Comments": []
+  }
+]

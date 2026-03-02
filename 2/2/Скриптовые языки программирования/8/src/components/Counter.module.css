@@ -1,0 +1,15 @@
+.counter {
+    text-align: center;
+    margin: 2rem;
+  }
+  
+  .value {
+    font-size: 3rem;
+    color: #333;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }

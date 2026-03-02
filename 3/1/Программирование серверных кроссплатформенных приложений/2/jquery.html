@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+</script>
+<body>
+    <p id="user-data"></p>
+</body>
+
+<script>
+    $(document).ready(function(){
+            $.ajax({
+                url:"http://localhost:5000/api/name",
+                method:'GET',
+                success:function(data){
+                    $('#user-data').text(data);
+                },
+                error:function(){
+                    console.log("Error Occured");
+                }
+            })
+    })
+</script>
+
+</html>

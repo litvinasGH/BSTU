@@ -1,0 +1,22 @@
+﻿Сборка начата 12.04.2024 14:39:48.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\user\source\repos\SE_Lab06S\SE_Lab06L\SE_Lab06L.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Создание "x64\Debug\SE_Lab06L.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "x64\Debug\SE_Lab06L.tlog\unsuccessfulbuild".
+       ClCompile:
+         Для всех выходных данных обновления не требуется.
+       Lib:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\user\source\repos\SE_Lab06S\x64\Debug\SE_Lab06L.lib" /NOLOGO /MACHINE:X64 x64\Debug\Dictionary.obj
+         SE_Lab06L.vcxproj -> C:\Users\user\source\repos\SE_Lab06S\x64\Debug\SE_Lab06L.lib
+       FinalizeBuildStatus:
+         Файл "x64\Debug\SE_Lab06L.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Debug\SE_Lab06L.tlog\SE_Lab06L.lastbuildstate".
+     1>Сборка проекта "C:\Users\user\source\repos\SE_Lab06S\SE_Lab06L\SE_Lab06L.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:00.14
