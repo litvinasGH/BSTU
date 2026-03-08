@@ -1,0 +1,61 @@
+
+body {
+    background: #242424;
+    padding: 30px;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    color: white;
+}
+
+
+#responseContainer {
+    margin: 20px auto;
+    padding: 15px;
+    width: 300px;
+    min-height: 40px;
+    background: #242424;
+    border: 1px solid #515151;
+    border-radius: 6px;
+}
+
+
+#text {
+    white-space: pre-line;
+    margin: 0;
+}
+
+form{
+  width: fit-content;
+  margin: auto;
+}
+
+
+input {
+    padding: 5px;
+    width: 120px;
+}
+select{
+  padding: 5px;
+}
+
+#GetButton{
+  margin-bottom: 1rem;
+}
+
+.buttonsContainer {
+    margin-top: 15px;
+}
+
+.MethodButton {
+    margin: 5px;
+    padding: 8px 16px;
+    border: none;
+    background: #d50000;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.MethodButton:hover {
+    background: #6c0000;
+}
