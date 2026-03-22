@@ -7,20 +7,22 @@ import (
 	"net/http"
 )
 
+var counter P03_02.Counters
+
 func router(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
 		switch r.URL.Path {
 		case "/S":
-			P03_02.PlusGet()
+			counter.PlusGet()
 		case "/G":
-			fmt.Fprint(w, P03_02.GenStr())
+			fmt.Fprint(w, counter.GenStr())
 		default:
 			http.NotFound(w, r)
 		}
 	case "POST":
 		if r.URL.Path == "/S" {
-			P03_02.PlusPost()
+			counter.PlusPost()
 		} else {
 			http.NotFound(w, r)
 		}

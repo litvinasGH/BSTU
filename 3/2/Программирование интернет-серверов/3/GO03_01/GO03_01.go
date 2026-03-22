@@ -7,12 +7,14 @@ import (
 
 func router(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
-	case "GET":
-		handler(w, r)
-	case "POST":
-		handler(w, r)
-	case "PUT":
-		handler(w, r)
+
+	case "GET", "POST", "PUT":
+		switch r.URL.Path {
+		case "/A", "/A/B":
+			handler(w, r)
+		default:
+			handler(w, r)
+		}
 	default:
 		http.Error(w, "Method not Allowed", http.StatusMethodNotAllowed)
 	}
