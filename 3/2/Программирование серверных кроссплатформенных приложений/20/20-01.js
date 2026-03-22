@@ -1,145 +1,98 @@
-const express = require('express');
-const fs = require('fs');
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
+const exphbs = require("express-handlebars");
 
 const app = express();
 const PORT = 3000;
-const DATA_FILE = path.join(__dirname, 'phonebook.json');
 
-
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
+app.engine("hbs", exphbs.engine({
+    extname: "hbs",
+    layoutsDir: "views/layouts",
+    partialsDir: "views/partials",
+    defaultLayout: "main",
+    helpers: {
+        cancel: function () {
+            return '<a href="/">Отказаться</a>';
+        }
+    }
+}));
 
+app.set("view engine", "hbs");
+app.set("views", "./views");
 
-async function readPhonebook() {
-  try {
-    const data = await fs.readFile(DATA_FILE, 'utf8');
-    return JSON.parse(data);
-  } catch (error) {
-    console.error('Ошибка чтения файла:', error);
-    return { contacts: [] };
-  }
+const file = path.join(__dirname, "phonebook.json");
+
+function readData() {
+    return JSON.parse(fs.readFileSync(file));
 }
 
-async function writePhonebook(data) {
-  try {
-    await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
-    return true;
-  } catch (error) {
-    console.error('Ошибка записи в файл:', error);
-    return false;
-  }
+function writeData(data) {
+    fs.writeFileSync(file, JSON.stringify(data, null, 2));
 }
 
-
-
-app.get('/api/contacts', async (req, res) => {
-  const phonebook = await readPhonebook();
-  res.json(phonebook);
+app.get("/", (req, res) => {
+    const data = readData();
+    res.render("index", { contacts: data });
 });
 
-app.get('/api/contacts/:id', async (req, res) => {
-  const phonebook = await readPhonebook();
-  const contact = phonebook.contacts.find(c => c.id === parseInt(req.params.id));
-  
-  if (contact) {
-    res.json(contact);
-  } else {
-    res.status(404).json({ error: 'Контакт не найден' });
-  }
+app.get("/Add", (req, res) => {
+    const data = readData();
+    res.render("add", { contacts: data });
 });
 
-app.post('/api/contacts', async (req, res) => {
-  const phonebook = await readPhonebook();
-  
-  const newContact = {
-    id: phonebook.contacts.length > 0 ? Math.max(...phonebook.contacts.map(c => c.id)) + 1 : 1,
-    name: req.body.name,
-    phone: req.body.phone,
-  };
-  
-  phonebook.contacts.push(newContact);
-  
-  if (await writePhonebook(phonebook)) {
-    res.status(201).json(newContact);
-  } else {
-    res.status(500).json({ error: 'Ошибка при сохранении контакта' });
-  }
+app.post("/Add", (req, res) => {
+    const data = readData();
+
+    const newContact = {
+        id: Date.now(),
+        name: req.body.name,
+        phone: req.body.phone
+    };
+
+    data.push(newContact);
+    writeData(data);
+
+    res.redirect("/");
 });
 
-app.put('/api/contacts/:id', async (req, res) => {
-  const phonebook = await readPhonebook();
-  const index = phonebook.contacts.findIndex(c => c.id === parseInt(req.params.id));
-  
-  if (index === -1) {
-    return res.status(404).json({ error: 'Контакт не найден' });
-  }
-  
-  phonebook.contacts[index] = {
-    ...phonebook.contacts[index],
-    ...req.body,
-    id: parseInt(req.params.id)
-  };
-  
-  if (await writePhonebook(phonebook)) {
-    res.json(phonebook.contacts[index]);
-  } else {
-    res.status(500).json({ error: 'Ошибка при обновлении контакта' });
-  }
+app.get("/Update/:id", (req, res) => {
+    const data = readData();
+    const contact = data.find(x => x.id == req.params.id);
+
+    res.render("update", {
+        contacts: data,
+        contact
+    });
 });
 
-app.delete('/api/contacts/:id', async (req, res) => {
-  const phonebook = await readPhonebook();
-  const initialLength = phonebook.contacts.length;
-  
-  phonebook.contacts = phonebook.contacts.filter(c => c.id !== parseInt(req.params.id));
-  
-  if (phonebook.contacts.length === initialLength) {
-    return res.status(404).json({ error: 'Контакт не найден' });
-  }
-  
-  if (await writePhonebook(phonebook)) {
-    res.json({ message: 'Контакт успешно удален' });
-  } else {
-    res.status(500).json({ error: 'Ошибка при удалении контакта' });
-  }
+app.post("/Update", (req, res) => {
+    let data = readData();
+
+    data = data.map(c => {
+        if (c.id == req.body.id) {
+            c.name = req.body.name;
+            c.phone = req.body.phone;
+        }
+        return c;
+    });
+
+    writeData(data);
+    res.redirect("/");
 });
 
-// HTML формы для работы со справочником
-app.post('/add', async (req, res) => {
-  const phonebook = await readPhonebook();
-  
-  const newContact = {
-    id: phonebook.contacts.length > 0 ? Math.max(...phonebook.contacts.map(c => c.id)) + 1 : 1,
-    name: req.body.name,
-    phone: req.body.phone,
-    email: req.body.email
-  };
-  
-  phonebook.contacts.push(newContact);
-  await writePhonebook(phonebook);
-  
-  res.redirect('/');
+app.post("/Delete", (req, res) => {
+    let data = readData();
+
+    data = data.filter(c => c.id != req.body.id);
+
+    writeData(data);
+    res.redirect("/");
 });
-
-app.post('/delete/:id', async (req, res) => {
-  const phonebook = await readPhonebook();
-  phonebook.contacts = phonebook.contacts.filter(c => c.id !== parseInt(req.params.id));
-  await writePhonebook(phonebook);
-  res.redirect('/');
-})
-
-
-
-
-
-
-
-
-
-
 
 app.listen(PORT, () => {
-  console.log(`Сервер 20-01 запущен и слушает порт ${PORT}`);
-  console.log(`Откройте http://localhost:${PORT} в браузере`);
+    console.log("Server started on port 3000");
 });
