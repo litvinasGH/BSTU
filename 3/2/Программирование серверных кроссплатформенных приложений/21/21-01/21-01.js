@@ -33,11 +33,13 @@ app.get('/resource', passport.authenticate('basic', { session: false }), (req, r
     }
 }); 
 
-
+let id = 0;
 app.get('/logout', (req, res) => { 
     isAuthenticated = false;
-    res.set('WWW-Authenticate', 'Basic realm="logout"');
-    res.status(401).send('Logged out'); 
+    res
+        .status(401)
+        .set('WWW-Authenticate', 'Basic realm="logout"')
+        .send('Logged out');
 }); 
 
 
