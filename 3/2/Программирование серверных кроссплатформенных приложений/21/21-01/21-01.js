@@ -5,9 +5,9 @@ const authData = require('./auth-users.json');
 const app = express(); 
 const PORT = 3000;
 let isAuthenticated = false;
+let id = 0;
 
-
-passport.use(new BasicStrategy((username, password, done) => { 
+passport.use(new BasicStrategy({ realm: `User${id}` }, (username, password, done) => { 
         const user = authData.users.find( u => u.username === username && u.password === password ); 
         if (!user) { 
             return done(null, false); 
@@ -24,7 +24,7 @@ app.get('/login', passport.authenticate('basic', { session: false }), (req, res)
 }); 
 
 
-app.get('/resource', passport.authenticate('basic', { session: false }), (req, res) => { 
+app.get('/resource', (req, res) => { 
     if (isAuthenticated){
         res.send('RESOURCE'); 
     }
@@ -33,7 +33,7 @@ app.get('/resource', passport.authenticate('basic', { session: false }), (req, r
     }
 }); 
 
-let id = 0;
+
 app.get('/logout', (req, res) => { 
     isAuthenticated = false;
     res
