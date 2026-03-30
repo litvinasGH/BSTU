@@ -30,6 +30,9 @@ function checkAuth(req, res, next) {
 
 
 app.get('/login', (req, res) => {
+  if (req.session.user) {
+    return res.redirect('/resource');
+  }
   res.send(`
     <html>
       <body>
