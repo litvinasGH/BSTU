@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "fullName": "Emma Stone",
+    "nationality": "USA",
+    "reqPhotoPath": "/img/emma_stone.jpg"
+  },
+  {
+    "id": 2,
+    "fullName": "Benedict Cumberbatch",
+    "nationality": "UK",
+    "reqPhotoPath": "/img/benedict.jpg"
+  }
+]
