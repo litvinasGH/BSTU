@@ -8,7 +8,7 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	_ "github.com/lib/pq"
+	_ "github.com/jackc/pgx/v5/stdlib"
 )
 
 type Celebrity struct {
@@ -38,9 +38,10 @@ func main() {
 func initDB() {
 	var err error
 
-	connStr := "postgres://postgres:postgres@localhost:5432/gisdb?sslmode=disable"
+	//connStr := "postgres://postgres:postgres@localhost:5432/gisdb?sslmode=disable"
 
-	db, err = sql.Open("postgres", connStr)
+	connStr := "host=localhost user=postgres password=postgres dbname=gisdb port=5432 sslmode=disable"
+	db, err = sql.Open("pgx", connStr)
 	if err != nil {
 		log.Fatal(err)
 	}
