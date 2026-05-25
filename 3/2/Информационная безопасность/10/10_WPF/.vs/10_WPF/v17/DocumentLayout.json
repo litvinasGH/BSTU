@@ -1,0 +1,76 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\6\\10_WPF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A42342E8-12F6-46E1-96D6-0EC74173BBB8}|10_WPF\\10_WPF.csproj|d:\\6\\10_wpf\\10_wpf\\elgamal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A42342E8-12F6-46E1-96D6-0EC74173BBB8}|10_WPF\\10_WPF.csproj|solutionrelative:10_wpf\\elgamal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A42342E8-12F6-46E1-96D6-0EC74173BBB8}|10_WPF\\10_WPF.csproj|D:\\6\\10_WPF\\10_wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A42342E8-12F6-46E1-96D6-0EC74173BBB8}|10_WPF\\10_WPF.csproj|solutionrelative:10_wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A42342E8-12F6-46E1-96D6-0EC74173BBB8}|10_WPF\\10_WPF.csproj|D:\\6\\10_WPF\\10_wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A42342E8-12F6-46E1-96D6-0EC74173BBB8}|10_WPF\\10_WPF.csproj|solutionrelative:10_wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ElGamal.cs",
+              "DocumentMoniker": "D:\\6\\10_WPF\\10_WPF\\ElGamal.cs",
+              "RelativeDocumentMoniker": "10_WPF\\ElGamal.cs",
+              "ToolTip": "D:\\6\\10_WPF\\10_WPF\\ElGamal.cs",
+              "RelativeToolTip": "10_WPF\\ElGamal.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAADsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T18:02:00.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\6\\10_WPF\\10_WPF\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "10_WPF\\MainWindow.xaml",
+              "ToolTip": "D:\\6\\10_WPF\\10_WPF\\MainWindow.xaml",
+              "RelativeToolTip": "10_WPF\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-07T17:57:59.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\6\\10_WPF\\10_WPF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "10_WPF\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\6\\10_WPF\\10_WPF\\MainWindow.xaml.cs",
+              "RelativeToolTip": "10_WPF\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAgwMsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T17:57:58.102Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

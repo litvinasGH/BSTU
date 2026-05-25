@@ -1,0 +1,167 @@
+﻿[
+  {
+    "Symbol": " ",
+    "Count": 63,
+    "Probability": 0.15328467153284672
+  },
+  {
+    "Symbol": "i",
+    "Count": 44,
+    "Probability": 0.1070559610705596
+  },
+  {
+    "Symbol": "a",
+    "Count": 39,
+    "Probability": 0.0948905109489051
+  },
+  {
+    "Symbol": "s",
+    "Count": 24,
+    "Probability": 0.058394160583941604
+  },
+  {
+    "Symbol": "u",
+    "Count": 22,
+    "Probability": 0.0535279805352798
+  },
+  {
+    "Symbol": "r",
+    "Count": 21,
+    "Probability": 0.051094890510948905
+  },
+  {
+    "Symbol": "o",
+    "Count": 19,
+    "Probability": 0.046228710462287104
+  },
+  {
+    "Symbol": "t",
+    "Count": 17,
+    "Probability": 0.0413625304136253
+  },
+  {
+    "Symbol": ",",
+    "Count": 14,
+    "Probability": 0.0340632603406326
+  },
+  {
+    "Symbol": "n",
+    "Count": 13,
+    "Probability": 0.031630170316301706
+  },
+  {
+    "Symbol": "e",
+    "Count": 13,
+    "Probability": 0.031630170316301706
+  },
+  {
+    "Symbol": "l",
+    "Count": 13,
+    "Probability": 0.031630170316301706
+  },
+  {
+    "Symbol": "k",
+    "Count": 12,
+    "Probability": 0.029197080291970802
+  },
+  {
+    "Symbol": "m",
+    "Count": 11,
+    "Probability": 0.0267639902676399
+  },
+  {
+    "Symbol": "g",
+    "Count": 10,
+    "Probability": 0.024330900243309004
+  },
+  {
+    "Symbol": "v",
+    "Count": 8,
+    "Probability": 0.019464720194647202
+  },
+  {
+    "Symbol": "ž",
+    "Count": 8,
+    "Probability": 0.019464720194647202
+  },
+  {
+    "Symbol": "ė",
+    "Count": 8,
+    "Probability": 0.019464720194647202
+  },
+  {
+    "Symbol": "d",
+    "Count": 7,
+    "Probability": 0.0170316301703163
+  },
+  {
+    "Symbol": ".",
+    "Count": 6,
+    "Probability": 0.014598540145985401
+  },
+  {
+    "Symbol": "p",
+    "Count": 6,
+    "Probability": 0.014598540145985401
+  },
+  {
+    "Symbol": "š",
+    "Count": 5,
+    "Probability": 0.012165450121654502
+  },
+  {
+    "Symbol": "ų",
+    "Count": 5,
+    "Probability": 0.012165450121654502
+  },
+  {
+    "Symbol": "j",
+    "Count": 4,
+    "Probability": 0.009732360097323601
+  },
+  {
+    "Symbol": "y",
+    "Count": 4,
+    "Probability": 0.009732360097323601
+  },
+  {
+    "Symbol": "b",
+    "Count": 4,
+    "Probability": 0.009732360097323601
+  },
+  {
+    "Symbol": "ą",
+    "Count": 3,
+    "Probability": 0.0072992700729927005
+  },
+  {
+    "Symbol": "į",
+    "Count": 3,
+    "Probability": 0.0072992700729927005
+  },
+  {
+    "Symbol": "c",
+    "Count": 1,
+    "Probability": 0.0024330900243309003
+  },
+  {
+    "Symbol": "h",
+    "Count": 1,
+    "Probability": 0.0024330900243309003
+  },
+  {
+    "Symbol": "č",
+    "Count": 1,
+    "Probability": 0.0024330900243309003
+  },
+  {
+    "Symbol": "ę",
+    "Count": 1,
+    "Probability": 0.0024330900243309003
+  },
+  {
+    "Symbol": "ū",
+    "Count": 1,
+    "Probability": 0.0024330900243309003
+  }
+]
