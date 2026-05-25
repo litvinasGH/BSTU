@@ -1,0 +1,15 @@
+D:\6\11\11\bin\Debug\11.exe.config
+D:\6\11\11\bin\Debug\11.exe
+D:\6\11\11\bin\Debug\11.pdb
+D:\6\11\11\obj\Debug\11.csproj.AssemblyReference.cache
+D:\6\11\11\obj\Debug\MainWindow.baml
+D:\6\11\11\obj\Debug\MainWindow.g.cs
+D:\6\11\11\obj\Debug\App.g.cs
+D:\6\11\11\obj\Debug\11_MarkupCompile.cache
+D:\6\11\11\obj\Debug\11.g.resources
+D:\6\11\11\obj\Debug\_11.Properties.Resources.resources
+D:\6\11\11\obj\Debug\11.csproj.GenerateResource.cache
+D:\6\11\11\obj\Debug\11.csproj.CoreCompileInputs.cache
+D:\6\11\11\obj\Debug\11.exe
+D:\6\11\11\obj\Debug\11.pdb
+D:\6\11\11\obj\Debug\11.exe.config

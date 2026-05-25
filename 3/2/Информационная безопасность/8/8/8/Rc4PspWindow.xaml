@@ -1,0 +1,30 @@
+﻿<Window x:Class="_8.Rc4PspWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_8"
+        mc:Ignorable="d"
+        Title="Rc4PspWindow" Height="450" Width="800">
+    <Grid Margin="12">
+        <StackPanel>
+
+            <TextBlock Text="Ключ (через запятую)"/>
+            <TextBox x:Name="KeyBox" Text="76,111,85,54,211"/>
+
+            <TextBlock Text="Длина ПСП"/>
+            <TextBox x:Name="LengthBox" Text="20"/>
+
+            <Button Content="Генерировать ПСП" Margin="0,10,0,0" Click="Generate_Click"/>
+
+            <TextBlock Text="ПСП"/>
+            <TextBox x:Name="OutputText" Height="150" TextWrapping="Wrap"/>
+
+            <ProgressBar x:Name="ProgressBar" Height="20"/>
+
+            <TextBlock x:Name="InfoText"/>
+            <TextBlock x:Name="TimeText"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

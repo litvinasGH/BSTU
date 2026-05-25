@@ -1,0 +1,167 @@
+﻿[
+  {
+    "character": "\u0430",
+    "original": 46290,
+    "encrypted": 10192
+  },
+  {
+    "character": "\u0431",
+    "original": 11565,
+    "encrypted": 197
+  },
+  {
+    "character": "\u0432",
+    "original": 28236,
+    "encrypted": 17904
+  },
+  {
+    "character": "\u0433",
+    "original": 10624,
+    "encrypted": 11550
+  },
+  {
+    "character": "\u0434",
+    "original": 18840,
+    "encrypted": 30826
+  },
+  {
+    "character": "\u0435",
+    "original": 51416,
+    "encrypted": 18840
+  },
+  {
+    "character": "\u0451",
+    "original": 85,
+    "encrypted": 1932
+  },
+  {
+    "character": "\u0436",
+    "original": 6706,
+    "encrypted": 41319
+  },
+  {
+    "character": "\u0437",
+    "original": 10192,
+    "encrypted": 11428
+  },
+  {
+    "character": "\u0438",
+    "original": 41319,
+    "encrypted": 37320
+  },
+  {
+    "character": "\u0439",
+    "original": 6320,
+    "encrypted": 46290
+  },
+  {
+    "character": "\u043A",
+    "original": 24904,
+    "encrypted": 37010
+  },
+  {
+    "character": "\u043B",
+    "original": 27009,
+    "encrypted": 51416
+  },
+  {
+    "character": "\u043C",
+    "original": 17904,
+    "encrypted": 11480
+  },
+  {
+    "character": "\u043D",
+    "original": 37320,
+    "encrypted": 6320
+  },
+  {
+    "character": "\u043E",
+    "original": 67964,
+    "encrypted": 12589
+  },
+  {
+    "character": "\u043F",
+    "original": 16799,
+    "encrypted": 67964
+  },
+  {
+    "character": "\u0440",
+    "original": 24990,
+    "encrypted": 11565
+  },
+  {
+    "character": "\u0441",
+    "original": 30826,
+    "encrypted": 18242
+  },
+  {
+    "character": "\u0442",
+    "original": 37010,
+    "encrypted": 85
+  },
+  {
+    "character": "\u0443",
+    "original": 18242,
+    "encrypted": 5782
+  },
+  {
+    "character": "\u0444",
+    "original": 738,
+    "encrypted": 24904
+  },
+  {
+    "character": "\u0445",
+    "original": 5908,
+    "encrypted": 1337
+  },
+  {
+    "character": "\u0446",
+    "original": 1932,
+    "encrypted": 16799
+  },
+  {
+    "character": "\u0447",
+    "original": 11480,
+    "encrypted": 28236
+  },
+  {
+    "character": "\u0448",
+    "original": 5782,
+    "encrypted": 738
+  },
+  {
+    "character": "\u0449",
+    "original": 1798,
+    "encrypted": 6706
+  },
+  {
+    "character": "\u044A",
+    "original": 197,
+    "encrypted": 1798
+  },
+  {
+    "character": "\u044B",
+    "original": 11428,
+    "encrypted": 27009
+  },
+  {
+    "character": "\u044C",
+    "original": 12589,
+    "encrypted": 3633
+  },
+  {
+    "character": "\u044D",
+    "original": 1337,
+    "encrypted": 24990
+  },
+  {
+    "character": "\u044E",
+    "original": 3633,
+    "encrypted": 10624
+  },
+  {
+    "character": "\u044F",
+    "original": 11550,
+    "encrypted": 5908
+  }
+]

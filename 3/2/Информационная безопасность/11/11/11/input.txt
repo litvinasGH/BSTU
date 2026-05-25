@@ -1,0 +1,22 @@
+Информационная безопасность — это состояние защищённости информации,
+при котором обеспечиваются её конфиденциальность, целостность и доступность.
+
+Алгоритмы хеширования семейства MD применяются для вычисления контрольных
+сумм и проверки целостности данных. В данной лабораторной работе реализуется
+алгоритм MD5 с использованием языка программирования C# и технологии WPF.
+
+Хеш-функция преобразует входные данные произвольной длины в строку
+фиксированного размера. Даже незначительное изменение исходного текста
+приводит к полному изменению итогового значения хеша.
+
+Пример текста для тестирования:
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+0123456789
+
+Повторение данных для увеличения размера файла:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+Duis aute irure dolor in reprehenderit in voluptate velit esse.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa.
