@@ -1,0 +1,173 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "REST API with Swagger UI",
+        "title": "GO11_01 REST API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "paths": {
+        "/Celebrities": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Celebrities"
+                ],
+                "summary": "Create celebrity",
+                "parameters": [
+                    {
+                        "description": "Celebrity",
+                        "name": "celebrity",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/main.Celebrity"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/main.Celebrity"
+                        }
+                    }
+                }
+            }
+        },
+        "/Celebrities/All": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Celebrities"
+                ],
+                "summary": "Get all celebrities",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/main.Celebrity"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/Celebrities/{id}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Celebrities"
+                ],
+                "summary": "Get celebrity by ID",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Celebrity ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/main.Celebrity"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Celebrities"
+                ],
+                "summary": "Update celebrity",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Celebrity ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "Celebrity",
+                        "name": "celebrity",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/main.Celebrity"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/main.Celebrity"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Celebrities"
+                ],
+                "summary": "Delete celebrity",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Celebrity ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "main.Celebrity": {
+            "type": "object",
+            "properties": {
+                "fullName": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "nationality": {
+                    "type": "string"
+                },
+                "reqPhotoPath": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

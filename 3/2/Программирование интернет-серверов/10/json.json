@@ -1,0 +1,125 @@
+{
+  "info": {
+    "name": "GO10_01 GraphQL",
+    "_postman_id": "8c3a9b91-1111-2222-3333-444455556666",
+    "description": "GraphQL requests for GO10_01",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Celebrities",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"query\": \"query { celebrities { id fullName nationality reqPhotoPath } }\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/graphql",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["graphql"]
+        }
+      }
+    },
+    {
+      "name": "Get Celebrity By ID",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"query\": \"query { celebrity(id: 1) { id fullName nationality reqPhotoPath } }\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/graphql",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["graphql"]
+        }
+      }
+    },
+    {
+      "name": "Create Celebrity",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"query\": \"mutation { createCelebrity(id: 1, fullName: \\\"Brad Pitt\\\", nationality: \\\"USA\\\", reqPhotoPath: \\\"/img/brad.jpg\\\") { id fullName nationality reqPhotoPath } }\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/graphql",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["graphql"]
+        }
+      }
+    },
+    {
+      "name": "Update Celebrity",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"query\": \"mutation { updateCelebrity(id: 1, fullName: \\\"Brad Pitt Updated\\\", nationality: \\\"USA\\\", reqPhotoPath: \\\"/img/new.jpg\\\") { id fullName nationality reqPhotoPath } }\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/graphql",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["graphql"]
+        }
+      }
+    },
+    {
+      "name": "Delete Celebrity",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"query\": \"mutation { deleteCelebrity(id: 1) }\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/graphql",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["graphql"]
+        }
+      }
+    }
+  ]
+}
