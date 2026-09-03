@@ -14,8 +14,9 @@
       ],
 
 
+
 "LoadBalancerOptions": {
-    "Type": "WeightedLoadBalancer"
+    "Type": "RoundRobin"
 }
 
     }
