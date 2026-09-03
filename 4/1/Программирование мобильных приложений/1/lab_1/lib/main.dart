@@ -28,9 +28,9 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: .fromSeed(seedColor: Colors.red),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page LAB1'),
+      home: const MyHomePage(title: 'AB1'),
     );
   }
 }
@@ -66,6 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
+
+  
 
   @override
   Widget build(BuildContext context) {
