@@ -4,6 +4,9 @@ abstract class ComputerGame {
   int year;
   static int gameCount = 0;
 
+  
+  
+
   static void showGameCount() {
   print('Создано игр: $gameCount');
 }
@@ -40,7 +43,7 @@ abstract class ComputerGame {
     year = newYear;
   }
 
-  void launch([String mode = 'Одиночная игра']) {
+  void launch([String? mode]) {
     print('$title запущена. Режим: $mode');
   }
 

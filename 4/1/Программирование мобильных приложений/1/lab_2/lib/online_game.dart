@@ -37,7 +37,7 @@ class OnlineGame implements ComputerGame {
   }
 
   @override
-  void launch([String mode = 'Одиночная игра']) {
+  void launch([String? mode]) {
     // TODO: implement launch
   }
 

@@ -1,4 +1,4 @@
-abstract class Playable {
+abstract interface class Playable {
   void startGame();
   void endGame();
 }
