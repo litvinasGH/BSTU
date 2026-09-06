@@ -24,7 +24,7 @@ void main() {
 
   print('Название игры: ${game.title}');
 
-  Strategy game2 = Strategy.fromDefault();
+  Strategy game2 = Strategy.name(Strategy.fromDefault());
   game2.showInfo();
   print(game2.popularity);
 
@@ -80,6 +80,9 @@ void main() {
     'Shooter',
   };
 
+  for (String gen in genres) {
+    print(gen);
+  }
 
   genres.add('Adventure');
 
