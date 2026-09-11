@@ -51,5 +51,32 @@ class OnlineGame implements ComputerGame {
     // TODO: implement setHealth
   }
 
+  @override
+  void logAction(String message) {
+    // TODO: implement logAction
+  }
+
+  @override
+  void logGameEnd(String title) {
+    // TODO: implement logGameEnd
+  }
+
+  @override
+  void logGameStart(String title) {
+    // TODO: implement logGameStart
+  }
+
+  @override
+  int compareTo(ComputerGame other) {
+    // TODO: implement compareTo
+    throw UnimplementedError();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    // TODO: implement toJson
+    throw UnimplementedError();
+  }
+
   
 }
