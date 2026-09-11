@@ -1,4 +1,6 @@
-abstract class ComputerGame {
+import 'package:lab_2/mixin.dart';
+
+abstract class ComputerGame with GameLogger implements Comparable<ComputerGame> {
   String title;
   String developer;
   int year;
@@ -62,5 +64,15 @@ abstract class ComputerGame {
   }
 
   print('Здоровье установлено: $health');
+  
 }
+
+  @override
+  int compareTo(ComputerGame other) {
+    return year.compareTo(other.year);
+  }
+
+  Map<String, dynamic> toJson() {
+    return {'title': title, 'developer': developer, 'year': year};
+  }
 }

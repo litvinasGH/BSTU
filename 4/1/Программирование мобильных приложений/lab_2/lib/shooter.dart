@@ -22,4 +22,12 @@ class Shooter extends ComputerGame implements Playable {
   void isCool() {
     print("Cool");
   }
+
+  factory Shooter.fromJson(Map<String, dynamic> json) {
+    return Shooter(
+      json['title'] as String,
+      json['developer'] as String,
+      json['year'] as int,
+    );
+  }
 }
