@@ -1,5 +1,5 @@
 Future<String> loadGameData() async {
-  print('Начинаем загрузку данных...');
+  prin('Начинаем загрузку данных...');
 
   await Future.delayed(Duration(seconds: 2));
 
