@@ -10,7 +10,7 @@ class NewsFeed extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MyScaffold(
+    return MyScaffold(
       children: [
         NewsFeedHeader(),
         SizedBox(height: 30),

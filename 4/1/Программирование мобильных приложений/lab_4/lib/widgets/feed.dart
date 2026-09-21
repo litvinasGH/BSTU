@@ -22,6 +22,15 @@ class PostFeed extends StatelessWidget {
               Icon(Icons.more_horiz, color: Colors.grey, size: 25),
             ],
           ),
+          SizedBox(height: 15),
+          PostItem(
+            images: ['assets/404.png', 'assets/404.png', 'assets/404.png'],
+            avatar: 'assets/404.png',
+            name: 'Nilesh',
+            postedTime: '1h ago',
+            subgroup: "u8s",
+            text: "Discover adventure in patagonia's peaks or serenity provence's @hamlets - arrival",
+          ),
           PostItem(
             images: ['assets/404.png', 'assets/404.png', 'assets/404.png'],
             avatar: 'assets/404.png',

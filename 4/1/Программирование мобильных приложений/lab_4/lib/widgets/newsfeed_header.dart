@@ -17,6 +17,14 @@ class NewsFeedHeader extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withValues(alpha: 0.1),
+                      spreadRadius: -1,
+                      blurRadius: 1,
+                      offset: Offset(5, 6),
+                    ),
+                  ],
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
@@ -43,6 +51,14 @@ class NewsFeedHeader extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withValues(alpha: 0.3),
+                      spreadRadius: -1,
+                      blurRadius: 1,
+                      offset: Offset(5, 6),
+                    ),
+                  ],
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(5),
@@ -55,6 +71,14 @@ class NewsFeedHeader extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               border: Border.all(color: Colors.white, width: 3),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withValues(alpha: 0.3),
+                  spreadRadius: -1,
+                  blurRadius: 1,
+                  offset: Offset(5, 6),
+                ),
+              ],
             ),
             clipBehavior: Clip.antiAlias,
             child: ClipRRect(
