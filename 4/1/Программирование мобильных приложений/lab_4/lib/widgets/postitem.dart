@@ -81,7 +81,7 @@ class PostItem extends StatelessWidget {
               if (images.isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.only(top: 10),
-                  child: SizedBox(child: Gallery(images: images), height: 180),
+                  child: SizedBox(height: 180, child: Gallery(images: images)),
                 )
               else
                 SizedBox(height: 20),
@@ -124,7 +124,12 @@ class Gallery extends StatelessWidget {
       child: Stack(
         children: [
           // Центральная
-          Positioned(left: 160, top: 5, child: _image(images[0])),
+          Positioned(
+            left: 0,
+            right: 0,
+            top: 5,
+            child: Align(alignment: Alignment(0, 0), child: _image(images[0])),
+          ),
         ],
       ),
     );
@@ -140,16 +145,30 @@ class Gallery extends StatelessWidget {
         children: [
           // Левая
           Positioned(
-            left: 65,
-            top: 5,
-            child: Transform.rotate(angle: -0.10, child: _image(images[0])),
+            left: 0,
+            right: 0,
+            top: 15,
+            child: Transform.rotate(
+              angle: -0.10,
+              child: Align(
+                alignment: Alignment(-0.3, 0),
+                child: _image(images[0]),
+              ),
+            ),
           ),
 
           // Правая
           Positioned(
-            right: 65,
+            right: 0,
+            left: 0,
             top: 5,
-            child: Transform.rotate(angle: 0.10, child: _image(images[1])),
+            child: Transform.rotate(
+              angle: 0.10,
+              child: Align(
+                alignment: Alignment(0.3, 0),
+                child: _image(images[1]),
+              ),
+            ),
           ),
         ],
       ),
@@ -166,20 +185,39 @@ class Gallery extends StatelessWidget {
         children: [
           // Левая
           Positioned(
-            left: 65,
-            top: 5,
-            child: Transform.rotate(angle: -0.10, child: _image(images[0])),
+            left: 0,
+            top: 10,
+            right: 0,
+            child: Transform.rotate(
+              angle: -0.10,
+              child: Align(
+                alignment: Alignment(-0.9, 0),
+                child: _image(images[0]),
+              ),
+            ),
           ),
 
           // Правая
           Positioned(
-            right: 65,
+            right: 0,
+            left: 0,
             top: 5,
-            child: Transform.rotate(angle: 0.10, child: _image(images[2])),
+            child: Transform.rotate(
+              angle: 0.10,
+              child: Align(
+                alignment: Alignment(0.9, 0),
+                child: _image(images[2]),
+              ),
+            ),
           ),
 
           // Центральная
-          Positioned(left: 160, top: 20, child: _image(images[1])),
+          Positioned(
+            left: 0,
+            right: 0,
+            top: 30,
+            child: Align(alignment: Alignment(0, 0), child: _image(images[1])),
+          ),
         ],
       ),
     );
@@ -197,23 +235,39 @@ class Gallery extends StatelessWidget {
         children: [
           // Левая
           Positioned(
-            left: 65,
-            top: 5,
-            child: Transform.rotate(angle: -0.10, child: _image(images[0])),
+            left: 0,
+            top: 10,
+            right: 0,
+            child: Transform.rotate(
+              angle: -0.10,
+              child: Align(
+                alignment: Alignment(-0.9, 0),
+                child: _image(images[0]),
+              ),
+            ),
           ),
 
           // Правая
           Positioned(
-            right: 65,
+            right: 0,
+            left: 0,
             top: 5,
             child: Transform.rotate(
               angle: 0.10,
-              child: _imageWithOverlay(images[2], "+$remaining"),
+              child: Align(
+                alignment: Alignment(0.9, 0),
+                child: _imageWithOverlay(images[2], "+$remaining"),
+              ),
             ),
           ),
 
           // Центральная
-          Positioned(left: 160, top: 20, child: _image(images[1])),
+          Positioned(
+            left: 0,
+            right: 0,
+            top: 30,
+            child: Align(alignment: Alignment(0, 0), child: _image(images[1])),
+          ),
         ],
       ),
     );
@@ -229,33 +283,35 @@ class Gallery extends StatelessWidget {
 
   // Картинка с +N
   Widget _imageWithOverlay(String path, String text) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(14),
-      child: Stack(
-        children: [
-          Image.asset(path, width: 145, height: 190, fit: BoxFit.cover),
+    return FractionallySizedBox(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(14),
+        child: Stack(
+          children: [
+            Image.asset(path, width: 145, height: 190, fit: BoxFit.cover),
 
-          // Затемнение
-          Container(
-            width: 145,
-            height: 190,
-            color: Colors.black.withValues(alpha: 0.45),
-          ),
+            // Затемнение
+            Container(
+              width: 145,
+              height: 190,
+              color: Colors.black.withValues(alpha: 0.45),
+            ),
 
-          // +N
-          Positioned.fill(
-            child: Center(
-              child: Text(
-                text,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
+            // +N
+            Positioned.fill(
+              child: Center(
+                child: Text(
+                  text,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 32,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

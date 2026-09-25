@@ -3,7 +3,14 @@ import 'package:flutter/material.dart';
 class Story extends StatelessWidget {
   final String image1;
   final String litimage;
-  const Story({super.key, required this.image1, required this.litimage});
+  const Story({
+    super.key,
+    required this.image1,
+    required this.litimage,
+    required this.isAvatarOn,
+  });
+
+  final bool isAvatarOn;
 
   @override
   Widget build(BuildContext context) {
@@ -23,21 +30,22 @@ class Story extends StatelessWidget {
                 child: Image.asset(image1, fit: BoxFit.cover),
               ),
             ),
-            Positioned(
-              top: 8,
-              left: 8,
-              child: Container(
-                padding: EdgeInsets.all(2),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                ),
-                child: CircleAvatar(
-                  radius: 12,
-                  backgroundImage: AssetImage(litimage),
+            if (isAvatarOn)
+              Positioned(
+                top: 8,
+                left: 8,
+                child: Container(
+                  padding: EdgeInsets.all(2),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                  ),
+                  child: CircleAvatar(
+                    radius: 12,
+                    backgroundImage: AssetImage(litimage),
+                  ),
                 ),
               ),
-            ),
           ],
         ),
       ),

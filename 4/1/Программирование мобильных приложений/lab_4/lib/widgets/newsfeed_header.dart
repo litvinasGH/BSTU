@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screens/profile.dart';
+
 class NewsFeedHeader extends StatelessWidget {
   const NewsFeedHeader({super.key});
 
@@ -67,23 +69,35 @@ class NewsFeedHeader extends StatelessWidget {
               ),
             ],
           ),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: Colors.white, width: 3),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withValues(alpha: 0.3),
-                  spreadRadius: -1,
-                  blurRadius: 1,
-                  offset: Offset(5, 6),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfileScreen()),
+              );
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: Colors.white, width: 3),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withValues(alpha: 0.3),
+                    spreadRadius: -1,
+                    blurRadius: 1,
+                    offset: Offset(5, 6),
+                  ),
+                ],
+              ),
+              clipBehavior: Clip.antiAlias,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset(
+                  'assets/mainavatar.jpg',
+                  height: 30,
+                  width: 30,
                 ),
-              ],
-            ),
-            clipBehavior: Clip.antiAlias,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset('assets/404.png', height: 30, width: 30),
+              ),
             ),
           ),
         ],
