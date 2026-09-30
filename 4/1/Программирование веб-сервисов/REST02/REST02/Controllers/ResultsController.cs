@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using ResultsAuthenticate;
 using ResultsCollection;
 
 namespace REST01.Controllers;
@@ -8,13 +10,41 @@ namespace REST01.Controllers;
 public class ResultsController : ControllerBase
 {
     private readonly ResultsCollection.Results _results;
+    private readonly Authenticate _authenticate;
 
-    public ResultsController(ResultsCollection.Results results)
+    public ResultsController(
+        ResultsCollection.Results results,
+        Authenticate authenticate)
     {
         _results = results;
+        _authenticate = authenticate;
+    }
+
+    // POST: api/Results/SignIn
+    [AllowAnonymous]
+    [HttpPost("SignIn")]
+    public IActionResult SignIn([FromBody] SignInRequest request)
+    {
+        if (string.IsNullOrWhiteSpace(request.Login) ||
+            string.IsNullOrWhiteSpace(request.Password))
+        {
+            return BadRequest();
+        }
+
+        string? token = _authenticate.SignIn(
+            request.Login,
+            request.Password);
+
+        if (token == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(new { token });
     }
 
     // GET: api/Results
+    [Authorize(Roles = "READER,WRITER")]
     [HttpGet]
     public IActionResult GetAll()
     {
@@ -29,6 +59,7 @@ public class ResultsController : ControllerBase
     }
 
     // GET: api/Results/1
+    [Authorize(Roles = "READER,WRITER")]
     [HttpGet("{id:int}")]
     public IActionResult Get(int id)
     {
@@ -43,6 +74,7 @@ public class ResultsController : ControllerBase
     }
 
     // POST: api/Results
+    [Authorize(Roles = "WRITER")]
     [HttpPost]
     public IActionResult Post([FromBody] ResultRequest request)
     {
@@ -60,6 +92,7 @@ public class ResultsController : ControllerBase
     }
 
     // PUT: api/Results/1
+    [Authorize(Roles = "WRITER")]
     [HttpPut("{id:int}")]
     public IActionResult Put(int id, [FromBody] ResultRequest request)
     {
@@ -79,6 +112,7 @@ public class ResultsController : ControllerBase
     }
 
     // DELETE: api/Results/1
+    [Authorize(Roles = "WRITER")]
     [HttpDelete("{id:int}")]
     public IActionResult Delete(int id)
     {
@@ -96,4 +130,10 @@ public class ResultsController : ControllerBase
 public class ResultRequest
 {
     public string Value { get; set; } = string.Empty;
+}
+
+public class SignInRequest
+{
+    public string Login { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
 }
