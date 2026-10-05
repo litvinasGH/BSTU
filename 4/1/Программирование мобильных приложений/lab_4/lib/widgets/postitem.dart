@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../screens/profile.dart';
 import 'formatted_text.dart';
 
 class PostItem extends StatelessWidget {
@@ -46,9 +47,20 @@ class PostItem extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(right: 10.0),
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage(avatar),
-                      radius: 25,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                ProfileScreen(name: name, image: avatar),
+                          ),
+                        );
+                      },
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage(avatar),
+                        radius: 25,
+                      ),
                     ),
                   ),
                   Column(

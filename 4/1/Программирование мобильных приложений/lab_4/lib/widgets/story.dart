@@ -34,15 +34,24 @@ class Story extends StatelessWidget {
               Positioned(
                 top: 8,
                 left: 8,
-                child: Container(
-                  padding: EdgeInsets.all(2),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
-                  ),
-                  child: CircleAvatar(
-                    radius: 12,
-                    backgroundImage: AssetImage(litimage),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/profile',
+                      arguments: {'name': "NO_NAME", 'image': litimage},
+                    );
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                    ),
+                    child: CircleAvatar(
+                      radius: 12,
+                      backgroundImage: AssetImage(litimage),
+                    ),
                   ),
                 ),
               ),

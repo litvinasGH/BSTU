@@ -1,5 +1,18 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter/services.dart';
+
+const platform = MethodChannel('gyroscope');
+
+Future<void> getGyroscope() async {
+  try {
+    final result = await platform.invokeMethod('getGyroscope');
+    print('Гироскоп: $result');
+  } on PlatformException catch (e) {
+    print('Ошибка: ${e.message}');
+  }
+}
+
 class Profileheader extends StatelessWidget {
   const new({super.key});
 
@@ -22,24 +35,34 @@ class Profileheader extends StatelessWidget {
           ),
           Row(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 6,
-                    horizontal: 15,
+              InkWell(
+                onTap: () {
+                  getGyroscope();
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Text(
-                    "Edit",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 6,
+                      horizontal: 15,
+                    ),
+                    child: Text(
+                      "Edit",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               ),
               SizedBox(width: 15),
-              Icon(Icons.menu),
+              InkWell(
+                onTap: () {
+                  Navigator.pop(context, 'Hi, Darlene');
+                },
+                child: Icon(Icons.menu),
+              ),
             ],
           ),
         ],
