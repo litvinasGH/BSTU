@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lab_4/screens/newsfeed.dart';
 
+import 'screens/profile.dart';
+
 void main() {
   runApp(const MainApp());
 }
@@ -10,10 +12,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: NewsFeed(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const NewsFeed(),
+        '/profile': (context) => ProfileScreen(),
+      },
     );
   }
 }
-

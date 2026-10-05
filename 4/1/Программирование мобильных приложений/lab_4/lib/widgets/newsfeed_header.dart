@@ -70,11 +70,20 @@ class NewsFeedHeader extends StatelessWidget {
             ],
           ),
           InkWell(
-            onTap: () {
-              Navigator.push(
+            onTap: () async {
+              final result = await Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ProfileScreen()),
+                MaterialPageRoute(
+                  builder: (context) => ProfileScreen(
+                    name: "Darlene Beats",
+                    image: 'assets/mainavatar.jpg',
+                  ),
+                ),
               );
+
+              if (result != null) {
+                print('Hi $result');
+              }
             },
             child: Container(
               decoration: BoxDecoration(

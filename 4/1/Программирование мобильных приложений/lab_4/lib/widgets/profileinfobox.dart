@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class ProfileInfoBox extends StatelessWidget {
-  const new({super.key});
+  new({super.key, required this.image, required this.name});
+
+  String name;
+  String image;
 
   @override
   Widget build(BuildContext context) {
@@ -12,16 +16,14 @@ class ProfileInfoBox extends StatelessWidget {
     const TextStyle undernumstyle = TextStyle(color: Colors.grey);
     return Padding(
       padding: const EdgeInsets.only(top: 50),
-      child: const Column(
+      child: Column(
         children: [
-          CircleAvatar(
-            backgroundImage: AssetImage('assets/mainavatar.jpg'),
-            radius: 65,
-          ),
+          CircleAvatar(backgroundImage: AssetImage(image), radius: 65),
+
           Padding(
             padding: EdgeInsets.only(top: 20),
             child: Text(
-              "Darlene Beats",
+              name,
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
             ),
           ),
