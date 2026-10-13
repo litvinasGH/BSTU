@@ -2,8 +2,16 @@ import 'package:flutter/material.dart';
 
 import '../screens/profile.dart';
 
-class NewsFeedHeader extends StatelessWidget {
+class NewsFeedHeader extends StatefulWidget {
   const NewsFeedHeader({super.key});
+
+  @override
+  State<NewsFeedHeader> createState() => _NewsFeedHeaderState();
+}
+
+class _NewsFeedHeaderState extends State<NewsFeedHeader> {
+  // 1. Создаем переменную для хранения текста (изначально "3")
+  String _notificationCount = "";
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +32,7 @@ class NewsFeedHeader extends StatelessWidget {
                       color: Colors.grey.withValues(alpha: 0.1),
                       spreadRadius: -1,
                       blurRadius: 1,
-                      offset: Offset(5, 6),
+                      offset: const Offset(5, 6),
                     ),
                   ],
                 ),
@@ -37,9 +45,10 @@ class NewsFeedHeader extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       const Icon(Icons.notifications),
+
                       Text(
                         "3",
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),
@@ -58,16 +67,20 @@ class NewsFeedHeader extends StatelessWidget {
                       color: Colors.grey.withValues(alpha: 0.3),
                       spreadRadius: -1,
                       blurRadius: 1,
-                      offset: Offset(5, 6),
+                      offset: const Offset(5, 6),
                     ),
                   ],
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(5),
-                  child: const Icon(Icons.message, color: Colors.grey),
+                child: const Padding(
+                  padding: EdgeInsets.all(5),
+                  child: Icon(Icons.message, color: Colors.grey),
                 ),
               ),
             ],
+          ),
+          Text(
+            _notificationCount,
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
           InkWell(
             onTap: () async {
@@ -81,8 +94,11 @@ class NewsFeedHeader extends StatelessWidget {
                 ),
               );
 
+              // 3. Если результат вернулся и это строка, обновляем состояние
               if (result != null) {
-                print('Hi $result');
+                setState(() {
+                  _notificationCount = result.toString();
+                });
               }
             },
             child: Container(
@@ -94,7 +110,7 @@ class NewsFeedHeader extends StatelessWidget {
                     color: Colors.grey.withValues(alpha: 0.3),
                     spreadRadius: -1,
                     blurRadius: 1,
-                    offset: Offset(5, 6),
+                    offset: const Offset(5, 6),
                   ),
                 ],
               ),
