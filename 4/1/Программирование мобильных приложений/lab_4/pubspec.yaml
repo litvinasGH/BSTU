@@ -9,11 +9,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  image_picker: ^1.2.4
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
-  image_picker: ^1.1.2
+  flutter_launcher_icons: ^0.14.1
 
 flutter:
   uses-material-design: true
@@ -21,3 +22,8 @@ flutter:
     - assets/
     - assets/splitanimage/
     - assets/postsAndStor/
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icons/ico.jpg"

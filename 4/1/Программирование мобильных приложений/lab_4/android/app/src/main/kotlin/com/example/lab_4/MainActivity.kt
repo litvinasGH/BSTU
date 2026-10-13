@@ -56,7 +56,6 @@ class MainActivity : FlutterActivity() {
                 }
             }
 
-        // 2. Канал для открытия веб-браузера
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, BROWSER_CHANNEL)
             .setMethodCallHandler { call, result ->
                 if (call.method == "openBrowser") {
