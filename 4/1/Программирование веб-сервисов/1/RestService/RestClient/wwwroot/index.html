@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>REST-сервис</title>
+</head>
+
+<body>
+
+    <h1>Демонстрация REST-сервиса</h1>
+
+    <div class="block">
+        <h3>GET — получить RESULT</h3>
+
+        <button onclick="getResult()">
+            GET
+        </button>
+    </div>
+
+
+    <div class="block">
+        <h3>POST — изменить RESULT</h3>
+
+        <input type="number"
+               id="resultValue"
+               placeholder="RESULT">
+
+        <button onclick="postResult()">
+            POST
+        </button>
+    </div>
+
+
+    <div class="block">
+        <h3>PUT — PUSH в стек</h3>
+
+        <input type="number"
+               id="addValue"
+               placeholder="ADD">
+
+        <button onclick="putValue()">
+            PUT
+        </button>
+    </div>
+
+
+    <div class="block">
+        <h3>DELETE — POP из стека</h3>
+
+        <button onclick="deleteValue()">
+            DELETE
+        </button>
+    </div>
+
+
+    <div id="response">
+        Ответ сервиса появится здесь
+    </div>
+
+
+    <script>const serviceUrl =
+            "http://localhost:8080/RestService/test.KVV";
+
+
+        async function sendRequest(method, url) {
+
+            try {
+
+                const response = await fetch(url, {
+                    method: method
+                });
+
+                const text = await response.text();
+
+                document.getElementById("response").innerText =
+                    "HTTP " + response.status + "\n" + text;
+
+            }
+            catch (error) {
+
+                document.getElementById("response").innerText =
+                    "Ошибка: " + error;
+
+            }
+        }
+
+
+        function getResult() {
+
+            sendRequest(
+                "GET",
+                serviceUrl
+            );
+        }
+
+
+        function postResult() {
+
+            const value =
+                document.getElementById("resultValue").value;
+
+            if (value === "") {
+                alert("Введите RESULT");
+                return;
+            }
+
+            sendRequest(
+                "POST",
+                serviceUrl + "?RESULT=" + value
+            );
+        }
+
+
+        function putValue() {
+
+            const value =
+                document.getElementById("addValue").value;
+
+            if (value === "") {
+                alert("Введите ADD");
+                return;
+            }
+
+            sendRequest(
+                "PUT",
+                serviceUrl + "?ADD=" + value
+            );
+        }
+
+
+        function deleteValue() {
+
+            sendRequest(
+                "DELETE",
+                serviceUrl
+            );
+        }</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "REST01": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5088"
+    }
+  }
+}
