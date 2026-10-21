@@ -1,0 +1,109 @@
+services:
+  # =====================================
+  # Задание 1. WS01-01: серверный стек
+  # =====================================
+
+  ws01-01-a:
+    image: ws01-01:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DOTNET_VERSION: ${DOTNET_VERSION}
+        PROJECT_NAME: WS01_01
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+    expose:
+      - "8080"
+
+  ws01-01-b:
+    image: ws01-01:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DOTNET_VERSION: ${DOTNET_VERSION}
+        PROJECT_NAME: WS01_01
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+    expose:
+      - "8080"
+
+
+  # =====================================
+  # Задание 2. Gateway: Sticky Session
+  # =====================================
+
+  sticky-gateway:
+    image: sticky-gateway:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DOTNET_VERSION: ${DOTNET_VERSION}
+        PROJECT_NAME: StickyGateway
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+
+      ReverseProxy__Clusters__ws01Cluster__Destinations__instance1__Address: http://ws01-01-a:8080/
+      ReverseProxy__Clusters__ws01Cluster__Destinations__instance2__Address: http://ws01-01-b:8080/
+    ports:
+      - "5100:8080"
+    depends_on:
+      - ws01-01-a
+      - ws01-01-b
+
+
+  # =====================================
+  # Задание 3. WS01-02: стек в cookie
+  # =====================================
+
+  ws01-02-a:
+    image: ws01-02:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DOTNET_VERSION: ${DOTNET_VERSION}
+        PROJECT_NAME: WS01_02
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+    expose:
+      - "8080"
+
+  ws01-02-b:
+    image: ws01-02:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DOTNET_VERSION: ${DOTNET_VERSION}
+        PROJECT_NAME: WS01_02
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+    expose:
+      - "8080"
+
+
+  # =====================================
+  # Задание 4. Gateway: Round Robin
+  # =====================================
+
+  roundrobin-gateway:
+    image: roundrobin-gateway:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DOTNET_VERSION: ${DOTNET_VERSION}
+        PROJECT_NAME: RoundRobinGateway
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+
+      ReverseProxy__Clusters__ws01_02_cluster__Destinations__server1__Address: http://ws01-02-a:8080/
+      ReverseProxy__Clusters__ws01_02_cluster__Destinations__server2__Address: http://ws01-02-b:8080/
+    ports:
+      - "5300:8080"
+    depends_on:
+      - ws01-02-a
+      - ws01-02-b
