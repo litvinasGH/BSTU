@@ -1,0 +1,20 @@
+ARG DOTNET_VERSION=8.0
+
+FROM mcr.microsoft.com/dotnet/runtime-deps:${DOTNET_VERSION} AS final
+
+ARG PREBUILT_DIR
+ARG EXECUTABLE_NAME
+
+WORKDIR /app
+
+COPY ${PREBUILT_DIR}/ ./
+COPY ${PREBUILT_DIR}/wwwroot/ ./wwwroot/
+
+ENV ASPNETCORE_URLS=http://+:8080
+ENV APP_NAME=${EXECUTABLE_NAME}
+
+EXPOSE 8080
+
+RUN chmod +x /app/${EXECUTABLE_NAME} 2>/dev/null || true
+
+ENTRYPOINT ["sh", "-c", "exec ./$APP_NAME"]

@@ -34,6 +34,16 @@ class GameRecord {
     };
   }
 
+  Map<String, Object?> toJson() {
+    return {
+      'id': id,
+      'title': title,
+      'developer': developer,
+      'year': year,
+      'type': type,
+    };
+  }
+
   factory GameRecord.fromMap(Map<String, Object?> map) {
     return GameRecord(
       id: map['id'] as int?,
@@ -43,4 +53,27 @@ class GameRecord {
       type: map['type'] as String,
     );
   }
+
+  factory GameRecord.fromJson(Map<String, Object?> json) {
+    return GameRecord(
+      id: json['id'] as int?,
+      title: json['title'] as String,
+      developer: json['developer'] as String,
+      year: json['year'] as int,
+      type: json['type'] as String,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is GameRecord &&
+        other.id == id &&
+        other.title == title &&
+        other.developer == developer &&
+        other.year == year &&
+        other.type == type;
+  }
+
+  @override
+  int get hashCode => Object.hash(id, title, developer, year, type);
 }

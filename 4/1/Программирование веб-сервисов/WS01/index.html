@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REST-сервис — лабораторная работа №1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 750px;
+            margin: 30px auto;
+            padding: 0 16px;
+            background-color: grey;
+        }
+
+        .block {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        select,
+        input,
+        button {
+            padding: 8px;
+            margin: 4px;
+        }
+
+        #response {
+            background: #f2f2f2;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Демонстрация REST-сервиса</h1>
+    <div class="block">
+        <h3>Выбор задания</h3>
+
+        <select id="task" onchange="changeTask()">
+            <option value="ws01-01">WS01-01 — Sticky Session</option>
+            <option value="ws01-02">WS01-02 — Round Robin</option>
+        </select>
+
+        <p id="taskDescription">
+            Проверка Sticky Session через API Gateway.
+        </p>
+        <p>Адрес: <span id="serviceAddress"></span></p>
+    </div>
+
+    <div class="block">
+        <h3>GET — получить RESULT</h3>
+        <button onclick="getResult()">GET</button>
+    </div>
+
+    <div class="block">
+        <h3>POST — изменить RESULT</h3>
+        <input type="number" id="resultValue" placeholder="RESULT">
+        <button onclick="postResult()">POST</button>
+    </div>
+
+    <div class="block">
+        <h3>PUT — PUSH в стек</h3>
+        <input type="number" id="addValue" placeholder="ADD">
+        <button onclick="putValue()">PUT</button>
+    </div>
+
+    <div class="block">
+        <h3>DELETE — POP из стека</h3>
+        <button onclick="deleteValue()">DELETE</button>
+    </div>
+
+    <div class="block">
+        <h3>Проверка балансировщика</h3>
+        <button onclick="checkBalancer()">Отправить 6 GET-запросов</button>
+    </div>
+
+    <div id="response">Ответ сервиса появится здесь</div>
+
+    <script>
+        const tasks = {
+            "ws01-01": {
+                url: "http://localhost:5100/stack",
+                description: "WS01-01: балансировка со Sticky Session."
+            },
+            "ws01-02": {
+                url: "http://localhost:5300/stack",
+                description: "WS01-02: балансировка Round Robin."
+            }
+        };
+
+        function changeTask() {
+            const task = tasks[document.getElementById("task").value];
+
+            document.getElementById("taskDescription").textContent =
+                task.description;
+
+            document.getElementById("serviceAddress").textContent =
+                task.url;
+
+            document.getElementById("response").textContent =
+                "Выбрано задание. Можно отправлять запросы.";
+        }
+
+        function getServiceUrl() {
+            return tasks[document.getElementById("task").value].url;
+        }
+
+        async function sendRequest(method, url, body = null) {
+            try {
+                const options = {
+                    method: method,
+                    credentials: "include"
+                };
+
+                if (body !== null) {
+                    options.headers = {
+                        "Content-Type": "application/json"
+                    };
+                    options.body = JSON.stringify(body);
+                }
+
+                const response = await fetch(url, options);
+                const text = await response.text();
+
+                let result = text;
+                let parsed = null;
+                try {
+                    parsed = JSON.parse(text);
+                    result = JSON.stringify(parsed, null, 2);
+                } catch { }
+
+                const backendHeader =
+                    response.headers.get("X-Backend-Instance") ?? "unknown";
+                const backend =
+                    parsed && parsed.INSTANCE
+                        ? parsed.INSTANCE
+                        : backendHeader;
+
+                document.getElementById("response").textContent =
+                    "HTTP " + response.status +
+                    "\nСервер/экземпляр: " + backend +
+                    "\n" + result;
+
+            } catch (error) {
+                document.getElementById("response").textContent =
+                    "Ошибка: " + error.message +
+                    "\nПроверь, запущен ли Docker Compose и разрешён ли CORS.";
+            }
+        }
+
+        function getResult() {
+            sendRequest("GET", getServiceUrl());
+        }
+
+        function postResult() {
+            const value = document.getElementById("resultValue").value;
+
+            if (value === "") {
+                alert("Введите RESULT");
+                return;
+            }
+
+            sendRequest("POST", getServiceUrl(), {
+                RESULT: Number(value)
+            });
+        }
+
+        function putValue() {
+            const value = document.getElementById("addValue").value;
+
+            if (value === "") {
+                alert("Введите ADD");
+                return;
+            }
+
+            sendRequest(
+                "PUT",
+                getServiceUrl() + "?ADD=" + encodeURIComponent(value)
+            );
+        }
+
+        function deleteValue() {
+            sendRequest("DELETE", getServiceUrl());
+        }
+
+        async function checkBalancer() {
+            const output = document.getElementById("response");
+            output.textContent = "Проверка балансировщика...\n";
+
+            for (let i = 1; i <= 6; i++) {
+                try {
+                    const response = await fetch(getServiceUrl(), {
+                        method: "GET",
+                        credentials: "include"
+                    });
+
+                    const backendHeader =
+                        response.headers.get("X-Backend-Instance");
+                    const text = await response.text();
+                    let parsed = null;
+                    try {
+                        parsed = JSON.parse(text);
+                    } catch { }
+
+                    const backend =
+                        parsed && parsed.INSTANCE
+                            ? parsed.INSTANCE
+                            : (backendHeader || "неизвестно");
+
+                    output.textContent +=
+                        i + ". HTTP " + response.status +
+                        " | Сервер/экземпляр: " + backend +
+                        " | " + text + "\n";
+
+                } catch (error) {
+                    output.textContent +=
+                        i + ". Ошибка: " + error.message + "\n";
+                    break;
+                }
+            }
+        }
+
+        changeTask();
+    </script>
+
+</body>
+
+</html>

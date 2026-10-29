@@ -1,6 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.AddControllers();
 
 builder.Services.AddDistributedMemoryCache();
@@ -16,6 +15,16 @@ builder.Services.AddSession(options =>
 var app = builder.Build();
 
 // app.UseHttpsRedirection();
+
+var instanceName = Environment.GetEnvironmentVariable("INSTANCE_NAME") ?? "ws01-01-unknown";
+app.Use(async (context, next) =>
+{
+    context.Response.Headers["X-Backend-Instance"] = instanceName;
+    await next();
+});
+
+app.UseStaticFiles();
+app.UseDefaultFiles();
 
 app.UseRouting();
 

@@ -17,3 +17,7 @@
 	path = 4/1/Распределённые и облачные технологии/4lab
 	url = git@github.com:litvinasGH/Distributed-and-cloud-technologies-1-lab.git
 	branch = lab4
+[submodule "4/1/Распределённые и облачные технологии/5lab"]
+	path = 4/1/Распределённые и облачные технологии/5lab
+	url = git@github.com:litvinasGH/Distributed-and-cloud-technologies-1-lab.git
+	branch = lab5

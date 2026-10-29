@@ -1,7 +1,12 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
+import '../computer_game.dart';
+import '../rpg.dart';
+import '../shooter.dart';
+import '../strategy.dart';
 import 'gamerecord.dart';
+import 'sort_field.dart';
 
 class GameDatabase {
   GameDatabase._init();
@@ -43,29 +48,19 @@ class GameDatabase {
   Future<int> createGame(GameRecord game) async {
     final db = await instance.database;
 
-    final values = game.toMap()..remove('id');
-
-    return db.insert('games', values);
+    return db.insert('games', game.toMap()..remove('id'));
   }
 
   Future<List<GameRecord>> getGames({
     String search = '',
-    String sortBy = 'title',
-    bool ascending = true,
+    List<SortField> sortFields = const <SortField>[],
   }) async {
     final db = await instance.database;
 
-    const allowedColumns = {'title', 'developer', 'year', 'type'};
-
-    if (!allowedColumns.contains(sortBy)) {
-      sortBy = 'title';
-    }
-
-    final orderBy = '$sortBy ${ascending ? 'ASC' : 'DESC'}';
     final query = search.trim();
 
     final rows = query.isEmpty
-        ? await db.query('games', orderBy: orderBy)
+        ? await db.query('games', orderBy: _orderBy(sortFields))
         : await db.query(
             'games',
             where: '''
@@ -75,10 +70,18 @@ class GameDatabase {
               OR CAST(year AS TEXT) LIKE ?
             ''',
             whereArgs: List.filled(4, '%$query%'),
-            orderBy: orderBy,
+            orderBy: _orderBy(sortFields),
           );
 
     return rows.map(GameRecord.fromMap).toList();
+  }
+
+  Future<GameRecord?> getGame(int id) async {
+    final db = await instance.database;
+
+    final rows = await db.query('games', where: 'id = ?', whereArgs: [id], limit: 1);
+
+    return rows.isEmpty ? null : GameRecord.fromMap(rows.first);
   }
 
   Future<int> updateGame(GameRecord game) async {
@@ -87,15 +90,35 @@ class GameDatabase {
     }
 
     final db = await instance.database;
-    final values = game.toMap()..remove('id');
 
-    return db.update('games', values, where: 'id = ?', whereArgs: [game.id]);
+    return db.update('games', game.toMap()..remove('id'), where: 'id = ?', whereArgs: [game.id]);
   }
 
   Future<int> deleteGame(int id) async {
     final db = await instance.database;
 
     return db.delete('games', where: 'id = ?', whereArgs: [id]);
+  }
+
+  Future<void> seedIfEmpty() async {
+    final db = await instance.database;
+
+    final total = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM games')) ?? 0;
+
+    if (total > 0) {
+      return;
+    }
+
+    final List<ComputerGame> games = <ComputerGame>[
+      Shooter('Counter-Strike 2', 'Valve', 2023),
+      Strategy('Civilization VI', 'Firaxis Games', 2016),
+      Shooter('DOOM Eternal', 'id Software', 2020),
+      Rpg('Skyrim', 'Беседка', 2012),
+    ];
+
+    for (final ComputerGame game in games) {
+      await createGame(GameRecord.fromComputerGame(game));
+    }
   }
 
   Future<void> close() async {
@@ -105,5 +128,21 @@ class GameDatabase {
       await db.close();
       _database = null;
     }
+  }
+
+  Future<void> dropDatabase() async {
+    await close();
+
+    await deleteDatabase(join(await getDatabasesPath(), 'games.db'));
+  }
+
+  String _orderBy(List<SortField> sortFields) {
+    final allowed = sortFields.where((SortField field) => SortField.isAllowed(field.column)).toList();
+
+    if (allowed.isEmpty) {
+      return 'title ASC';
+    }
+
+    return allowed.map((SortField field) => field.orderExpression).join(', ');
   }
 }
