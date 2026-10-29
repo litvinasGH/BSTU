@@ -7,6 +7,9 @@ builder.Services
 
 var app = builder.Build();
 
+app.UseStaticFiles();
+app.UseDefaultFiles();
+
 app.MapReverseProxy();
 
 app.Run();

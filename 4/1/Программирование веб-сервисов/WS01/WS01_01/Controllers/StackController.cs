@@ -9,7 +9,9 @@ namespace WS01_01.Controllers;
 public class StackController : ControllerBase
 {
     private const string StackKey = "Lab01.Stack";
-    private const string ResultKey = "Lab01.BaseResult";
+    private static int ResultGlobal = 0;
+
+    private string GetInstanceName() => Environment.GetEnvironmentVariable("INSTANCE_NAME") ?? "unknown";
 
     // GET /stack
     [HttpGet]
@@ -19,7 +21,8 @@ public class StackController : ControllerBase
 
         return Ok(new ResultResponse
         {
-            Result = CalculateResult(stack)
+            Result = CalculateResult(stack),
+            Instance = GetInstanceName()
         });
     }
 
@@ -28,13 +31,14 @@ public class StackController : ControllerBase
     [HttpPost]
     public IActionResult Post([FromBody] ResultRequest request)
     {
-        HttpContext.Session.SetInt32(ResultKey, request.Result);
+        ResultGlobal = request.Result;
 
         var stack = LoadStack();
 
         return Ok(new ResultResponse
         {
-            Result = CalculateResult(stack)
+            Result = CalculateResult(stack),
+            Instance = GetInstanceName()
         });
     }
 
@@ -49,7 +53,8 @@ public class StackController : ControllerBase
 
         return Ok(new ResultResponse
         {
-            Result = CalculateResult(stack)
+            Result = CalculateResult(stack),
+            Instance = GetInstanceName()
         });
     }
 
@@ -72,7 +77,8 @@ public class StackController : ControllerBase
 
         return Ok(new ResultResponse
         {
-            Result = CalculateResult(stack)
+            Result = CalculateResult(stack),
+            Instance = GetInstanceName()
         });
     }
 
@@ -98,10 +104,9 @@ public class StackController : ControllerBase
         HttpContext.Session.SetString(StackKey, json);
     }
 
-    private long CalculateResult(Stack<int> stack)
+    private static long CalculateResult(Stack<int> stack)
     {
-        var baseResult =
-            HttpContext.Session.GetInt32(ResultKey) ?? 0;
+        var baseResult = ResultGlobal;
 
         var top = stack.TryPeek(out var value) ? value : 0;
 
@@ -119,6 +124,9 @@ public sealed class ResultResponse
 {
     [JsonPropertyName("RESULT")]
     public long Result { get; set; }
+
+    [JsonPropertyName("INSTANCE")]
+    public string Instance { get; set; } = string.Empty;
 }
 
 public sealed class ErrorResponse

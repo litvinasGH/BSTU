@@ -10,18 +10,21 @@ public class StackController : ControllerBase
 {
     private const string CookieName = "WS01_02.State";
 
+    private static int ResultGlobal;
+
+    private string GetInstanceName() => Environment.GetEnvironmentVariable("INSTANCE_NAME") ?? "unknown";
+
     // GET /stack
     [HttpGet]
     public IActionResult Get()
     {
         var state = ReadState();
 
-        if (!Request.Cookies.ContainsKey(CookieName))
-            WriteState(state);
 
         return Ok(new ResultResponse
         {
-            Result = CalculateResult(state)
+            Result = CalculateResult(state),
+            Instance = GetInstanceName()
         });
     }
 
@@ -30,14 +33,12 @@ public class StackController : ControllerBase
     [HttpPost]
     public IActionResult Post([FromBody] ResultRequest request)
     {
-        var state = ReadState();
-        state.BaseResult = request.Result;
-
-        WriteState(state);
+        ResultGlobal = request.Result;
 
         return Ok(new ResultResponse
         {
-            Result = CalculateResult(state)
+            Result = ResultGlobal,
+            Instance = GetInstanceName()
         });
     }
 
@@ -53,7 +54,8 @@ public class StackController : ControllerBase
 
         return Ok(new ResultResponse
         {
-            Result = CalculateResult(state)
+            Result = ResultGlobal,
+            Instance = GetInstanceName()
         });
     }
 
@@ -77,7 +79,8 @@ public class StackController : ControllerBase
 
         return Ok(new ResultResponse
         {
-            Result = CalculateResult(state)
+            Result = ResultGlobal,
+            Instance = GetInstanceName()
         });
     }
 
@@ -121,13 +124,12 @@ public class StackController : ControllerBase
             ? state.StackTopFirst[0]
             : 0;
 
-        return (long)state.BaseResult + top;
+        return (long)ResultGlobal + top;
     }
 }
 
 public sealed class ClientState
 {
-    public int BaseResult { get; set; }
 
     public List<int> StackTopFirst { get; set; } = new();
 }
@@ -142,4 +144,7 @@ public sealed class ResultResponse
 {
     [JsonPropertyName("RESULT")]
     public long Result { get; set; }
+
+    [JsonPropertyName("INSTANCE")]
+    public string Instance { get; set; } = string.Empty;
 }
