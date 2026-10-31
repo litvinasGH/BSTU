@@ -1,0 +1,6 @@
+{
+	"Celebrities": {
+		"PhotosFolder": "C:/Users/litvi/Documents/BSTU/2/2/Прога в инет/all/ASPA/ASPA006_1/Photos",
+		"ConnectionString": "Data Source=ArchFanBTW\\MYDB;Initial Catalog=CelebrityDB;Integrated Security=True;TrustServerCertificate=True;"
+	}
+}

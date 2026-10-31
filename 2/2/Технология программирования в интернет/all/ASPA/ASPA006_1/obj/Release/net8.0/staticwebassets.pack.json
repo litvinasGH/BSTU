@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA006_1\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA006_1\\wwwroot\\js\\Celebrities.js",
+      "PackagePath": "staticwebassets\\js\\Celebrities.js"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.ASPA006_1.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.ASPA006_1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.ASPA006_1.props",
+      "PackagePath": "build\\ASPA006_1.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ASPA006_1.props",
+      "PackagePath": "buildMultiTargeting\\ASPA006_1.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.ASPA006_1.props",
+      "PackagePath": "buildTransitive\\ASPA006_1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

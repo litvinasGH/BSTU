@@ -1,0 +1,43 @@
+﻿<Window x:Class="_8.RsaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_8"
+        mc:Ignorable="d"
+        Title="RsaWindow" Height="576" Width="800">
+    <Grid Margin="12">
+        <StackPanel>
+
+            <!-- КНОПКИ -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Button Content="Сгенерировать p, q" Width="180" Height="32" Margin="0,0,8,0" Click="Generate_Click"/>
+                <Button Content="Генерировать ПСП" Width="150" Height="32" Margin="0,0,8,0" Click="GenerateSequence_Click"/>
+                <Button Content="Сохранить результат" Width="170" Height="32" Click="Save_Click"/>
+            </StackPanel>
+
+            <!-- ПАРАМЕТРЫ -->
+            <TextBlock Text="Параметры RSA" FontWeight="Bold"/>
+            <TextBox x:Name="ParamsText" Height="120" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+
+            <!-- ВВОД -->
+            <TextBlock Text="Начальное значение x0" Margin="0,10,0,0"/>
+            <TextBox x:Name="SeedBox" Height="30" Text="12345"/>
+
+            <TextBlock Text="Количество элементов" Margin="0,5,0,0"/>
+            <TextBox x:Name="CountBox" Height="30" Text="20"/>
+
+            <!-- РЕЗУЛЬТАТ -->
+            <TextBlock Text="ПСП" Margin="0,10,0,0" FontWeight="Bold"/>
+            <TextBox x:Name="OutputText" Height="150" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+
+            <!-- ПРОГРЕСС -->
+            <ProgressBar x:Name="ProgressBar" Height="20" Margin="0,10,0,0"/>
+
+            <!-- ИНФА -->
+            <TextBlock x:Name="InfoText" Margin="0,10,0,0"/>
+            <TextBlock x:Name="TimeText" FontWeight="Bold"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

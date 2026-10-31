@@ -1,0 +1,12 @@
+<form method="POST" action="/Add">
+
+{{> rows contacts=contacts active=false}}
+
+<input name="name" placeholder="Name">
+<input name="phone" placeholder="Phone">
+
+<button type="submit">Добавить</button>
+
+</form>
+
+{{{cancel}}}

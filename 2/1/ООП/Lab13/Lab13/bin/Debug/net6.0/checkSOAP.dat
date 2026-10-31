@@ -1,0 +1,22 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/clr/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  <SOAP-ENV:Body>
+    <a1:Check id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Lab4OOP/Lab13%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+      <_x003C_Issuer_x003E_k__BackingField href="#ref-2" />
+      <_x003C_Amount_x003E_k__BackingField>1000</_x003C_Amount_x003E_k__BackingField>
+      <DocumentBase_x002B__x003C_Date_x003E_k__BackingField href="#ref-3" />
+    </a1:Check>
+    <a1:Organization id="ref-2" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Lab4OOP/Lab13%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+      <_x003C_Name_x003E_k__BackingField id="ref-4">Company B</_x003C_Name_x003E_k__BackingField>
+      <_x003C_Address_x003E_k__BackingField>
+        <Num>456</Num>
+        <Street id="ref-5">Avenue</Street>
+        <Index>third</Index>
+      </_x003C_Address_x003E_k__BackingField>
+    </a1:Organization>
+    <a1:DateInfo id="ref-3" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Lab4OOP/Lab13%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+      <_x003C_Day_x003E_k__BackingField>24</_x003C_Day_x003E_k__BackingField>
+      <_x003C_Month_x003E_k__BackingField>12</_x003C_Month_x003E_k__BackingField>
+      <_x003C_Year_x003E_k__BackingField>2024</_x003C_Year_x003E_k__BackingField>
+    </a1:DateInfo>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

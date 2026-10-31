@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "l1gHR7i75+A=",
+  "success": true,
+  "projectFilePath": "D:\\6\\131\\131\\131.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Litvinas_COMP\\.nuget\\packages\\microsoft.win32.systemevents\\10.0.8\\microsoft.win32.systemevents.10.0.8.nupkg.sha512",
+    "C:\\Users\\Litvinas_COMP\\.nuget\\packages\\system.drawing.common\\10.0.8\\system.drawing.common.10.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

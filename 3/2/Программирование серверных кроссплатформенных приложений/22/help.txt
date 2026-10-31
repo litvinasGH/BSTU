@@ -1,0 +1,10 @@
+openssl genrsa -out RS-LAB22-KVV.key 2048
+openssl req -new -key RS-LAB22-KVV.key -out RS-LAB22-KVV.csr -subj "//CN=RS-LAB22-KVV"
+
+
+openssl x509 -req -in RS-LAB22-KEO.csr \
+-CA CA-LAB22-KVV.crt -CAkey CA-LAB22-KVV.key \
+-CAcreateserial \
+-out RS-LAB22-KEO.crt \
+-days 365 -sha256 \
+-extfile ext.cnf

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDWA02-01</title>
+    <link rel="stylesheet" href="TDWA02-01.css">
+</head>
+<body>
+
+    <div id="responseContainer">
+        <p id="text"></p>
+    </div>
+
+    <button class="MethodButton" id="GetButton" onclick="request('GET')">Get</button>
+
+
+    <form>
+        <label for="op">operation:  <select name="op" id="op">
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="div">/</option>
+            <option value="mul">*</option>
+        </select><br></label><br>
+       
+        <label for="X">x: <input type="number" id="X" nam="X"><br></label><br>
+        
+        <label for="Y">y: <input type="number" id="Y" nam="Y"><br></label><br>
+        
+    </form>
+    <div class="buttonsContainer">
+    <button class="MethodButton" id="PostButton" onclick="request('POST')">Post</button>
+
+    <button class="MethodButton" id="PutButton" onclick="request('PUT')">Put</button>
+
+    <button class="MethodButton" id="DeleteButton" onclick="request('DELETE')">Delete</button>
+    </div>
+</body>
+
+<script src="TDWA02-01.js"></script>
+</html>

@@ -1,0 +1,15 @@
+D:\git\BSTU\2\1\ООП\lab15\lab15\bin\Debug\net8.0\lab15.exe
+D:\git\BSTU\2\1\ООП\lab15\lab15\bin\Debug\net8.0\lab15.deps.json
+D:\git\BSTU\2\1\ООП\lab15\lab15\bin\Debug\net8.0\lab15.runtimeconfig.json
+D:\git\BSTU\2\1\ООП\lab15\lab15\bin\Debug\net8.0\lab15.dll
+D:\git\BSTU\2\1\ООП\lab15\lab15\bin\Debug\net8.0\lab15.pdb
+D:\git\BSTU\2\1\ООП\lab15\lab15\obj\Debug\net8.0\lab15.GeneratedMSBuildEditorConfig.editorconfig
+D:\git\BSTU\2\1\ООП\lab15\lab15\obj\Debug\net8.0\lab15.AssemblyInfoInputs.cache
+D:\git\BSTU\2\1\ООП\lab15\lab15\obj\Debug\net8.0\lab15.AssemblyInfo.cs
+D:\git\BSTU\2\1\ООП\lab15\lab15\obj\Debug\net8.0\lab15.csproj.CoreCompileInputs.cache
+D:\git\BSTU\2\1\ООП\lab15\lab15\obj\Debug\net8.0\lab15.sourcelink.json
+D:\git\BSTU\2\1\ООП\lab15\lab15\obj\Debug\net8.0\lab15.dll
+D:\git\BSTU\2\1\ООП\lab15\lab15\obj\Debug\net8.0\refint\lab15.dll
+D:\git\BSTU\2\1\ООП\lab15\lab15\obj\Debug\net8.0\lab15.pdb
+D:\git\BSTU\2\1\ООП\lab15\lab15\obj\Debug\net8.0\lab15.genruntimeconfig.cache
+D:\git\BSTU\2\1\ООП\lab15\lab15\obj\Debug\net8.0\ref\lab15.dll

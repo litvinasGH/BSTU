@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "Hash": "f4TNi2wmDpK6/yjJ28wmoGA1nSULMFWT2CyKtn7baj0=",
+  "Source": "ASPA006_1",
+  "BasePath": "_content/ASPA006_1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ASPA006_1\\wwwroot",
+      "Source": "ASPA006_1",
+      "ContentRoot": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA006_1\\wwwroot\\",
+      "BasePath": "_content/ASPA006_1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA006_1\\wwwroot\\index.html",
+      "SourceId": "ASPA006_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA006_1\\wwwroot\\",
+      "BasePath": "_content/ASPA006_1",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xmib1yslo8",
+      "Integrity": "GZy0Z0znA8kbrjvG4QlizB55RU6zHZ1Pb7Hpqr0xNQA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA006_1\\wwwroot\\js\\Celebrities.js",
+      "SourceId": "ASPA006_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA006_1\\wwwroot\\",
+      "BasePath": "_content/ASPA006_1",
+      "RelativePath": "js/Celebrities#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tyz6fykwat",
+      "Integrity": "lXICYWMSzJBaJ1wOCIHtByNhmBrHx8gUiUG9IO2hPQU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Celebrities.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA006_1\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "777"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GZy0Z0znA8kbrjvG4QlizB55RU6zHZ1Pb7Hpqr0xNQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Apr 2025 14:23:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GZy0Z0znA8kbrjvG4QlizB55RU6zHZ1Pb7Hpqr0xNQA="
+        }
+      ]
+    },
+    {
+      "Route": "index.xmib1yslo8.html",
+      "AssetFile": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA006_1\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "777"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GZy0Z0znA8kbrjvG4QlizB55RU6zHZ1Pb7Hpqr0xNQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Apr 2025 14:23:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xmib1yslo8"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GZy0Z0znA8kbrjvG4QlizB55RU6zHZ1Pb7Hpqr0xNQA="
+        }
+      ]
+    },
+    {
+      "Route": "js/Celebrities.js",
+      "AssetFile": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA006_1\\wwwroot\\js\\Celebrities.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lXICYWMSzJBaJ1wOCIHtByNhmBrHx8gUiUG9IO2hPQU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Apr 2025 14:34:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lXICYWMSzJBaJ1wOCIHtByNhmBrHx8gUiUG9IO2hPQU="
+        }
+      ]
+    },
+    {
+      "Route": "js/Celebrities.tyz6fykwat.js",
+      "AssetFile": "C:\\Users\\litvi\\Documents\\BSTU\\2\\2\\Прога в инет\\all\\ASPA\\ASPA006_1\\wwwroot\\js\\Celebrities.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lXICYWMSzJBaJ1wOCIHtByNhmBrHx8gUiUG9IO2hPQU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Apr 2025 14:34:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tyz6fykwat"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Celebrities.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lXICYWMSzJBaJ1wOCIHtByNhmBrHx8gUiUG9IO2hPQU="
+        }
+      ]
+    }
+  ]
+}

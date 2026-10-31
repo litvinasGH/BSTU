@@ -1,0 +1,162 @@
+﻿[
+  {
+    "Symbol": " ",
+    "Count": 61,
+    "Probability": 0.17681159420289855
+  },
+  {
+    "Symbol": "а",
+    "Count": 27,
+    "Probability": 0.0782608695652174
+  },
+  {
+    "Symbol": "и",
+    "Count": 27,
+    "Probability": 0.0782608695652174
+  },
+  {
+    "Symbol": "е",
+    "Count": 23,
+    "Probability": 0.06666666666666667
+  },
+  {
+    "Symbol": "у",
+    "Count": 23,
+    "Probability": 0.06666666666666667
+  },
+  {
+    "Symbol": "о",
+    "Count": 18,
+    "Probability": 0.05217391304347826
+  },
+  {
+    "Symbol": "с",
+    "Count": 16,
+    "Probability": 0.0463768115942029
+  },
+  {
+    "Symbol": "н",
+    "Count": 15,
+    "Probability": 0.043478260869565216
+  },
+  {
+    "Symbol": "р",
+    "Count": 15,
+    "Probability": 0.043478260869565216
+  },
+  {
+    "Symbol": "т",
+    "Count": 12,
+    "Probability": 0.034782608695652174
+  },
+  {
+    "Symbol": "в",
+    "Count": 12,
+    "Probability": 0.034782608695652174
+  },
+  {
+    "Symbol": "к",
+    "Count": 12,
+    "Probability": 0.034782608695652174
+  },
+  {
+    "Symbol": "ј",
+    "Count": 9,
+    "Probability": 0.02608695652173913
+  },
+  {
+    "Symbol": ",",
+    "Count": 9,
+    "Probability": 0.02608695652173913
+  },
+  {
+    "Symbol": "л",
+    "Count": 7,
+    "Probability": 0.020289855072463767
+  },
+  {
+    "Symbol": "д",
+    "Count": 6,
+    "Probability": 0.017391304347826087
+  },
+  {
+    "Symbol": "п",
+    "Count": 6,
+    "Probability": 0.017391304347826087
+  },
+  {
+    "Symbol": ".",
+    "Count": 6,
+    "Probability": 0.017391304347826087
+  },
+  {
+    "Symbol": "м",
+    "Count": 6,
+    "Probability": 0.017391304347826087
+  },
+  {
+    "Symbol": "з",
+    "Count": 6,
+    "Probability": 0.017391304347826087
+  },
+  {
+    "Symbol": "ч",
+    "Count": 4,
+    "Probability": 0.011594202898550725
+  },
+  {
+    "Symbol": "б",
+    "Count": 3,
+    "Probability": 0.008695652173913044
+  },
+  {
+    "Symbol": "ш",
+    "Count": 3,
+    "Probability": 0.008695652173913044
+  },
+  {
+    "Symbol": "г",
+    "Count": 3,
+    "Probability": 0.008695652173913044
+  },
+  {
+    "Symbol": "ж",
+    "Count": 3,
+    "Probability": 0.008695652173913044
+  },
+  {
+    "Symbol": "њ",
+    "Count": 3,
+    "Probability": 0.008695652173913044
+  },
+  {
+    "Symbol": "ћ",
+    "Count": 3,
+    "Probability": 0.008695652173913044
+  },
+  {
+    "Symbol": "љ",
+    "Count": 2,
+    "Probability": 0.005797101449275362
+  },
+  {
+    "Symbol": "х",
+    "Count": 2,
+    "Probability": 0.005797101449275362
+  },
+  {
+    "Symbol": "ц",
+    "Count": 1,
+    "Probability": 0.002898550724637681
+  },
+  {
+    "Symbol": "џ",
+    "Count": 1,
+    "Probability": 0.002898550724637681
+  },
+  {
+    "Symbol": "ђ",
+    "Count": 1,
+    "Probability": 0.002898550724637681
+  }
+]

@@ -1,0 +1,82 @@
+<Window x:Class="EdsaLabWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ЭЦП" Height="650" Width="900">
+
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+
+            <ComboBox x:Name="AlgorithmBox"
+                      Width="200"
+                      Margin="0 0 10 0"/>
+
+            <TextBox x:Name="BitsBox"
+                     Width="100"
+                     Text="512"
+                     Margin="0 0 10 0"/>
+
+            <Button Content="Сгенерировать ключи"
+                    Click="GenerateKeys_Click"
+                    Margin="0 0 10 0"/>
+
+            <Button Content="Подписать"
+                    Click="Sign_Click"
+                    Margin="0 0 10 0"/>
+
+            <Button Content="Проверить"
+                    Click="Verify_Click"/>
+        </StackPanel>
+
+        <TextBox Grid.Row="1"
+                 x:Name="MessageBox"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 Margin="0 10 0 10"/>
+
+        <Grid Grid.Row="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox x:Name="PublicKeyBox"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"/>
+
+            <TextBox Grid.Column="1"
+                     x:Name="PrivateKeyBox"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"/>
+        </Grid>
+
+        <Grid Grid.Row="3" Margin="0 10 0 0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox x:Name="SignatureBox"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"/>
+
+            <TextBox Grid.Column="1"
+                     x:Name="SignTimeBox"
+                     Margin="10 0"/>
+
+            <TextBox Grid.Column="2"
+                     x:Name="VerifyBox"/>
+        </Grid>
+    </Grid>
+</Window>

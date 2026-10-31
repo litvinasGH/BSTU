@@ -1,0 +1,32 @@
+﻿Сборка начата 29.09.2023 13:18:39.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\user\source\repos\HelloWorld\rnd\rnd.vcxproj" в узле 2 (целевые объекты Build).
+     1>InitializeBuildStatus:
+         Создание "x64\Release\rnd.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "x64\Release\rnd.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX64\x64\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /O2 /Oi /GL /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Release\\" /Fd"x64\Release\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt rnd.cpp
+         rnd.cpp
+     1>C:\Users\user\source\repos\HelloWorld\rnd\rnd.cpp(9,6): warning C4101: h: неиспользованная локальная переменная
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\source\repos\HelloWorld\x64\Release\rnd.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\source\repos\HelloWorld\x64\Release\rnd.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /LTCGOUT:"x64\Release\rnd.iobj" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\source\repos\HelloWorld\x64\Release\rnd.lib" /MACHINE:X64 x64\Release\rnd.obj
+         Создание кода
+         1 of 11 functions ( 9.1%) were compiled, the rest were copied from previous compilation.
+           0 functions were new in current compilation
+           0 functions had inline decision re-evaluated but remain unchanged
+         Создание кода завершено
+         rnd.vcxproj -> C:\Users\user\source\repos\HelloWorld\x64\Release\rnd.exe
+       FinalizeBuildStatus:
+         Файл "x64\Release\rnd.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Release\rnd.tlog\rnd.lastbuildstate".
+     1>Сборка проекта "C:\Users\user\source\repos\HelloWorld\rnd\rnd.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+       "C:\Users\user\source\repos\HelloWorld\rnd\rnd.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\user\source\repos\HelloWorld\rnd\rnd.cpp(9,6): warning C4101: h: неиспользованная локальная переменная
+
+    Предупреждений: 1
+    Ошибок: 0
+
+Прошло времени 00:00:02.04

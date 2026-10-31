@@ -1,0 +1,14 @@
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\bin\Debug\net8.0\CryptoLab.exe
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\bin\Debug\net8.0\CryptoLab.deps.json
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\bin\Debug\net8.0\CryptoLab.runtimeconfig.json
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\bin\Debug\net8.0\CryptoLab.dll
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\bin\Debug\net8.0\CryptoLab.pdb
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\obj\Debug\net8.0\CryptoLab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\obj\Debug\net8.0\CryptoLab.AssemblyInfoInputs.cache
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\obj\Debug\net8.0\CryptoLab.AssemblyInfo.cs
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\obj\Debug\net8.0\CryptoLab.csproj.CoreCompileInputs.cache
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\obj\Debug\net8.0\CryptoLab.dll
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\obj\Debug\net8.0\refint\CryptoLab.dll
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\obj\Debug\net8.0\CryptoLab.pdb
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\obj\Debug\net8.0\CryptoLab.genruntimeconfig.cache
+C:\Users\litvi\Documents\test\CryptoLab\CryptoLab\obj\Debug\net8.0\ref\CryptoLab.dll

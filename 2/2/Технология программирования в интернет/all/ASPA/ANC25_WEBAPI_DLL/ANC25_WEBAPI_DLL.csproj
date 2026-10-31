@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
+	  <PackageReference Include="Microsoft.NETCore.App" Version="2.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DAL_Celebrity\DAL_Celebrity.csproj" />
+    <ProjectReference Include="..\DAL_Celebrity_MSSQL\DAL_Celebrity_MSSQL.csproj" />
+  </ItemGroup>
+
+</Project>

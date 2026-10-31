@@ -1,0 +1,14 @@
+D:\2\IC2\IC2\bin\Debug\net8.0\IC2.exe
+D:\2\IC2\IC2\bin\Debug\net8.0\IC2.deps.json
+D:\2\IC2\IC2\bin\Debug\net8.0\IC2.runtimeconfig.json
+D:\2\IC2\IC2\bin\Debug\net8.0\IC2.dll
+D:\2\IC2\IC2\bin\Debug\net8.0\IC2.pdb
+D:\2\IC2\IC2\obj\Debug\net8.0\IC2.GeneratedMSBuildEditorConfig.editorconfig
+D:\2\IC2\IC2\obj\Debug\net8.0\IC2.AssemblyInfoInputs.cache
+D:\2\IC2\IC2\obj\Debug\net8.0\IC2.AssemblyInfo.cs
+D:\2\IC2\IC2\obj\Debug\net8.0\IC2.csproj.CoreCompileInputs.cache
+D:\2\IC2\IC2\obj\Debug\net8.0\IC2.dll
+D:\2\IC2\IC2\obj\Debug\net8.0\refint\IC2.dll
+D:\2\IC2\IC2\obj\Debug\net8.0\IC2.pdb
+D:\2\IC2\IC2\obj\Debug\net8.0\IC2.genruntimeconfig.cache
+D:\2\IC2\IC2\obj\Debug\net8.0\ref\IC2.dll

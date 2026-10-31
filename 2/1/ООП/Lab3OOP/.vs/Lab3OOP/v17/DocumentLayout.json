@@ -1,0 +1,138 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Lab3OOP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|c:\\users\\user\\source\\repos\\lab3oop\\lab3oop\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|solutionrelative:lab3oop\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|c:\\users\\user\\source\\repos\\lab3oop\\lab3oop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|solutionrelative:lab3oop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|c:\\users\\user\\source\\repos\\lab3oop\\lab3oop\\tofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|solutionrelative:lab3oop\\tofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|c:\\users\\user\\source\\repos\\lab3oop\\lab3oop\\lab07.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|solutionrelative:lab3oop\\lab07.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|c:\\users\\user\\source\\repos\\lab3oop\\lab3oop\\class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|solutionrelative:lab3oop\\class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|c:\\users\\user\\source\\repos\\lab3oop\\lab3oop\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|solutionrelative:lab3oop\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|c:\\users\\user\\source\\repos\\lab3oop\\lab3oop\\class3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729215D3-8ACC-492F-87D5-2640925C5D57}|Lab3OOP\\Lab3OOP.csproj|solutionrelative:lab3oop\\class3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "lab07.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\lab07.cs",
+              "RelativeDocumentMoniker": "Lab3OOP\\lab07.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\lab07.cs",
+              "RelativeToolTip": "Lab3OOP\\lab07.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwGEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T06:28:33.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ToFile.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\ToFile.cs",
+              "RelativeDocumentMoniker": "Lab3OOP\\ToFile.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\ToFile.cs",
+              "RelativeToolTip": "Lab3OOP\\ToFile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T11:54:59.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Class3.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\Class3.cs",
+              "RelativeDocumentMoniker": "Lab3OOP\\Class3.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\Class3.cs",
+              "RelativeToolTip": "Lab3OOP\\Class3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T11:58:34.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\Class1.cs",
+              "RelativeDocumentMoniker": "Lab3OOP\\Class1.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\Class1.cs",
+              "RelativeToolTip": "Lab3OOP\\Class1.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAADwvy8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T11:49:15.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Class2.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\Class2.cs",
+              "RelativeDocumentMoniker": "Lab3OOP\\Class2.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\Class2.cs",
+              "RelativeToolTip": "Lab3OOP\\Class2.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T11:47:38.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "List.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\List.cs",
+              "RelativeDocumentMoniker": "Lab3OOP\\List.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\List.cs",
+              "RelativeToolTip": "Lab3OOP\\List.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAwwKgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T14:09:57.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\Program.cs",
+              "RelativeDocumentMoniker": "Lab3OOP\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\Lab3OOP\\Lab3OOP\\Program.cs",
+              "RelativeToolTip": "Lab3OOP\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T13:52:23.473Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

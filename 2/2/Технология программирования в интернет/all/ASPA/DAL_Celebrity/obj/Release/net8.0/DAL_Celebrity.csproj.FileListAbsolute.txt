@@ -1,0 +1,12 @@
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity\bin\Release\net8.0\DAL_Celebrity.deps.json
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity\bin\Release\net8.0\DAL_Celebrity.dll
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity\bin\Release\net8.0\DAL_Celebrity.pdb
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity\obj\Release\net8.0\DAL_Celebrity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity\obj\Release\net8.0\DAL_Celebrity.AssemblyInfoInputs.cache
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity\obj\Release\net8.0\DAL_Celebrity.AssemblyInfo.cs
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity\obj\Release\net8.0\DAL_Celebrity.csproj.CoreCompileInputs.cache
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity\obj\Release\net8.0\DAL_Celebrity.sourcelink.json
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity\obj\Release\net8.0\DAL_Celebrity.dll
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity\obj\Release\net8.0\refint\DAL_Celebrity.dll
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity\obj\Release\net8.0\DAL_Celebrity.pdb
+C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\DAL_Celebrity\obj\Release\net8.0\ref\DAL_Celebrity.dll

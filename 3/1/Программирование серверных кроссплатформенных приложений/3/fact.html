@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+
+<body>
+    <div id="content"></div>
+</body>
+
+<script>
+
+    async function processFactorials() {
+        var content_container = document.getElementById('content');
+        const start_time = Date.now();
+        for (let i = 0; i < 21; i++) {
+            const response = await fetch(`/fact?k=${i}`);
+            const data = await response.json();
+            let passed_time = Date.now()-start_time;
+            if(response.ok){
+                content_container.innerHTML+=`<p>${i}.Результат: ${passed_time}-${data.k}/${data.fact}</p>`;
+            }
+            else{
+                content_container.innerHTML+=`${i}Error`;
+            }
+        }
+    }
+
+    processFactorials();
+</script>
+
+</html>

@@ -1,0 +1,95 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\6\\12\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0B28435C-BF19-4F46-AAEC-A3EFE97799EE}|12\\12.csproj|d:\\6\\12\\12\\cryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B28435C-BF19-4F46-AAEC-A3EFE97799EE}|12\\12.csproj|solutionrelative:12\\cryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B28435C-BF19-4F46-AAEC-A3EFE97799EE}|12\\12.csproj|d:\\6\\12\\12\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B28435C-BF19-4F46-AAEC-A3EFE97799EE}|12\\12.csproj|solutionrelative:12\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B28435C-BF19-4F46-AAEC-A3EFE97799EE}|12\\12.csproj|D:\\6\\12\\12\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0B28435C-BF19-4F46-AAEC-A3EFE97799EE}|12\\12.csproj|solutionrelative:12\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B28435C-BF19-4F46-AAEC-A3EFE97799EE}|12\\12.csproj|D:\\6\\12\\12\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B28435C-BF19-4F46-AAEC-A3EFE97799EE}|12\\12.csproj|solutionrelative:12\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CryptoService.cs",
+              "DocumentMoniker": "D:\\6\\12\\12\\CryptoService.cs",
+              "RelativeDocumentMoniker": "12\\CryptoService.cs",
+              "ToolTip": "D:\\6\\12\\12\\CryptoService.cs",
+              "RelativeToolTip": "12\\CryptoService.cs",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAUwNQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T15:55:18.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Models.cs",
+              "DocumentMoniker": "D:\\6\\12\\12\\Models.cs",
+              "RelativeDocumentMoniker": "12\\Models.cs",
+              "ToolTip": "D:\\6\\12\\12\\Models.cs",
+              "RelativeToolTip": "12\\Models.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T15:26:16.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\6\\12\\12\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "12\\MainWindow.xaml",
+              "ToolTip": "D:\\6\\12\\12\\MainWindow.xaml",
+              "RelativeToolTip": "12\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-21T15:22:19.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\6\\12\\12\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "12\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\6\\12\\12\\MainWindow.xaml.cs",
+              "RelativeToolTip": "12\\MainWindow.xaml.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowDIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T15:22:17.969Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

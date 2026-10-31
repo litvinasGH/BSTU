@@ -1,0 +1,48 @@
+﻿<Window x:Class="_9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_9"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Выбор режима -->
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Режим:" Margin="0,0,10,0"/>
+            <ComboBox x:Name="ModeBox" Width="120">
+                <ComboBoxItem Content="ASCII" IsSelected="True"/>
+                <ComboBoxItem Content="Base64"/>
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Кнопки -->
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,10">
+            <Button Content="Сгенерировать ключи" Click="GenerateKeys_Click" Margin="5"/>
+            <Button Content="Зашифровать" Click="Encrypt_Click" Margin="5"/>
+            <Button Content="Расшифровать" Click="Decrypt_Click" Margin="5"/>
+            <Button Content="Экспорт CSV" Click="Export_Click" Margin="5"/>
+        </StackPanel>
+
+        <!-- Поля -->
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="Исходный текст"/>
+            <TextBox x:Name="InputBox" Height="30"
+                     Text="Kachinskas Vaclovas Vaclovovich"/>
+
+            <TextBlock Text="Шифртекст"/>
+            <TextBox x:Name="CipherBox" Height="60"/>
+
+            <TextBlock Text="Расшифрованный текст"/>
+            <TextBox x:Name="OutputBox" Height="30"/>
+
+            <TextBlock x:Name="TimeText"/>
+        </StackPanel>
+    </Grid>
+</Window>

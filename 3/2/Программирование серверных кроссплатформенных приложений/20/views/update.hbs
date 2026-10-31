@@ -1,0 +1,21 @@
+{{> rows contacts=contacts active=false}}
+<form method="POST" action="/Update">
+
+<input type="hidden" name="id" value="{{contact.id}}">
+
+<input class="edit-input" name="name" value="{{contact.name}}">
+<input class="edit-input" name="phone" value="{{contact.phone}}">
+
+<button type="submit">Изменить</button>
+
+</form>
+
+<form method="POST" action="/Delete">
+
+<input type="hidden" name="id" value="{{contact.id}}">
+
+<button type="submit" id="deleteBtn">Удалить</button>
+
+</form>
+
+{{{cancel}}}

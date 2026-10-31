@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Client</title>
+</head>
+<body>
+
+<h2>WebSocket Client (GO08_01c)</h2>
+<div id="log"></div>
+
+<script>
+    const logDiv = document.getElementById("log");
+
+    function log(msg) {
+        console.log(msg);
+        logDiv.innerHTML += msg + "<br>";
+    }
+
+    const ws = new WebSocket("ws://localhost:3000/ws");
+
+    ws.onopen = () => {
+        log("Connected to server");
+
+        let i = 1;
+
+        const interval = setInterval(() => {
+            if (i > 5) {
+                clearInterval(interval);
+                ws.close();
+                log("Client finished");
+                return;
+            }
+
+            const message = "message " + i;
+            log("Sending: " + message);
+
+            ws.send(message);
+            i++;
+        }, 1000);
+    };
+
+    ws.onmessage = (event) => {
+        log("Received: " + event.data);
+    };
+
+    ws.onclose = () => {
+        log("Connection closed");
+    };
+
+    ws.onerror = (err) => {
+        log("Error: " + err);
+    };
+</script>
+
+</body>
+</html>

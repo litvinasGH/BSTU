@@ -1,0 +1,35 @@
+body {
+  padding-top: 100px;
+  font-size: xxx-large;
+}
+
+#container {
+  margin: auto;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  border: 3px rgb(95, 203, 211) solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  border-radius: 10px;
+}
+#container #counterContainer {
+  text-align: center;
+}
+#container #buttonsContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#container #buttonsContainer button {
+  font-size: x-large;
+  padding: 5px;
+  background-color: rgb(95, 203, 211);
+  border-radius: 3px;
+  border-color: rgb(95, 203, 211);
+  width: 30%;
+}/*# sourceMappingURL=App.css.map */

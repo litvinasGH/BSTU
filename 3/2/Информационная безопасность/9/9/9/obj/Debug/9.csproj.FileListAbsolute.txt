@@ -1,0 +1,16 @@
+D:\6\9\9\bin\Debug\9.exe.config
+D:\6\9\9\bin\Debug\9.exe
+D:\6\9\9\bin\Debug\9.pdb
+D:\6\9\9\obj\Debug\9.csproj.AssemblyReference.cache
+D:\6\9\9\obj\Debug\MainWindow.g.cs
+D:\6\9\9\obj\Debug\App.g.cs
+D:\6\9\9\obj\Debug\9_MarkupCompile.cache
+D:\6\9\9\obj\Debug\9_MarkupCompile.lref
+D:\6\9\9\obj\Debug\MainWindow.baml
+D:\6\9\9\obj\Debug\9.g.resources
+D:\6\9\9\obj\Debug\_9.Properties.Resources.resources
+D:\6\9\9\obj\Debug\9.csproj.GenerateResource.cache
+D:\6\9\9\obj\Debug\9.csproj.CoreCompileInputs.cache
+D:\6\9\9\obj\Debug\9.exe
+D:\6\9\9\obj\Debug\9.pdb
+D:\6\9\9\obj\Debug\9.exe.config

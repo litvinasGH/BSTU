@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ANC25_WEBAPI_DLL\ANC25_WEBAPI_DLL.csproj" />
+    <ProjectReference Include="..\DAL_Celebrity\DAL_Celebrity.csproj" />
+    <ProjectReference Include="..\DAL_Celebrity_MSSQL\DAL_Celebrity_MSSQL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\litvi\Documents\BSTU\2\2\Прога в инет\all\ASPA\ASPA007_1\.editorconfig" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,112 @@
+basePath: /
+definitions:
+  main.Celebrity:
+    properties:
+      fullName:
+        type: string
+      id:
+        type: integer
+      nationality:
+        type: string
+      reqPhotoPath:
+        type: string
+    type: object
+host: localhost:3000
+info:
+  contact: {}
+  description: REST API with Swagger UI
+  title: GO11_01 REST API
+  version: "1.0"
+paths:
+  /Celebrities:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Celebrity
+        in: body
+        name: celebrity
+        required: true
+        schema:
+          $ref: '#/definitions/main.Celebrity'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/main.Celebrity'
+      summary: Create celebrity
+      tags:
+      - Celebrities
+  /Celebrities/{id}:
+    delete:
+      parameters:
+      - description: Celebrity ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "204":
+          description: No Content
+      summary: Delete celebrity
+      tags:
+      - Celebrities
+    get:
+      parameters:
+      - description: Celebrity ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Celebrity'
+      summary: Get celebrity by ID
+      tags:
+      - Celebrities
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Celebrity ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Celebrity
+        in: body
+        name: celebrity
+        required: true
+        schema:
+          $ref: '#/definitions/main.Celebrity'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Celebrity'
+      summary: Update celebrity
+      tags:
+      - Celebrities
+  /Celebrities/All:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/main.Celebrity'
+            type: array
+      summary: Get all celebrities
+      tags:
+      - Celebrities
+swagger: "2.0"

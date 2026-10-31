@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Lab13/1.0.0": {
+        "dependencies": {
+          "SoapFormatter": "1.1.9"
+        },
+        "runtime": {
+          "Lab13.dll": {}
+        }
+      },
+      "SoapFormatter/1.1.9": {
+        "runtime": {
+          "lib/netstandard2.0/SoapFormatter.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.9.49678"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Lab13/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SoapFormatter/1.1.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9okRnHpuoOKlTlxid6sddSjZ0OVGbK4EjSf3VvxOLnQfTkV3iGZzSQa2ZYYuD+apairVrPqwZ3lPvcFqR8b7Kw==",
+      "path": "soapformatter/1.1.9",
+      "hashPath": "soapformatter.1.1.9.nupkg.sha512"
+    }
+  }
+}
