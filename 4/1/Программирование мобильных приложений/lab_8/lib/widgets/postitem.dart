@@ -4,22 +4,28 @@ import '../screens/profile.dart';
 import 'formatted_text.dart';
 
 class PostItem extends StatelessWidget {
-  new({
+  const PostItem({
     super.key,
     required this.images,
     required this.avatar,
     required this.name,
     required this.postedTime,
-    this.text = "",
-    this.subgroup = "",
+    this.text = '',
+    this.subgroup = '',
+    this.postId,
+    this.isLiked = false,
+    this.onLikeToggle,
   });
 
-  List<String> images;
-  String avatar;
-  String name;
-  String postedTime;
-  String text;
-  String subgroup = "";
+  final List<String> images;
+  final String avatar;
+  final String name;
+  final String postedTime;
+  final String text;
+  final String subgroup;
+  final String? postId;
+  final bool isLiked;
+  final VoidCallback? onLikeToggle;
 
   @override
   Widget build(BuildContext context) {
@@ -34,14 +40,14 @@ class PostItem extends StatelessWidget {
               color: Colors.grey.withValues(alpha: 0.3),
               spreadRadius: 0.1,
               blurRadius: 5,
-              offset: Offset(5, 6),
+              offset: const Offset(5, 6),
             ),
           ],
         ),
         child: Padding(
           padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
           child: Column(
-            crossAxisAlignment: .start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
@@ -64,39 +70,49 @@ class PostItem extends StatelessWidget {
                     ),
                   ),
                   Column(
-                    crossAxisAlignment: .start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(name, style: TextStyle(fontWeight: FontWeight.bold)),
+                      Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
                       Row(
                         children: [
                           subgroup.isNotEmpty
                               ? Text(
-                                  "Posted in $subgroup - ",
-                                  style: TextStyle(
+                                  'Posted in $subgroup - ',
+                                  style: const TextStyle(
                                     color: Colors.grey,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 )
-                              : SizedBox.shrink(),
-                          Text(
-                            postedTime,
-                            style: TextStyle(color: Colors.grey),
-                          ),
+                              : const SizedBox.shrink(),
+                          Text(postedTime, style: const TextStyle(color: Colors.grey)),
                         ],
                       ),
                     ],
                   ),
                 ],
               ),
-              SizedBox(height: 15),
-              FormattedText(text: text, style: TextStyle(fontSize: 16)),
+              const SizedBox(height: 15),
+              FormattedText(text: text, style: const TextStyle(fontSize: 16)),
               if (images.isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.only(top: 10),
                   child: SizedBox(height: 180, child: Gallery(images: images)),
                 )
               else
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
+              // Единственное новое действие прямо в карточке — лайк/избранное.
+              if (postId != null && onLikeToggle != null)
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: IconButton(
+                    tooltip: isLiked ? 'Убрать из избранного' : 'Нравится',
+                    onPressed: onLikeToggle,
+                    icon: Icon(
+                      isLiked ? Icons.favorite : Icons.favorite_border,
+                      color: isLiked ? Colors.redAccent : Colors.grey,
+                    ),
+                  ),
+                ),
             ],
           ),
         ),

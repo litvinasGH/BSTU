@@ -118,6 +118,8 @@ public class StackController : ControllerBase
         });
     }
 
+
+
     private static long CalculateResult(ClientState state)
     {
         int top = state.StackTopFirst.Count > 0

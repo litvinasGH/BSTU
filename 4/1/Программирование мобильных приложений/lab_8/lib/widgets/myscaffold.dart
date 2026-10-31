@@ -5,10 +5,12 @@ class MyScaffold extends StatelessWidget {
     super.key,
     required this.children,
     this.isMenuVisible = true,
+    this.onAddPressed,
   });
 
   final List<Widget> children;
   final bool isMenuVisible;
+  final VoidCallback? onAddPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -131,7 +133,7 @@ class MyScaffold extends StatelessWidget {
                         shape: BoxShape.circle,
                       ),
                       child: FloatingActionButton(
-                        onPressed: () {},
+                        onPressed: onAddPressed,
                         shape: const CircleBorder(),
                         elevation: 0,
                         backgroundColor: Colors.tealAccent,
