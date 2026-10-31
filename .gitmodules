@@ -1,3 +1,6 @@
+[submodule "1/2/Printinvest"]
+	path = 1/2/Printinvest
+	url = git@github.com:litvinasGH/Printinvest.git
 [submodule "4/1/Распределённые и облачные технологии/1lab"]
 	path = 4/1/Распределённые и облачные технологии/1lab
 	url = git@github.com:litvinasGH/Distributed-and-cloud-technologies-1-lab.git
@@ -21,3 +24,4 @@
 	path = 4/1/Распределённые и облачные технологии/5lab
 	url = git@github.com:litvinasGH/Distributed-and-cloud-technologies-1-lab.git
 	branch = lab5
+
