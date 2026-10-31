@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:lab_4/data/hive_social_store.dart';
 import 'package:lab_4/screens/newsfeed.dart';
 
 import 'screens/profile.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await HiveSocialStore.initialize();
   runApp(const MainApp());
 }
 

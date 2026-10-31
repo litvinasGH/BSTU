@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:lab_4/data/hive_social_store.dart';
+import 'package:lab_4/models/social_models.dart';
 import 'package:lab_4/screens/profile.dart';
 
 import '../widgets/newsfeed_header.dart';
@@ -9,6 +11,7 @@ import '../widgets/myscaffold.dart';
 import '../widgets/stories_feed.dart';
 import '../widgets/feed.dart';
 import 'CameraPage.dart';
+import 'post_editor_screen.dart';
 
 const platform2 = MethodChannel('browser');
 
@@ -80,11 +83,36 @@ class _NewsFeedState extends State<NewsFeed> {
     super.dispose();
   }
 
+  Future<void> _createPost() async {
+    final actor = HiveSocialStore.activeUser;
+    if (!actor.canManagePosts) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Эта роль не может создавать публикации. Откройте меню управления, чтобы переключить пользователя.')),
+      );
+      return;
+    }
+
+    final post = await Navigator.of(context).push<SocialPost>(
+      MaterialPageRoute(builder: (_) => PostEditorScreen(actor: actor)),
+    );
+    if (post == null || !mounted) return;
+    try {
+      await HiveSocialStore.savePost(actor: HiveSocialStore.activeUser, post: post);
+    } catch (error) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(error.toString())),
+        );
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return PageView(
       children: [
         MyScaffold(
+          onAddPressed: _createPost,
           children: [
             const NewsFeedHeader(),
             const SizedBox(height: 30),
@@ -210,7 +238,7 @@ class MySimpleScreen extends StatelessWidget {
 // Get battery level.
 
 class BatterPage extends StatefulWidget {
-  const new({super.key});
+  const BatterPage({super.key});
 
   @override
   State<BatterPage> createState() => _BatterPageState();

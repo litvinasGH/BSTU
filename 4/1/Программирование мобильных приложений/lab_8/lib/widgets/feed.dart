@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
+import '../data/hive_social_store.dart';
+import '../models/social_models.dart';
+import '../screens/social_management_screen.dart';
 import 'postitem.dart';
 
 class PostFeed extends StatelessWidget {
-  PostFeed({super.key, this.isProfileDcreen = false});
+  const PostFeed({super.key, this.isProfileDcreen = false});
 
-  bool isProfileDcreen = false;
+  final bool isProfileDcreen;
 
   @override
   Widget build(BuildContext context) {
@@ -15,35 +19,44 @@ class PostFeed extends StatelessWidget {
         children: [
           if (!isProfileDcreen)
             Row(
-              mainAxisAlignment: .spaceBetween,
-
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Recently Post",
+                const Text(
+                  'Recently Post',
                   style: TextStyle(color: Colors.grey, fontSize: 16),
                 ),
-                Icon(Icons.more_horiz, color: Colors.grey, size: 25),
+                // Оставляем исходную иконку на прежнем месте. Управление
+                // открывается отдельным экраном, без изменения ленты.
+                InkWell(
+                  borderRadius: BorderRadius.circular(20),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const SocialManagementScreen(),
+                    ),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(4),
+                    child: Icon(Icons.more_horiz, color: Colors.grey, size: 25),
+                  ),
+                ),
               ],
             )
           else
             Row(
-              mainAxisAlignment: .spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       border: Border(bottom: BorderSide(width: 2)),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
-                        mainAxisAlignment: .center,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(Icons.window_outlined),
-                          Text(
-                            "Post",
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
+                          Text('Post', style: TextStyle(fontWeight: FontWeight.bold)),
                         ],
                       ),
                     ),
@@ -51,27 +64,18 @@ class PostFeed extends StatelessWidget {
                 ),
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       border: Border(
-                        bottom: BorderSide(
-                          width: 2,
-                          color: const Color.fromARGB(255, 233, 233, 233),
-                        ),
+                        bottom: BorderSide(width: 2, color: Color.fromARGB(255, 233, 233, 233)),
                       ),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
-                        mainAxisAlignment: .center,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(Icons.alternate_email, color: Colors.grey),
-                          Text(
-                            "Mention",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey,
-                            ),
-                          ),
+                          Text('Mention', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey)),
                         ],
                       ),
                     ),
@@ -79,37 +83,62 @@ class PostFeed extends StatelessWidget {
                 ),
               ],
             ),
-          SizedBox(height: 15),
-          PostItem(
-            images: [
-              'assets/postsAndStor/6.jpg',
-              'assets/postsAndStor/7.jpg',
-              'assets/postsAndStor/5.jpg',
-            ],
-            avatar: 'assets/postsAndStor/5.jpg',
-            name: 'Nilesh',
-            postedTime: '1h ago',
-            subgroup: "u8s",
-            text: "Discover adventure in patagonia's peaks or serenity provence's @hamlets - arrival",
-          ),
-          PostItem(
-            images: [
-              'assets/postsAndStor/8.jpg',
-              'assets/postsAndStor/9.jpg',
-              'assets/postsAndStor/10.jpg',
-            ],
-            avatar: 'assets/postsAndStor/3.jpg',
-            name: 'Ultra Runner',
-            postedTime: '2h ago',
-            subgroup: "The Ultra Tribe",
-            text:
-                "The elements, the terrain, and the miles. "
-                "The full spectrum of extreme running in just a few frames. "
-                "Which shot captures the vibe best for you? 👇 "
-                "@the_ultra_tribe #XMarathon #RunnerLife #GritAndMiles #AthletesOfInstagram",
+          const SizedBox(height: 15),
+          ValueListenableBuilder<Box<String>>(
+            valueListenable: HiveSocialStore.settings.listenable(),
+            builder: (context, settingsBox, _) {
+              final userId = settingsBox.get('activeUserId', defaultValue: 'darlene')!;
+              return ValueListenableBuilder<Box<SocialPost>>(
+                valueListenable: HiveSocialStore.posts.listenable(),
+                builder: (context, postBox, _) {
+                  final posts = postBox.values.toList()
+                    ..sort((a, b) => b.createdAtMillis.compareTo(a.createdAtMillis));
+                  if (posts.isEmpty) {
+                    return const Padding(
+                      padding: EdgeInsets.all(24),
+                      child: Text('Публикаций пока нет.'),
+                    );
+                  }
+                  return ValueListenableBuilder<Box<FavoriteEntry>>(
+                    valueListenable: HiveSocialStore.favorites.listenable(),
+                    builder: (context, favoriteBox, _) {
+                      return Column(
+                        children: [
+                          for (final post in posts)
+                            PostItem(
+                              key: ValueKey(post.id),
+                              postId: post.id,
+                              isLiked: favoriteBox.containsKey('$userId::${post.id}'),
+                              onLikeToggle: () => HiveSocialStore.toggleFavorite(
+                                userId: userId,
+                                postId: post.id,
+                              ),
+                              images: post.imagePaths,
+                              avatar: post.avatarPath,
+                              name: post.authorName,
+                              postedTime: _relativeTime(post.createdAt),
+                              subgroup: post.subgroup,
+                              text: post.text,
+                            ),
+                        ],
+                      );
+                    },
+                  );
+                },
+              );
+            },
           ),
         ],
       ),
     );
+  }
+
+  static String _relativeTime(DateTime dateTime) {
+    final difference = DateTime.now().difference(dateTime);
+    if (difference.inMinutes < 1) return 'только что';
+    if (difference.inHours < 1) return '${difference.inMinutes} мин. назад';
+    if (difference.inDays < 1) return '${difference.inHours}h ago';
+    if (difference.inDays < 7) return '${difference.inDays} дн. назад';
+    return '${dateTime.day.toString().padLeft(2, '0')}.${dateTime.month.toString().padLeft(2, '0')}.${dateTime.year}';
   }
 }

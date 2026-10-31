@@ -14,7 +14,7 @@ Future<void> getGyroscope() async {
 }
 
 class Profileheader extends StatelessWidget {
-  const new({super.key});
+  const Profileheader({super.key});
 
   @override
   Widget build(BuildContext context) {

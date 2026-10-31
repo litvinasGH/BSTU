@@ -7,7 +7,7 @@ import '../widgets/myscaffold.dart';
 import '../widgets/profileheader.dart';
 
 class ProfileScreen extends StatelessWidget {
-  new({super.key, this.image = "", this.name = "no_name"});
+  ProfileScreen({super.key, this.image = "", this.name = "no_name"});
 
   String name = "no_name";
   String image = "";

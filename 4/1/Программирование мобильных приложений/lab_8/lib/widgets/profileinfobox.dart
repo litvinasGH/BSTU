@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class ProfileInfoBox extends StatelessWidget {
-  new({super.key, required this.image, required this.name});
+  ProfileInfoBox({super.key, required this.image, required this.name});
 
   String name;
   String image;
