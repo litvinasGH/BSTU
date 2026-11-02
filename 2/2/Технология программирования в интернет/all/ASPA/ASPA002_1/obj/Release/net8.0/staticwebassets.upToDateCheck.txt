@@ -1,4 +1,0 @@
-wwwroot\css\style.css
-wwwroot\index.html
-wwwroot\pic\neuman.jpg
-wwwroot\scripts\Calc.js
