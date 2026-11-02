@@ -24,3 +24,11 @@
 
 
 
+[submodule "6lab"]
+	path = 6lab
+	url = git@github.com:litvinasGH/Distributed-and-cloud-technologies-1-lab.git
+	branch = lab6
+[submodule "4/1/Распределённые и облачные технологии/6lab"]
+	path = 4/1/Распределённые и облачные технологии/6lab
+	url = git@github.com:litvinasGH/Distributed-and-cloud-technologies-1-lab.git
+	branch = lab6
