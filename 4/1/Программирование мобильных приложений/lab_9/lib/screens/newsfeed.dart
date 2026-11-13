@@ -2,7 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:lab_4/data/hive_social_store.dart';
+import 'package:provider/provider.dart';
+import 'package:lab_4/providers/social_provider.dart';
 import 'package:lab_4/models/social_models.dart';
 import 'package:lab_4/screens/profile.dart';
 
@@ -84,7 +85,7 @@ class _NewsFeedState extends State<NewsFeed> {
   }
 
   Future<void> _createPost() async {
-    final actor = HiveSocialStore.activeUser;
+    final actor = context.read<SocialProvider>().activeUser;
     if (!actor.canManagePosts) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Эта роль не может создавать публикации. Откройте меню управления, чтобы переключить пользователя.')),
@@ -97,7 +98,10 @@ class _NewsFeedState extends State<NewsFeed> {
     );
     if (post == null || !mounted) return;
     try {
-      await HiveSocialStore.savePost(actor: HiveSocialStore.activeUser, post: post);
+      await context.read<SocialProvider>().savePost(
+        actor: context.read<SocialProvider>().activeUser,
+        post: post,
+      );
     } catch (error) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(

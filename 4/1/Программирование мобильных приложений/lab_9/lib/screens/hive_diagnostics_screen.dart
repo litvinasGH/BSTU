@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../data/hive_social_store.dart';
+import '../providers/social_provider.dart';
 
 class HiveDiagnosticsScreen extends StatefulWidget {
   const HiveDiagnosticsScreen({super.key});
@@ -19,7 +21,7 @@ class _HiveDiagnosticsScreenState extends State<HiveDiagnosticsScreen> {
       _result = 'Выполняется уплотнение Hive Box...';
     });
     try {
-      final before = HiveSocialStore.posts.length;
+      final before = context.read<SocialProvider>().posts.length;
       await HiveSocialStore.compactAllBoxes();
       if (!mounted) return;
       setState(() {

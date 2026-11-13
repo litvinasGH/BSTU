@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/social_provider.dart';
 
 import '../screens/profile.dart';
 
@@ -15,6 +18,7 @@ class _NewsFeedHeaderState extends State<NewsFeedHeader> {
 
   @override
   Widget build(BuildContext context) {
+    final activeUser = context.watch<SocialProvider>().activeUser;
     return Padding(
       padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
       child: Row(
@@ -88,8 +92,8 @@ class _NewsFeedHeaderState extends State<NewsFeedHeader> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => ProfileScreen(
-                    name: "Darlene Beats",
-                    image: 'assets/mainavatar.jpg',
+                    name: activeUser.name,
+                    image: activeUser.avatarPath,
                   ),
                 ),
               );
@@ -118,7 +122,7 @@ class _NewsFeedHeaderState extends State<NewsFeedHeader> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image.asset(
-                  'assets/mainavatar.jpg',
+                  activeUser.avatarPath,
                   height: 30,
                   width: 30,
                 ),
