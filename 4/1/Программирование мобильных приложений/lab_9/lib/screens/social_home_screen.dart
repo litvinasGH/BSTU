@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:provider/provider.dart';
 
 import '../data/hive_social_store.dart';
 import '../models/social_models.dart';
+import '../providers/social_provider.dart';
 import '../widgets/path_image.dart';
 import '../widgets/social_post_card.dart';
 import '../widgets/story_strip.dart';
@@ -16,12 +17,11 @@ class SocialHomeScreen extends StatefulWidget {
 }
 
 class _SocialHomeScreenState extends State<SocialHomeScreen> {
+  // Эти поля описывают только локальный интерфейс текущего экрана.
   int _selectedIndex = 0;
   bool _newestFirst = true;
   String _searchQuery = '';
   final TextEditingController _searchController = TextEditingController();
-
-  SocialUser get _user => HiveSocialStore.activeUser;
 
   @override
   void dispose() {
@@ -31,7 +31,10 @@ class _SocialHomeScreenState extends State<SocialHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final currentUser = _user;
+    // Подписка на общее состояние: экран перестроится при изменениях Hive Box.
+    final social = context.watch<SocialProvider>();
+    final currentUser = social.activeUser;
+
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 18,
@@ -43,15 +46,13 @@ class _SocialHomeScreenState extends State<SocialHomeScreen> {
           PopupMenuButton<String>(
             tooltip: 'Переключить пользователя',
             onSelected: (id) async {
-              await HiveSocialStore.setActiveUser(id);
+              await context.read<SocialProvider>().setActiveUser(id);
               if (!mounted) return;
-              setState(() {
-                if (_selectedIndex == 3 && !HiveSocialStore.activeUser.canManagePosts) {
-                  _selectedIndex = 0;
-                }
-              });
+              if (_selectedIndex == 3 && !context.read<SocialProvider>().activeUser.canManagePosts) {
+                setState(() => _selectedIndex = 0);
+              }
             },
-            itemBuilder: (context) => HiveSocialStore.allUsers.map((user) {
+            itemBuilder: (context) => social.allUsers.map((user) {
               return PopupMenuItem<String>(
                 value: user.id,
                 child: Row(
@@ -93,7 +94,7 @@ class _SocialHomeScreenState extends State<SocialHomeScreen> {
             colors: [Color(0xFFBFF8EC), Color(0xFFF1FFFB)],
           ),
         ),
-        child: SafeArea(child: _buildPage(currentUser)),
+        child: SafeArea(child: _buildPage(currentUser, social)),
       ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _selectedIndex,
@@ -108,228 +109,189 @@ class _SocialHomeScreenState extends State<SocialHomeScreen> {
     );
   }
 
-  Widget _buildPage(SocialUser user) {
+  Widget _buildPage(SocialUser user, SocialProvider social) {
     return switch (_selectedIndex) {
-      0 => _buildFeed(user),
-      1 => _buildFavorites(user),
-      2 => _buildProfile(user),
-      _ => _buildManagement(user),
+      0 => _buildFeed(user, social),
+      1 => _buildFavorites(user, social),
+      2 => _buildProfile(user, social),
+      _ => _buildManagement(user, social),
     };
   }
 
-  Widget _buildFeed(SocialUser user) {
-    return ValueListenableBuilder<Box<SocialStory>>(
-      valueListenable: HiveSocialStore.stories.listenable(),
-      builder: (context, storyBox, _) {
-        return ValueListenableBuilder<Box<SocialPost>>(
-          valueListenable: HiveSocialStore.posts.listenable(),
-          builder: (context, postBox, _) {
-            return ValueListenableBuilder<Box<FavoriteEntry>>(
-              valueListenable: HiveSocialStore.favorites.listenable(),
-              builder: (context, favoriteBox, _) {
-                var visiblePosts = postBox.values.where((post) {
-                  final query = _searchQuery.trim().toLowerCase();
-                  if (query.isEmpty) return true;
-                  return post.text.toLowerCase().contains(query) ||
-                      post.authorName.toLowerCase().contains(query) ||
-                      post.subgroup.toLowerCase().contains(query);
-                }).toList();
-                visiblePosts.sort((a, b) => _newestFirst
-                    ? b.createdAtMillis.compareTo(a.createdAtMillis)
-                    : a.createdAtMillis.compareTo(b.createdAtMillis));
+  Widget _buildFeed(SocialUser user, SocialProvider social) {
+    final query = _searchQuery.trim().toLowerCase();
+    final visiblePosts = social.posts.where((post) {
+      if (query.isEmpty) return true;
+      return post.text.toLowerCase().contains(query) ||
+          post.authorName.toLowerCase().contains(query) ||
+          post.subgroup.toLowerCase().contains(query);
+    }).toList()
+      ..sort((a, b) => _newestFirst
+          ? b.createdAtMillis.compareTo(a.createdAtMillis)
+          : a.createdAtMillis.compareTo(b.createdAtMillis));
+    final stories = social.stories
+      ..sort((a, b) => b.createdAtMillis.compareTo(a.createdAtMillis));
 
-                return ListView(
-                  padding: const EdgeInsets.fromLTRB(18, 12, 18, 22),
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            'Добро пожаловать, ${user.name.split(' ').first}',
-                            style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w800),
-                          ),
-                        ),
-                        _RoleChip(roleLabel: user.roleLabel),
-                      ],
-                    ),
-                    const SizedBox(height: 18),
-                    StoryStrip(stories: storyBox.values.toList(), currentUser: user),
-                    const SizedBox(height: 20),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: TextField(
-                            controller: _searchController,
-                            onChanged: (value) => setState(() => _searchQuery = value),
-                            decoration: const InputDecoration(
-                              prefixIcon: Icon(Icons.search),
-                              hintText: 'Поиск по постам',
-                              contentPadding: EdgeInsets.symmetric(vertical: 13),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                        IconButton.filledTonal(
-                          tooltip: _newestFirst ? 'Сначала старые' : 'Сначала новые',
-                          onPressed: () => setState(() => _newestFirst = !_newestFirst),
-                          icon: Icon(_newestFirst ? Icons.south : Icons.north),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 19),
-                    Row(
-                      children: [
-                        const Expanded(
-                          child: Text('Recently Post', style: TextStyle(color: Colors.blueGrey, fontSize: 16)),
-                        ),
-                        if (user.canManagePosts)
-                          FilledButton.tonalIcon(
-                            onPressed: _createPost,
-                            icon: const Icon(Icons.add, size: 18),
-                            label: const Text('Пост'),
-                          ),
-                      ],
-                    ),
-                    const SizedBox(height: 12),
-                    if (visiblePosts.isEmpty)
-                      const _EmptyState(
-                        icon: Icons.search_off,
-                        title: 'Ничего не найдено',
-                        message: 'Попробуй изменить поисковый запрос.',
-                      )
-                    else
-                      for (final post in visiblePosts)
-                        SocialPostCard(
-                          post: post,
-                          isFavorite: favoriteBox.containsKey('${user.id}::${post.id}'),
-                          canManage: user.canManagePosts,
-                          onToggleFavorite: () => _toggleFavorite(post),
-                          onEdit: () => _editPost(post),
-                          onDelete: () => _confirmDelete(post),
-                        ),
-                  ],
-                );
-              },
-            );
-          },
-        );
-      },
-    );
-  }
-
-  Widget _buildFavorites(SocialUser user) {
-    return ValueListenableBuilder<Box<FavoriteEntry>>(
-      valueListenable: HiveSocialStore.favorites.listenable(),
-      builder: (context, favoriteBox, _) {
-        return ValueListenableBuilder<Box<SocialPost>>(
-          valueListenable: HiveSocialStore.posts.listenable(),
-          builder: (context, postBox, _) {
-            final ids = favoriteBox.values
-                .where((favorite) => favorite.userId == user.id)
-                .map((favorite) => favorite.postId)
-                .toSet();
-            final posts = postBox.values.where((post) => ids.contains(post.id)).toList()
-              ..sort((a, b) => b.createdAtMillis.compareTo(a.createdAtMillis));
-            return ListView(
-              padding: const EdgeInsets.all(18),
-              children: [
-                const Text('Избранное', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900)),
-                const SizedBox(height: 6),
-                Text('Список публикаций пользователя ${user.name}', style: const TextStyle(color: Colors.blueGrey)),
-                const SizedBox(height: 18),
-                if (posts.isEmpty)
-                  const _EmptyState(
-                    icon: Icons.favorite_border,
-                    title: 'Пока ничего нет',
-                    message: 'Добавляй понравившиеся публикации в избранное из ленты.',
-                  )
-                else
-                  for (final post in posts)
-                    SocialPostCard(
-                      post: post,
-                      isFavorite: true,
-                      canManage: user.canManagePosts,
-                      onToggleFavorite: () => _toggleFavorite(post),
-                      onEdit: () => _editPost(post),
-                      onDelete: () => _confirmDelete(post),
-                    ),
-              ],
-            );
-          },
-        );
-      },
-    );
-  }
-
-  Widget _buildProfile(SocialUser user) {
-    return ValueListenableBuilder<Box<FavoriteEntry>>(
-      valueListenable: HiveSocialStore.favorites.listenable(),
-      builder: (context, favoriteBox, _) {
-        return ValueListenableBuilder<Box<SocialPost>>(
-          valueListenable: HiveSocialStore.posts.listenable(),
-          builder: (context, postBox, _) {
-            final userPosts = postBox.values.where((post) => post.authorId == user.id).toList()
-              ..sort((a, b) => b.createdAtMillis.compareTo(a.createdAtMillis));
-            final favoriteCount = favoriteBox.values.where((favorite) => favorite.userId == user.id).length;
-            return ListView(
-              padding: const EdgeInsets.all(18),
-              children: [
-                Container(
-                  padding: const EdgeInsets.fromLTRB(20, 24, 20, 22),
-                  decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(26)),
-                  child: Column(
-                    children: [
-                      UserAvatar(imagePath: user.avatarPath, name: user.name, radius: 54),
-                      const SizedBox(height: 14),
-                      Text(user.name, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900)),
-                      Text('@${user.handle}', style: const TextStyle(color: Colors.blueGrey)),
-                      const SizedBox(height: 8),
-                      _RoleChip(roleLabel: user.roleLabel),
-                      if (user.bio.isNotEmpty) ...[
-                        const SizedBox(height: 12),
-                        Text(user.bio, textAlign: TextAlign.center, style: const TextStyle(height: 1.35)),
-                      ],
-                      const SizedBox(height: 20),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          _ProfileStat(value: '${userPosts.length}', label: 'Посты'),
-                          _ProfileStat(value: _compactCount(user.followers), label: 'Подписчики'),
-                          _ProfileStat(value: _compactCount(user.following), label: 'Подписки'),
-                          _ProfileStat(value: '$favoriteCount', label: 'Избранное'),
-                        ],
-                      ),
-                    ],
-                  ),
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(18, 12, 18, 22),
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: Text(
+                'Добро пожаловать, ${user.name.split(' ').first}',
+                style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w800),
+              ),
+            ),
+            _RoleChip(roleLabel: user.roleLabel),
+          ],
+        ),
+        const SizedBox(height: 18),
+        StoryStrip(stories: stories, currentUser: user),
+        const SizedBox(height: 20),
+        Row(
+          children: [
+            Expanded(
+              child: TextField(
+                controller: _searchController,
+                onChanged: (value) => setState(() => _searchQuery = value),
+                decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.search),
+                  hintText: 'Поиск по постам',
+                  contentPadding: EdgeInsets.symmetric(vertical: 13),
                 ),
-                const SizedBox(height: 20),
-                const Text('Публикации', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800)),
-                const SizedBox(height: 12),
-                if (userPosts.isEmpty)
-                  const _EmptyState(
-                    icon: Icons.photo_library_outlined,
-                    title: 'Нет публикаций',
-                    message: 'Публикации этого пользователя появятся здесь.',
-                  )
-                else
-                  for (final post in userPosts)
-                    SocialPostCard(
-                      post: post,
-                      isFavorite: favoriteBox.containsKey('${user.id}::${post.id}'),
-                      canManage: user.canManagePosts,
-                      onToggleFavorite: () => _toggleFavorite(post),
-                      onEdit: () => _editPost(post),
-                      onDelete: () => _confirmDelete(post),
-                    ),
-              ],
-            );
-          },
-        );
-      },
+              ),
+            ),
+            const SizedBox(width: 8),
+            IconButton.filledTonal(
+              tooltip: _newestFirst ? 'Сначала старые' : 'Сначала новые',
+              onPressed: () => setState(() => _newestFirst = !_newestFirst),
+              icon: Icon(_newestFirst ? Icons.south : Icons.north),
+            ),
+          ],
+        ),
+        const SizedBox(height: 19),
+        Row(
+          children: [
+            const Expanded(child: Text('Recently Post', style: TextStyle(color: Colors.blueGrey, fontSize: 16))),
+            if (user.canManagePosts)
+              FilledButton.tonalIcon(
+                onPressed: _createPost,
+                icon: const Icon(Icons.add, size: 18),
+                label: const Text('Пост'),
+              ),
+          ],
+        ),
+        const SizedBox(height: 12),
+        if (visiblePosts.isEmpty)
+          const _EmptyState(
+            icon: Icons.search_off,
+            title: 'Ничего не найдено',
+            message: 'Попробуй изменить поисковый запрос.',
+          )
+        else
+          for (final post in visiblePosts)
+            SocialPostCard(
+              post: post,
+              isFavorite: social.isFavorite(userId: user.id, postId: post.id),
+              canManage: user.canManagePosts,
+              onToggleFavorite: () => _toggleFavorite(post),
+              onEdit: () => _editPost(post),
+              onDelete: () => _confirmDelete(post),
+            ),
+      ],
     );
   }
 
-  Widget _buildManagement(SocialUser user) {
+  Widget _buildFavorites(SocialUser user, SocialProvider social) {
+    final posts = social.favoritesFor(user.id);
+    return ListView(
+      padding: const EdgeInsets.all(18),
+      children: [
+        const Text('Избранное', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900)),
+        const SizedBox(height: 6),
+        Text('Список публикаций пользователя ${user.name}', style: const TextStyle(color: Colors.blueGrey)),
+        const SizedBox(height: 18),
+        if (posts.isEmpty)
+          const _EmptyState(
+            icon: Icons.favorite_border,
+            title: 'Пока ничего нет',
+            message: 'Добавляй понравившиеся публикации в избранное из ленты.',
+          )
+        else
+          for (final post in posts)
+            SocialPostCard(
+              post: post,
+              isFavorite: true,
+              canManage: user.canManagePosts,
+              onToggleFavorite: () => _toggleFavorite(post),
+              onEdit: () => _editPost(post),
+              onDelete: () => _confirmDelete(post),
+            ),
+      ],
+    );
+  }
+
+  Widget _buildProfile(SocialUser user, SocialProvider social) {
+    final userPosts = social.posts.where((post) => post.authorId == user.id).toList()
+      ..sort((a, b) => b.createdAtMillis.compareTo(a.createdAtMillis));
+    final favoriteCount = social.favorites.where((favorite) => favorite.userId == user.id).length;
+
+    return ListView(
+      padding: const EdgeInsets.all(18),
+      children: [
+        Container(
+          padding: const EdgeInsets.fromLTRB(20, 24, 20, 22),
+          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(26)),
+          child: Column(
+            children: [
+              UserAvatar(imagePath: user.avatarPath, name: user.name, radius: 54),
+              const SizedBox(height: 14),
+              Text(user.name, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900)),
+              Text('@${user.handle}', style: const TextStyle(color: Colors.blueGrey)),
+              const SizedBox(height: 8),
+              _RoleChip(roleLabel: user.roleLabel),
+              if (user.bio.isNotEmpty) ...[
+                const SizedBox(height: 12),
+                Text(user.bio, textAlign: TextAlign.center, style: const TextStyle(height: 1.35)),
+              ],
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _ProfileStat(value: '${userPosts.length}', label: 'Посты'),
+                  _ProfileStat(value: _compactCount(user.followers), label: 'Подписчики'),
+                  _ProfileStat(value: _compactCount(user.following), label: 'Подписки'),
+                  _ProfileStat(value: '$favoriteCount', label: 'Избранное'),
+                ],
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 20),
+        const Text('Публикации', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800)),
+        const SizedBox(height: 12),
+        if (userPosts.isEmpty)
+          const _EmptyState(
+            icon: Icons.photo_library_outlined,
+            title: 'Нет публикаций',
+            message: 'Публикации этого пользователя появятся здесь.',
+          )
+        else
+          for (final post in userPosts)
+            SocialPostCard(
+              post: post,
+              isFavorite: social.isFavorite(userId: user.id, postId: post.id),
+              canManage: user.canManagePosts,
+              onToggleFavorite: () => _toggleFavorite(post),
+              onEdit: () => _editPost(post),
+              onDelete: () => _confirmDelete(post),
+            ),
+      ],
+    );
+  }
+
+  Widget _buildManagement(SocialUser user, SocialProvider social) {
     if (!user.canManagePosts) {
       return const Center(
         child: Padding(
@@ -343,105 +305,84 @@ class _SocialHomeScreenState extends State<SocialHomeScreen> {
       );
     }
 
-    return ValueListenableBuilder<Box<FavoriteEntry>>(
-      valueListenable: HiveSocialStore.favorites.listenable(),
-      builder: (context, favoriteBox, _) {
-        return ValueListenableBuilder<Box<SocialPost>>(
-          valueListenable: HiveSocialStore.posts.listenable(),
-          builder: (context, postBox, _) {
-            return ValueListenableBuilder<Box<SocialUser>>(
-              valueListenable: HiveSocialStore.users.listenable(),
-              builder: (context, userBox, _) {
-                return ValueListenableBuilder<Box<SocialStory>>(
-                  valueListenable: HiveSocialStore.stories.listenable(),
-                  builder: (context, storyBox, _) {
-                    final sortedPosts = postBox.values.toList()
-                      ..sort((a, b) => b.createdAtMillis.compareTo(a.createdAtMillis));
-                    return ListView(
-                      padding: const EdgeInsets.all(18),
-                      children: [
-                        const Text('Управление', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900)),
-                        const SizedBox(height: 6),
-                        Text('Вход выполнен как ${user.name} · ${user.roleLabel}', style: const TextStyle(color: Colors.blueGrey)),
-                        const SizedBox(height: 16),
-                        Wrap(
-                          spacing: 10,
-                          runSpacing: 10,
-                          children: [
-                            _StatCard(label: 'Публикации', value: '${postBox.length}', icon: Icons.article_outlined),
-                            _StatCard(label: 'Пользователи', value: '${userBox.length}', icon: Icons.people_outline),
-                            _StatCard(label: 'Истории', value: '${storyBox.length}', icon: Icons.auto_awesome_outlined),
-                            _StatCard(label: 'Избранное', value: '${favoriteBox.length}', icon: Icons.favorite_border),
-                          ],
-                        ),
-                        const SizedBox(height: 20),
-                        FilledButton.icon(
-                          onPressed: _createPost,
-                          icon: const Icon(Icons.add_circle_outline),
-                          label: const Text('Создать публикацию'),
-                          style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 14)),
-                        ),
-                        const SizedBox(height: 20),
-                        Container(
-                          padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(22)),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text('Обслуживание Hive', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
-                              const SizedBox(height: 5),
-                              const Text(
-                                'Тест использует временный Box и не изменяет основную базу. Уплотнение выполняется для основных Box.',
-                                style: TextStyle(color: Colors.blueGrey, fontSize: 12, height: 1.35),
-                              ),
-                              const SizedBox(height: 12),
-                              OutlinedButton.icon(
-                                onPressed: _runWrongKeyTest,
-                                icon: const Icon(Icons.key_off_outlined),
-                                label: const Text('Проверить неправильный ключ'),
-                              ),
-                              OutlinedButton.icon(
-                                onPressed: _compactBoxes,
-                                icon: const Icon(Icons.compress),
-                                label: const Text('Выполнить compact()'),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        Row(
-                          children: [
-                            const Expanded(child: Text('Все публикации', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800))),
-                            Text('${postBox.length}', style: const TextStyle(color: Colors.blueGrey)),
-                          ],
-                        ),
-                        const SizedBox(height: 12),
-                        if (sortedPosts.isEmpty)
-                          const _EmptyState(icon: Icons.article_outlined, title: 'Публикаций нет', message: 'Создай первую публикацию.')
-                        else
-                          for (final post in sortedPosts)
-                            SocialPostCard(
-                              post: post,
-                              isFavorite: favoriteBox.containsKey('${user.id}::${post.id}'),
-                              canManage: true,
-                              onToggleFavorite: () => _toggleFavorite(post),
-                              onEdit: () => _editPost(post),
-                              onDelete: () => _confirmDelete(post),
-                            ),
-                      ],
-                    );
-                  },
-                );
-              },
-            );
-          },
-        );
-      },
+    final posts = social.posts..sort((a, b) => b.createdAtMillis.compareTo(a.createdAtMillis));
+    return ListView(
+      padding: const EdgeInsets.all(18),
+      children: [
+        const Text('Управление', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900)),
+        const SizedBox(height: 6),
+        Text('Вход выполнен как ${user.name} · ${user.roleLabel}', style: const TextStyle(color: Colors.blueGrey)),
+        const SizedBox(height: 16),
+        Wrap(
+          spacing: 10,
+          runSpacing: 10,
+          children: [
+            _StatCard(label: 'Публикации', value: '${posts.length}', icon: Icons.article_outlined),
+            _StatCard(label: 'Пользователи', value: '${social.users.length}', icon: Icons.people_outline),
+            _StatCard(label: 'Истории', value: '${social.stories.length}', icon: Icons.auto_awesome_outlined),
+            _StatCard(label: 'Избранное', value: '${social.favorites.length}', icon: Icons.favorite_border),
+          ],
+        ),
+        const SizedBox(height: 20),
+        FilledButton.icon(
+          onPressed: _createPost,
+          icon: const Icon(Icons.add_circle_outline),
+          label: const Text('Создать публикацию'),
+          style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 14)),
+        ),
+        const SizedBox(height: 20),
+        Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(22)),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text('Обслуживание Hive', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
+              const SizedBox(height: 5),
+              const Text(
+                'Тест использует временный Box и не изменяет основную базу. Уплотнение выполняется для основных Box.',
+                style: TextStyle(color: Colors.blueGrey, fontSize: 12, height: 1.35),
+              ),
+              const SizedBox(height: 12),
+              OutlinedButton.icon(
+                onPressed: _runWrongKeyTest,
+                icon: const Icon(Icons.key_off_outlined),
+                label: const Text('Проверить неправильный ключ'),
+              ),
+              OutlinedButton.icon(
+                onPressed: _compactBoxes,
+                icon: const Icon(Icons.compress),
+                label: const Text('Выполнить compact()'),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 20),
+        Row(
+          children: [
+            const Expanded(child: Text('Все публикации', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800))),
+            Text('${posts.length}', style: const TextStyle(color: Colors.blueGrey)),
+          ],
+        ),
+        const SizedBox(height: 12),
+        if (posts.isEmpty)
+          const _EmptyState(icon: Icons.article_outlined, title: 'Публикаций нет', message: 'Создай первую публикацию.')
+        else
+          for (final post in posts)
+            SocialPostCard(
+              post: post,
+              isFavorite: social.isFavorite(userId: user.id, postId: post.id),
+              canManage: true,
+              onToggleFavorite: () => _toggleFavorite(post),
+              onEdit: () => _editPost(post),
+              onDelete: () => _confirmDelete(post),
+            ),
+      ],
     );
   }
 
   Future<void> _createPost() async {
-    final actor = _user;
+    final actor = context.read<SocialProvider>().activeUser;
     if (!actor.canManagePosts) {
       _showMessage('Недостаточно прав: нужна роль администратора или менеджера.');
       return;
@@ -451,7 +392,11 @@ class _SocialHomeScreenState extends State<SocialHomeScreen> {
     );
     if (post == null || !mounted) return;
     try {
-      await HiveSocialStore.savePost(actor: actor, post: post);
+      await context.read<SocialProvider>().savePost(
+        actor: context.read<SocialProvider>().activeUser,
+        post: post,
+      );
+      if (!mounted) return;
       setState(() => _selectedIndex = 0);
       _showMessage('Публикация сохранена в Hive.');
     } catch (error) {
@@ -460,7 +405,7 @@ class _SocialHomeScreenState extends State<SocialHomeScreen> {
   }
 
   Future<void> _editPost(SocialPost post) async {
-    final actor = _user;
+    final actor = context.read<SocialProvider>().activeUser;
     if (!actor.canManagePosts) {
       _showMessage('Недостаточно прав для редактирования.');
       return;
@@ -470,7 +415,7 @@ class _SocialHomeScreenState extends State<SocialHomeScreen> {
     );
     if (changedPost == null || !mounted) return;
     try {
-      await HiveSocialStore.savePost(actor: actor, post: changedPost);
+      await context.read<SocialProvider>().savePost(actor: actor, post: changedPost);
       _showMessage('Изменения сохранены.');
     } catch (error) {
       _showMessage(error.toString());
@@ -478,7 +423,7 @@ class _SocialHomeScreenState extends State<SocialHomeScreen> {
   }
 
   Future<void> _confirmDelete(SocialPost post) async {
-    final actor = _user;
+    final actor = context.read<SocialProvider>().activeUser;
     if (!actor.canManagePosts) {
       _showMessage('Недостаточно прав для удаления.');
       return;
@@ -496,7 +441,7 @@ class _SocialHomeScreenState extends State<SocialHomeScreen> {
     );
     if (confirmed != true || !mounted) return;
     try {
-      await HiveSocialStore.deletePost(actor: actor, postId: post.id);
+      await context.read<SocialProvider>().deletePost(actor: actor, postId: post.id);
       _showMessage('Публикация удалена.');
     } catch (error) {
       _showMessage(error.toString());
@@ -505,7 +450,8 @@ class _SocialHomeScreenState extends State<SocialHomeScreen> {
 
   Future<void> _toggleFavorite(SocialPost post) async {
     try {
-      await HiveSocialStore.toggleFavorite(userId: _user.id, postId: post.id);
+      final userId = context.read<SocialProvider>().activeUserId;
+      await context.read<SocialProvider>().toggleFavorite(userId: userId, postId: post.id);
     } catch (error) {
       _showMessage(error.toString());
     }

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:provider/provider.dart';
 
-import '../data/hive_social_store.dart';
-import '../models/social_models.dart';
+import '../providers/social_provider.dart';
 import '../screens/social_management_screen.dart';
 import 'postitem.dart';
 
@@ -13,6 +12,11 @@ class PostFeed extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final social = context.watch<SocialProvider>();
+    final userId = social.activeUserId;
+    final posts = social.posts
+      ..sort((a, b) => b.createdAtMillis.compareTo(a.createdAtMillis));
+
     return Padding(
       padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
       child: Column(
@@ -25,8 +29,6 @@ class PostFeed extends StatelessWidget {
                   'Recently Post',
                   style: TextStyle(color: Colors.grey, fontSize: 16),
                 ),
-                // Оставляем исходную иконку на прежнем месте. Управление
-                // открывается отдельным экраном, без изменения ленты.
                 InkWell(
                   borderRadius: BorderRadius.circular(20),
                   onTap: () => Navigator.of(context).push(
@@ -56,7 +58,10 @@ class PostFeed extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(Icons.window_outlined),
-                          Text('Post', style: TextStyle(fontWeight: FontWeight.bold)),
+                          Text(
+                            'Post',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
                         ],
                       ),
                     ),
@@ -66,7 +71,10 @@ class PostFeed extends StatelessWidget {
                   child: Container(
                     decoration: const BoxDecoration(
                       border: Border(
-                        bottom: BorderSide(width: 2, color: Color.fromARGB(255, 233, 233, 233)),
+                        bottom: BorderSide(
+                          width: 2,
+                          color: Color.fromARGB(255, 233, 233, 233),
+                        ),
                       ),
                     ),
                     child: const Padding(
@@ -75,7 +83,13 @@ class PostFeed extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(Icons.alternate_email, color: Colors.grey),
-                          Text('Mention', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey)),
+                          Text(
+                            'Mention',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.grey,
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -84,50 +98,31 @@ class PostFeed extends StatelessWidget {
               ],
             ),
           const SizedBox(height: 15),
-          ValueListenableBuilder<Box<String>>(
-            valueListenable: HiveSocialStore.settings.listenable(),
-            builder: (context, settingsBox, _) {
-              final userId = settingsBox.get('activeUserId', defaultValue: 'darlene')!;
-              return ValueListenableBuilder<Box<SocialPost>>(
-                valueListenable: HiveSocialStore.posts.listenable(),
-                builder: (context, postBox, _) {
-                  final posts = postBox.values.toList()
-                    ..sort((a, b) => b.createdAtMillis.compareTo(a.createdAtMillis));
-                  if (posts.isEmpty) {
-                    return const Padding(
-                      padding: EdgeInsets.all(24),
-                      child: Text('Публикаций пока нет.'),
-                    );
-                  }
-                  return ValueListenableBuilder<Box<FavoriteEntry>>(
-                    valueListenable: HiveSocialStore.favorites.listenable(),
-                    builder: (context, favoriteBox, _) {
-                      return Column(
-                        children: [
-                          for (final post in posts)
-                            PostItem(
-                              key: ValueKey(post.id),
-                              postId: post.id,
-                              isLiked: favoriteBox.containsKey('$userId::${post.id}'),
-                              onLikeToggle: () => HiveSocialStore.toggleFavorite(
-                                userId: userId,
-                                postId: post.id,
-                              ),
-                              images: post.imagePaths,
-                              avatar: post.avatarPath,
-                              name: post.authorName,
-                              postedTime: _relativeTime(post.createdAt),
-                              subgroup: post.subgroup,
-                              text: post.text,
-                            ),
-                        ],
-                      );
-                    },
-                  );
-                },
-              );
-            },
-          ),
+          if (posts.isEmpty)
+            const Padding(
+              padding: EdgeInsets.all(24),
+              child: Text('Публикаций пока нет.'),
+            )
+          else
+            Column(
+              children: [
+                for (final post in posts)
+                  PostItem(
+                    key: ValueKey(post.id),
+                    postId: post.id,
+                    isLiked: social.isFavorite(userId: userId, postId: post.id),
+                    onLikeToggle: () => context
+                        .read<SocialProvider>()
+                        .toggleFavorite(userId: userId, postId: post.id),
+                    images: post.imagePaths,
+                    avatar: post.avatarPath,
+                    name: post.authorName,
+                    postedTime: _relativeTime(post.createdAt),
+                    subgroup: post.subgroup,
+                    text: post.text,
+                  ),
+              ],
+            ),
         ],
       ),
     );

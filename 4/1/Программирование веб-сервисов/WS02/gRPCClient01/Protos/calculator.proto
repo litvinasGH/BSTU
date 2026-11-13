@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPCServer01";
+option go_package = "example.com/grpcclient02/calculatorpb";
+
+package calculator;
+
+service Calculator {
+    rpc Sum (BinaryRequest) returns (DoubleResponse);
+    rpc Sub (BinaryRequest) returns (DoubleResponse);
+    rpc Mul (BinaryRequest) returns (DoubleResponse);
+    rpc Div (BinaryRequest) returns (DoubleResponse);
+    rpc Fact (FactorialRequest) returns (IntResponse);
+}
+
+message BinaryRequest {
+    double x = 1;
+    double y = 2;
+}
+
+message FactorialRequest {
+    int32 x = 1;
+}
+
+message DoubleResponse {
+    double result = 1;
+}
+
+message IntResponse {
+    int32 result = 1;
+}

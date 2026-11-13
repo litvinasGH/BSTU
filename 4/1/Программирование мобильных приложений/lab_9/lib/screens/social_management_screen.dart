@@ -1,53 +1,51 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:provider/provider.dart';
 
-import '../data/hive_social_store.dart';
 import '../models/social_models.dart';
+import '../providers/social_provider.dart';
 import 'favorite_posts_screen.dart';
 import 'hive_diagnostics_screen.dart';
 import 'post_editor_screen.dart';
 
-/// Все дополнительные действия ЛР 8 вынесены на отдельный экран.
-/// Внешний вид исходной ленты при этом не меняется.
-class SocialManagementScreen extends StatefulWidget {
+/// Дополнительные действия лабораторной №8.
+/// Все общие данные экран получает из SocialProvider.
+class SocialManagementScreen extends StatelessWidget {
   const SocialManagementScreen({super.key});
 
-  @override
-  State<SocialManagementScreen> createState() => _SocialManagementScreenState();
-}
-
-class _SocialManagementScreenState extends State<SocialManagementScreen> {
-  SocialUser get _activeUser => HiveSocialStore.activeUser;
-
-  Future<void> _switchUser(String? userId) async {
+  Future<void> _switchUser(BuildContext context, String? userId) async {
     if (userId == null) return;
-    await HiveSocialStore.setActiveUser(userId);
-    if (mounted) setState(() {});
+    await context.read<SocialProvider>().setActiveUser(userId);
   }
 
-  Future<void> _createPost() async {
-    final actor = _activeUser;
+  Future<void> _createPost(BuildContext context) async {
+    final actor = context.read<SocialProvider>().activeUser;
     if (!actor.canManagePosts) {
-      _showMessage('Для этой роли создание публикаций запрещено.');
+      _showMessage(context, 'Для этой роли создание публикаций запрещено.');
       return;
     }
 
     final post = await Navigator.of(context).push<SocialPost>(
       MaterialPageRoute(builder: (_) => PostEditorScreen(actor: actor)),
     );
-    if (post == null || !mounted) return;
+    if (post == null || !context.mounted) return;
     try {
-      await HiveSocialStore.savePost(actor: HiveSocialStore.activeUser, post: post);
-      if (mounted) _showMessage('Публикация сохранена.');
+      await context.read<SocialProvider>().savePost(
+        actor: context.read<SocialProvider>().activeUser,
+        post: post,
+      );
+      if (context.mounted) _showMessage(context, 'Публикация сохранена.');
     } catch (error) {
-      if (mounted) _showMessage(error.toString());
+      if (context.mounted) _showMessage(context, error.toString());
     }
   }
 
-  Future<void> _editPost(SocialPost post) async {
-    final actor = _activeUser;
+  Future<void> _editPost(BuildContext context, SocialPost post) async {
+    final actor = context.read<SocialProvider>().activeUser;
     if (!actor.canManagePosts) {
-      _showMessage('Только администратор или менеджер может редактировать публикации.');
+      _showMessage(
+        context,
+        'Только администратор или менеджер может редактировать публикации.',
+      );
       return;
     }
     final changed = await Navigator.of(context).push<SocialPost>(
@@ -55,19 +53,25 @@ class _SocialManagementScreenState extends State<SocialManagementScreen> {
         builder: (_) => PostEditorScreen(actor: actor, existingPost: post),
       ),
     );
-    if (changed == null || !mounted) return;
+    if (changed == null || !context.mounted) return;
     try {
-      await HiveSocialStore.savePost(actor: HiveSocialStore.activeUser, post: changed);
-      if (mounted) _showMessage('Изменения сохранены.');
+      await context.read<SocialProvider>().savePost(
+        actor: context.read<SocialProvider>().activeUser,
+        post: changed,
+      );
+      if (context.mounted) _showMessage(context, 'Изменения сохранены.');
     } catch (error) {
-      if (mounted) _showMessage(error.toString());
+      if (context.mounted) _showMessage(context, error.toString());
     }
   }
 
-  Future<void> _deletePost(SocialPost post) async {
-    final actor = _activeUser;
+  Future<void> _deletePost(BuildContext context, SocialPost post) async {
+    final actor = context.read<SocialProvider>().activeUser;
     if (!actor.canManagePosts) {
-      _showMessage('Только администратор или менеджер может удалять публикации.');
+      _showMessage(
+        context,
+        'Только администратор или менеджер может удалять публикации.',
+      );
       return;
     }
     final confirmed = await showDialog<bool>(
@@ -76,27 +80,41 @@ class _SocialManagementScreenState extends State<SocialManagementScreen> {
         title: const Text('Удалить публикацию?'),
         content: Text('Публикация ${post.authorName} будет удалена из Hive.'),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(dialogContext, false), child: const Text('Отмена')),
-          FilledButton(onPressed: () => Navigator.pop(dialogContext, true), child: const Text('Удалить')),
+          TextButton(
+            onPressed: () => Navigator.pop(dialogContext, false),
+            child: const Text('Отмена'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(dialogContext, true),
+            child: const Text('Удалить'),
+          ),
         ],
       ),
     );
-    if (confirmed != true || !mounted) return;
+    if (confirmed != true || !context.mounted) return;
     try {
-      await HiveSocialStore.deletePost(actor: HiveSocialStore.activeUser, postId: post.id);
-      if (mounted) _showMessage('Публикация удалена.');
+      await context.read<SocialProvider>().deletePost(
+        actor: context.read<SocialProvider>().activeUser,
+        postId: post.id,
+      );
+      if (context.mounted) _showMessage(context, 'Публикация удалена.');
     } catch (error) {
-      if (mounted) _showMessage(error.toString());
+      if (context.mounted) _showMessage(context, error.toString());
     }
   }
 
-  void _showMessage(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+  void _showMessage(BuildContext context, String message) {
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(message)));
   }
 
   @override
   Widget build(BuildContext context) {
-    final activeUser = _activeUser;
+    final social = context.watch<SocialProvider>();
+    final activeUser = social.activeUser;
+    final posts = social.posts
+      ..sort((a, b) => b.createdAtMillis.compareTo(a.createdAtMillis));
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Управление'),
@@ -104,7 +122,7 @@ class _SocialManagementScreenState extends State<SocialManagementScreen> {
           if (activeUser.canManagePosts)
             IconButton(
               tooltip: 'Добавить публикацию',
-              onPressed: _createPost,
+              onPressed: () => _createPost(context),
               icon: const Icon(Icons.add),
             ),
         ],
@@ -112,18 +130,24 @@ class _SocialManagementScreenState extends State<SocialManagementScreen> {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          const Text('Текущий пользователь', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          const Text(
+            'Текущий пользователь',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
           const SizedBox(height: 8),
           DropdownButtonFormField<String>(
             value: activeUser.id,
-            decoration: const InputDecoration(border: OutlineInputBorder(), labelText: 'Пользователь и роль'),
-            items: HiveSocialStore.allUsers.map((user) {
+            decoration: const InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Пользователь и роль',
+            ),
+            items: social.allUsers.map((user) {
               return DropdownMenuItem<String>(
                 value: user.id,
                 child: Text('${user.name} — ${user.roleLabel}'),
               );
             }).toList(),
-            onChanged: _switchUser,
+            onChanged: (id) => _switchUser(context, id),
           ),
           const SizedBox(height: 8),
           Text(
@@ -151,50 +175,56 @@ class _SocialManagementScreenState extends State<SocialManagementScreen> {
           Row(
             children: [
               const Expanded(
-                child: Text('Публикации', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                child: Text(
+                  'Публикации',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
               ),
-              Text('${HiveSocialStore.posts.length}', style: const TextStyle(color: Colors.grey)),
+              Text(
+                '${posts.length}',
+                style: const TextStyle(color: Colors.grey),
+              ),
             ],
           ),
           const SizedBox(height: 8),
-          ValueListenableBuilder<Box<SocialPost>>(
-            valueListenable: HiveSocialStore.posts.listenable(),
-            builder: (context, box, _) {
-              final posts = box.values.toList()
-                ..sort((a, b) => b.createdAtMillis.compareTo(a.createdAtMillis));
-              if (posts.isEmpty) return const ListTile(title: Text('Нет публикаций'));
-              return Column(
-                children: [
-                  for (final post in posts)
-                    Card(
-                      child: ListTile(
-                        leading: const Icon(Icons.article_outlined),
-                        title: Text(post.authorName, maxLines: 1, overflow: TextOverflow.ellipsis),
-                        subtitle: Text(post.text.isEmpty ? 'Публикация с изображениями' : post.text,
-                            maxLines: 2, overflow: TextOverflow.ellipsis),
-                        trailing: activeUser.canManagePosts
-                            ? Wrap(
-                                spacing: 0,
-                                children: [
-                                  IconButton(
-                                    tooltip: 'Редактировать',
-                                    onPressed: () => _editPost(post),
-                                    icon: const Icon(Icons.edit_outlined),
-                                  ),
-                                  IconButton(
-                                    tooltip: 'Удалить',
-                                    onPressed: () => _deletePost(post),
-                                    icon: const Icon(Icons.delete_outline),
-                                  ),
-                                ],
-                              )
-                            : null,
-                      ),
-                    ),
-                ],
-              );
-            },
-          ),
+          if (posts.isEmpty)
+            const ListTile(title: Text('Нет публикаций'))
+          else
+            for (final post in posts)
+              Card(
+                child: ListTile(
+                  leading: const Icon(Icons.article_outlined),
+                  title: Text(
+                    post.authorName,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  subtitle: Text(
+                    post.text.isEmpty
+                        ? 'Публикация с изображениями'
+                        : post.text,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  trailing: activeUser.canManagePosts
+                      ? Wrap(
+                          spacing: 0,
+                          children: [
+                            IconButton(
+                              tooltip: 'Редактировать',
+                              onPressed: () => _editPost(context, post),
+                              icon: const Icon(Icons.edit_outlined),
+                            ),
+                            IconButton(
+                              tooltip: 'Удалить',
+                              onPressed: () => _deletePost(context, post),
+                              icon: const Icon(Icons.delete_outline),
+                            ),
+                          ],
+                        )
+                      : null,
+                ),
+              ),
         ],
       ),
     );
