@@ -7,8 +7,6 @@ import 'favorite_posts_screen.dart';
 import 'hive_diagnostics_screen.dart';
 import 'post_editor_screen.dart';
 
-/// Дополнительные действия лабораторной №8.
-/// Все общие данные экран получает из SocialProvider.
 class SocialManagementScreen extends StatelessWidget {
   const SocialManagementScreen({super.key});
 
